@@ -21,7 +21,7 @@ export default function Home() {
               Let's ensure those changes are positive.
             </p>
             <a
-              href="#"
+              href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
               className="text-xl text-gray-600 hover:underline mb-4 inline-block"
             >
               Join our mailing list →
