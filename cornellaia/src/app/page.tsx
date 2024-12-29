@@ -18,7 +18,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl italic mb-8">
-              Let's ensure those changes are positive.
+              Let&apos;s ensure those changes are positive.
             </p>
             <a
               href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
@@ -45,9 +45,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <p className="text-xl mb-8">
-              We're a group of Cornell students dedicated to reducing risks from
-              advanced artificial intelligence and shaping its development for
-              the better.
+              We&apos;re a group of Cornell students dedicated to reducing risks
+              from advanced artificial intelligence and shaping its development
+              for the better.
             </p>
 
             <p className="text-xl mb-4">
