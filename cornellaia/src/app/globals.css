@@ -10,14 +10,6 @@
   --cornell-red: #b51a1b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --cornell-red: #b51a1b;
-  }
-}
-
 @layer base {
   h1,
   h2,

@@ -138,7 +138,6 @@ export default function Home() {
                   <h3 className="font-semibold mb-2 text-sm">
                     ProgressGym: Alignment with a Millennium of Moral Progress
                   </h3>
-                  <p className="text-gray-600 mb-2 text-sm">Jasmine Li</p>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                       NeurIPS 2024
@@ -161,7 +160,6 @@ export default function Home() {
                     Scaling laws for contrastive activation addition with
                     refusal mechanisms and Llama 2 models
                   </h3>
-                  <p className="text-gray-600 mb-2 text-sm">Jasmine Li</p>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                       SPAR S24
@@ -173,20 +171,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Navigation arrows */}
-            <button
-              className="absolute left-0 top-1/3 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg"
-              aria-label="Previous slide"
-            >
-              ←
-            </button>
-            <button
-              className="absolute right-0 top-1/3 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg"
-              aria-label="Next slide"
-            >
-              →
-            </button>
           </div>
         </div>
       </section>

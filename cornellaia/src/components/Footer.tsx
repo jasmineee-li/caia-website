@@ -20,9 +20,9 @@ export default function Footer() {
               Instagram
             </a> */}
           </div>
-          <div className="text-sm text-gray-600">
+          {/* <div className="text-sm text-gray-600">
             <p>Registered student organization of Cornell University.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
