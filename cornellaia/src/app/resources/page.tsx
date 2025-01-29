@@ -80,7 +80,7 @@ export default function Resources() {
                       href="https://www.cold-takes.com/why-would-ai-aim-to-defeat-humanity/"
                       className="text-blue-600 hover:underline"
                     >
-                      Why Would AI "Aim" to Defeat Humanity?
+                      Why Would AI &quot;Aim&quot; to Defeat Humanity?
                     </a>
                   </li>
                   <li>
@@ -146,7 +146,8 @@ export default function Resources() {
                   href="https://www.nytimes.com/2023/05/30/technology/ai-threat-warning.html"
                   className="text-blue-600 hover:underline"
                 >
-                  A.I. Poses 'Risk of Extinction,' Industry Experts Warn
+                  A.I. Poses &apos;Risk of Extinction,&apos; Industry Experts
+                  Warn
                 </a>{" "}
                 (Kevin Roose, New York Times)
               </li>
@@ -155,8 +156,8 @@ export default function Resources() {
                   href="https://www.technologyreview.com/2023/05/02/1072528/geoffrey-hinton-google-why-scared-ai/"
                   className="text-blue-600 hover:underline"
                 >
-                  Geoffrey Hinton tells us why he's now scared of the tech he
-                  helped build
+                  Geoffrey Hinton tells us why he&apos;s now scared of the tech
+                  he helped build
                 </a>{" "}
                 (Will Douglas Heaven, MIT Technology Review)
               </li>
@@ -212,7 +213,7 @@ export default function Resources() {
                   href="https://haist.ai/tech-papers#:~:text=Articles%20in%20Anthropic%E2%80%99s%20Transformer%20Circuits%20Thread"
                   className="text-blue-600 hover:underline"
                 >
-                  Articles in Anthropic's Transformer Circuits Thread
+                  Articles in Anthropic&apos;s Transformer Circuits Thread
                 </a>{" "}
                 (a few great papers are here)
               </li>
@@ -226,7 +227,7 @@ export default function Resources() {
                 by Wang et al
               </li>
               <li>
-                We recommend Neel Nanda's materials for getting started in
+                We recommend Neel Nanda&apos;s materials for getting started in
                 Mechanistic Interpretability, including:
                 <ul className="ml-4 space-y-1">
                   <li>
@@ -272,12 +273,12 @@ export default function Resources() {
             <p>
               Because language models are trained to predict the next token in
               naturally occurring text, they often reproduce common human errors
-              and misconceptions, even when they "know better" in some sense.
-              More worryingly, when models are trained to generate text that's
-              rated highly by humans, they may learn to output false statements
-              that human evaluators can't detect. One attempt to circumvent this
-              issue is by directly eliciting latent knowledge inside the
-              activations of a language model.
+              and misconceptions, even when they &quot;know better&quot; in some
+              sense. More worryingly, when models are trained to generate text
+              that's rated highly by humans, they may learn to output false
+              statements that human evaluators can&apos;t detect. One attempt to
+              circumvent this issue is by directly eliciting latent knowledge
+              inside the activations of a language model.
             </p>
             <p>A few good papers:</p>
             <ul className="ml-4 space-y-2">
@@ -300,15 +301,15 @@ export default function Resources() {
               AI Evaluations and Standards
             </h3>
             <p>
-              AI evaluations and standards (or "evals") are processes that check
-              or audit AI models. Evaluations can focus on how powerful models
-              are ("capability evaluations") and on whether models are
-              exhibiting dangerous behaviors or are misaligned ("alignment
-              evaluations" or "safety evaluations"). Working on AI evaluations
-              might involve developing standards and enforcing compliance with
-              the standards. Evaluations can help labs determine whether it's
-              safe to deploy new models, and can help with AI governance and
-              regulation.
+              AI evaluations and standards (or &quot;evals&quot;) are processes
+              that check or audit AI models. Evaluations can focus on how
+              powerful models are (&quot;capability evaluations&quot;) and on
+              whether models are exhibiting dangerous behaviors or are
+              misaligned (&quot;alignment evaluations&quot; or &quot;safety
+              evaluations&quot;). Working on AI evaluations might involve
+              developing standards and enforcing compliance with the standards.
+              Evaluations can help labs determine whether it's safe to deploy
+              new models, and can help with AI governance and regulation.
             </p>
             <p>A couple good papers:</p>
             <ul className="ml-4 space-y-2">
@@ -340,9 +341,10 @@ export default function Resources() {
               Emergent Abilities
             </h3>
             <p>
-              It sometimes seems that large language models' abilities emerge
-              suddenly and unpredictably. If we don't know the capabilities of
-              our models, we don't know how dangerous they may be.
+              It sometimes seems that large language models&apos; abilities
+              emerge suddenly and unpredictably. If we don&apos;t know the
+              capabilities of our models, we don&apos;t know how dangerous they
+              may be.
             </p>
             <p>Two papers with contrasting perspectives:</p>
             <ul className="ml-4 space-y-2">
@@ -422,10 +424,10 @@ export default function Resources() {
                   The Role of Cooperation in Responsible AI Development
                 </strong>{" "}
                 (Askell et al., 2019). This paper outlines one of the central
-                issues in the governance of advanced AI: the risk of a "race to
-                the bottom" where, because AI developers are unable to
-                coordinate with each other, they are each incentivized to
-                quickly develop more capable models while cutting corners on
+                issues in the governance of advanced AI: the risk of a
+                &quot;race to the bottom&quot; where, because AI developers are
+                unable to coordinate with each other, they are each incentivized
+                to quickly develop more capable models while cutting corners on
                 safety.
               </li>
               <li>
@@ -508,7 +510,7 @@ export default function Resources() {
                 similar challenges to the effective governance of advanced AI.
                 Here, Mauricio Baker discusses in depth the lessons the AI
                 governance community can draw from the challenges of verifying
-                states' claims about their nuclear development.
+                states&apos; claims about their nuclear development.
               </li>
               <li>
                 <strong>
@@ -534,11 +536,12 @@ export default function Resources() {
             <ul className="ml-4 space-y-2">
               <li>
                 <strong>How does the offense-defense balance scale?</strong>{" "}
-                (Garfinkel & Dafoe, 2019). The "offense-defense balance" refers
-                to the relative ease of attacking another power and defending
-                against an attack. Some researchers worry that advanced AI might
-                tilt this balance in favor of offense, leading to a more
-                conflict-prone world. This paper discusses that possibility.
+                (Garfinkel & Dafoe, 2019). The &quot;offense-defense
+                balance&quot; refers to the relative ease of attacking another
+                power and defending against an attack. Some researchers worry
+                that advanced AI might tilt this balance in favor of offense,
+                leading to a more conflict-prone world. This paper discusses
+                that possibility.
               </li>
               <li>
                 <strong>
@@ -572,7 +575,7 @@ export default function Resources() {
                 (Zwetsloot & Dafoe, 2019). This blog post develops a rough
                 taxonomy for classifying different risks associated with AI
                 development. Most significantly, it develops the notion of
-                "structural risk."
+                &quot;structural risk.&quot;
               </li>
               <li>
                 <strong>
@@ -589,11 +592,12 @@ export default function Resources() {
               </li>
               <li>
                 <strong>Algorithmic Black Swans</strong> (Kolt, 2023). This
-                article introduces the concept of an "algorithmic black swan" —
-                a catastrophic tail outcome caused by AI development. Noam Kolt
-                argues that existing institutions and efforts to regulate AI
-                systematically neglect these outcomes, and argues that future
-                efforts should actively take them into account.
+                article introduces the concept of an &quot;algorithmic black
+                swan&quot; — a catastrophic tail outcome caused by AI
+                development. Noam Kolt argues that existing institutions and
+                efforts to regulate AI systematically neglect these outcomes,
+                and argues that future efforts should actively take them into
+                account.
               </li>
             </ul>
           </>
