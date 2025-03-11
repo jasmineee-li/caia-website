@@ -18,11 +18,11 @@ export default function Team() {
                 name="Jasmine Li"
                 role="Lead"
               />
-              <ProfileCard
+              {/* <ProfileCard
                 imageSrc="/TEAM_anurag_koyyada.jpeg"
-                name="Anurag Koyyada"
-                role="Co-Lead"
-              />
+                name="Leonhard Piff"
+                role="Fellowship Lead"
+              /> */}
               <ProfileCard
                 imageSrc="/TEAM_jaime_fernandez.jpeg"
                 name="Jaime Fernandez"
