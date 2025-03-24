@@ -21,7 +21,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {/* Notification Bar */}
-        <div className="bg-cornell-red text-white text-center py-2">
+        {/* <div className="bg-cornell-red text-white text-center py-2">
           <span>
             Applications are now open for the Intro to AI Safety Fellowship!{" "}
             <a
@@ -34,7 +34,7 @@ export default function RootLayout({
             </a>{" "}
             by Sunday, February 9, 11:59pm EST.
           </span>
-        </div>
+        </div> */}
 
         <Header />
         {children}

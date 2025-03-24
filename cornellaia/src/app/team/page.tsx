@@ -12,21 +12,27 @@ export default function Team() {
           {/* Executive Board Section */}
           <div className="mb-16">
             <h2 className="text-2xl font-semibold mb-8">Executive Board</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <ProfileCard
-                imageSrc="/TEAM_jasmine_li.jpg"
+                imageSrc="/TEAM_jasmine_li.png"
                 name="Jasmine Li"
-                role="Lead"
+                role="Full Team Lead"
               />
-              {/* <ProfileCard
-                imageSrc="/TEAM_anurag_koyyada.jpeg"
-                name="Leonhard Piff"
-                role="Fellowship Lead"
-              /> */}
+
               <ProfileCard
                 imageSrc="/TEAM_jaime_fernandez.jpeg"
                 name="Jaime Fernandez"
                 role="Co-Lead"
+              />
+              <ProfileCard
+                imageSrc="/TEAM_leo_piff.jpg"
+                name="Leonhard Piff"
+                role="Intro Fellowship Lead"
+              />
+              <ProfileCard
+                imageSrc="/TEAM_ashton_chew.jpeg"
+                name="Ashton Chew"
+                role="Outreach Lead"
               />
             </div>
           </div>
