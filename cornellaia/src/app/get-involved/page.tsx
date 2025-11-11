@@ -1,7 +1,7 @@
 export default function GetInvolved() {
   return (
     <main>
-      <section className="py-16 container mx-auto px-4">
+      <section className="py-16 container mx-auto px-4 md:px-12">
         <div className="max-w-4xl">
           <h1 className="text-4xl font-bold text-cornell-red mb-8">
             Introduction to AI Alignment Fellowship
@@ -16,34 +16,35 @@ export default function GetInvolved() {
             include neural network interpretability,
             <span className="text-cornell-red">
               <sup>
-                <a
-                  href="https://distill.pub/2020/circuits/zoom-in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  1
-                </a>
+          <a
+            href="https://distill.pub/2020/circuits/zoom-in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            1
+          </a>
               </sup>
             </span>{" "}
             learning from human feedback,
             <span className="text-cornell-red">
               <sup>
-                <a
-                  href="https://arxiv.org/abs/2009.01325"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  2
-                </a>
+          <a
+            href="https://arxiv.org/abs/2009.01325"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            2
+          </a>
               </sup>
             </span>{" "}
             US AI policy, and potential catastrophic risks from advanced AI
             systems. The program is open to both undergraduate and graduate
             students. Students with machine learning experience are especially
-            encouraged to apply, but no prior experience is required.
+            encouraged to apply, but no prior experience is required. The fellowship meets weekly in small groups, with dinner provided
+            and no additional work outside of meetings.
           </p>
 
-          <p className="text-xl mb-8">
+          {/* <p className="text-xl mb-8">
             The fellowship meets weekly in small groups, with dinner provided
             and no additional work outside of meetings. Our curriculum is
             adapted from OpenAI&apos;s{" "}
@@ -55,7 +56,7 @@ export default function GetInvolved() {
             >
               AI Safety Fundamentals
             </a>{" "}
-            course. See the Spring 2025 syllabus{" "}
+            course. See the Fall 2025 syllabus{" "}
             <a
               href="https://docs.google.com/document/d/1OuJmW-3W5qZfCH9PtcPNkskU_ySpQIb_oF-8lhmZqLc/edit?tab=t.0#heading=h.c6ivfpz8bbwa"
               className="text-cornell-red hover:underline"
@@ -65,13 +66,29 @@ export default function GetInvolved() {
               here
             </a>
             .
-          </p>
+          </p> */}
+
+          <div className="text-xl mb-6">
+            <p>
+              <span className="font-semibold">Note:</span> Due to time constraints in the Fall 2025 semester, we will be running a one-day accelerated workshop instead of the full fellowship. You can view the curriculum{" "}
+              <a
+          href="https://docs.google.com/document/d/1WnHIJ8oLKoe6nEM6q2gbkdhsz1PQHetuWnYZsyZbuwc/edit?tab=t.0"
+          className="text-cornell-red hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+              >
+          here.
+              </a>
+            </p>
+          </div>
 
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfa6OQUipQmUAjODi1I2ygYAeCk1sp112mjUGRtI3MnUdFIgw/viewform?fbzx=-2352693528615737036"
+            href="https://luma.com/noc7jeyk"
             className="inline-block bg-cornell-red text-bold text-white px-4 py-3 rounded-lg bg-opacity-90 transition mb-10"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Apply here by February 9, 2025, 11:59pm EST.
+            Sign up for the Fall 2025 Workshop
           </a>
         </div>
 
@@ -88,7 +105,7 @@ export default function GetInvolved() {
           </p>
 
           <a
-            href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-2xsts4ngh-vCpBuKQFj4IgtHN0dqPE7w"
+            href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-3h031d0zn-Ch9ANyyhXTpaDdyKYBuo8w"
             className="inline-block bg-cornell-red text-bold text-white px-4 py-3 rounded-lg bg-opacity-90 transition mb-10"
             target="_blank"
             rel="noopener noreferrer"

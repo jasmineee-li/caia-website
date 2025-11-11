@@ -3,14 +3,14 @@ import ProfileCard from "@/components/ProfileCard";
 export default function Team() {
   return (
     <main>
-      <section className="py-16 container mx-auto px-4">
-        <div className="max-w-4xl">
+      <section className="py-16 container mx-auto px-4 md:px-12">
+        <div className="width-full">
           <h1 className="text-4xl font-bold text-cornell-red mb-12">
             Our Team
           </h1>
 
           {/* Executive Board Section */}
-          <div className="mb-16">
+          <div className="mb-16 flex flex-col items-center">
             <h2 className="text-2xl font-semibold mb-8">Executive Board</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <ProfileCard
@@ -38,7 +38,7 @@ export default function Team() {
           </div>
 
           {/* Advisors Section */}
-          <div>
+          <div className="flex flex-col items-center">
             <h2 className="text-2xl font-semibold mb-8">Advisors</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ProfileCard
