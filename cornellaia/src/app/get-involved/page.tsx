@@ -105,7 +105,7 @@ export default function GetInvolved() {
           </p>
 
           <a
-            href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-3h031d0zn-Ch9ANyyhXTpaDdyKYBuo8w"
+            href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w"
             className="inline-block bg-cornell-red text-bold text-white px-4 py-3 rounded-lg bg-opacity-90 transition mb-10"
             target="_blank"
             rel="noopener noreferrer"

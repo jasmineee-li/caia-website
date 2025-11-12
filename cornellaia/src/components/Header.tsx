@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="border-b">
-      <div className="container mx-auto px-4 py-8 flex justify-between items-center max-w-6xl">
+      <div className="flex justify-between items-center py-16 container mx-auto px-4 md:px-12">
         <Link href="/" className="text-cornell-red flex-shrink-0">
           <Image
             src="/serif-logo.svg"

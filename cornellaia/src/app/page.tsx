@@ -18,16 +18,27 @@ export default function Home() {
                 AI will change the world as we know it.
                 </h1>
 
-              <p className="text-2xl italic mb-8">
+              <p className="text-2xl italic mb-4">
                 We conduct research and outreach to advance the development of
                 safe AI.
               </p>
-              <a
-                href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
-                className="text-2xl text-gray-600 hover:underline mb-4 inline-block"
-              >
-                Join our mailing list →
-              </a>
+              <p className="text-2xl text-gray-600 mb-4 underline">
+                Join our{" "}
+                <a
+                  href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
+                  className="hover:text-cornell-red"
+                >
+                  mailing list
+                </a>
+                {" / "}
+                <a
+                  href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w"
+                  className="hover:text-cornell-red"
+                >
+                  Slack
+                </a>
+
+              </p>
               {/* <div className="mb-12 mt-8">
                 <p className="text-xl mb-4">
                   Apply to our Intro to ML Safety Fellowship, by [Date] here:
@@ -53,9 +64,9 @@ export default function Home() {
       </main>
 
       <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-12">
           <div className="max-w-6xl mx-auto">
-            <div className="max-w-[800px]">
+            <div className="">
               <p className="text-xl mb-4">
                 Managing risks from advanced artificial intelligence is one of
                 the most important problems of our time.
@@ -159,7 +170,7 @@ export default function Home() {
                 workshops and socials.
               </p>
 
-              <p className="text-xl mb-8">
+              <p className="text-xl">
                 Interested in helping shape the future of AI safety? Express
                 interest in our programs by{" "}
                 <a

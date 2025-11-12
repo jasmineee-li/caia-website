@@ -1,7 +1,7 @@
 interface ProfileCardProps {
   imageSrc: string;
   name: string;
-  role: string;
+  role?: string;
   altText?: string;
 }
 
@@ -21,7 +21,7 @@ export default function ProfileCard({
         />
       </div>
       <h3 className="text-lg font-semibold mb-1">{name}</h3>
-      <p className="text-gray-600 text-sm">{role}</p>
+      {role && <p className="text-gray-600 text-sm">{role}</p>}
     </div>
   );
 }
