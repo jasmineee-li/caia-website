@@ -19,7 +19,7 @@ export default function Team() {
               />
               <ProfileCard
                 imageSrc="/TEAM_jonathn_chang.png"
-                name="Jonathan Chang"
+                name="Jonathn Chang"
               />
               <ProfileCard
                 imageSrc="/TEAM_suvadip_sana.png"
