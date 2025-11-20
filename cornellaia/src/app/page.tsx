@@ -1,4 +1,5 @@
 import { Young_Serif } from "next/font/google";
+import ArrowIcon from "@/components/ArrowIcon";
 
 const youngSerif = Young_Serif({
   weight: "400",
@@ -12,33 +13,40 @@ export default function Home() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-6xl flex flex-col items-center gap-8 mx-auto">
             <div>
-                <h1
+              <h1
                 className={`text-6xl font-bold text-cornell-red mb-8 tracking-tighter ${youngSerif.className}`}
-                >
+              >
                 AI will change the world as we know it.
-                </h1>
+              </h1>
 
               <p className="text-2xl italic mb-4">
                 We conduct research and outreach to advance the development of
                 safe AI.
               </p>
-              <p className="text-2xl text-gray-600 mb-4 underline">
-                Join our{" "}
-                <a
+                <ul className="flex flex-row space-x-8 text-xl text-gray-600">
+                <li>
+                  <a
+                  className="flex items-center transition-all hover:text-cornell-red"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
-                  className="hover:text-cornell-red"
-                >
-                  mailing list
-                </a>
-                {" / "}
-                <a
+                  >
+                  <ArrowIcon />
+                  <p className="ml-2">Join our mailing list</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                  className="flex items-center transition-all hover:text-cornell-red"
+                  rel="noopener noreferrer"
+                  target="_blank"
                   href="https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w"
-                  className="hover:text-cornell-red"
-                >
-                  Slack
-                </a>
-
-              </p>
+                  >
+                  <ArrowIcon />
+                  <p className="ml-2">Join our Slack</p>
+                  </a>
+                </li>
+                </ul>
               {/* <div className="mb-12 mt-8">
                 <p className="text-xl mb-4">
                   Apply to our Intro to ML Safety Fellowship, by [Date] here:
@@ -217,117 +225,117 @@ export default function Home() {
           <h2 className="text-3xl mb-12">Student Research</h2>
 
           <div className="relative">
-        {/* Use grid for responsive layout: 2 cols on small, 4 on md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <a
-          href="https://deceptionsurvey.com/paper.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block hover:opacity-80 transition"
-            >
-          <div className="aspect-[3/4] relative mb-4">
-            <img
-              src="/paper-deceptionsurvey.png"
-              alt="Paper preview"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <h3 className="font-semibold mb-2 text-sm">
-            Shadows of Intelligence: A Comprehensive Survey of AI
-            Deception
-          </h3>
-          <div className="flex gap-2 flex-wrap">
-            <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-              Survey
-            </span>
-          </div>
-            </a>
-          </div>
+            {/* Use grid for responsive layout: 2 cols on small, 4 on md+ */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <a
+                  href="https://deceptionsurvey.com/paper.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-80 transition"
+                >
+                  <div className="aspect-[3/4] relative mb-4">
+                    <img
+                      src="/paper-deceptionsurvey.png"
+                      alt="Paper preview"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm">
+                    Shadows of Intelligence: A Comprehensive Survey of AI
+                    Deception
+                  </h3>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
+                      Survey
+                    </span>
+                  </div>
+                </a>
+              </div>
 
-          <div>
-            <a
-          href="https://arxiv.org/pdf/2509.01938"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block hover:opacity-80 transition"
-            >
-          <div className="aspect-[3/4] relative mb-4">
-            <img
-              src="/paper-eigenbench.png"
-              alt="Paper preview"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <h3 className="font-semibold mb-2 text-sm">
-            EigenBench: A Comparative Behavior Measure of Value
-            Alignment
-          </h3>
-          <div className="flex gap-2 flex-wrap">
-            <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-              Benchmarks
-            </span>
-          </div>
-            </a>
-          </div>
+              <div>
+                <a
+                  href="https://arxiv.org/pdf/2509.01938"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-80 transition"
+                >
+                  <div className="aspect-[3/4] relative mb-4">
+                    <img
+                      src="/paper-eigenbench.png"
+                      alt="Paper preview"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm">
+                    EigenBench: A Comparative Behavior Measure of Value
+                    Alignment
+                  </h3>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
+                      Benchmarks
+                    </span>
+                  </div>
+                </a>
+              </div>
 
-          <div>
-            <a
-          href="https://arxiv.org/abs/2406.20087"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block hover:opacity-80 transition"
-            >
-          <div className="aspect-[3/4] relative mb-4">
-            <img
-              src="/paper-progressgym.png"
-              alt="Paper preview"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <h3 className="font-semibold mb-2 text-sm">
-            ProgressGym: Alignment with a Millennium of Moral Progress
-          </h3>
-          <div className="flex gap-2 flex-wrap">
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-              NeurIPS 2024
-            </span>
-            <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-              Benchmarks
-            </span>
-          </div>
-            </a>
-          </div>
+              <div>
+                <a
+                  href="https://arxiv.org/abs/2406.20087"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-80 transition"
+                >
+                  <div className="aspect-[3/4] relative mb-4">
+                    <img
+                      src="/paper-progressgym.png"
+                      alt="Paper preview"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm">
+                    ProgressGym: Alignment with a Millennium of Moral Progress
+                  </h3>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                      NeurIPS 2024
+                    </span>
+                    <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
+                      Benchmarks
+                    </span>
+                  </div>
+                </a>
+              </div>
 
-          <div>
-            <a
-          href="https://drive.google.com/file/d/1-uK8lsKApXFikfCdQIixFNwu0uWL1gSJ/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block hover:opacity-80 transition"
-            >
-          <div className="aspect-[3/4] relative mb-4">
-            <img
-              src="/paper-scalinglaws.png"
-              alt="Paper preview"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <h3 className="font-semibold mb-2 text-sm">
-            Scaling laws for contrastive activation addition with
-            refusal mechanisms and Llama 2 models
-          </h3>
-          <div className="flex gap-2 flex-wrap">
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-              SPAR S24
-            </span>
-            <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-              Model Steering
-            </span>
-          </div>
-            </a>
-          </div>
-        </div>
+              <div>
+                <a
+                  href="https://drive.google.com/file/d/1-uK8lsKApXFikfCdQIixFNwu0uWL1gSJ/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-80 transition"
+                >
+                  <div className="aspect-[3/4] relative mb-4">
+                    <img
+                      src="/paper-scalinglaws.png"
+                      alt="Paper preview"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm">
+                    Scaling laws for contrastive activation addition with
+                    refusal mechanisms and Llama 2 models
+                  </h3>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                      SPAR S24
+                    </span>
+                    <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
+                      Model Steering
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

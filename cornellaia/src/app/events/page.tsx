@@ -33,15 +33,17 @@ export default function GetInvolved() {
             {/* <div className="bg-gray-50 rounded-lg border border-slate-200 px-4 md:px-8 py-6"> */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {[
-                "evt-PLy4Dev5zraVoAo",
-                "evt-kObcYzfFqgVPvTN",
-                "evt-v9Juq969L7tifIN",
-                "evt-SuD0alEFo8h3ea1",
-                "evt-UmCIEAb6WnAeZE8",
+                "gZ1HLC8ZVDneIqZ",
+                "IXGr5rIHSYR4urE",
+                "PLy4Dev5zraVoAo",
+                "kObcYzfFqgVPvTN",
+                "v9Juq969L7tifIN",
+                "SuD0alEFo8h3ea1",
+                "UmCIEAb6WnAeZE8",
               ].map(eventId => (
                 <iframe
                 key={eventId}
-                src={`https://luma.com/embed/event/${eventId}/simple`}
+                src={`https://luma.com/embed/event/evt-${eventId}/simple`}
                 className="rounded-xl shadow-sm w-full h-[500px] lg:h-[450px]"
                 style={{ border: "1px solid #cfd8e380" }}
                 allow="fullscreen; payment"

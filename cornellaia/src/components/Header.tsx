@@ -8,8 +8,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="border-b">
-      <div className="flex justify-between items-center py-16 container mx-auto px-4 md:px-12">
+    <header className="border-b sticky top-0 left-0 w-full bg-white z-50">
+      <div className="flex justify-between items-center py-6 container mx-auto px-4 md:px-12">
         <Link href="/" className="text-cornell-red flex-shrink-0">
           <Image
             src="/serif-logo.svg"

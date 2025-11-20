@@ -68,7 +68,7 @@ export default function GetInvolved() {
             .
           </p> */}
 
-          <div className="text-xl mb-6">
+          {/* <div className="text-xl mb-6">
             <p>
               <span className="font-semibold">Note:</span> Due to time constraints in the Fall 2025 semester, we will be running a one-day accelerated workshop instead of the full fellowship. You can view the curriculum{" "}
               <a
@@ -80,15 +80,15 @@ export default function GetInvolved() {
           here.
               </a>
             </p>
-          </div>
+          </div> */}
 
           <a
-            href="https://luma.com/noc7jeyk"
+            href="hhttps://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
             className="inline-block bg-cornell-red text-bold text-white px-4 py-3 rounded-lg bg-opacity-90 transition mb-10"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Sign up for the Fall 2025 Workshop
+            Join our mailing list to hear about the next fellowship!
           </a>
         </div>
 
