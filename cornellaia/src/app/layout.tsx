@@ -9,6 +9,11 @@ const inter = Inter({
   weight: ["300"], // Light weight
 });
 
+export const metadata = {
+  title: "Cornell AI Alignment",
+  description: "…",
+};
+
 export default function RootLayout({
   children,
 }: {
