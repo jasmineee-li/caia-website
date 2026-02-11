@@ -73,16 +73,32 @@ function toAccordionItem(section: ResourceSection): AccordionItem {
 }
 
 export default function ResourcesPage() {
-  const accordionItems = RESOURCE_SECTIONS.map(toAccordionItem);
+  const sectionOrder: Record<string, number> = {
+    "non-technical": 1,
+    newsletters: 2,
+    fellowships: 3,
+    technical: 4,
+    policy: 5,
+  };
+
+  const orderedSections = [...RESOURCE_SECTIONS].sort(
+    (a, b) => (sectionOrder[a.id] ?? 99) - (sectionOrder[b.id] ?? 99),
+  );
+
+  const accordionItems = orderedSections.map(toAccordionItem);
+  const sectionSummary = orderedSections.map((section) => section.title).join(" • ");
 
   return (
     <main>
       <Section
         title="Learning resources for AI safety"
-        subtitle="Curated material spanning non-technical introductions, technical work, and governance policy."
+        subtitle="Curated material spanning introductions, technical papers, policy work, newsletters, and fellowships."
       >
         <MotionReveal>
-          <Accordion items={accordionItems} defaultOpenIds={["non-technical"]} />
+          <p className="mb-5 text-sm leading-7 text-slate-600 sm:text-base">{sectionSummary}</p>
+        </MotionReveal>
+        <MotionReveal>
+          <Accordion items={accordionItems} defaultOpenIds={[]} />
         </MotionReveal>
       </Section>
     </main>
