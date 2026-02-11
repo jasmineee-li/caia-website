@@ -115,7 +115,7 @@ export default function Header() {
         id="mobile-site-nav"
         aria-label="Mobile navigation"
         className={cn(
-          "fixed inset-y-0 right-0 z-50 flex h-full w-[90vw] max-w-sm flex-col bg-white/95 px-5 pb-6 pt-5 shadow-2xl backdrop-blur-sm transition-transform md:hidden",
+          "fixed inset-y-0 right-0 z-50 flex h-full w-[76vw] max-w-[18rem] flex-col bg-white/95 px-4 pb-6 pt-5 shadow-2xl backdrop-blur-sm transition-transform md:hidden",
           menuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
@@ -133,7 +133,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="flex-1 space-y-2 overflow-y-auto pr-1">
+        <div className="flex-1 space-y-2 overflow-y-auto">
           {NAV_ITEMS.map((item) => {
             const active = isRouteActive(pathname, item.href);
 
@@ -142,7 +142,7 @@ export default function Header() {
                 key={`mobile-${item.href}`}
                 href={item.href}
                 className={cn(
-                  "focus-ring group flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors",
+                  "focus-ring flex items-center rounded-xl px-3 py-2.5 text-base font-medium transition-colors",
                   active
                     ? "bg-red-50 text-brand-red"
                     : "bg-white/80 text-slate-700 hover:bg-slate-50",
@@ -150,15 +150,6 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
               >
                 <span>{item.label}</span>
-                <span
-                  className={cn(
-                    "text-sm transition-transform",
-                    active ? "text-brand-red" : "text-slate-400 group-hover:translate-x-0.5 group-hover:text-slate-600",
-                  )}
-                  aria-hidden="true"
-                >
-                  {">"}
-                </span>
               </Link>
             );
           })}
