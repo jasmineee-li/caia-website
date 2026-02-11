@@ -1,0 +1,20 @@
+<svg width="460" height="460" viewBox="0 0 460 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative orbital grid">
+  <rect width="460" height="460" rx="42" fill="url(#bg)"/>
+  <g opacity="0.45">
+    <circle cx="230" cy="230" r="164" stroke="#B31B1B" stroke-width="1.2"/>
+    <circle cx="230" cy="230" r="122" stroke="#0EA5A3" stroke-width="1.2"/>
+    <circle cx="230" cy="230" r="82" stroke="#1E293B" stroke-width="1.2"/>
+    <circle cx="230" cy="230" r="42" stroke="#0F172A" stroke-width="1.2"/>
+  </g>
+  <path d="M76 303C144 261 198 192 250 139C286 102 322 70 383 58" stroke="#0EA5A3" stroke-width="1.4"/>
+  <path d="M73 158C154 166 240 226 292 281C322 312 349 343 390 386" stroke="#B31B1B" stroke-width="1.4"/>
+  <circle cx="145" cy="154" r="7" fill="#B31B1B"/>
+  <circle cx="318" cy="289" r="9" fill="#0EA5A3"/>
+  <circle cx="245" cy="133" r="6" fill="#1E293B"/>
+  <defs>
+    <linearGradient id="bg" x1="45" y1="33" x2="418" y2="431" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+  </defs>
+</svg>

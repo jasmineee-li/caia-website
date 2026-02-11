@@ -1,63 +1,45 @@
+import MotionReveal from "@/components/ui/MotionReveal";
+import Section from "@/components/ui/Section";
 import ProfileCard from "@/components/ProfileCard";
+import { TEAM_GROUPS } from "@/content/team";
 
-export default function Team() {
+export default function TeamPage() {
   return (
     <main>
-      <section className="py-16 container mx-auto px-4 md:px-12">
-        <div className="width-full">
-          <h1 className="text-4xl font-bold text-cornell-red mb-12">
-            Our Team
-          </h1>
-
-          {/* Core Team Section */}
-          <div className="mb-16 flex flex-col items-center">
-            <h2 className="text-2xl font-semibold mb-8">Core Team</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
-              <ProfileCard
-                imageSrc="/TEAM_jasmine_li.png"
-                name="Jasmine Li"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_jonathn_chang.png"
-                name="Jonathn Chang"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_suvadip_sana.png"
-                name="Suvadip Sana"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_jinzhou_wu.png"
-                name="Jinzhou Wu"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_vincent_cheng.png"
-                name="Vincent Cheng"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_leo_piff.jpg"
-                name="Leonhard Piff"
-              />
-            </div>
-          </div>
-
-          {/* Advisors Section */}
-          <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-semibold mb-8">Advisors</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-              <ProfileCard
-                imageSrc="/TEAM_lionel_levine.jpeg"
-                name="Lionel Levine"
-                role="Faculty Advisor"
-              />
-              <ProfileCard
-                imageSrc="/TEAM_tzu.webp"
-                name="Tzu Kit Chan"
-                role="Affiliate Advisor"
-              />
-            </div>
-          </div>
+      <Section
+        title="Our Team"
+        subtitle="Students and advisors working to improve the safety and governance of advanced AI systems."
+      >
+        <div className="space-y-12">
+          {TEAM_GROUPS.map((group, groupIndex) => (
+            <MotionReveal key={group.title} delayClass={groupIndex > 0 ? "motion-delay-1" : undefined}>
+              <div>
+                <h2 className="mb-6 text-2xl font-semibold text-slate-900">{group.title}</h2>
+                <div
+                  className={
+                    group.title === "Core Team"
+                      ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                      : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+                  }
+                >
+                  {group.members.map((member) => (
+                    <ProfileCard
+                      key={`${group.title}-${member.name}`}
+                      imageSrc={member.imageSrc}
+                      name={member.name}
+                      role={member.role}
+                      altText={member.altText}
+                      websiteUrl={member.websiteUrl}
+                      scholarUrl={member.scholarUrl}
+                      linkedinUrl={member.linkedinUrl}
+                    />
+                  ))}
+                </div>
+              </div>
+            </MotionReveal>
+          ))}
         </div>
-      </section>
+      </Section>
     </main>
   );
 }

@@ -1,61 +1,60 @@
-export default function GetInvolved() {
+import Button from "@/components/ui/Button";
+import MotionReveal from "@/components/ui/MotionReveal";
+import Section from "@/components/ui/Section";
+import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENT_IDS } from "@/content/events";
+
+export default function EventsPage() {
   return (
     <main>
-      <section className="py-16 container mx-auto px-4 md:px-12">
-        <div className="w-full mb-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
-            <h1 className="text-4xl font-bold text-cornell-red">
-              Upcoming Events
-            </h1>
-            <a
-              href="https://luma.com/cornellaia"
-              className="bg-cornell-red text-bold text-white px-4 py-3 rounded-lg bg-opacity-90 transition w-auto self-start"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Subscribe to our Events Calendar
-            </a>
+      <Section
+        title="Talks, workshops, and socials"
+        subtitle="Discover what is coming up and browse highlights from previous CAIA events."
+      >
+        <MotionReveal>
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+            <p className="text-sm text-slate-600 sm:text-base">
+              Subscribe to receive updates in your calendar.
+            </p>
+            <Button href={EVENTS_CALENDAR_URL} external variant="secondary">
+              Subscribe to Events Calendar
+            </Button>
           </div>
-          <div className="">
+
+          <div className="overflow-hidden">
             <iframe
-              src="https://luma.com/embed/calendar/cal-NrH7EP037bvvQtm/events?lt=light"
-              className="w-full rounded-lg border min-h-[500px]"
-              style={{ border: "1px solid #bfcbda88" }}
+              src={EVENTS_EMBED_URL}
+              className="h-[560px] w-full rounded-xl border border-slate-200"
+              style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
               allowFullScreen
-              aria-hidden="false"
-              tabIndex={0}
-            ></iframe>
+              title="Upcoming CAIA events"
+            />
           </div>
-          <div className="mt-12">
-            <h1 className="text-4xl font-bold text-cornell-red mb-8">
-              Past Events
-            </h1>
-            {/* <div className="bg-gray-50 rounded-lg border border-slate-200 px-4 md:px-8 py-6"> */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {[
-                "gZ1HLC8ZVDneIqZ",
-                "IXGr5rIHSYR4urE",
-                "PLy4Dev5zraVoAo",
-                "kObcYzfFqgVPvTN",
-                "v9Juq969L7tifIN",
-                "SuD0alEFo8h3ea1",
-                "UmCIEAb6WnAeZE8",
-              ].map(eventId => (
+        </MotionReveal>
+      </Section>
+
+      <Section
+        title="Past Events"
+        subtitle="Selected event pages from previous semesters."
+      >
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {PAST_EVENT_IDS.map((eventId, index) => (
+            <MotionReveal
+              key={eventId}
+              delayClass={index === 1 ? "motion-delay-1" : index >= 2 ? "motion-delay-2" : undefined}
+            >
+              <div className="overflow-hidden p-2">
                 <iframe
-                key={eventId}
-                src={`https://luma.com/embed/event/evt-${eventId}/simple`}
-                className="rounded-xl shadow-sm w-full h-[500px] lg:h-[450px]"
-                style={{ border: "1px solid #cfd8e380" }}
-                allow="fullscreen; payment"
-                aria-hidden="false"
-                tabIndex={0}
-                ></iframe>
-              ))}
+                  src={`https://luma.com/embed/event/evt-${eventId}/simple`}
+                  className="h-[450px] w-full rounded-lg border border-slate-200"
+                  style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
+                  allow="fullscreen; payment"
+                  title={`Past event ${eventId}`}
+                />
               </div>
-            {/* </div> */}
-          </div>
+            </MotionReveal>
+          ))}
         </div>
-      </section>
+      </Section>
     </main>
   );
 }

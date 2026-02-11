@@ -1,0 +1,30 @@
+:root {
+  --color-paper-50: #f8faff;
+  --color-paper-100: #eef3ff;
+  --color-paper-200: #dce6ff;
+  --color-ink-900: #0f172a;
+  --color-ink-700: #334155;
+  --color-ink-500: #64748b;
+  --color-brand-red: #b31b1b;
+  --color-brand-red-strong: #8f1212;
+  --color-brand-cyan: #0ea5a3;
+  --color-brand-navy: #1e293b;
+  --color-accent-gold: #b38744;
+
+  --bg-app: #ffffff;
+  --bg-hero: #ffffff;
+
+  --shadow-soft: none;
+  --shadow-lift: none;
+
+  --radius-sm: 0.6rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.4rem;
+  --radius-xl: 2rem;
+
+  --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  --font-display: "Young Serif", "Times New Roman", serif;
+
+  --max-page-width: 74rem;
+  --max-content-width: 56rem;
+}
