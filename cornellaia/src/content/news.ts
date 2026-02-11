@@ -53,7 +53,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     title: "RAISE Act is signed by the NY Governor",
-    summary: "Governor Kathy Hochul signed the RAISE Act into law, establishing nation-leading AI safety requirements for frontier model developers.",
+    summary: "Governor Kathy Hochul signed the RAISE Act into law, establishing nation-leading AI safety requirements for frontier model developers. CAIA helped canvass support for the bill.",
     date: "2025-12-19",
     displayDate: "December 19, 2025",
     category: "Announcement",

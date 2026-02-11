@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
@@ -16,6 +17,15 @@ import {
 } from "@/content/home";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL } from "@/content/events";
 import { NEWS_ITEMS } from "@/content/news";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Home",
+  description:
+    "Cornell AI Alignment is a student community focused on AI safety research, programs, and events at Cornell.",
+  path: "/",
+  keywords: ["Cornell AI Alignment", "AI safety", "student organization", "alignment research"],
+});
 
 export default function Home() {
   const latestNews = [...NEWS_ITEMS]
@@ -24,7 +34,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="pt-20 pb-10 sm:pt-24 sm:pb-16">
+      <section className="pt-12 pb-10 sm:pt-24 sm:pb-16">
         <Container>
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
               <MotionReveal>

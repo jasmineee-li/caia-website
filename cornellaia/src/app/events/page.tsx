@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENT_IDS } from "@/content/events";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Events",
+  description:
+    "Explore upcoming Cornell AI Alignment talks, workshops, and socials, and browse selected past events.",
+  path: "/events",
+  keywords: ["CAIA events", "Cornell AI", "talks", "workshops", "AI safety events"],
+});
 
 export default function EventsPage() {
   return (

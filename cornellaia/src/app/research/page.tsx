@@ -1,10 +1,20 @@
 import { Fragment } from "react";
+import type { Metadata } from "next";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import LetterGlitch from "@/components/ui/LetterGlitch";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import { RESEARCH_PAPERS } from "@/content/research";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Research",
+  description:
+    "Browse research by Cornell AI Alignment members and collaborators, including papers, reports, and accepted conference work.",
+  path: "/research",
+  keywords: ["AI alignment research", "CAIA papers", "Cornell AI safety research"],
+});
 
 export default function ResearchPage() {
   return (

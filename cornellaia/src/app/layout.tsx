@@ -2,11 +2,24 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/content/seo";
 
 export const metadata: Metadata = {
-  title: "Cornell AI Alignment",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Cornell AI Alignment",
+    template: "%s | Cornell AI Alignment",
+  },
   description:
     "Cornell AI Alignment is a student community conducting research and outreach to advance safe AI.",
+  applicationName: "Cornell AI Alignment",
+  openGraph: {
+    siteName: "Cornell AI Alignment",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: "/favicon.ico",
   },

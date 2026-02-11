@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Accordion, { AccordionItem } from "@/components/ui/Accordion";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
@@ -7,6 +8,15 @@ import {
   ResourceItem,
   ResourceSection,
 } from "@/content/resources";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Resources",
+  description:
+    "Curated AI safety resources from Cornell AI Alignment, spanning non-technical intros, technical papers, and governance material.",
+  path: "/resources",
+  keywords: ["AI safety resources", "alignment reading list", "Cornell AI Alignment resources"],
+});
 
 function ResourceList({ items }: { items: ResourceItem[] }) {
   return (

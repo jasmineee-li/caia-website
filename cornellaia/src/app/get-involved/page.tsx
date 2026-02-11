@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import { PROGRAM_ITEMS } from "@/content/programs";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Programs",
+  description:
+    "Learn how to get involved with Cornell AI Alignment through fellowships, reading groups, and student research opportunities.",
+  path: "/get-involved",
+  keywords: ["CAIA programs", "AI alignment fellowship", "Cornell reading group", "AI safety research"],
+});
 
 export default function GetInvolvedPage() {
   return (

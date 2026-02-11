@@ -1,9 +1,19 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Card from "@/components/ui/Card";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
 import { NEWS_ITEMS } from "@/content/news";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "News",
+  description:
+    "Read recent Cornell AI Alignment news covering research milestones, events, and policy announcements.",
+  path: "/news",
+  keywords: ["CAIA news", "AI safety updates", "Cornell AI Alignment news"],
+});
 
 export default function NewsPage() {
   const chronologicalNews = [...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));

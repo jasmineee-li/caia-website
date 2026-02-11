@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import ProfileCard from "@/components/ProfileCard";
 import { TEAM_GROUPS } from "@/content/team";
+import { createPageMetadata } from "@/content/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Team",
+  description:
+    "Meet the Cornell AI Alignment core team and advisors working on AI safety research and outreach.",
+  path: "/team",
+  keywords: ["Cornell AI Alignment team", "AI safety students", "CAIA advisors"],
+});
 
 export default function TeamPage() {
   return (
