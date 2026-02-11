@@ -20,6 +20,7 @@ const CARD_PLANE_BASE_HEIGHT = 1020;
 const CARD_PLANE_BASE_WIDTH = Math.round((CARD_WIDTH / CARD_HEIGHT) * CARD_PLANE_BASE_HEIGHT);
 const CLICK_DRAG_THRESHOLD = 8;
 const MOBILE_BREAKPOINT = 640;
+const GESTURE_LOCK_THRESHOLD = 12;
 
 function debounce<F extends (...args: unknown[]) => void>(func: F, wait: number) {
   let timeout: number | undefined;
@@ -575,6 +576,9 @@ class App {
   private start = 0;
   private startY = 0;
   private hasMoved = false;
+  private isHorizontalGesture = false;
+  private isVerticalGesture = false;
+  private lastDeltaX = 0;
 
   constructor(
     container: HTMLElement,
@@ -686,6 +690,9 @@ class App {
 
     this.isDown = true;
     this.hasMoved = false;
+    this.isHorizontalGesture = false;
+    this.isVerticalGesture = false;
+    this.lastDeltaX = 0;
     this.scroll.position = this.scroll.current;
     const point = "touches" in event ? event.touches[0] : event;
     this.start = point.clientX;
@@ -700,12 +707,36 @@ class App {
     const point = "touches" in event ? event.touches[0] : event;
     const currentX = point.clientX;
     const currentY = point.clientY;
+    const deltaX = currentX - this.start;
+    const deltaY = currentY - this.startY;
+    this.lastDeltaX = deltaX;
+
+    if (!this.isHorizontalGesture && !this.isVerticalGesture) {
+      if (Math.abs(deltaX) > GESTURE_LOCK_THRESHOLD || Math.abs(deltaY) > GESTURE_LOCK_THRESHOLD) {
+        if (Math.abs(deltaX) > Math.abs(deltaY) * 1.1) {
+          this.isHorizontalGesture = true;
+        } else if (Math.abs(deltaY) > Math.abs(deltaX) * 1.1) {
+          this.isVerticalGesture = true;
+        }
+      }
+    }
+
+    if (this.isVerticalGesture) {
+      return;
+    }
+
+    if ("touches" in event && event.cancelable && this.isHorizontalGesture) {
+      event.preventDefault();
+    }
+
     const movedDistance = Math.hypot(currentX - this.start, currentY - this.startY);
     if (movedDistance > CLICK_DRAG_THRESHOLD) {
       this.hasMoved = true;
     }
 
-    const distance = (this.start - currentX) * (this.scrollSpeed * 0.025);
+    const isMobile = this.screen.width < MOBILE_BREAKPOINT;
+    const dragScale = isMobile ? 0.15 : 0.04;
+    const distance = (this.start - currentX) * (this.scrollSpeed * dragScale);
     this.scroll.target = this.scroll.position + distance;
   }
 
@@ -750,10 +781,18 @@ class App {
   private onTouchUp(event: MouseEvent | TouchEvent) {
     const shouldOpen = !this.hasMoved && this.isDown;
     const pointer = this.getPointer(event);
+    const horizontalGesture = this.isHorizontalGesture;
 
     this.isDown = false;
     this.hasMoved = false;
+    this.isHorizontalGesture = false;
+    this.isVerticalGesture = false;
+    this.lastDeltaX = 0;
     this.onCheck();
+
+    if (horizontalGesture) {
+      return;
+    }
 
     if (!shouldOpen) {
       return;
@@ -838,7 +877,7 @@ class App {
     window.addEventListener("mouseup", this.boundOnTouchUp);
 
     this.container.addEventListener("touchstart", this.boundOnTouchDown);
-    window.addEventListener("touchmove", this.boundOnTouchMove);
+    window.addEventListener("touchmove", this.boundOnTouchMove, { passive: false });
     window.addEventListener("touchend", this.boundOnTouchUp);
   }
 
@@ -908,6 +947,7 @@ export default function CircularGallery({
     <div
       ref={containerRef}
       className="h-full w-full cursor-grab overflow-hidden active:cursor-grabbing"
+      style={{ touchAction: "pan-y" }}
       aria-label="Circular student research gallery"
     />
   );
