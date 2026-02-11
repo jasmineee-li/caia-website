@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import LetterGlitch from "@/components/ui/LetterGlitch";
@@ -73,8 +74,20 @@ export default function ResearchPage() {
                   {paper.authors.map((author, authorIndex) => (
                     <Fragment key={`${paper.title}-${author.name}-${authorIndex}`}>
                       {authorIndex > 0 ? ", " : ""}
-                      <span className={author.isCaiaMember ? "font-semibold text-slate-900" : ""}>
-                        {author.name}
+                      <span className="inline-flex items-center gap-1 align-middle">
+                        {author.isCaiaMember && (
+                          <Image
+                            src="/logo.svg"
+                            alt=""
+                            aria-hidden="true"
+                            width={14}
+                            height={14}
+                            className="h-3.5 w-3.5 shrink-0"
+                          />
+                        )}
+                        <span className={author.isCaiaMember ? "font-semibold text-slate-900" : ""}>
+                          {author.name}
+                        </span>
                       </span>
                     </Fragment>
                   ))}
