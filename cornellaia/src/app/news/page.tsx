@@ -41,7 +41,7 @@ export default function NewsPage() {
                       className="h-auto w-full object-cover"
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 92vw, 1100px"
-                      quality={78}
+                      quality={80}
                     />
                   </div>
                 )}

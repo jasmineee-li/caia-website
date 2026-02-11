@@ -10,7 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Explore upcoming Cornell AI Alignment talks, workshops, and socials, and browse selected past events.",
   path: "/events",
-  keywords: ["CAIA events", "Cornell AI", "talks", "workshops", "AI safety events"],
+  keywords: ["Cornell AI Alignment events", "Cornell AI", "talks", "workshops", "AI safety events"],
 });
 
 export default function EventsPage() {
