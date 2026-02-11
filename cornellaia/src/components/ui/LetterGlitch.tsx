@@ -29,6 +29,7 @@ interface LetterGlitchProps {
 const FONT_SIZE = 16;
 const CHAR_WIDTH = 10;
 const CHAR_HEIGHT = 20;
+const LETTER_GLITCH_IMAGE_CACHE = new Map<string, HTMLImageElement>();
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
@@ -302,20 +303,37 @@ export default function LetterGlitch({
     };
 
     if (imageSrc) {
-      const image = new Image();
-      image.src = imageSrc;
-      image.onload = () => {
+      const handleImageLoad = (image: HTMLImageElement) => {
         if (isDestroyed) return;
         sourceImage = image;
         imageLoaded = true;
         resizeCanvas();
       };
-      image.onerror = () => {
+
+      const handleImageError = () => {
         if (isDestroyed) return;
         imageLoaded = false;
         sourceImage = null;
+        LETTER_GLITCH_IMAGE_CACHE.delete(imageSrc);
         resizeCanvas();
       };
+
+      const cachedImage = LETTER_GLITCH_IMAGE_CACHE.get(imageSrc);
+      const image = cachedImage ?? new Image();
+
+      if (!cachedImage) {
+        image.decoding = "async";
+        image.fetchPriority = "high";
+        LETTER_GLITCH_IMAGE_CACHE.set(imageSrc, image);
+        image.src = imageSrc;
+      }
+
+      if (image.complete && image.naturalWidth > 0) {
+        handleImageLoad(image);
+      } else {
+        image.addEventListener("load", () => handleImageLoad(image), { once: true });
+        image.addEventListener("error", handleImageError, { once: true });
+      }
     }
 
     resizeCanvas();

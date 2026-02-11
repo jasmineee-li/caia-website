@@ -21,6 +21,7 @@ const CARD_PLANE_BASE_WIDTH = Math.round((CARD_WIDTH / CARD_HEIGHT) * CARD_PLANE
 const CLICK_DRAG_THRESHOLD = 8;
 const MOBILE_BREAKPOINT = 640;
 const GESTURE_LOCK_THRESHOLD = 12;
+const GALLERY_IMAGE_CACHE = new Map<string, HTMLImageElement>();
 
 function debounce<F extends (...args: unknown[]) => void>(func: F, wait: number) {
   let timeout: number | undefined;
@@ -431,11 +432,7 @@ class Media {
   }
 
   private populateTexture() {
-    const image = new Image();
-    image.crossOrigin = "anonymous";
-    image.src = this.image;
-
-    image.onload = () => {
+    const applyImageTexture = (image: HTMLImageElement) => {
       this.texture.image = createCardCanvas({
         image,
         title: this.title,
@@ -444,6 +441,41 @@ class Media {
         font: this.font,
       });
     };
+
+    const cached = GALLERY_IMAGE_CACHE.get(this.image);
+    if (cached && cached.complete && cached.naturalWidth > 0) {
+      applyImageTexture(cached);
+      return;
+    }
+
+    const image = cached ?? new Image();
+    if (!cached) {
+      image.crossOrigin = "anonymous";
+      image.decoding = "async";
+      GALLERY_IMAGE_CACHE.set(this.image, image);
+      image.src = this.image;
+    }
+
+    if (image.complete && image.naturalWidth > 0) {
+      applyImageTexture(image);
+      return;
+    }
+
+    image.addEventListener(
+      "load",
+      () => {
+        applyImageTexture(image);
+      },
+      { once: true },
+    );
+
+    image.addEventListener(
+      "error",
+      () => {
+        GALLERY_IMAGE_CACHE.delete(this.image);
+      },
+      { once: true },
+    );
   }
 
   private createMesh() {

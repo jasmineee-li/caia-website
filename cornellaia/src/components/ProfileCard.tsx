@@ -66,6 +66,8 @@ export default function ProfileCard({
           alt={altText || `${name}'s profile photo`}
           fill
           sizes="112px"
+          loading="lazy"
+          quality={75}
           className="object-cover"
         />
       </div>

@@ -12,11 +12,11 @@ import TextType from "@/components/ui/TextType";
 import {
   HOME_CTA_ITEMS,
   HOME_HERO,
-  HOME_RESEARCH_PAPERS,
   HOME_SPONSORS,
 } from "@/content/home";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL } from "@/content/events";
 import { NEWS_ITEMS } from "@/content/news";
+import { RESEARCH_PAPERS } from "@/content/research";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -78,6 +78,7 @@ export default function Home() {
                     height={460}
                     className="h-auto w-full"
                     priority
+                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 460px"
                   />
                   <Image
                     src="/Title2.jpg"
@@ -85,6 +86,8 @@ export default function Home() {
                     width={1280}
                     height={889}
                     className="absolute -bottom-6 right-0 w-[78%] rounded-3xl border border-white/80 object-cover"
+                    sizes="(max-width: 640px) 58vw, (max-width: 1024px) 38vw, 360px"
+                    quality={80}
                   />
                 </div>
               </MotionReveal>
@@ -226,7 +229,7 @@ export default function Home() {
         <MotionReveal>
           <div className="relative h-[520px] overflow-hidden rounded-xl border border-slate-200 sm:h-[620px] lg:h-[680px]">
             <CircularGallery
-              items={HOME_RESEARCH_PAPERS.map((paper) => ({
+              items={RESEARCH_PAPERS.map((paper) => ({
                 image: paper.imageSrc,
                 title: paper.title,
                 badge: paper.tags.length > 0 ? paper.tags[0] : undefined,
@@ -261,6 +264,8 @@ export default function Home() {
               width={980}
               height={220}
               className="h-auto w-full"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 980px"
             />
           </div>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
@@ -279,6 +284,9 @@ export default function Home() {
                   width={320}
                   height={120}
                   className="h-auto max-h-16 w-auto sm:max-h-20"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 26vw, 220px"
+                  quality={75}
                 />
               </a>
             ))}

@@ -6,6 +6,10 @@ export interface ResearchAuthor {
 export interface ResearchPaperDetail {
   title: string;
   href: string;
+  imageSrc: string;
+  imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   authors: ResearchAuthor[];
   abstract: string;
   tags: string[];
@@ -15,6 +19,10 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
     title: "Democratic Preference Alignment via Sortition-Weighted RLHF",
     href: "https://arxiv.org/abs/2602.05113",
+    imageSrc: "/papers/paper-dempo.png",
+    imageAlt: "Cover image for Democratic Preference Alignment paper",
+    imageWidth: 2550,
+    imageHeight: 3300,
     authors: [
       { name: "Suvadip Sana", isCaiaMember: true },
       { name: "Jinzhou Wu", isCaiaMember: true },
@@ -27,6 +35,10 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
     title: "AI Deception: Risks, Dynamics, and Controls",
     href: "https://arxiv.org/abs/2511.22619",
+    imageSrc: "/papers/paper-deceptionsurvey.png",
+    imageAlt: "Cover image for AI Deception paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
     authors: [
       { name: "Boyuan Chen" },
       { name: "Sitong Fang" },
@@ -43,6 +55,10 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
     title: "EigenBench: A Comparative Behavior Measure of Value Alignment",
     href: "https://arxiv.org/pdf/2509.01938",
+    imageSrc: "/papers/paper-eigenbench.png",
+    imageAlt: "Cover image for EigenBench paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
     authors: [
       { name: "Jonathn Chang", isCaiaMember: true },
       { name: "Leonhard Piff", isCaiaMember: true },
@@ -57,6 +73,10 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
     title: "ProgressGym: Alignment with a Millennium of Moral Progress",
     href: "https://arxiv.org/abs/2406.20087",
+    imageSrc: "/papers/paper-progressgym.png",
+    imageAlt: "Cover image for ProgressGym paper",
+    imageWidth: 1046,
+    imageHeight: 1356,
     authors: [
       { name: "Tianyi Qiu" },
       { name: "Yang Zhang" },
@@ -73,6 +93,10 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     title:
       "Scaling laws for contrastive activation addition with refusal mechanisms",
     href: "https://arxiv.org/abs/2507.11771",
+    imageSrc: "/papers/paper-scalinglaws.png",
+    imageAlt: "Cover image for scaling laws paper",
+    imageWidth: 1066,
+    imageHeight: 1384,
     authors: [
       { name: "Sheikh Abdur Raheem Ali" },
       { name: "Justin Xu" },
