@@ -87,7 +87,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="focus-ring rounded-md border border-slate-200 bg-white p-2 text-slate-800 shadow-sm md:hidden"
+          className="focus-ring rounded-md bg-slate-50 p-2 text-slate-800 md:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-site-nav"
@@ -114,20 +114,15 @@ export default function Header() {
         id="mobile-site-nav"
         aria-label="Mobile navigation"
         className={cn(
-          "fixed inset-y-0 right-0 z-50 flex h-full w-[90vw] max-w-sm flex-col border-l border-slate-200/80 bg-white/95 px-5 pb-6 pt-5 shadow-2xl backdrop-blur-sm transition-transform md:hidden",
+          "fixed inset-y-0 right-0 z-50 flex h-full w-[90vw] max-w-sm flex-col bg-white/95 px-5 pb-6 pt-5 shadow-2xl backdrop-blur-sm transition-transform md:hidden",
           menuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <div className="mb-3 flex items-start justify-between gap-3">
-          <div>
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-slate-500">Menu</p>
-            <p className="mt-1 text-base font-semibold text-slate-900">Cornell AI Alignment</p>
-            <p className="text-xs text-slate-500">Explore pages and programs</p>
-          </div>
+        <div className="mb-3 flex items-center justify-end">
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
-            className="focus-ring rounded-md border border-slate-200 bg-white p-1.5 text-slate-700 shadow-sm"
+            className="focus-ring rounded-md bg-white/70 p-2 text-slate-700"
             aria-label="Close menu"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -136,7 +131,6 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="mb-3 h-px bg-slate-200" />
 
         <div className="flex-1 space-y-2 overflow-y-auto pr-1">
           {NAV_ITEMS.map((item) => {
@@ -147,10 +141,10 @@ export default function Header() {
                 key={`mobile-${item.href}`}
                 href={item.href}
                 className={cn(
-                  "focus-ring group flex items-center justify-between rounded-xl border px-4 py-3 text-base font-medium transition-colors",
+                  "focus-ring group flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors",
                   active
-                    ? "border-brand-red/35 bg-red-50 text-brand-red"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-brand-cyan/50 hover:bg-slate-50",
+                    ? "bg-red-50 text-brand-red"
+                    : "bg-white/80 text-slate-700 hover:bg-slate-50",
                 )}
                 onClick={() => setMenuOpen(false)}
               >
@@ -162,7 +156,7 @@ export default function Header() {
                   )}
                   aria-hidden="true"
                 >
-                  →
+                  {">"}
                 </span>
               </Link>
             );
