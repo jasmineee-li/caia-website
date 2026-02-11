@@ -34,11 +34,15 @@ export const HOME_CTA_ITEMS: CTAItem[] = [
 
 export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Google DeepMind", src: "/orgs/gdm.png", href: "https://deepmind.google/" },
-  { name: "Pivotal", src: "/orgs/pivotal.png", href: "https://www.pivotal-research.org/" },
-  { name: "Center for AI Safety", src: "/orgs/cas.png", href: "https://safe.ai/" },
-  { name: "KAIROS", src: "/orgs/kairos.png", href: "https://kairos-project.org/" },
   { name: "MATS", src: "/orgs/mats.svg", href: "https://www.matsprogram.org/" },
-  { name: "RAND", src: "/orgs/rand.svg", href: "https://www.rand.org/" },
+  { name: "Pivotal", src: "/orgs/pivotal.png", href: "https://www.pivotal-research.org/" },
+  { name: "METR", src: "/orgs/metr.jpg", href: "https://metr.org/" },
+  { name: "Center for AI Safety", src: "/orgs/cas.png", href: "https://safe.ai/" },
+  { name: "LISA", src: "/orgs/lisa.svg", href: "https://www.safeai.org.uk/" },
+  { name: "CBAI", src: "/orgs/cbai.webp", href: "https://www.cbai.ai/" },
   { name: "Berkeley SPAR", src: "/orgs/spar.png", href: "https://sparai.org/" },
-  { name: "Safe AI Forum", src: "/orgs/saif.svg", href: "https://www.saif.vc/" },
+  { name: "KAIROS", src: "/orgs/kairos.png", href: "https://kairos-project.org/" },
+  { name: "Amazon AGI", src: "/orgs/amazon.png", href: "https://huggingface.co/amazon-agi" },
+  { name: "RAND", src: "/orgs/rand.svg", href: "https://www.rand.org/" },
+  { name: "SAIF", src: "/orgs/saif.svg", href: "https://saif.org/" },
 ];
