@@ -15,7 +15,7 @@ export interface TeamGroup {
 
 export const TEAM_GROUPS: TeamGroup[] = [
   {
-    title: "Core Team",
+    title: "Leadership",
     members: [
       {
         imageSrc: "/team/TEAM_jonathn_chang.png",

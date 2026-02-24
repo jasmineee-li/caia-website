@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/content/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Team",
   description:
-    "Meet the Cornell AI Alignment core team and advisors working on AI safety research and outreach.",
+    "Meet the Cornell AI Alignment leadership and advisors working on AI safety research and outreach.",
   path: "/team",
   keywords: ["Cornell AI Alignment team", "AI safety students", "CAIA advisors"],
 });
@@ -27,7 +27,7 @@ export default function TeamPage() {
                 <h2 className="mb-6 text-2xl font-semibold text-slate-900">{group.title}</h2>
                 <div
                   className={
-                    group.title === "Core Team"
+                    group.title === "Leadership"
                       ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                       : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
                   }
