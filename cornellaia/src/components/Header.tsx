@@ -184,7 +184,7 @@ export default function Header() {
                     }}
                     onClick={() => setMenuOpen(false)}
                   >
-                    <span>{item.label.toLowerCase()}</span>
+                    <span>{item.label}</span>
                   </Link>
                 );
               })}
