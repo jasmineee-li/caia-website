@@ -1,12 +1,10 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function ScrollToTop() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const search = searchParams.toString();
 
   useEffect(() => {
     const html = document.documentElement;
@@ -25,7 +23,7 @@ export default function ScrollToTop() {
     return () => {
       window.cancelAnimationFrame(restoreId);
     };
-  }, [pathname, search]);
+  }, [pathname]);
 
   return null;
 }
