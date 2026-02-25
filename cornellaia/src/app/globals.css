@@ -57,3 +57,7 @@
 main.cs1998-page + footer {
   margin-top: 0 !important;
 }
+
+main.not-found-page + footer {
+  margin-top: 0 !important;
+}

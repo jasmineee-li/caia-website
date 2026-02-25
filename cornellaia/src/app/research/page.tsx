@@ -22,6 +22,7 @@ export default function ResearchPage() {
     <main>
       <section className="relative aspect-[16/9] w-full min-h-[240px] max-h-[70vh] overflow-hidden">
         <LetterGlitch
+          glitchColors={["#fb051b", "#22043a", "#e684a6", "#ee3c55", "#fdf7f8"]}
           imageSrc="/Title5.webp"
           imageFit="contain"
           glitchSpeed={50}

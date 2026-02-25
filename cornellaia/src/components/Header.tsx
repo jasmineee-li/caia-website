@@ -144,7 +144,7 @@ export default function Header() {
 
       <div
         className={cn(
-          "fixed inset-0 z-30 bg-slate-950/45 backdrop-blur-[2px] transition-opacity md:hidden",
+          "fixed inset-0 z-30 bg-white transition-opacity md:hidden",
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         onClick={() => setMenuOpen(false)}
@@ -174,7 +174,7 @@ export default function Header() {
                     key={`mobile-${item.href}`}
                     href={item.href}
                     className={cn(
-                      "focus-ring inline-flex h-[5.15rem] min-w-[9.7rem] items-center justify-center rounded-[2.65rem] bg-white px-8 text-center text-[2.05rem] font-medium text-slate-900 shadow-[0_8px_24px_rgba(15,23,42,0.14)] transition-colors",
+                      "focus-ring inline-flex h-[5.15rem] min-w-[9.7rem] items-center justify-center rounded-[2.65rem] border border-slate-300 bg-white px-8 text-center text-[2.05rem] font-medium text-slate-900 transition-colors",
                       active
                         ? "bg-red-50 text-brand-red"
                         : "hover:bg-slate-50",
