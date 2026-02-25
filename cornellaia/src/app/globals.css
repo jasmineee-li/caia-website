@@ -53,3 +53,7 @@
     border-radius: 0.55rem;
   }
 }
+
+main.cs1998-page + footer {
+  margin-top: 0 !important;
+}

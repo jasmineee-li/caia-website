@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Badge from "@/components/ui/Badge";
+import Squares from "@/components/ui/Squares";
 import { SITE_URL } from "@/content/seo";
+import styles from "./cs1998.module.css";
 
 interface MaterialItem {
   label: string;
@@ -39,19 +41,34 @@ const COURSE_WEEKS: CourseWeek[] = [
     materials: {
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
-        { label: "Attention Is All You Need (Vaswani et al., 2017)", href: "https://arxiv.org/abs/1706.03762" },
+        {
+          label: "Attention Is All You Need (Vaswani et al., 2017)",
+          href: "https://arxiv.org/abs/1706.03762",
+        },
         {
           label: "Language Models are Few-Shot Learners (Brown et al., 2020)",
           href: "https://arxiv.org/abs/2005.14165",
         },
       ],
       demo: [
-        { label: "LLM visualization and forward pass walkthrough", href: "https://bbycroft.net/llm" },
-        { label: "Visualize a Logit Lens view of hidden states during generation." },
+        {
+          label: "LLM visualization and forward pass walkthrough",
+          href: "https://bbycroft.net/llm",
+        },
+        {
+          label:
+            "Visualize a Logit Lens view of hidden states during generation.",
+        },
       ],
       takeHomeNotebook: [
-        { label: "NanoGPT playground", href: "https://github.com/karpathy/nanoGPT" },
-        { label: "Implement raw sampling (temperature and top-k) and inspect output distributions." },
+        {
+          label: "NanoGPT playground",
+          href: "https://github.com/karpathy/nanoGPT",
+        },
+        {
+          label:
+            "Implement raw sampling (temperature and top-k) and inspect output distributions.",
+        },
       ],
     },
   },
@@ -69,7 +86,8 @@ const COURSE_WEEKS: CourseWeek[] = [
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
         {
-          label: "In-context Learning and Induction Heads (Olsson et al., 2022)",
+          label:
+            "In-context Learning and Induction Heads (Olsson et al., 2022)",
           href: "https://arxiv.org/abs/2209.11895",
         },
         {
@@ -80,7 +98,7 @@ const COURSE_WEEKS: CourseWeek[] = [
       demo: [
         {
           label:
-            "Patch clean activations into a corrupted Eiffel Tower prompt to locate which layer restores \"Paris\".",
+            'Patch clean activations into a corrupted Eiffel Tower prompt to locate which layer restores "Paris".',
         },
       ],
       takeHomeNotebook: [{ label: "TBD" }],
@@ -100,7 +118,8 @@ const COURSE_WEEKS: CourseWeek[] = [
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
         {
-          label: "Representation Engineering: A Top-Down Approach to AI Transparency (Zou et al., 2023)",
+          label:
+            "Representation Engineering: A Top-Down Approach to AI Transparency (Zou et al., 2023)",
           href: "https://arxiv.org/abs/2310.01405",
         },
         {
@@ -108,14 +127,23 @@ const COURSE_WEEKS: CourseWeek[] = [
           href: "https://www.anthropic.com/research/golden-gate-claude",
         },
         {
-          label: "The Internal State of an LLM Knows When It's Lying (Azaria & Mitchell, 2023)",
+          label:
+            "The Internal State of an LLM Knows When It's Lying (Azaria & Mitchell, 2023)",
           href: "https://arxiv.org/abs/2304.13734",
         },
       ],
-      demo: [{ label: "Steering the direction of non-corrigibility (Jinzhou's project)." }],
+      demo: [
+        {
+          label:
+            "Steering the direction of non-corrigibility (Jinzhou's project).",
+        },
+      ],
       takeHomeNotebook: [
         { label: "Building a lie detector probe.ipynb" },
-        { label: "Replicate lie/hallucination detection from internal activations." },
+        {
+          label:
+            "Replicate lie/hallucination detection from internal activations.",
+        },
       ],
     },
   },
@@ -133,15 +161,19 @@ const COURSE_WEEKS: CourseWeek[] = [
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
         {
-          label: "Deep Reinforcement Learning from Human Preferences (Christiano et al., 2017)",
+          label:
+            "Deep Reinforcement Learning from Human Preferences (Christiano et al., 2017)",
           href: "https://arxiv.org/abs/1706.03741",
         },
         {
-          label: "Scaling Laws for Reward Model Overoptimization (Gao et al., 2022)",
+          label:
+            "Scaling Laws for Reward Model Overoptimization (Gao et al., 2022)",
           href: "https://arxiv.org/abs/2210.10760",
         },
       ],
-      demo: [{ label: "Live DPO run with TRL on safe/toxic preference pairs." }],
+      demo: [
+        { label: "Live DPO run with TRL on safe/toxic preference pairs." },
+      ],
       takeHomeNotebook: [{ label: "TBD" }],
     },
   },
@@ -159,7 +191,8 @@ const COURSE_WEEKS: CourseWeek[] = [
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
         {
-          label: "Universal and Transferable Adversarial Attacks on Aligned Language Models (Zou et al., 2023)",
+          label:
+            "Universal and Transferable Adversarial Attacks on Aligned Language Models (Zou et al., 2023)",
           href: "https://arxiv.org/abs/2307.15043",
         },
         {
@@ -168,7 +201,11 @@ const COURSE_WEEKS: CourseWeek[] = [
         },
       ],
       demo: [{ label: "Automated jailbreaking demo with GCG." }],
-      takeHomeNotebook: [{ label: "Jailbreaking CTF: extract a hidden key from a black-box API." }],
+      takeHomeNotebook: [
+        {
+          label: "Jailbreaking CTF: extract a hidden key from a black-box API.",
+        },
+      ],
     },
   },
   {
@@ -211,14 +248,18 @@ const COURSE_WEEKS: CourseWeek[] = [
       slide: [{ label: "Slides (TBD)" }],
       recommendedReading: [
         {
-          label: "Scaling Laws for Neural Language Models (Kaplan et al., 2020)",
+          label:
+            "Scaling Laws for Neural Language Models (Kaplan et al., 2020)",
           href: "https://arxiv.org/abs/2001.08361",
         },
         { label: "Epoch AI Compute Trends", href: "https://epoch.ai/trends" },
       ],
       demo: [{ label: "TBD" }],
       takeHomeNotebook: [
-        { label: "Research proposal: hypothesis, method, and expected result from Weeks 2-6 topics." },
+        {
+          label:
+            "Research proposal: hypothesis, method, and expected result from Weeks 2-6 topics.",
+        },
       ],
     },
   },
@@ -257,7 +298,13 @@ const COURSE_SCHEMA = {
 export const metadata: Metadata = {
   title: "CS 1998: Intro to AI Safety & Alignment",
   description: COURSE_DESCRIPTION,
-  keywords: ["CS 1998", "AI Safety course", "AI Alignment course", "Cornell student-led course", "Fall 2026"],
+  keywords: [
+    "CS 1998",
+    "AI Safety course",
+    "AI Alignment course",
+    "Cornell student-led course",
+    "Fall 2026",
+  ],
   alternates: {
     canonical: COURSE_PATH,
   },
@@ -313,7 +360,9 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
         <MaterialList items={materials.slide} />
       </div>
       <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">Recommended Reading</p>
+        <p className="mb-1 text-sm font-bold text-slate-900">
+          Recommended Reading
+        </p>
         <MaterialList items={materials.recommendedReading} />
       </div>
       <div>
@@ -321,7 +370,9 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
         <MaterialList items={materials.demo} />
       </div>
       <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">Take-Home Notebook</p>
+        <p className="mb-1 text-sm font-bold text-slate-900">
+          Take-Home Notebook
+        </p>
         <MaterialList items={materials.takeHomeNotebook} />
       </div>
     </div>
@@ -330,175 +381,280 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
 
 export default function CS1998Page() {
   return (
-    <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(COURSE_SCHEMA) }}
-      />
-      <div className="mx-auto w-full max-w-page px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
-        <header className="relative overflow-hidden rounded-[1.9rem] border border-brand-red/20 bg-[linear-gradient(145deg,#fff5f5_0%,#ffffff_45%,#f8fafc_100%)] px-6 py-7 sm:px-10 sm:py-10">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-brand-red/10 blur-3xl"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-12 left-1/3 h-44 w-44 rounded-full bg-cyan-100/60 blur-3xl"
-          />
+    <main className="cs1998-page relative overflow-hidden bg-white pb-12 sm:pb-16">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+      >
+        <Squares
+          speed={0.03}
+          squareSize={42}
+          direction="diagonal"
+          borderColor="rgba(15, 23, 42, 0.055)"
+          hoverFillColor="rgba(179, 27, 27, 0.14)"
+          fadeOverlayColor="rgba(255, 255, 255, 0.82)"
+        />
+      </div>
 
-          <div className="relative space-y-5">
-            <Badge>Planning Stage (Fall 2026, tentative)</Badge>
-            <h1 className="display-title max-w-4xl text-3xl sm:text-5xl">CS 1998: Intro to AI Safety &amp; Alignment</h1>
-            <p className="max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
-              1 Credit · 7 Weeks First · S/U Grading · Open Enrollment
-            </p>
-            <nav aria-label="CS 1998 sections" className="flex flex-wrap gap-2 pt-1">
-              <a
-                href="#content"
-                className="focus-ring rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-red hover:text-brand-red"
+      <div className="relative z-10">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(COURSE_SCHEMA) }}
+        />
+        <header className="relative overflow-hidden border-b border-slate-200 bg-[linear-gradient(145deg,#fff5f5_0%,#ffffff_45%,#f8fafc_100%)]">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+          >
+            <div className={`${styles.gradient} ${styles.gradientA}`} />
+            <div className={`${styles.gradient} ${styles.gradientB}`} />
+            <div className={`${styles.gradient} ${styles.gradientC}`} />
+          </div>
+          <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+            <div className="relative space-y-5 py-10 sm:py-16">
+              <Badge className="inline-flex items-center gap-2 rounded-lg border border-brand-red/25 bg-white/75 px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-none sm:text-[0.95rem]">
+                <span
+                  aria-hidden="true"
+                  className="h-2 w-2 rounded-full bg-brand-red"
+                />
+                Planning Stage (Fall 2026, tentative)
+              </Badge>
+              <h1 className="display-title text-3xl sm:text-5xl">
+                CS 1998: Intro to AI Safety &amp; Alignment
+              </h1>
+              <p className="max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
+                1 Credit · 7 Weeks First · S/U Grading · Open Enrollment
+              </p>
+              <nav
+                aria-label="CS 1998 sections"
+                className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1"
               >
-                Content
-              </a>
-              <a
-                href="#logistics"
-                className="focus-ring rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-red hover:text-brand-red"
-              >
-                Logistics
-              </a>
-              <a
-                href="#syllabus"
-                className="focus-ring rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-red hover:text-brand-red"
-              >
-                Syllabus
-              </a>
-            </nav>
+                <a
+                  href="#content"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Content
+                </a>
+                <a
+                  href="#logistics"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Logistics
+                </a>
+                <a
+                  href="#syllabus"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Syllabus
+                </a>
+              </nav>
+            </div>
           </div>
         </header>
 
-        <section id="content" className="mt-10 scroll-mt-28">
-          <div className="grid gap-6 lg:grid-cols-12">
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:col-span-7">
-              <h2 className="display-title text-2xl sm:text-3xl">Content</h2>
-              <h3 className="mt-4 text-xl font-semibold text-slate-900">What is this course about?</h3>
-              <div className="mt-3 space-y-4 text-sm leading-7 text-slate-700 sm:text-base">
-                <p>
-                  CS 1998 is a planned student-led introduction to AI safety and alignment. The course
-                  introduces how modern language models are trained and deployed, then examines how and
-                  why failures emerge in real systems. Students will learn core technical ideas in
-                  mechanistic interpretability, reward learning, red teaming, and oversight.
-                </p>
-                <p>
-                  The course is designed to be practical and research-oriented. Each week combines
-                  conceptual lectures, paper reading, live demos, and applied notebooks so students can
-                  build and test alignment ideas directly.
-                </p>
-              </div>
-            </article>
+        <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <section id="content" className="mt-10 scroll-mt-28">
+            <div className="grid gap-6 lg:grid-cols-12">
+              <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:col-span-7">
+                <h2 className="display-title text-2xl sm:text-3xl">Content</h2>
+                <h3 className="mt-4 text-xl font-semibold text-slate-900">
+                  What is this course about?
+                </h3>
+                <div className="mt-3 space-y-4 text-sm leading-7 text-slate-700 sm:text-base">
+                  <p>
+                    CS 1998: Intro to AI Safety &amp; Alignment is a student-led
+                    course that explores why advanced AI systems can fail in
+                    unexpected and dangerous ways. We begin by building a solid
+                    understanding of how modern language models are trained,
+                    from pretraining on web-scale data through supervised
+                    fine-tuning and reinforcement learning from human feedback.
+                    From there, we turn to the core question: how do we ensure
+                    these systems do what we actually want? Students will learn
+                    key technical ideas in mechanistic interpretability
+                    (reverse-engineering model internals to understand what
+                    they've learned), reward learning (how optimization pressure
+                    can produce unintended behaviors like sycophancy and reward
+                    hacking), red teaming and adversarial evaluation
+                    (systematically probing models for failure modes), and
+                    scalable oversight (supervising systems that may exceed
+                    human-level performance on the tasks we're evaluating them
+                    on).
+                  </p>
+                  <p></p>
+                </div>
 
-            <div className="space-y-6 lg:col-span-5">
-              <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
-                <h3 className="text-xl font-semibold text-slate-900">Prerequisites</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                  This course will be technically focused so some prior knowledge about linear algebra,
-                  machine learning (such as the transformer architecture), and proficiency in Python are
-                  assumed. However, we will also spend a lot of time talking about intuition behind
-                  these ideas, so non-technical people are also welcome to take the course.
-                </p>
-              </article>
-
-              <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
-                <h3 className="text-xl font-semibold text-slate-900">Audience</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                  The course is intended for Cornell undergraduates and graduate students interested in
-                  AI safety and alignment, including students pursuing technical research, policy, and
-                  governance pathways.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="logistics" className="mt-10 scroll-mt-28">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="display-title text-2xl sm:text-3xl">Logistics</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-              <li>We are still in the planning stage for Fall 2026.</li>
-              <li>This is planned as a 1-credit, 7-week, first S/U course.</li>
-              <li>Open enrollment; we are planning around 75 seats.</li>
-              <li>The syllabus below is tentative and may change as planning progresses.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section id="syllabus" className="mt-10 scroll-mt-28">
-          <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-            <div className="px-6 pt-6 sm:px-8 sm:pt-8">
-              <h2 className="display-title text-2xl sm:text-3xl">Syllabus (Tentative)</h2>
-            </div>
-
-            <div className="mt-6 space-y-4 px-6 pb-6 sm:px-8 lg:hidden">
-              {COURSE_WEEKS.map((week) => (
-                <details
-                  key={`mobile-week-${week.number}`}
-                  className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
-                >
-                  <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-4">
-                    <div>
-                      <p className="text-sm font-semibold text-slate-600">Week {week.number}</p>
-                      <p className="text-base font-semibold text-slate-900">{week.description}</p>
-                    </div>
-                    <span className="text-xl leading-none text-slate-500 transition-transform group-open:rotate-45">+</span>
-                  </summary>
-                  <div className="space-y-4 border-t border-slate-200 bg-white px-4 py-4">
-                    <div>
-                      <p className="mb-1 text-sm font-bold text-slate-900">Topics</p>
-                      <ul className="list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-700">
-                        {week.topics.map((topic) => (
-                          <li key={`mobile-topic-${week.number}-${topic}`}>{topic}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <WeekMaterialsView materials={week.materials} />
+                <div className="mt-6 space-y-6 lg:hidden">
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      Prerequisites
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                      This course is technically focused, so some prior
+                      knowledge of linear algebra, machine learning
+                      (particularly the transformer architecture), and
+                      proficiency in Python are assumed. That said, we spend
+                      significant time building intuition behind these ideas, so
+                      students from non-technical backgrounds who are motivated
+                      to engage with the material are also welcome.
+                    </p>
                   </div>
-                </details>
-              ))}
-            </div>
 
-            <div className="mt-6 hidden overflow-x-auto lg:block">
-              <table className="min-w-[1120px] w-full border-collapse">
-                <thead>
-                  <tr className="bg-slate-100 text-left">
-                    <th className="px-4 py-3 text-sm font-semibold text-slate-900">Week</th>
-                    <th className="px-4 py-3 text-sm font-semibold text-slate-900">Description</th>
-                    <th className="px-4 py-3 text-sm font-semibold text-slate-900">Topics</th>
-                    <th className="px-4 py-3 text-sm font-semibold text-slate-900">Materials</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COURSE_WEEKS.map((week, index) => (
-                    <tr
-                      key={week.number}
-                      className={index % 2 === 0 ? "align-top border-b border-slate-200 bg-white" : "align-top border-b border-slate-200 bg-slate-50/70"}
-                    >
-                      <td className="px-4 py-4 align-top text-sm font-semibold text-slate-700">{week.number}</td>
-                      <td className="px-4 py-4 text-sm font-semibold text-slate-900">{week.description}</td>
-                      <td className="px-4 py-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      Audience
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                      Undergraduates who are curious about how modern AI systems
+                      can fail, concerned about the long-term risks of advanced
+                      AI, or looking to understand the technical foundations
+                      behind ongoing safety research.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <div className="hidden space-y-6 lg:col-span-5 lg:block">
+                <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    Prerequisites
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                    This course is technically focused, so some prior knowledge
+                    of linear algebra, machine learning (particularly the
+                    transformer architecture), and proficiency in Python are
+                    assumed. That said, we spend significant time building
+                    intuition behind these ideas, so students from non-technical
+                    backgrounds who are motivated to engage with the material
+                    are also welcome.
+                  </p>
+                </article>
+
+                <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    Audience
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
+                    Undergraduates who are curious about how modern AI systems
+                    can fail, concerned about the long-term risks of advanced
+                    AI, or looking to understand the technical foundations
+                    behind ongoing safety research.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="logistics" className="mt-10 scroll-mt-28">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h2 className="display-title text-2xl sm:text-3xl">Logistics</h2>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
+                <li>This will be a 1-credit, 7-week, first S/U course.</li>
+                <li>
+                  This course will be open enrollment (without application), and
+                  we are planning around 75 seats.
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section id="syllabus" className="mt-10 scroll-mt-28">
+            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white/95 shadow-[0_1px_0_rgba(255,255,255,0.8)]">
+              <div className="px-4 pt-5 sm:px-8 sm:pt-8">
+                <h2 className="display-title text-2xl sm:text-3xl">
+                  Syllabus (Tentative)
+                </h2>
+              </div>
+
+              <div className="mt-5 space-y-3 px-4 pb-5 sm:px-6 lg:hidden">
+                {COURSE_WEEKS.map((week) => (
+                  <details
+                    key={`mobile-week-${week.number}`}
+                    className="group overflow-hidden rounded-2xl border border-slate-200/90 bg-white"
+                  >
+                    <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-3 px-4 py-4 sm:px-5">
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-slate-500">
+                          Week {week.number}
+                        </p>
+                        <p className="mt-0.5 text-[1.1rem] font-semibold leading-7 text-slate-900">
+                          {week.description}
+                        </p>
+                      </div>
+                      <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-slate-300 text-lg leading-none text-slate-500 transition-transform duration-200 group-open:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <div className="space-y-4 border-t border-slate-200/80 bg-white px-4 py-4 sm:px-5">
+                      <div>
+                        <p className="mb-1 text-sm font-bold text-slate-900">
+                          Topics
+                        </p>
                         <ul className="list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-700">
                           {week.topics.map((topic) => (
-                            <li key={`${week.number}-${topic}`}>{topic}</li>
+                            <li key={`mobile-topic-${week.number}-${topic}`}>
+                              {topic}
+                            </li>
                           ))}
                         </ul>
-                      </td>
-                      <td className="px-4 py-4">
-                        <WeekMaterialsView materials={week.materials} />
-                      </td>
+                      </div>
+                      <WeekMaterialsView materials={week.materials} />
+                    </div>
+                  </details>
+                ))}
+              </div>
+
+              <div className="mt-6 hidden overflow-x-auto lg:block">
+                <table className="min-w-[1120px] w-full border-collapse">
+                  <thead>
+                    <tr className="bg-slate-100 text-left">
+                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
+                        Week
+                      </th>
+                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
+                        Description
+                      </th>
+                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
+                        Topics
+                      </th>
+                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
+                        Materials
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </article>
-        </section>
+                  </thead>
+                  <tbody>
+                    {COURSE_WEEKS.map((week, index) => (
+                      <tr
+                        key={week.number}
+                        className={
+                          index % 2 === 0
+                            ? "align-top border-b border-slate-200 bg-white"
+                            : "align-top border-b border-slate-200 bg-slate-50/70"
+                        }
+                      >
+                        <td className="px-4 py-4 align-top text-sm font-semibold text-slate-700">
+                          {week.number}
+                        </td>
+                        <td className="px-4 py-4 text-sm font-semibold text-slate-900">
+                          {week.description}
+                        </td>
+                        <td className="px-4 py-4">
+                          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-700">
+                            {week.topics.map((topic) => (
+                              <li key={`${week.number}-${topic}`}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                        <td className="px-4 py-4">
+                          <WeekMaterialsView materials={week.materials} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+        </div>
       </div>
     </main>
   );

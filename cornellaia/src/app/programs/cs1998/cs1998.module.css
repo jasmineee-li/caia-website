@@ -1,0 +1,69 @@
+.gradient {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(56px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.gradientA {
+  width: 18rem;
+  height: 18rem;
+  top: -6rem;
+  right: -3rem;
+  background: rgba(179, 27, 27, 0.3);
+  animation: floatA 16s ease-in-out infinite alternate;
+}
+
+.gradientB {
+  width: 14rem;
+  height: 14rem;
+  bottom: -5rem;
+  left: 28%;
+  background: rgba(14, 165, 163, 0.25);
+  animation: floatB 19s ease-in-out infinite alternate;
+}
+
+.gradientC {
+  width: 12rem;
+  height: 12rem;
+  top: 30%;
+  left: -4rem;
+  background: rgba(59, 130, 246, 0.16);
+  animation: floatC 14s ease-in-out infinite alternate;
+}
+
+@keyframes floatA {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-32px, 26px, 0) scale(1.08);
+  }
+}
+
+@keyframes floatB {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(44px, -24px, 0) scale(1.05);
+  }
+}
+
+@keyframes floatC {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(20px, 30px, 0) scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradientA,
+  .gradientB,
+  .gradientC {
+    animation: none;
+  }
+}

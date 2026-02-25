@@ -36,7 +36,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="mx-auto w-fit pt-2 md:absolute md:bottom-0 md:right-0 md:mx-0 md:pt-0">
+          <div className="mx-auto w-fit pt-2 md:absolute md:-bottom-2 md:right-0 md:mx-0 md:pt-0">
             <CircularText
               text="CORNELL*AI*ALIGNMENT*CLUB*"
               onHover="speedUp"

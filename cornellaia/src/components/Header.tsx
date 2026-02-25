@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 import { NAV_ITEMS } from "@/content/navigation";
 import { cn } from "@/lib/cn";
 
@@ -18,6 +19,7 @@ function isRouteActive(pathname: string, href: string) {
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const bubbleRefs = useRef<HTMLAnchorElement[]>([]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -50,9 +52,40 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const bubbles = bubbleRefs.current.filter(Boolean);
+    if (!bubbles.length) return;
+
+    gsap.killTweensOf(bubbles);
+
+    if (menuOpen) {
+      gsap.set(bubbles, { scale: 0.7, y: 18, autoAlpha: 0, rotation: 0 });
+      gsap.to(bubbles, {
+        scale: 1,
+        y: 0,
+        autoAlpha: 1,
+        rotation: (index) => [-4, 3, -2, 4, -3, 2, -1][index % 7] ?? 0,
+        duration: 0.44,
+        ease: "back.out(1.5)",
+        stagger: 0.06,
+      });
+      return;
+    }
+
+    gsap.to(bubbles, {
+      scale: 0.76,
+      y: 12,
+      autoAlpha: 0,
+      rotation: 0,
+      duration: 0.18,
+      ease: "power2.in",
+      stagger: { each: 0.03, from: "end" },
+    });
+  }, [menuOpen]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95">
-      <div className="mx-auto flex w-full max-w-page items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="relative z-[60] mx-auto flex w-full max-w-page items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="focus-ring rounded-md">
           <Image
             src="/serif-logo.svg"
@@ -94,17 +127,24 @@ export default function Header() {
           aria-controls="mobile-site-nav"
           onClick={() => setMenuOpen((state) => !state)}
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M4 17H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
+          {menuOpen ? (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 6L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+              <path d="M18 6L6 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+            </svg>
+          ) : (
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path d="M4 17H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          )}
         </button>
       </div>
 
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] transition-opacity md:hidden",
+          "fixed inset-0 z-30 bg-slate-950/45 backdrop-blur-[2px] transition-opacity md:hidden",
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         onClick={() => setMenuOpen(false)}
@@ -115,44 +155,41 @@ export default function Header() {
         id="mobile-site-nav"
         aria-label="Mobile navigation"
         className={cn(
-          "fixed inset-y-0 right-0 z-50 flex h-full w-[76vw] max-w-[18rem] flex-col bg-white/95 px-4 pb-6 pt-5 shadow-2xl backdrop-blur-sm transition-transform md:hidden",
-          menuOpen ? "translate-x-0" : "translate-x-full",
+          "fixed inset-0 z-40 transition-opacity duration-200 md:hidden",
+          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
         )}
+        onClick={() => setMenuOpen(false)}
       >
-        <div className="mb-3 flex items-center justify-end">
-          <button
-            type="button"
-            onClick={() => setMenuOpen(false)}
-            className="focus-ring rounded-md bg-white/70 p-2 text-slate-700"
-            aria-label="Close menu"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 6L18 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-          </button>
-        </div>
+        <div
+          className="flex h-full w-full items-center justify-center px-6 py-24"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className="w-full max-w-[26rem]">
+            <div className="flex flex-wrap items-center justify-center gap-3.5">
+              {NAV_ITEMS.map((item, index) => {
+                const active = isRouteActive(pathname, item.href);
 
-        <div className="flex-1 space-y-2 overflow-y-auto">
-          {NAV_ITEMS.map((item) => {
-            const active = isRouteActive(pathname, item.href);
-
-            return (
-              <Link
-                key={`mobile-${item.href}`}
-                href={item.href}
-                className={cn(
-                  "focus-ring flex items-center rounded-xl px-3 py-2.5 text-base font-medium transition-colors",
-                  active
-                    ? "bg-red-50 text-brand-red"
-                    : "bg-white/80 text-slate-700 hover:bg-slate-50",
-                )}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span>{item.label}</span>
-              </Link>
-            );
-          })}
+                return (
+                  <Link
+                    key={`mobile-${item.href}`}
+                    href={item.href}
+                    className={cn(
+                      "focus-ring inline-flex h-[5.15rem] min-w-[9.7rem] items-center justify-center rounded-[2.65rem] bg-white px-8 text-center text-[2.05rem] font-medium text-slate-900 shadow-[0_8px_24px_rgba(15,23,42,0.14)] transition-colors",
+                      active
+                        ? "bg-red-50 text-brand-red"
+                        : "hover:bg-slate-50",
+                    )}
+                    ref={(el) => {
+                      if (el) bubbleRefs.current[index] = el;
+                    }}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span>{item.label.toLowerCase()}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </nav>
     </header>
