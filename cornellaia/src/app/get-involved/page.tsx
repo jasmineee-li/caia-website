@@ -18,6 +18,30 @@ export default function GetInvolvedPage() {
   return (
     <main>
       <Section
+        title="New for Fall 2026: CS 1998 — Intro to AI Safety & Alignment"
+        subtitle="We are currently in the planning stage for a student-led Cornell CS 1998 course focused on AI safety and alignment."
+      >
+        <MotionReveal>
+          <Card className="p-6 sm:p-7">
+            <div className="space-y-4 text-[1.02rem] leading-8 text-slate-700 sm:text-lg">
+              <p>
+                The course is planned to cover foundational model training pipelines, mechanistic
+                interpretability, RLHF and goal misgeneralization, safety evaluations and red
+                teaming, scalable oversight and control, and policy and career pathways in AI safety.
+              </p>
+              <p>
+                The format will emphasize hands-on notebooks, live demos, and paper-driven
+                discussion to help students build both conceptual understanding and practical skills.
+              </p>
+            </div>
+            <div className="mt-6">
+              <Button href="/programs/cs1998">View CS 1998 course page</Button>
+            </div>
+          </Card>
+        </MotionReveal>
+      </Section>
+
+      <Section
         title="Ways to get involved"
         subtitle="CAIA offers multiple ways for students to learn, connect, and contribute to AI safety research."
       >
