@@ -67,4 +67,12 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "Research",
     href: "https://arxiv.org/pdf/2509.01938",
   },
+  {
+    title: "CAIA bowling social",
+    summary:
+      "Bowling @ Helen Newman Hall was a success!",
+    date: "2025-10-15",
+    displayDate: "October 15, 2025",
+    category: "Event",
+  },
 ];
