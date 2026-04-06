@@ -63,7 +63,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
       {
         imageSrc: "/team/TEAM_jasmine_li.png",
         name: "Jasmine Li",
-        role: "Advisor",
+        role: "Founder, Advisor",
         linkedinUrl: "https://www.linkedin.com/in/jasminexli/",
         websiteUrl: "https://jasminexli.com/",
         scholarUrl: "https://scholar.google.com/citations?user=LSidePQAAAAJ&hl=en",
