@@ -417,7 +417,7 @@ export default function CS1998Page() {
                   aria-hidden="true"
                   className="h-2 w-2 rounded-full bg-brand-red"
                 />
-                Planning Stage (Fall 2026, tentative)
+                Fall 2026
               </Badge>
               <h1 className="display-title text-3xl sm:text-5xl">
                 CS 1998: Intro to AI Safety &amp; Alignment
@@ -453,6 +453,30 @@ export default function CS1998Page() {
         </header>
 
         <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
+          <section aria-label="Pre-enroll" className="mt-10">
+            <article className="rounded-2xl border border-brand-red/30 bg-gradient-to-br from-brand-red/5 via-white to-white p-6 sm:p-8">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="min-w-0">
+                  <h2 className="display-title text-2xl sm:text-3xl">
+                    Pre-enroll today!
+                  </h2>
+                  <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
+                    CS 1998, PRJ 608 · Class number{" "}
+                    <span className="font-semibold text-slate-900">18589</span>
+                  </p>
+                </div>
+                <a
+                  href="https://classes.cornell.edu/browse/roster/FA26/class/CS/1998"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-ring inline-flex shrink-0 items-center justify-center rounded-lg bg-brand-red px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-red-strong sm:text-base"
+                >
+                  Pre-enroll on Class Roster
+                </a>
+              </div>
+            </article>
+          </section>
+
           <section id="content" className="mt-10 scroll-mt-28">
             <div className="grid gap-6 lg:grid-cols-12">
               <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:col-span-7">
