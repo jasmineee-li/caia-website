@@ -275,33 +275,33 @@ const COURSE_WEEKS: CourseWeek[] = [
 const COURSE_STAFF: CourseStaffMember[] = [
   {
     name: "Jinzhou Wu",
-    role: "Main Instructor",
+    role: "Organizer",
     imageSrc: "/team/TEAM_jinzhou_wu.png",
   },
   {
+    name: "Eric Yachbes",
+    role: "",
+    imageSrc: "/team/TEAM_eric_yachbes.jpeg",
+  },
+  {
     name: "Jasmine Li",
-    role: "Course Staff",
+    role: "",
     imageSrc: "/team/TEAM_jasmine_li.png",
   },
   {
     name: "Jonathn Chang",
-    role: "Course Staff",
+    role: "",
     imageSrc: "/team/TEAM_jonathn_chang.png",
   },
   {
     name: "Suvadip Sana",
-    role: "Course Staff",
+    role: "",
     imageSrc: "/team/TEAM_suvadip_sana.png",
   },
   {
     name: "Uday Tyagi",
-    role: "Course Staff",
+    role: "",
     imageSrc: "/team/TEAM_uday.jpeg",
-  },
-  {
-    name: "Eric Yachbes",
-    role: "Course Staff",
-    imageSrc: "/team/TEAM_eric_yachbes.jpeg",
   },
   {
     name: "Éva Tardos",
