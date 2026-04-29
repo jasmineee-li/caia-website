@@ -61,3 +61,23 @@ main.cs1998-page + footer {
 main.not-found-page + footer {
   margin-top: 0 !important;
 }
+
+body:has(main.cs1998-poster-page) {
+  background: #ffffff;
+}
+
+body:has(main.cs1998-poster-page)::before,
+body:has(main.cs1998-poster-page) > header,
+body:has(main.cs1998-poster-page) > footer {
+  display: none;
+}
+
+@media print {
+  .page-grid::before {
+    display: none !important;
+  }
+
+  .app-shell {
+    min-height: auto !important;
+  }
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ProfileCard from "@/components/ProfileCard";
 import Badge from "@/components/ui/Badge";
 import Squares from "@/components/ui/Squares";
 import { SITE_URL } from "@/content/seo";
@@ -21,6 +22,12 @@ interface CourseWeek {
   description: string;
   topics: string[];
   materials: WeekMaterials;
+}
+
+interface CourseStaffMember {
+  name: string;
+  role: string;
+  imageSrc: string;
 }
 
 const COURSE_PATH = "/programs/cs1998";
@@ -265,11 +272,49 @@ const COURSE_WEEKS: CourseWeek[] = [
   },
 ];
 
+const COURSE_STAFF: CourseStaffMember[] = [
+  {
+    name: "Jinzhou Wu",
+    role: "Main Instructor",
+    imageSrc: "/team/TEAM_jinzhou_wu.png",
+  },
+  {
+    name: "Jasmine Li",
+    role: "Course Staff",
+    imageSrc: "/team/TEAM_jasmine_li.png",
+  },
+  {
+    name: "Jonathn Chang",
+    role: "Course Staff",
+    imageSrc: "/team/TEAM_jonathn_chang.png",
+  },
+  {
+    name: "Suvadip Sana",
+    role: "Course Staff",
+    imageSrc: "/team/TEAM_suvadip_sana.png",
+  },
+  {
+    name: "Uday Tyagi",
+    role: "Course Staff",
+    imageSrc: "/team/TEAM_uday.jpeg",
+  },
+  {
+    name: "Eric Yachbes",
+    role: "Course Staff",
+    imageSrc: "/team/TEAM_eric_yachbes.jpeg",
+  },
+  {
+    name: "Éva Tardos",
+    role: "Faculty Advisor",
+    imageSrc: "/team/TEAM_eva_tardos.jpg",
+  },
+];
+
 const COURSE_DESCRIPTION =
-  "CS 1998 is a planned student-led, technically focused introduction to AI Safety and Alignment at Cornell for Fall 2026.";
+  "CS 1998 is a student-led, technically focused introduction to AI Safety and Alignment at Cornell for Fall 2026.";
 
 const COURSE_OG_DESCRIPTION =
-  "Planning-stage CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with paper readings, demos, and notebooks.";
+  "Fall 2026 CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with paper readings, demos, and notebooks.";
 
 const COURSE_SCHEMA = {
   "@context": "https://schema.org",
@@ -291,6 +336,10 @@ const COURSE_SCHEMA = {
     "Red teaming and safety evaluations",
     "Scalable oversight and AI governance",
   ],
+  instructor: COURSE_STAFF.map((member) => ({
+    "@type": "Person",
+    name: member.name,
+  })),
   timeRequired: "P7W",
   inLanguage: "en",
 };
@@ -309,7 +358,7 @@ export const metadata: Metadata = {
     canonical: COURSE_PATH,
   },
   openGraph: {
-    title: "CS 1998: Intro to AI Safety & Alignment (Fall 2026, tentative)",
+    title: "CS 1998: Intro to AI Safety & Alignment (Fall 2026)",
     description: COURSE_OG_DESCRIPTION,
     url: COURSE_PATH,
     siteName: "Cornell AI Alignment",
@@ -442,6 +491,12 @@ export default function CS1998Page() {
                   Logistics
                 </a>
                 <a
+                  href="#staff"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Staff
+                </a>
+                <a
                   href="#syllabus"
                   className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
                 >
@@ -473,6 +528,29 @@ export default function CS1998Page() {
                 >
                   Pre-enroll on Class Roster
                 </a>
+              </div>
+            </article>
+          </section>
+
+          <section id="staff" className="mt-10 scroll-mt-28">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h2 className="display-title text-2xl sm:text-3xl">
+                Course Staff
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
+                The course is led by CAIA members with faculty advising from
+                Cornell.
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {COURSE_STAFF.map((member) => (
+                  <ProfileCard
+                    key={member.name}
+                    imageSrc={member.imageSrc}
+                    name={member.name}
+                    role={member.role}
+                  />
+                ))}
               </div>
             </article>
           </section>
@@ -572,10 +650,10 @@ export default function CS1998Page() {
             <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
               <h2 className="display-title text-2xl sm:text-3xl">Logistics</h2>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-                <li>This will be a 1-credit, 7-week, first S/U course.</li>
+                <li>This is a 1-credit, 7-week, first S/U course.</li>
                 <li>
-                  This course will be open enrollment (without application), and
-                  we are planning around 75 seats.
+                  This course is open enrollment (without application), with
+                  around 75 seats.
                 </li>
               </ul>
             </article>
