@@ -52,14 +52,6 @@ export const NEWS_ITEMS: NewsItem[] = [
     ],
   },
   {
-    title: "RAISE Act is signed by the NY Governor",
-    summary: "Governor Kathy Hochul signed the RAISE Act into law, establishing nation-leading AI safety requirements for frontier model developers. CAIA helped canvass support for the bill.",
-    date: "2025-12-19",
-    displayDate: "December 19, 2025",
-    category: "Announcement",
-    href: "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-require-ai-frameworks-ai-frontier-models",
-  },
-  {
     title: "EigenBench accepted to ICLR 2026 as an Oral paper!",
     summary: "EigenBench was accepted to ICLR 2026 and selected for an Oral presentation.",
     date: "2026-02-06",

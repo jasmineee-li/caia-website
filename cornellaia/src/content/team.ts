@@ -55,6 +55,11 @@ export const TEAM_GROUPS: TeamGroup[] = [
         name: "Uday Tyagi",
         linkedinUrl: "https://www.linkedin.com/in/heyuday/",
       },
+      {
+        imageSrc: "/team/TEAM_eric_yachbes.jpeg",
+        name: "Eric Yachbes",
+        linkedinUrl: "https://www.linkedin.com/in/eric-yachbes/",
+      },
     ],
   },
   {
