@@ -546,7 +546,7 @@ export default function CS1998Page() {
                   href="#grading"
                   className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
                 >
-                  Course Structure and Grading
+                  Grading
                 </a>
                 <a
                   href="#calendar"
