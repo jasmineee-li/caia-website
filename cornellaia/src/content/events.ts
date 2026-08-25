@@ -3,6 +3,17 @@ export const EVENTS_CALENDAR_URL = "https://luma.com/cornellaia";
 export const EVENTS_EMBED_URL =
   "https://luma.com/embed/calendar/cal-NrH7EP037bvvQtm/events?lt=light";
 
+export const RECENT_EVENTS = [
+  {
+    title: "CAIA End-of-Semester Social",
+    embedUrl: "https://luma.com/embed/event/evt-IUSkaQG54gA9czw/simple",
+  },
+  {
+    title: "Dinner Social",
+    embedUrl: "https://luma.com/embed/event/evt-aPXYSVBUTWhJDSf/simple",
+  },
+];
+
 export const PAST_EVENT_IDS = [
   "jst12JWoIZq2MEY",
   "vfwzibwhJEsB2sx",

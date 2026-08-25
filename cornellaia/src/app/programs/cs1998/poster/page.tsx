@@ -43,7 +43,7 @@ export default function CS1998PosterPage() {
           </div>
 
           <section className={styles.hero}>
-            <h1 className={styles.preEnroll}>Pre-enroll Now!</h1>
+            <h1 className={styles.preEnroll}>Enroll Now!</h1>
             <h2 className={styles.title}>
               CS 1998:
               <br />
@@ -129,7 +129,7 @@ export default function CS1998PosterPage() {
                   </a>
                 </div>
                 <a className={styles.roster} href={ROSTER_URL}>
-                  Pre-enroll through Cornell Class Roster
+                  Enroll through Cornell Class Roster
                 </a>
               </section>
             </aside>

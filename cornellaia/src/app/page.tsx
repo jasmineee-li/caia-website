@@ -34,6 +34,41 @@ export default function Home() {
 
   return (
     <main>
+      <section
+        aria-label="CS 1998 course announcement"
+        className="border-b border-slate-200 bg-[linear-gradient(100deg,#fff1f2_0%,#ffffff_100%)]"
+      >
+        <Container>
+          <Link
+            href="/programs/cs1998"
+            className="group focus-ring flex flex-col items-center justify-between gap-2 py-3 text-center sm:flex-row sm:text-left"
+          >
+            <span className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:justify-start">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-red">
+                <span
+                  aria-hidden="true"
+                  className="h-2 w-2 rounded-full bg-brand-red"
+                />
+                Fall 2026
+              </span>
+              <span className="font-semibold text-slate-950">
+                CS 1998: Intro to AI Safety &amp; Alignment
+              </span>
+              <span className="text-sm text-slate-600">Enrollment open</span>
+            </span>
+            <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-red transition group-hover:text-brand-red-strong">
+              <span className="underline decoration-brand-red/35 underline-offset-4">
+                Course details
+              </span>
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 -rotate-45 border-b-2 border-r-2 border-current transition-transform group-hover:translate-x-0.5"
+              />
+            </span>
+          </Link>
+        </Container>
+      </section>
+
       <section className="pt-12 pb-10 sm:pt-24 sm:pb-16">
         <Container>
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
@@ -232,7 +267,7 @@ export default function Home() {
               items={RESEARCH_PAPERS.map((paper) => ({
                 image: paper.imageSrc,
                 title: paper.title,
-                badge: paper.tags.length > 0 ? paper.tags[0] : undefined,
+                badge: paper.shortTag ?? (paper.tags.length > 0 ? paper.tags[0] : undefined),
                 href: paper.href,
               }))}
               textColor="#0f172a"

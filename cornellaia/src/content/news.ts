@@ -20,6 +20,32 @@ export interface NewsItem {
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    title: "CAIA members accepted to ICML 2026 workshops",
+    summary:
+      "CAIA members contributed to multiple papers accepted to ICML 2026 workshops, spanning pluralistic alignment, trustworthy AI, and mechanistic interpretability.",
+    date: "2026-06-11",
+    displayDate: "June 11, 2026",
+    category: "Research",
+    links: [
+      {
+        label: "Pluralistic Preference Alignment",
+        href: "https://icml.cc/virtual/2026/75691",
+      },
+      {
+        label: "WARP",
+        href: "https://icml.cc/virtual/2026/76886",
+      },
+      {
+        label: "Side Effects of Character Training",
+        href: "https://icml.cc/virtual/2026/75634",
+      },
+      {
+        label: "PLOT",
+        href: "https://arxiv.org/abs/2605.06979",
+      },
+    ],
+  },
+  {
     title: "CAIA ice skate social",
     summary: "Thank you everyone for a great semester working on AI safety. We wrapped up with a fun CAIA ice skate social.",
     date: "2025-12-07",

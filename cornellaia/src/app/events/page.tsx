@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
-import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENT_IDS } from "@/content/events";
+import {
+  EVENTS_CALENDAR_URL,
+  EVENTS_EMBED_URL,
+  PAST_EVENT_IDS,
+  RECENT_EVENTS,
+} from "@/content/events";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -40,6 +45,35 @@ export default function EventsPage() {
             />
           </div>
         </MotionReveal>
+      </Section>
+
+      <Section
+        title="Recent Events"
+        subtitle="Recent opportunities to meet other members of the CAIA community."
+      >
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {RECENT_EVENTS.map((event, index) => (
+            <MotionReveal
+              key={event.embedUrl}
+              delayClass={index === 1 ? "motion-delay-1" : undefined}
+            >
+              <article>
+                <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                  {event.title}
+                </h3>
+                <iframe
+                  src={event.embedUrl}
+                  className="h-[450px] w-full rounded-lg border border-slate-200"
+                  style={{ border: "1px solid rgba(191, 203, 218, 0.53)" }}
+                  allow="fullscreen; payment"
+                  title={event.title}
+                  loading="lazy"
+                  tabIndex={0}
+                />
+              </article>
+            </MotionReveal>
+          ))}
+        </div>
       </Section>
 
       <Section

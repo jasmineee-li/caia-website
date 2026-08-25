@@ -13,16 +13,91 @@ export interface ResearchPaperDetail {
   authors: ResearchAuthor[];
   abstract: string;
   tags: string[];
+  shortTag?: string;
 }
 
 export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
-    title: "Democratic Preference Alignment via Sortition-Weighted RLHF",
-    href: "https://arxiv.org/abs/2602.05113",
+    title:
+      "WARP: Measuring and Mitigating Evaluation Awareness in Browser-Agent Safety Benchmarks",
+    href: "https://icml.cc/virtual/2026/76886",
+    imageSrc: "/papers/paper-warp.png",
+    imageAlt: "Cover image for WARP paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
+    authors: [
+      { name: "Jasmine X Li", isCaiaMember: true },
+      { name: "Ashton Chew", isCaiaMember: true },
+      { name: "Maxwell Lin" },
+      { name: "Eliot Jones" },
+      { name: "Xiaohan Fu" },
+      { name: "Andy Zou" },
+    ],
+    abstract:
+      "Browser-agent safety benchmarks are useful only if behavior under evaluation generalizes to real deployment. WARP measures evaluation awareness across frontier models and browser-agent indirect prompt-injection benchmarks, finding that models often recognize benchmark trajectories as evaluations and that explicit evaluation cues can materially change reported attack-success rates. The paper introduces WARP, a wrapper-based benchmark-generation pipeline for constructing more challenging and realistic indirect prompt-injection tasks, and argues for routine reporting of evaluation awareness in browser-agent safety work.",
+    tags: ["ICML 2026 Workshop on Trustworthy AI for Good"],
+    shortTag: "ICML 2026 Workshop",
+  },
+  {
+    title:
+      "Side Effects of Character Training: Quantifying Cross-Constitution Drift in LLMs",
+    href: "https://icml.cc/virtual/2026/75634",
+    imageSrc: "/papers/paper-cross-constitution.png",
+    imageAlt: "Cover image for Side Effects of Character Training paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
+    authors: [
+      { name: "Bhagyesh Kumar" },
+      { name: "Ananya Sutradhar" },
+      { name: "Saurav Panigrahi" },
+      { name: "Jonathn Chang", isCaiaMember: true },
+      { name: "Lionel Levine", isCaiaMember: true },
+    ],
+    abstract:
+      "Character training is a key part of post-training large language models, but its broader effects across value systems are still underexplored. This work uses EigenBench to quantify how models trained on one constitution shift across other constitutions, studying intended value changes, cross-constitution side effects, prompt interactions, and the evolution of model character over training.",
+    tags: ["ICML 2026 Workshop on Pluralistic Alignment"],
+    shortTag: "ICML 2026 Workshop",
+  },
+  {
+    title:
+      "PLOT: Progressive Localization via Optimal Transport in Neural Causal Abstraction",
+    href: "https://arxiv.org/abs/2605.06979",
+    imageSrc: "/papers/paper-plot.png",
+    imageAlt: "Cover image for PLOT paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
+    authors: [
+      { name: "Jonathn Chang", isCaiaMember: true },
+      { name: "Arya Datla", isCaiaMember: true },
+      { name: "Ziv Goldfeld" },
+    ],
+    abstract:
+      "Causal abstraction offers a way to connect high-level causal variables with low-level neural computations, but existing intervention methods can require expensive searches over candidate neural sites. PLOT uses optimal transport over output-effect signatures to localize abstract variables within neural networks, moving from coarse sites such as tokens or layers to finer supports and providing fast handles for causal abstraction and mechanistic interpretability.",
+    tags: ["ICML 2026 Workshop on Mechanistic Interpretability"],
+    shortTag: "ICML 2026 Workshop",
+  },
+  {
+    title: "AI Epistemic Risks: Emerging Mechanisms & Evidence",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6873005",
+    imageSrc: "/papers/paper-epistemic-risks.png",
+    imageAlt: "Cover image for AI Epistemic Risks paper",
+    imageWidth: 1654,
+    imageHeight: 2339,
+    authors: [
+      { name: "Jasmine Li", isCaiaMember: true },
+      { name: "et al." },
+    ],
+    abstract:
+      "Humanity's ability to know, reason, judge, and act well underpins scientific progress, democratic governance, crisis response, and AI governance itself. This paper argues that advances in AI pose systemic epistemic risks: threats to collective capacities to form accurate beliefs, reason well, and sustain a healthy information environment. It connects evidence across machine learning, AI safety, human-computer interaction, philosophy, cognitive neuroscience, and education, focusing on persuasion and manipulation, cognitive offloading, and feedback loops that can narrow and lock in society's epistemic space. Because these harms can compound and conceal themselves, the paper calls for interventions in AI systems, human-AI interaction, institutions, and the incentives shaping deployment.",
+    tags: ["SSRN"],
+  },
+  {
+    title: "Pluralistic Preference Alignment via Sortition-weighted RLHF",
+    href: "https://icml.cc/virtual/2026/75691",
     imageSrc: "/papers/paper-dempo.png",
-    imageAlt: "Cover image for Democratic Preference Alignment paper",
-    imageWidth: 2550,
-    imageHeight: 3300,
+    imageAlt: "Cover image for Pluralistic Preference Alignment paper",
+    imageWidth: 1700,
+    imageHeight: 2200,
     authors: [
       { name: "Suvadip Sana", isCaiaMember: true },
       { name: "Jinzhou Wu", isCaiaMember: true },
@@ -30,7 +105,8 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     ],
     abstract:
       "Whose values should AI systems learn? Preference based alignment methods like RLHF derive their training signal from human raters, yet these rater pools are typically convenience samples that systematically over represent some demographics and under represent others. We introduce Democratic Preference Optimization, or DemPO, a framework that applies algorithmic sortition, the same mechanism used to construct citizen assemblies, to preference based fine tuning. DemPO offers two training schemes. Hard Panel trains exclusively on preferences from a quota satisfying mini public sampled via sortition. Soft Panel retains all data but reweights each rater by their inclusion probability under the sortition lottery. We prove that Soft Panel weighting recovers the expected Hard Panel objective in closed form. Using a public preference dataset that pairs human judgments with rater demographics and a seventy five clause constitution independently elicited from a representative United States panel, we evaluate Llama models from one billion to eight billion parameters fine tuned under each scheme. Across six aggregation methods, the Hard Panel consistently ranks first and the Soft Panel consistently outperforms the unweighted baseline, with effect sizes growing as model capacity increases. These results demonstrate that enforcing demographic representativeness at the preference collection stage, rather than post hoc correction, yields models whose behavior better reflects values elicited from representative publics.",
-    tags: ["Preprint"],
+    tags: ["ICML 2026 Workshop on Pluralistic Alignment"],
+    shortTag: "ICML 2026 Workshop",
   },
   {
     title: "AI Deception: Risks, Dynamics, and Controls",

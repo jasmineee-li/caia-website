@@ -81,16 +81,19 @@ function wrapTextLines(context: CanvasRenderingContext2D, text: string, maxWidth
 }
 
 function ellipsizeLine(context: CanvasRenderingContext2D, line: string, maxWidth: number): string {
-  if (context.measureText(line).width <= maxWidth) {
-    return line;
+  const words = line.trim().split(/\s+/);
+  let trimmed = words.join(" ");
+
+  while (words.length > 1 && context.measureText(`${trimmed}...`).width > maxWidth) {
+    words.pop();
+    trimmed = words.join(" ");
   }
 
-  let trimmed = line;
   while (trimmed.length > 0 && context.measureText(`${trimmed}...`).width > maxWidth) {
     trimmed = trimmed.slice(0, -1);
   }
 
-  return `${trimmed.trimEnd()}...`;
+  return trimmed ? `${trimmed.trimEnd()}...` : "...";
 }
 
 function drawRoundedRect(

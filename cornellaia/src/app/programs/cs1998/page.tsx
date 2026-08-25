@@ -12,9 +12,8 @@ interface MaterialItem {
 
 interface WeekMaterials {
   slide: MaterialItem[];
-  recommendedReading: MaterialItem[];
-  demo: MaterialItem[];
-  takeHomeNotebook: MaterialItem[];
+  discussionReading: MaterialItem[];
+  furtherReading: MaterialItem[];
 }
 
 interface CourseWeek {
@@ -32,240 +31,269 @@ interface CourseStaffMember {
 
 const COURSE_PATH = "/programs/cs1998";
 const COURSE_URL = new URL(COURSE_PATH, SITE_URL).toString();
+const COURSE_CALENDAR_EMBED_URL =
+  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&mode=WEEK&title=CS%201998%20Course%20Calendar&src=ancyNzgyQGNvcm5lbGwuZWR1&src=Y182NjBjN2M3NTg0MTk0MWM5ZDBhY2IzYjI4M2Y3N2Q2OThhODU3YTk4ZjcxNzE4ZWI3NGYzNjY3ZTEwYmZmYWE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wYzFkY2I4NGM2MTA0NDBiYTcwZGMzNDRiZWEwOGQ4NzQ4NDE5NjI1YzUwMjE1ZGNjMmQyMTk3MjE2ZGIyMmU1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18yY2RlODQyMjc2M2Y2YTUyMDlmODNmMDVlZGNiNTNjY2M5NjE1MDk4ODNhMzNkYmM2YWVmOGI1MDdjYmVlOGMxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wNzViODZmOWQxZDk3M2JjZjBkNDZlMzAxZDIzY2Q0NjQxMTdlOGFhZmQ5ZjBhYTdiZmY3ZTIwNTZhMTQwYmFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19mMmMxZWVkNDZmZTU5MGIyZDM1MzBiMmMxMTM4NGNlODU3YzZiZGZiY2YzNmZkOWQ0NGNiZjhiMDFlYmM1ZmU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18xZmM2NzM4ZGYxODJkZDk5MDIxMGI1YmQxNTg3NDcxZjBiMzNmYjFlZTIxYTM4NTBlZWEyM2Y4ZmYwM2U4OGNmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y185OTJiMWNmMTg0ZTE3NzAzNjNhNjVjMmMwMzZhZDQyZjllNWI0YWYxZWM2NDgyY2E4MjAwMTNmMDQ1YzY5NGVhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180MGRhZTU3ZDNlZWFlMzA3ODUwYzkzNDI2MWZmMmJiYzdhY2E1NjNkM2M2ZGNiOTcyNGE0MmE1MmNlNTQ3ZmIzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23d50000&color=%234285f4&color=%23f6bf26&color=%233f51b5&color=%238e24aa&color=%23d50000&color=%23d81b60&color=%23c0ca33";
 
 const COURSE_WEEKS: CourseWeek[] = [
   {
     number: 1,
-    description: "Motivation & The Training Pipeline",
+    description: "Introduction to AI Safety",
     topics: [
-      "Motivation for AI safety: examples of specification gaming, toxicity, orthogonality thesis, and why safety is not guaranteed by default.",
-      "Transformer architecture: residual stream, multi-head attention, and MLP layers.",
-      "GPT-2 architecture: decoder-only specifics.",
-      "Training pipeline: pretraining, supervised fine-tuning (SFT), and RLHF.",
-      "Pretraining objective and web-scale datasets such as CommonCrawl.",
-      "How generation works: temperature and top-k sampling.",
+      "Why increasingly capable AI systems do not become safe or aligned by default.",
+      "Evidence from current systems: sycophancy, deception, specification gaming, and agentic failure modes.",
+      "Risk models spanning misuse, accidents, systemic harms, and loss of control.",
+      "How to reason about uncertain, low-probability, high-impact outcomes.",
+      "Capabilities forecasts, scenarios, and the assumptions behind them.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
-          label: "Attention Is All You Need (Vaswani et al., 2017)",
-          href: "https://arxiv.org/abs/1706.03762",
-        },
-        {
-          label: "Language Models are Few-Shot Learners (Brown et al., 2020)",
-          href: "https://arxiv.org/abs/2005.14165",
+          label: "Current AIs seem pretty misaligned to me (Greenblatt, 2026)",
+          href: "https://www.lesswrong.com/posts/WewsByywWNhX9rtwi/current-ais-seem-pretty-misaligned-to-me",
         },
       ],
-      demo: [
+      furtherReading: [
         {
-          label: "LLM visualization and forward pass walkthrough",
-          href: "https://bbycroft.net/llm",
+          label: "AI 2027: Summary (Kokotajlo et al., 2025)",
+          href: "https://ai-2027.com/summary",
         },
         {
-          label:
-            "Visualize a Logit Lens view of hidden states during generation.",
-        },
-      ],
-      takeHomeNotebook: [
-        {
-          label: "NanoGPT playground",
-          href: "https://github.com/karpathy/nanoGPT",
-        },
-        {
-          label:
-            "Implement raw sampling (temperature and top-k) and inspect output distributions.",
+          label: "International AI Safety Report 2026",
+          href: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
         },
       ],
     },
   },
   {
     number: 2,
-    description: "Mech Interp I: Causal Tracing",
+    description: "AI Alignment and RLHF",
     topics: [
-      "Mechanistic interpretability as reverse engineering.",
-      "Residual stream as the model communication channel.",
-      "Attention heads and information flow between token positions.",
-      "Induction heads and in-context pattern copying.",
-      "Activation patching (causal tracing) to identify causally important components.",
+      "The post-training pipeline: supervised fine-tuning, preference data, reward models, and policy optimization.",
+      "RLHF with PPO and direct preference methods such as DPO.",
+      "Constitutional AI, reinforcement learning from AI feedback, and rule-based alignment.",
+      "What present-day alignment methods accomplish in practice.",
+      "Known limitations: reward misspecification, overoptimization, plural values, and dependence on human oversight.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
           label:
-            "In-context Learning and Induction Heads (Olsson et al., 2022)",
-          href: "https://arxiv.org/abs/2209.11895",
-        },
-        {
-          label: "Interpretability in the Wild (Wang et al., 2022)",
-          href: "https://arxiv.org/abs/2211.00593",
+            "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback — selected sections (Casper et al., 2023)",
+          href: "https://arxiv.org/abs/2307.15217",
         },
       ],
-      demo: [
+      furtherReading: [
         {
           label:
-            'Patch clean activations into a corrupted Eiffel Tower prompt to locate which layer restores "Paris".',
-        },
-      ],
-      takeHomeNotebook: [{ label: "TBD" }],
-    },
-  },
-  {
-    number: 3,
-    description: "Mech Interp II: Understanding the Black Box",
-    topics: [
-      "Linear probes for concept detection in internal states.",
-      "Persona vectors for traits like honesty, deception, and sycophancy.",
-      "Activation steering to control model behavior.",
-      "Superposition and feature packing.",
-      "Sparse autoencoders (SAEs) for disentangling representations.",
-    ],
-    materials: {
-      slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
-        {
-          label:
-            "Representation Engineering: A Top-Down Approach to AI Transparency (Zou et al., 2023)",
-          href: "https://arxiv.org/abs/2310.01405",
-        },
-        {
-          label: "Golden Gate Claude (Anthropic, 2024)",
-          href: "https://www.anthropic.com/research/golden-gate-claude",
+            "Training Language Models to Follow Instructions with Human Feedback (Ouyang et al., 2022)",
+          href: "https://arxiv.org/abs/2203.02155",
         },
         {
           label:
-            "The Internal State of an LLM Knows When It's Lying (Azaria & Mitchell, 2023)",
-          href: "https://arxiv.org/abs/2304.13734",
+            "Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)",
+          href: "https://arxiv.org/abs/2212.08073",
         },
-      ],
-      demo: [
         {
           label:
-            "Steering the direction of non-corrigibility (Jinzhou's project).",
-        },
-      ],
-      takeHomeNotebook: [
-        { label: "Building a lie detector probe.ipynb" },
-        {
-          label:
-            "Replicate lie/hallucination detection from internal activations.",
+            "Direct Preference Optimization: Your Language Model is Secretly a Reward Model (Rafailov et al., 2023)",
+          href: "https://arxiv.org/abs/2305.18290",
         },
       ],
     },
   },
   {
-    number: 4,
-    description: "RL, RLHF, and Goal Misgeneralization",
+    number: 3,
+    description: "Reward Hacking and Goal Misgeneralization",
     topics: [
-      "RL basics: policy, reward, and value functions.",
-      "RLHF pipeline: preference data collection, reward modeling, PPO/DPO optimization.",
-      "Reward hacking and Goodhart's law.",
-      "Goal misgeneralization in competent-but-misaligned agents.",
-      "Sycophancy as reward hacking toward user approval.",
+      "Goodhart's law, proxy objectives, and specification gaming.",
+      "Reward hacking and reward tampering in agents and language models.",
+      "Goal misgeneralization versus ordinary capability failures under distribution shift.",
+      "Sycophancy and emergent misalignment after narrow fine-tuning.",
+      "Mitigation strategies and why behavioral training may not remove the underlying failure mode.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
           label:
-            "Deep Reinforcement Learning from Human Preferences (Christiano et al., 2017)",
-          href: "https://arxiv.org/abs/1706.03741",
+            "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models (Denison et al., 2024)",
+          href: "https://arxiv.org/abs/2406.10162",
+        },
+      ],
+      furtherReading: [
+        {
+          label:
+            "Goal Misgeneralization in Deep Reinforcement Learning (Langosco et al., 2022)",
+          href: "https://arxiv.org/abs/2105.14111",
         },
         {
           label:
             "Scaling Laws for Reward Model Overoptimization (Gao et al., 2022)",
           href: "https://arxiv.org/abs/2210.10760",
         },
+        {
+          label:
+            "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs (Betley et al., 2025)",
+          href: "https://arxiv.org/abs/2502.17424",
+        },
       ],
-      demo: [
-        { label: "Live DPO run with TRL on safe/toxic preference pairs." },
+    },
+  },
+  {
+    number: 4,
+    description: "Interpretability",
+    topics: [
+      "What interpretability is for and what kinds of evidence it can provide.",
+      "Probes, logit attribution, activation patching, and causal interventions.",
+      "Sparse features, circuit tracing, and representation engineering.",
+      "The Jacobian lens and the J-space hypothesis of a verbalizable global workspace.",
+      "Limits of current methods and the challenge of scalable, safety-relevant auditing.",
+    ],
+    materials: {
+      slide: [{ label: "Slides (TBD)" }],
+      discussionReading: [
+        {
+          label:
+            "Verbalizable Representations Form a Global Workspace in Language Models (Gurnee et al., 2026)",
+          href: "https://arxiv.org/abs/2607.15495",
+        },
       ],
-      takeHomeNotebook: [{ label: "TBD" }],
+      furtherReading: [
+        {
+          label:
+            "Natural Language Autoencoders: Turning Claude's Thoughts into Text (Anthropic, 2026)",
+          href: "https://www.anthropic.com/research/natural-language-autoencoders",
+        },
+        {
+          label:
+            "Circuit Tracing: Revealing Computational Graphs in Language Models (Ameisen et al., 2025)",
+          href: "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
+        },
+        {
+          label:
+            "Open Problems in Mechanistic Interpretability (Sharkey et al., 2025)",
+          href: "https://arxiv.org/abs/2501.16496",
+        },
+      ],
     },
   },
   {
     number: 5,
-    description: "Evals & Red Teaming",
+    description: "Evaluations—Evaluating Dangerous Capabilities",
     topics: [
-      "Capability and safety benchmarks.",
-      "Manual and automated red teaming.",
-      "Jailbreak techniques and refusal bypass patterns.",
-      "Adversarial suffix attacks and prompt injection.",
-      "Model organisms and controlled dangerous-trait studies.",
+      "Threat modeling and capability elicitation before benchmark design.",
+      "Evaluations for cyber, biological, persuasion, deception, autonomy, and self-proliferation capabilities.",
+      "Construct validity, contamination, sandbagging, and evaluation awareness.",
+      "Manual red teaming, automated red teaming, and scalable evaluation pipelines.",
+      "Using evaluation evidence to inform deployment safeguards and safety cases.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
           label:
-            "Universal and Transferable Adversarial Attacks on Aligned Language Models (Zou et al., 2023)",
-          href: "https://arxiv.org/abs/2307.15043",
+            "Evaluating Frontier Models for Dangerous Capabilities (Phuong et al., 2024)",
+          href: "https://arxiv.org/abs/2403.13793",
         },
         {
-          label: "Sleeper Agents (Hubinger et al., 2024)",
-          href: "https://arxiv.org/abs/2401.05566",
+          label:
+            "WARP: Measuring and Mitigating Evaluation Awareness in Browser-Agent Safety Benchmarks (Li et al., 2026)",
+          href: "https://icml.cc/virtual/2026/76886",
         },
       ],
-      demo: [{ label: "Automated jailbreaking demo with GCG." }],
-      takeHomeNotebook: [
+      furtherReading: [
         {
-          label: "Jailbreaking CTF: extract a hidden key from a black-box API.",
+          label:
+            "Model Evaluation for Extreme Risks (Shevlane et al., 2023)",
+          href: "https://arxiv.org/abs/2305.15324",
+        },
+        {
+          label: "Measuring AI Ability to Complete Long Tasks (METR, 2025)",
+          href: "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+        },
+        {
+          label:
+            "Frontier Models are Capable of In-context Scheming (Meinke et al., 2024)",
+          href: "https://arxiv.org/abs/2412.04984",
         },
       ],
     },
   },
   {
     number: 6,
-    description: "Control & Scalable Oversight",
+    description: "Control and Scalable Oversight",
     topics: [
-      "Scalable oversight for systems beyond human evaluator capability.",
-      "Weak-to-strong generalization.",
-      "AI control: monitoring and containment methods.",
-      "Anomaly detection over model internals.",
-      "AI safety via debate.",
+      "The supervision gap and weak-to-strong generalization.",
+      "Scalable oversight through debate, critique, decomposition, and recursive supervision.",
+      "AI control protocols: trusted monitoring, untrusted monitoring, trusted editing, and defer-to-human strategies.",
+      "Control evaluations against intentionally subversive model behavior.",
+      "Safety-usefulness tradeoffs and evidence for an AI control safety case.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
-          label: "Weak-to-Strong Generalization (Burns et al., 2023)",
-          href: "https://arxiv.org/abs/2312.09390",
-        },
-        {
-          label: "AI Safety via Debate (Irving et al., 2018)",
-          href: "https://arxiv.org/abs/1805.00899",
+          label:
+            "How to Evaluate Control Measures for LLM Agents? A Trajectory from Today to Superintelligence (Korbak et al., 2025)",
+          href: "https://arxiv.org/abs/2504.05259",
         },
       ],
-      demo: [{ label: "TBD" }],
-      takeHomeNotebook: [{ label: "TBD" }],
+      furtherReading: [
+        {
+          label:
+            "AI Control: Improving Safety Despite Intentional Subversion (Greenblatt et al., 2023)",
+          href: "https://arxiv.org/abs/2312.06942",
+        },
+        {
+          label:
+            "On Scalable Oversight with Weak LLMs Judging Strong LLMs (Kenton et al., 2024)",
+          href: "https://arxiv.org/abs/2407.04622",
+        },
+        {
+          label:
+            "Weak Critics Make Strong Learners: On-Policy Critique Distillation for Scalable Oversight (Jin et al., 2026)",
+          href: "https://arxiv.org/abs/2606.00424",
+        },
+      ],
     },
   },
   {
     number: 7,
-    description: "Policy, Trajectory & Careers",
+    description: "Policy, Governance, and Forecasting",
     topics: [
-      "Scaling laws and trajectory forecasting.",
-      "Compute governance and frontier compute monitoring.",
-      "Current research directions in AI safety.",
-      "Technical and governance career paths.",
-      "Research proposal synthesis.",
+      "Capability, algorithmic, and compute trends and what they can and cannot predict.",
+      "Forecasting timelines and takeoff under deep uncertainty.",
+      "Governance tools: evaluations, safety cases, transparency, incident reporting, and compute governance.",
+      "Domestic regulation and international coordination at the frontier.",
+      "Open research questions and technical, policy, and governance career paths.",
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
-      recommendedReading: [
+      discussionReading: [
         {
-          label:
-            "Scaling Laws for Neural Language Models (Kaplan et al., 2020)",
-          href: "https://arxiv.org/abs/2001.08361",
+          label: "AI 2040: Plan A (AI Futures Project, 2026)",
+          href: "https://ai-2040.com/",
         },
-        { label: "Epoch AI Compute Trends", href: "https://epoch.ai/trends" },
       ],
-      demo: [{ label: "TBD" }],
-      takeHomeNotebook: [
+      furtherReading: [
+        {
+          label: "International AI Safety Report 2026",
+          href: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+        },
+        {
+          label: "AI 2027: Summary (Kokotajlo et al., 2025)",
+          href: "https://ai-2027.com/summary",
+        },
+        {
+          label: "Epoch AI: Compute Trends Across Three Eras of Machine Learning",
+          href: "https://epoch.ai/trends",
+        },
         {
           label:
-            "Research proposal: hypothesis, method, and expected result from Weeks 2-6 topics.",
+            "The 2026 Singapore Consensus on Global AI Safety Research Priorities",
+          href: "https://arxiv.org/abs/2608.14611",
         },
       ],
     },
@@ -275,13 +303,23 @@ const COURSE_WEEKS: CourseWeek[] = [
 const COURSE_STAFF: CourseStaffMember[] = [
   {
     name: "Jinzhou Wu",
-    role: "Organizer",
+    role: "Organizer and Lead Instructor",
     imageSrc: "/team/TEAM_jinzhou_wu.png",
   },
   {
-    name: "Eric Yachbes",
+    name: "Arya Datla",
     role: "",
-    imageSrc: "/team/TEAM_eric_yachbes.jpeg",
+    imageSrc: "/team/TEAM_arya_datla.jpeg",
+  },
+  {
+    name: "Daniel Lee",
+    role: "",
+    imageSrc: "/team/TEAM_daniel_lee.jpeg",
+  },
+  {
+    name: "Karan Verma",
+    role: "",
+    imageSrc: "/team/TEAM_karan_verma.jpeg",
   },
   {
     name: "Jasmine Li",
@@ -299,11 +337,6 @@ const COURSE_STAFF: CourseStaffMember[] = [
     imageSrc: "/team/TEAM_suvadip_sana.png",
   },
   {
-    name: "Uday Tyagi",
-    role: "",
-    imageSrc: "/team/TEAM_uday.jpeg",
-  },
-  {
     name: "Éva Tardos",
     role: "Faculty Advisor",
     imageSrc: "/team/TEAM_eva_tardos.jpg",
@@ -314,7 +347,7 @@ const COURSE_DESCRIPTION =
   "CS 1998 is a student-led, technically focused introduction to AI Safety and Alignment at Cornell for Fall 2026.";
 
 const COURSE_OG_DESCRIPTION =
-  "Fall 2026 CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with paper readings, demos, and notebooks.";
+  "Fall 2026 CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with discussion readings and technical notebooks.";
 
 const COURSE_SCHEMA = {
   "@context": "https://schema.org",
@@ -331,10 +364,11 @@ const COURSE_SCHEMA = {
   },
   teaches: [
     "AI safety and alignment fundamentals",
+    "Current alignment techniques and RLHF",
+    "Reward hacking and goal misgeneralization",
     "Mechanistic interpretability",
-    "RLHF and goal misgeneralization",
-    "Red teaming and safety evaluations",
-    "Scalable oversight and AI governance",
+    "Dangerous capability evaluations",
+    "AI control, scalable oversight, and governance",
   ],
   instructor: COURSE_STAFF.map((member) => ({
     "@type": "Person",
@@ -405,24 +439,20 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
   return (
     <div className="space-y-3">
       <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">Slide</p>
+        <p className="mb-1 text-sm font-bold text-slate-900">Slides</p>
         <MaterialList items={materials.slide} />
       </div>
       <div>
         <p className="mb-1 text-sm font-bold text-slate-900">
-          Recommended Reading
+          Discussion Readings
         </p>
-        <MaterialList items={materials.recommendedReading} />
-      </div>
-      <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">Demo</p>
-        <MaterialList items={materials.demo} />
+        <MaterialList items={materials.discussionReading} />
       </div>
       <div>
         <p className="mb-1 text-sm font-bold text-slate-900">
-          Take-Home Notebook
+          Further Reading
         </p>
-        <MaterialList items={materials.takeHomeNotebook} />
+        <MaterialList items={materials.furtherReading} />
       </div>
     </div>
   );
@@ -497,6 +527,18 @@ export default function CS1998Page() {
                   Staff
                 </a>
                 <a
+                  href="#grading"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Course Structure and Grading
+                </a>
+                <a
+                  href="#calendar"
+                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                >
+                  Calendar
+                </a>
+                <a
                   href="#syllabus"
                   className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
                 >
@@ -508,12 +550,12 @@ export default function CS1998Page() {
         </header>
 
         <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
-          <section aria-label="Pre-enroll" className="mt-10">
+          <section aria-label="Enroll" className="mt-10">
             <article className="rounded-2xl border border-brand-red/30 bg-gradient-to-br from-brand-red/5 via-white to-white p-6 sm:p-8">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="min-w-0">
                   <h2 className="display-title text-2xl sm:text-3xl">
-                    Pre-enroll today!
+                    Enroll today!
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
                     CS 1998, PRJ 608 · Class number{" "}
@@ -526,7 +568,7 @@ export default function CS1998Page() {
                   rel="noopener noreferrer"
                   className="focus-ring inline-flex shrink-0 items-center justify-center rounded-lg bg-brand-red px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-red-strong sm:text-base"
                 >
-                  Pre-enroll on Class Roster
+                  Enroll on Class Roster
                 </a>
               </div>
             </article>
@@ -556,94 +598,27 @@ export default function CS1998Page() {
           </section>
 
           <section id="content" className="mt-10 scroll-mt-28">
-            <div className="grid gap-6 lg:grid-cols-12">
-              <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 lg:col-span-7">
-                <h2 className="display-title text-2xl sm:text-3xl">Content</h2>
-                <h3 className="mt-4 text-xl font-semibold text-slate-900">
-                  What is this course about?
-                </h3>
-                <div className="mt-3 space-y-4 text-sm leading-7 text-slate-700 sm:text-base">
-                  <p>
-                    CS 1998: Intro to AI Safety &amp; Alignment is a student-led
-                    course that explores why advanced AI systems can fail in
-                    unexpected and dangerous ways. We begin by building a solid
-                    understanding of how modern language models are trained,
-                    from pretraining on web-scale data through supervised
-                    fine-tuning and reinforcement learning from human feedback.
-                    From there, we turn to the core question: how do we ensure
-                    these systems do what we actually want? Students will learn
-                    key technical ideas in mechanistic interpretability
-                    (reverse-engineering model internals to understand what
-                    they've learned), reward learning (how optimization pressure
-                    can produce unintended behaviors like sycophancy and reward
-                    hacking), red teaming and adversarial evaluation
-                    (systematically probing models for failure modes), and
-                    scalable oversight (supervising systems that may exceed
-                    human-level performance on the tasks we're evaluating them
-                    on).
-                  </p>
-                  <p></p>
-                </div>
-
-                <div className="mt-6 space-y-6 lg:hidden">
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-900">
-                      Prerequisites
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                      This course is technically focused, so some prior
-                      knowledge of linear algebra, machine learning
-                      (particularly the transformer architecture), and
-                      proficiency in Python are assumed. That said, we spend
-                      significant time building intuition behind these ideas, so
-                      students from non-technical backgrounds who are motivated
-                      to engage with the material are also welcome.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-900">
-                      Audience
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                      Undergraduates who are curious about how modern AI systems
-                      can fail, concerned about the long-term risks of advanced
-                      AI, or looking to understand the technical foundations
-                      behind ongoing safety research.
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <div className="hidden space-y-6 lg:col-span-5 lg:block">
-                <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    Prerequisites
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                    This course is technically focused, so some prior knowledge
-                    of linear algebra, machine learning (particularly the
-                    transformer architecture), and proficiency in Python are
-                    assumed. That said, we spend significant time building
-                    intuition behind these ideas, so students from non-technical
-                    backgrounds who are motivated to engage with the material
-                    are also welcome.
-                  </p>
-                </article>
-
-                <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    Audience
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                    Undergraduates who are curious about how modern AI systems
-                    can fail, concerned about the long-term risks of advanced
-                    AI, or looking to understand the technical foundations
-                    behind ongoing safety research.
-                  </p>
-                </article>
-              </div>
-            </div>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h2 className="display-title text-2xl sm:text-3xl">Content</h2>
+              <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
+                CS 1998: Intro to AI Safety &amp; Alignment is a student-led
+                course that explores why advanced AI systems can fail in
+                unexpected and dangerous ways. We begin by building a solid
+                understanding of how modern language models are trained, from
+                pretraining on web-scale data through supervised fine-tuning
+                and reinforcement learning from human feedback. From there, we
+                turn to the core question: how do we ensure these systems do
+                what we actually want? Students will learn key technical ideas
+                in mechanistic interpretability (reverse-engineering model
+                internals to understand what they&apos;ve learned), reward
+                learning (how optimization pressure can produce unintended
+                behaviors like sycophancy and reward hacking), red teaming and
+                adversarial evaluation (systematically probing models for
+                failure modes), and scalable oversight (supervising systems
+                that may exceed human-level performance on the tasks we&apos;re
+                evaluating them on).
+              </p>
+            </article>
           </section>
 
           <section id="logistics" className="mt-10 scroll-mt-28">
@@ -651,6 +626,7 @@ export default function CS1998Page() {
               <h2 className="display-title text-2xl sm:text-3xl">Logistics</h2>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
                 <li>This is a 1-credit, 7-week, first S/U course.</li>
+                <li>Location: Phillips Hall 203.</li>
                 <li>
                   This course is open enrollment (without application), with
                   around 75 seats.
@@ -659,12 +635,118 @@ export default function CS1998Page() {
             </article>
           </section>
 
+          <section id="grading" className="mt-10 scroll-mt-28">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h2 className="display-title text-2xl sm:text-3xl">
+                Course Structure and Grading
+              </h2>
+              <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700 sm:text-base">
+                <p>
+                  The course combines Friday lectures, guided technical
+                  notebooks, Monday paper discussions, and a proposal-driven
+                  final project. We&apos;ll use a point-based S/U grading
+                  system, with{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    145 points
+                  </span>{" "}
+                  available. Earning{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    100 points
+                  </span>{" "}
+                  will give you a pass.
+                </p>
+                <p>
+                  <strong className="text-slate-950">Lecture.</strong>{" "}
+                  Attendance at each of the seven Friday lectures earns{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    5 points, up to 35 points
+                  </span>
+                  {". "}Lectures introduce the core ideas, technical foundations,
+                  and research context needed for the week&apos;s other work.
+                </p>
+                <p>
+                  <strong className="text-slate-950">Notebook.</strong> From
+                  Week 2 through Week 6, we&apos;ll have one guided take-home
+                  notebook each week. Each notebook completed satisfactorily
+                  earns{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    10 points, up to 50 points
+                  </span>
+                  {". "}Each notebook will require roughly 30 lines of
+                  student-written code. Starter code will provide the
+                  surrounding framework, so you can focus on running a
+                  practical, hands-on experiment with provided models or
+                  datasets, inspecting the results, and answering short
+                  questions about what you observe.
+                </p>
+                <p>
+                  <strong className="text-slate-950">Discussion.</strong>{" "}
+                  Discussions run every Monday afternoon. We&apos;ll read a
+                  frontier or recent paper related to the preceding
+                  week&apos;s lecture, then examine its methods, evidence,
+                  limitations, and implications together. Each discussion
+                  attended earns{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    5 points, capped at 15 points
+                  </span>
+                  {"."}
+                </p>
+                <p>
+                  <strong className="text-slate-950">
+                    Project proposal.
+                  </strong>{" "}
+                  The proposal is worth{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    5 points
+                  </span>
+                  {". "}It should define a concrete AI safety question, a
+                  hypothesis, an experimental or evaluation plan, and the
+                  result you expect to observe. You&apos;ll receive feedback on
+                  the proposal before developing it into your final project.
+                </p>
+                <p>
+                  <strong className="text-slate-950">Final project.</strong>{" "}
+                  The final project is worth{" "}
+                  <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
+                    40 points
+                  </span>
+                  {". "}A project might reproduce and extend a recent result,
+                  build a focused safety evaluation, compare alignment,
+                  control, or interpretability methods, or test an original
+                  safety hypothesis. You&apos;re encouraged to use agentic coding
+                  tools such as Codex or Claude Code to implement the
+                  experiment from your proposal, while remaining responsible
+                  for understanding the code, validating the experiment, and
+                  communicating the results. We&apos;ll provide compute credits
+                  for final-project work.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section id="calendar" className="mt-10 scroll-mt-28">
+            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+              <div className="px-6 pt-6 sm:px-8 sm:pt-8">
+                <h2 className="display-title text-2xl sm:text-3xl">
+                  Course Calendar
+                </h2>
+              </div>
+              <div className="mt-5 h-[520px] sm:h-[600px]">
+                <iframe
+                  src={COURSE_CALENDAR_EMBED_URL}
+                  className="h-full w-full"
+                  style={{ border: 0 }}
+                  title="CS 1998 course calendar"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </section>
+
           <section id="syllabus" className="mt-10 scroll-mt-28">
             <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white/95 shadow-[0_1px_0_rgba(255,255,255,0.8)]">
               <div className="px-4 pt-5 sm:px-8 sm:pt-8">
-                <h2 className="display-title text-2xl sm:text-3xl">
-                  Syllabus (Tentative)
-                </h2>
+                <h2 className="display-title text-2xl sm:text-3xl">Syllabus</h2>
               </div>
 
               <div className="mt-5 space-y-3 px-4 pb-5 sm:px-6 lg:hidden">

@@ -18,20 +18,20 @@ export default function GetInvolvedPage() {
   return (
     <main>
       <Section
-        title="New for Fall 2026: CS 1998 — Intro to AI Safety & Alignment"
-        subtitle="We are currently in the planning stage for a student-led Cornell CS 1998 course focused on AI safety and alignment."
+        title="CS 1998 — Intro to AI Safety & Alignment"
+        subtitle="A student-led Cornell course focused on AI safety and alignment."
       >
         <MotionReveal>
           <Card className="p-6 sm:p-7">
             <div className="space-y-4 text-[1.02rem] leading-8 text-slate-700 sm:text-lg">
               <p>
-                The course is planned to cover foundational model training pipelines, mechanistic
+                The course covers foundational model training pipelines, mechanistic
                 interpretability, RLHF and goal misgeneralization, safety evaluations and red
                 teaming, scalable oversight and control, and policy and career pathways in AI safety.
               </p>
               <p>
-                The format will emphasize hands-on notebooks, live demos, and paper-driven
-                discussion to help students build both conceptual understanding and practical skills.
+                The format emphasizes hands-on notebooks, paper-driven discussion, and a final
+                project to help students build both conceptual understanding and practical skills.
               </p>
             </div>
             <div className="mt-6">
@@ -95,7 +95,11 @@ export default function GetInvolvedPage() {
                     <Button
                       href={program.ctaHref}
                       external={program.ctaExternal}
-                      variant={program.id === "reading-group" ? "secondary" : "primary"}
+                      variant={
+                        program.id === "reading-group" || program.id === "general-body"
+                          ? "secondary"
+                          : "primary"
+                      }
                     >
                       {program.ctaLabel}
                     </Button>

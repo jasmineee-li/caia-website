@@ -19,14 +19,14 @@ export const HOME_HERO = {
 
 export const HOME_CTA_ITEMS: CTAItem[] = [
   {
-    label: "Join our mailing list",
-    href: "https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form",
+    label: "Join our Slack",
+    href: "https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w",
     external: true,
     style: "primary",
   },
   {
-    label: "Join our Slack",
-    href: "https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w",
+    label: "Join our mailing list",
+    href: "https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form",
     external: true,
     style: "secondary",
   },
@@ -34,9 +34,11 @@ export const HOME_CTA_ITEMS: CTAItem[] = [
 
 export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Google DeepMind", src: "/orgs/gdm.png", href: "https://deepmind.google/" },
+  { name: "Anthropic", src: "/orgs/anthropic.svg", href: "https://www.anthropic.com/" },
   { name: "MATS", src: "/orgs/mats.svg", href: "https://www.matsprogram.org/" },
   { name: "Pivotal", src: "/orgs/pivotal.png", href: "https://www.pivotal-research.org/" },
   { name: "METR", src: "/orgs/metr.jpg", href: "https://metr.org/" },
+  { name: "SaferAI", src: "/orgs/saferai.svg", href: "https://www.safer-ai.org/" },
   { name: "Center for AI Safety", src: "/orgs/cas.png", href: "https://safe.ai/" },
   { name: "LISA", src: "/orgs/lisa.svg", href: "https://www.safeai.org.uk/" },
   { name: "CBAI", src: "/orgs/cbai.webp", href: "https://www.cbai.ai/" },

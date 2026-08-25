@@ -1,3 +1,5 @@
+import { EVENTS_CALENDAR_URL } from "@/content/events";
+
 export interface ProgramItem {
   id: string;
   title: string;
@@ -22,15 +24,24 @@ export const PROGRAM_ITEMS: ProgramItem[] = [
   },
   {
     id: "reading-group",
-    title: "Technical Paper Reading Group",
+    title: "Paper Discussion Section",
     description: [
-      "CAIA runs a weekly open technical ML reading group led by experienced TAs.",
-      "Sessions cover recent significant papers in AI and ML safety, meet weekly in small groups, and provide dinner.",
-      "There is no additional required work outside meetings.",
+      "Each week, CAIA runs an open paper discussion section focused on frontier and recent work in AI safety.",
+      "Participants read the selected paper in advance, then discuss its methods, evidence, limitations, and implications together.",
     ],
-    ctaLabel: "Join the CAIA Slack",
-    ctaHref:
-      "https://join.slack.com/t/cornellaialignment/shared_invite/zt-3hzie60ir-Ai4TDMKHUCFSpKZDcMbb0w",
+    ctaLabel: "Subscribe on Luma",
+    ctaHref: EVENTS_CALENDAR_URL,
+    ctaExternal: true,
+  },
+  {
+    id: "general-body",
+    title: "General Body Meetings",
+    description: [
+      "CAIA also hosts weekly community events, including workshops, tutorials, research salons, invited speaker talks, informal debates, and other opportunities to learn and connect.",
+      "Subscribe to our Luma event page for the latest meeting topics, times, and locations.",
+    ],
+    ctaLabel: "Subscribe on Luma",
+    ctaHref: EVENTS_CALENDAR_URL,
     ctaExternal: true,
   },
   {
