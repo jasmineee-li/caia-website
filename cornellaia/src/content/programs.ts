@@ -11,18 +11,6 @@ export interface ProgramItem {
 
 export const PROGRAM_ITEMS: ProgramItem[] = [
   {
-    id: "fellowship",
-    title: "Introduction to AI Alignment Fellowship",
-    description: [
-      "CAIA runs an 8-week introductory fellowship on AI safety, covering technical and policy topics including interpretability, learning from human feedback, US AI policy, and catastrophic risk from advanced systems.",
-      "The fellowship is open to undergraduate and graduate students. Students with ML experience are encouraged to apply, but no prior experience is required.",
-      "The program meets weekly in small groups with dinner provided and no additional required work outside meetings.",
-    ],
-    ctaLabel: "Join our mailing list for the next fellowship",
-    ctaHref: "https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form",
-    ctaExternal: true,
-  },
-  {
     id: "reading-group",
     title: "Paper Discussion Section",
     description: [
@@ -51,5 +39,15 @@ export const PROGRAM_ITEMS: ProgramItem[] = [
       "CAIA supports original student research in AI safety.",
       "Students interested in technical or policy research can reach out to be connected with resources and a faculty or upperclassman mentor.",
     ],
+  },
+  {
+    id: "fellowship",
+    title: "Introduction to AI Alignment Fellowship",
+    description: [
+      "In previous semesters, CAIA ran an 8-week introductory fellowship covering technical and policy topics in AI safety.",
+      "For Fall 2026, we are running CS 1998: Intro to AI Safety & Alignment in place of the fellowship. The course develops the same foundations through lectures, technical notebooks, paper discussions, and a final project.",
+    ],
+    ctaLabel: "View CS 1998 course page",
+    ctaHref: "/programs/cs1998",
   },
 ];

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/cn";
 
 interface ProfileCardProps {
   imageSrc: string;
@@ -8,6 +9,7 @@ interface ProfileCardProps {
   linkedinUrl?: string;
   scholarUrl?: string;
   websiteUrl?: string;
+  unframed?: boolean;
 }
 
 function LinkedInIcon() {
@@ -51,6 +53,7 @@ export default function ProfileCard({
   linkedinUrl,
   scholarUrl,
   websiteUrl,
+  unframed = false,
 }: ProfileCardProps) {
   const links = [
     websiteUrl ? { href: websiteUrl, label: "Personal Website", icon: <WebsiteIcon /> } : null,
@@ -59,7 +62,12 @@ export default function ProfileCard({
   ].filter(Boolean) as { href: string; label: string; icon: React.ReactNode }[];
 
   return (
-    <article className="surface-card flex h-full flex-col items-center px-4 py-6 text-center">
+    <article
+      className={cn(
+        "flex h-full flex-col items-center text-center",
+        unframed ? "p-0" : "surface-card px-4 py-6",
+      )}
+    >
       <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full ring-2 ring-slate-200">
         <Image
           src={imageSrc}

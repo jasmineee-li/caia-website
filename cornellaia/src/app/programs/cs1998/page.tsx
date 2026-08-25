@@ -308,32 +308,32 @@ const COURSE_STAFF: CourseStaffMember[] = [
   },
   {
     name: "Arya Datla",
-    role: "",
+    role: "Teaching Assistant",
     imageSrc: "/team/TEAM_arya_datla.jpeg",
   },
   {
     name: "Daniel Lee",
-    role: "",
+    role: "Teaching Assistant",
     imageSrc: "/team/TEAM_daniel_lee.jpeg",
   },
   {
     name: "Karan Verma",
-    role: "",
+    role: "Teaching Assistant",
     imageSrc: "/team/TEAM_karan_verma.jpeg",
   },
   {
     name: "Jasmine Li",
-    role: "",
+    role: "Advisor",
     imageSrc: "/team/TEAM_jasmine_li.png",
   },
   {
     name: "Jonathn Chang",
-    role: "",
+    role: "Advisor",
     imageSrc: "/team/TEAM_jonathn_chang.png",
   },
   {
     name: "Suvadip Sana",
-    role: "",
+    role: "Advisor",
     imageSrc: "/team/TEAM_suvadip_sana.png",
   },
   {
@@ -458,6 +458,22 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
   );
 }
 
+function CourseStaffGrid({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      {COURSE_STAFF.map((member) => (
+        <ProfileCard
+          key={member.name}
+          imageSrc={member.imageSrc}
+          name={member.name}
+          role={member.role}
+          unframed
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function CS1998Page() {
   return (
     <main className="cs1998-page relative overflow-hidden bg-white pb-12 sm:pb-16">
@@ -575,25 +591,35 @@ export default function CS1998Page() {
           </section>
 
           <section id="staff" className="mt-10 scroll-mt-28">
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-              <h2 className="display-title text-2xl sm:text-3xl">
-                Course Staff
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
+            <details className="group rounded-2xl border border-slate-200 bg-white sm:hidden">
+              <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-6 py-5 [&::-webkit-details-marker]:hidden">
+                <span>
+                  <span className="display-title block text-2xl">
+                    Course Staff
+                  </span>
+                  <span className="mt-1 block text-sm leading-6 text-slate-600">
+                    Meet the course team
+                  </span>
+                </span>
+                <span
+                  className="text-2xl leading-none text-brand-red transition-transform duration-200 group-open:rotate-45"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="border-t border-slate-200 p-4">
+                <CourseStaffGrid className="grid gap-y-8" />
+              </div>
+            </details>
+
+            <article className="hidden rounded-2xl border border-slate-200 bg-white p-8 sm:block">
+              <h2 className="display-title text-3xl">Course Staff</h2>
+              <p className="mt-2 max-w-2xl text-base leading-7 text-slate-700">
                 The course is led by CAIA members with faculty advising from
                 Cornell.
               </p>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {COURSE_STAFF.map((member) => (
-                  <ProfileCard
-                    key={member.name}
-                    imageSrc={member.imageSrc}
-                    name={member.name}
-                    role={member.role}
-                  />
-                ))}
-              </div>
+              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
             </article>
           </section>
 
@@ -642,50 +668,42 @@ export default function CS1998Page() {
               </h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700 sm:text-base">
                 <p>
-                  The course combines Friday lectures, guided technical
-                  notebooks, Monday paper discussions, and a proposal-driven
-                  final project. We&apos;ll use a point-based S/U grading
-                  system, with{" "}
+                  The course includes Friday lectures, guided notebooks, Monday
+                  paper discussions, and a final project. We use point-based
+                  S/U grading: {" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     145 points
                   </span>{" "}
-                  available. Earning{" "}
+                  are available, and{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     100 points
                   </span>{" "}
-                  will give you a pass.
+                  earns a pass.
                 </p>
                 <p>
                   <strong className="text-slate-950">Lecture.</strong>{" "}
-                  Attendance at each of the seven Friday lectures earns{" "}
+                  Each of seven Friday lectures earns{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     5 points, up to 35 points
                   </span>
-                  {". "}Lectures introduce the core ideas, technical foundations,
-                  and research context needed for the week&apos;s other work.
+                  {". "}Lectures introduce the week&apos;s core ideas, technical
+                  foundations, and research context.
                 </p>
                 <p>
-                  <strong className="text-slate-950">Notebook.</strong> From
-                  Week 2 through Week 6, we&apos;ll have one guided take-home
-                  notebook each week. Each notebook completed satisfactorily
-                  earns{" "}
+                  <strong className="text-slate-950">Notebook.</strong> Weeks
+                  2–6 each include a guided take-home notebook. Satisfactory
+                  completion earns{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     10 points, up to 50 points
                   </span>
-                  {". "}Each notebook will require roughly 30 lines of
-                  student-written code. Starter code will provide the
-                  surrounding framework, so you can focus on running a
-                  practical, hands-on experiment with provided models or
-                  datasets, inspecting the results, and answering short
-                  questions about what you observe.
+                  {". "}Expect roughly 30 lines of student-written code within a
+                  provided framework, focused on a hands-on experiment and
+                  short analysis.
                 </p>
                 <p>
                   <strong className="text-slate-950">Discussion.</strong>{" "}
-                  Discussions run every Monday afternoon. We&apos;ll read a
-                  frontier or recent paper related to the preceding
-                  week&apos;s lecture, then examine its methods, evidence,
-                  limitations, and implications together. Each discussion
-                  attended earns{" "}
+                  Monday discussions examine a frontier or recent paper related
+                  to the preceding lecture. Each attendance earns{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     5 points, capped at 15 points
                   </span>
@@ -695,30 +713,25 @@ export default function CS1998Page() {
                   <strong className="text-slate-950">
                     Project proposal.
                   </strong>{" "}
-                  The proposal is worth{" "}
+                  Earn{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     5 points
-                  </span>
-                  {". "}It should define a concrete AI safety question, a
-                  hypothesis, an experimental or evaluation plan, and the
-                  result you expect to observe. You&apos;ll receive feedback on
-                  the proposal before developing it into your final project.
+                  </span>{" "}
+                  for defining an AI safety question, hypothesis, method, and
+                  expected result. You&apos;ll receive feedback before final-project
+                  work begins.
                 </p>
                 <p>
                   <strong className="text-slate-950">Final project.</strong>{" "}
-                  The final project is worth{" "}
+                  Earn{" "}
                   <span className="text-slate-950 underline decoration-wavy decoration-slate-400 underline-offset-4">
                     40 points
-                  </span>
-                  {". "}A project might reproduce and extend a recent result,
-                  build a focused safety evaluation, compare alignment,
-                  control, or interpretability methods, or test an original
-                  safety hypothesis. You&apos;re encouraged to use agentic coding
-                  tools such as Codex or Claude Code to implement the
-                  experiment from your proposal, while remaining responsible
-                  for understanding the code, validating the experiment, and
-                  communicating the results. We&apos;ll provide compute credits
-                  for final-project work.
+                  </span>{" "}
+                  for reproducing or extending a result, building an evaluation,
+                  comparing methods, or testing a safety hypothesis. Agentic
+                  coding tools are encouraged, but you remain responsible for
+                  understanding and validating the work. Compute credits will
+                  be provided.
                 </p>
               </div>
             </article>

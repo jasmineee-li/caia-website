@@ -5,8 +5,7 @@ import Section from "@/components/ui/Section";
 import {
   EVENTS_CALENDAR_URL,
   EVENTS_EMBED_URL,
-  PAST_EVENT_IDS,
-  RECENT_EVENTS,
+  PAST_EVENTS,
 } from "@/content/events";
 import { createPageMetadata } from "@/content/seo";
 
@@ -48,51 +47,29 @@ export default function EventsPage() {
       </Section>
 
       <Section
-        title="Recent Events"
-        subtitle="Recent opportunities to meet other members of the CAIA community."
-      >
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {RECENT_EVENTS.map((event, index) => (
-            <MotionReveal
-              key={event.embedUrl}
-              delayClass={index === 1 ? "motion-delay-1" : undefined}
-            >
-              <article>
-                <h3 className="mb-3 text-xl font-semibold text-slate-900">
-                  {event.title}
-                </h3>
-                <iframe
-                  src={event.embedUrl}
-                  className="h-[450px] w-full rounded-lg border border-slate-200"
-                  style={{ border: "1px solid rgba(191, 203, 218, 0.53)" }}
-                  allow="fullscreen; payment"
-                  title={event.title}
-                  loading="lazy"
-                  tabIndex={0}
-                />
-              </article>
-            </MotionReveal>
-          ))}
-        </div>
-      </Section>
-
-      <Section
         title="Past Events"
         subtitle="Selected event pages from previous semesters."
       >
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {PAST_EVENT_IDS.map((eventId, index) => (
+          {PAST_EVENTS.map((event, index) => (
             <MotionReveal
-              key={eventId}
-              delayClass={index === 1 ? "motion-delay-1" : index >= 2 ? "motion-delay-2" : undefined}
+              key={event.embedUrl}
+              delayClass={
+                index % 3 === 1
+                  ? "motion-delay-1"
+                  : index % 3 === 2
+                    ? "motion-delay-2"
+                    : undefined
+              }
             >
               <div className="overflow-hidden p-2">
                 <iframe
-                  src={`https://luma.com/embed/event/evt-${eventId}/simple`}
+                  src={event.embedUrl}
                   className="h-[450px] w-full rounded-lg border border-slate-200"
                   style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
                   allow="fullscreen; payment"
-                  title={`Past event ${eventId}`}
+                  title={event.title}
+                  loading="lazy"
                 />
               </div>
             </MotionReveal>

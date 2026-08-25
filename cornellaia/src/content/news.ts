@@ -32,7 +32,7 @@ export const NEWS_ITEMS: NewsItem[] = [
         href: "https://icml.cc/virtual/2026/75691",
       },
       {
-        label: "WARP",
+        label: "Evaluation Awareness in Browser-Agent Safety Benchmarks",
         href: "https://icml.cc/virtual/2026/76886",
       },
       {
@@ -40,7 +40,7 @@ export const NEWS_ITEMS: NewsItem[] = [
         href: "https://icml.cc/virtual/2026/75634",
       },
       {
-        label: "PLOT",
+        label: "Localizing Neural Causal Abstractions",
         href: "https://arxiv.org/abs/2605.06979",
       },
     ],

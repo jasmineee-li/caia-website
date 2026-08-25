@@ -10,5 +10,5 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/events", label: "Events" },
   { href: "/get-involved", label: "Programs" },
   { href: "/team", label: "Team" },
-  { href: "/resources", label: "Resources" },
+  { href: "/programs/cs1998", label: "CS 1998" },
 ];

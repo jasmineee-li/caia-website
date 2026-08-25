@@ -9,9 +9,9 @@ import { createPageMetadata } from "@/content/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Programs",
   description:
-    "Learn how to get involved with Cornell AI Alignment through fellowships, reading groups, and student research opportunities.",
+    "Learn through CAIA's CS 1998 course, paper discussions, community events, and student research opportunities.",
   path: "/get-involved",
-  keywords: ["CAIA programs", "AI alignment fellowship", "Cornell reading group", "AI safety research"],
+  keywords: ["CAIA programs", "Cornell CS 1998", "Cornell reading group", "AI safety research"],
 });
 
 export default function GetInvolvedPage() {
@@ -57,24 +57,6 @@ export default function GetInvolvedPage() {
                   {program.description.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
-
-                  {program.id === "fellowship" && (
-                    <p>
-                      Topics include interpretability,
-                      <sup className="ml-1 text-brand-red">
-                        <a href="https://distill.pub/2020/circuits/zoom-in/" target="_blank" rel="noopener noreferrer">
-                          1
-                        </a>
-                      </sup>{" "}
-                      learning from human feedback,
-                      <sup className="ml-1 text-brand-red">
-                        <a href="https://arxiv.org/abs/2009.01325" target="_blank" rel="noopener noreferrer">
-                          2
-                        </a>
-                      </sup>{" "}
-                      US AI policy, and catastrophic risk from advanced systems.
-                    </p>
-                  )}
 
                   {program.id === "research" && (
                     <p>
