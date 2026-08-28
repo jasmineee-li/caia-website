@@ -46,7 +46,12 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Capabilities forecasts, scenarios, and the assumptions behind them.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 1 slides (PDF)",
+          href: "/cs1998/week_1_slides.pdf",
+        },
+      ],
       discussionReading: [
         {
           label: "Current AIs seem pretty misaligned to me (Greenblatt, 2026)",
@@ -197,11 +202,6 @@ const COURSE_WEEKS: CourseWeek[] = [
             "Evaluating Frontier Models for Dangerous Capabilities (Phuong et al., 2024)",
           href: "https://arxiv.org/abs/2403.13793",
         },
-        {
-          label:
-            "WARP: Measuring and Mitigating Evaluation Awareness in Browser-Agent Safety Benchmarks (Li et al., 2026)",
-          href: "https://icml.cc/virtual/2026/76886",
-        },
       ],
       furtherReading: [
         {
@@ -307,14 +307,14 @@ const COURSE_STAFF: CourseStaffMember[] = [
     imageSrc: "/team/TEAM_jinzhou_wu.png",
   },
   {
+    name: "Daniel Lee",
+    role: "Head TA",
+    imageSrc: "/team/TEAM_daniel_lee.jpeg",
+  },
+  {
     name: "Arya Datla",
     role: "Teaching Assistant",
     imageSrc: "/team/TEAM_arya_datla.jpeg",
-  },
-  {
-    name: "Daniel Lee",
-    role: "Teaching Assistant",
-    imageSrc: "/team/TEAM_daniel_lee.jpeg",
   },
   {
     name: "Karan Verma",

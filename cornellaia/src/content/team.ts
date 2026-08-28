@@ -32,6 +32,10 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedinUrl: "https://www.linkedin.com/in/arya-datla-351396258/",
       },
       {
+        imageSrc: "/team/TEAM_daniel_lee.jpeg",
+        name: "Daniel Lee",
+      },
+      {
         imageSrc: "/team/TEAM_eric_yachbes.jpeg",
         name: "Eric Yachbes",
         scholarUrl: "https://scholar.google.com/citations?user=Zb3LU-sAAAAJ&hl=en",
