@@ -17,6 +17,11 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title:
+      "CAIA Reading Group: Concrete Problems in AI Safety & the OpenAI / Hugging Face Incident",
+    embedUrl: "https://luma.com/embed/event/evt-IMXC3KrunBrBXGL/simple",
+  },
+  {
     title: "CAIA End-of-Semester Social",
     embedUrl: "https://luma.com/embed/event/evt-IUSkaQG54gA9czw/simple",
   },

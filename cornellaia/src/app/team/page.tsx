@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/content/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Team",
   description:
-    "Meet the Cornell AI Alignment leadership and advisors working on AI safety research and outreach.",
+    "Meet the Cornell AI Alignment leadership, advisors, and alumni working on AI safety research and outreach.",
   path: "/team",
   keywords: ["Cornell AI Alignment team", "AI safety students", "CAIA advisors"],
 });

@@ -54,8 +54,16 @@ const COURSE_WEEKS: CourseWeek[] = [
       ],
       discussionReading: [
         {
-          label: "Current AIs seem pretty misaligned to me (Greenblatt, 2026)",
-          href: "https://www.lesswrong.com/posts/WewsByywWNhX9rtwi/current-ais-seem-pretty-misaligned-to-me",
+          label: "Concrete Problems in AI Safety (Amodei et al., 2016)",
+          href: "https://arxiv.org/abs/1606.06565",
+        },
+        {
+          label: "Hugging Face Incident and the Road Ahead (OpenAI, 2026)",
+          href: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+        },
+        {
+          label: "OpenAI–Hugging Face Incident Investigation (METR, 2026)",
+          href: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation",
         },
       ],
       furtherReading: [
@@ -85,8 +93,8 @@ const COURSE_WEEKS: CourseWeek[] = [
       discussionReading: [
         {
           label:
-            "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback — selected sections (Casper et al., 2023)",
-          href: "https://arxiv.org/abs/2307.15217",
+            "Distortion of AI Alignment: Does Preference Optimization Optimize for Preferences?",
+          href: "https://arxiv.org/abs/2505.23749",
         },
       ],
       furtherReading: [
@@ -334,7 +342,7 @@ const COURSE_STAFF: CourseStaffMember[] = [
   {
     name: "Suvadip Sana",
     role: "Advisor",
-    imageSrc: "/team/TEAM_suvadip_sana.png",
+    imageSrc: "/team/TEAM_suvadip_sana.jpg",
   },
   {
     name: "Éva Tardos",

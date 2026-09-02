@@ -34,6 +34,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
       {
         imageSrc: "/team/TEAM_daniel_lee.jpeg",
         name: "Daniel Lee",
+        linkedinUrl: "https://www.linkedin.com/in/daniel-lee-55688730a/",
       },
       {
         imageSrc: "/team/TEAM_eric_yachbes.jpeg",
@@ -42,7 +43,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedinUrl: "https://www.linkedin.com/in/eric-yachbes/",
       },
       {
-        imageSrc: "/team/TEAM_suvadip_sana.png",
+        imageSrc: "/team/TEAM_suvadip_sana.jpg",
         name: "Suvadip Sana",
         scholarUrl: "https://scholar.google.com/citations?user=sbXiEbUAAAAJ&hl=en&oi=sra",
         websiteUrl: "https://sites.google.com/view/suvadipsana/",
@@ -80,6 +81,18 @@ export const TEAM_GROUPS: TeamGroup[] = [
         role: "Affiliate Advisor",
         websiteUrl: "https://tzukitchan.com/",
         linkedinUrl: "https://www.linkedin.com/in/tzukit/",
+      },
+    ],
+  },
+  {
+    title: "Alumni",
+    members: [
+      {
+        imageSrc: "/team/TEAM_vincent_cheng.png",
+        name: "Vincent Cheng",
+        websiteUrl: "https://vvvincent.me/about/",
+        scholarUrl: "https://scholar.google.com/citations?user=z5Mtc6cAAAAJ&hl=en",
+        linkedinUrl: "https://www.linkedin.com/in/vincentchengvc/",
       },
     ],
   },
