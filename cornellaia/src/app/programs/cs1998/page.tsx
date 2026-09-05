@@ -12,6 +12,7 @@ interface MaterialItem {
 
 interface WeekMaterials {
   slide: MaterialItem[];
+  notebook?: MaterialItem[];
   discussionReading: MaterialItem[];
   furtherReading: MaterialItem[];
 }
@@ -89,7 +90,22 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Known limitations: reward misspecification, overoptimization, plural values, and dependence on human oversight.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 2 slides (PDF)",
+          href: "/cs1998/week_2_slides.pdf",
+        },
+      ],
+      notebook: [
+        {
+          label: "Week 2 notebook",
+          href: "/cs1998/Week_2_Mini_Constitutional_AI.ipynb",
+        },
+        {
+          label: "Week 2 notebook (no-code version)",
+          href: "/cs1998/Week_2_Mini_Constitutional_AI_No_Code.ipynb",
+        },
+      ],
       discussionReading: [
         {
           label:
@@ -450,6 +466,12 @@ function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
         <p className="mb-1 text-sm font-bold text-slate-900">Slides</p>
         <MaterialList items={materials.slide} />
       </div>
+      {materials.notebook && materials.notebook.length > 0 && (
+        <div>
+          <p className="mb-1 text-sm font-bold text-slate-900">Notebook</p>
+          <MaterialList items={materials.notebook} />
+        </div>
+      )}
       <div>
         <p className="mb-1 text-sm font-bold text-slate-900">
           Discussion Readings
