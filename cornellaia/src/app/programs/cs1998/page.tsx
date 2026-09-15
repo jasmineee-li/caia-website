@@ -143,15 +143,35 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Mitigation strategies and why behavioral training may not remove the underlying failure mode.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 3 slides (PDF)",
+          href: "/cs1998/week_3_slides.pdf",
+        },
+      ],
+      notebook: [
+        {
+          label: "Week 3 notebook",
+          href: "/cs1998/Week_3_Notebook_CoinRun.ipynb",
+        },
+        {
+          label: "Week 3 notebook (no-code version)",
+          href: "/cs1998/Week_3_Notebook_CoinRun_No_Code.ipynb",
+        },
+      ],
       discussionReading: [
+        {
+          label:
+            "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs (Betley et al., 2025)",
+          href: "https://arxiv.org/abs/2502.17424",
+        },
+      ],
+      furtherReading: [
         {
           label:
             "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models (Denison et al., 2024)",
           href: "https://arxiv.org/abs/2406.10162",
         },
-      ],
-      furtherReading: [
         {
           label:
             "Goal Misgeneralization in Deep Reinforcement Learning (Langosco et al., 2022)",
@@ -161,11 +181,6 @@ const COURSE_WEEKS: CourseWeek[] = [
           label:
             "Scaling Laws for Reward Model Overoptimization (Gao et al., 2022)",
           href: "https://arxiv.org/abs/2210.10760",
-        },
-        {
-          label:
-            "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs (Betley et al., 2025)",
-          href: "https://arxiv.org/abs/2502.17424",
         },
       ],
     },
