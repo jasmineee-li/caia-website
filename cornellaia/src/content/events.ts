@@ -17,6 +17,18 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Reading Group #2: Emergent Misalignment & Narrow Finetuning",
+    embedUrl: "https://luma.com/embed/event/evt-KyYeXM2StPOWIzg/simple",
+  },
+  {
+    title: "Guest Talk: Distortion of AI Alignment, by Prof. Paul Gölz",
+    embedUrl: "https://luma.com/embed/event/evt-K9RLHFdtIAVtSN8/simple",
+  },
+  {
+    title: "CAIA @ Cornell Club Fest",
+    embedUrl: "https://luma.com/embed/event/evt-xIhmHZXn51dKAw2/simple",
+  },
+  {
     title:
       "CAIA Reading Group: Concrete Problems in AI Safety & the OpenAI / Hugging Face Incident",
     embedUrl: "https://luma.com/embed/event/evt-IMXC3KrunBrBXGL/simple",
