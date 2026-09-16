@@ -65,6 +65,13 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedinUrl: "https://www.linkedin.com/in/singhekadh/",
       },
       {
+        imageSrc: "/team/TEAM_elle_kim.png",
+        name: "Elle Kim",
+        role: "Policy Lead",
+        websiteUrl: "https://elledkim.com/",
+        linkedinUrl: "https://www.linkedin.com/in/elledanikim/",
+      },
+      {
         imageSrc: "/team/TEAM_uday.jpeg",
         name: "Uday Tyagi",
         role: "Co-Lead",

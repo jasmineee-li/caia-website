@@ -25,7 +25,12 @@ export default function TeamPage() {
           {TEAM_GROUPS.map((group, groupIndex) => (
             <MotionReveal key={group.title} delayClass={groupIndex > 0 ? "motion-delay-1" : undefined}>
               <div>
-                <h2 className="mb-6 text-2xl font-semibold text-slate-900">{group.title}</h2>
+                <div className="mb-6">
+                  <h2 className="text-2xl font-semibold text-slate-900">{group.title}</h2>
+                  {group.title === "Leadership" && (
+                    <p className="mt-1 text-sm text-slate-600">Co-leads are listed alphabetically.</p>
+                  )}
+                </div>
                 <div
                   className={
                     group.title === "Leadership"
@@ -33,18 +38,26 @@ export default function TeamPage() {
                       : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
                   }
                 >
-                  {group.members.map((member) => (
-                    <ProfileCard
-                      key={`${group.title}-${member.name}`}
-                      imageSrc={member.imageSrc}
-                      name={member.name}
-                      role={member.role}
-                      altText={member.altText}
-                      websiteUrl={member.websiteUrl}
-                      scholarUrl={member.scholarUrl}
-                      linkedinUrl={member.linkedinUrl}
-                    />
-                  ))}
+                  {[...group.members]
+                    .sort((a, b) => {
+                      if (group.title === "Leadership") {
+                        if (a.role === "President") return -1;
+                        if (b.role === "President") return 1;
+                      }
+                      return a.name.localeCompare(b.name);
+                    })
+                    .map((member) => (
+                      <ProfileCard
+                        key={`${group.title}-${member.name}`}
+                        imageSrc={member.imageSrc}
+                        name={member.name}
+                        role={member.role}
+                        altText={member.altText}
+                        websiteUrl={member.websiteUrl}
+                        scholarUrl={member.scholarUrl}
+                        linkedinUrl={member.linkedinUrl}
+                      />
+                    ))}
                 </div>
               </div>
             </MotionReveal>
