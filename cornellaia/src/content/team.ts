@@ -59,6 +59,13 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedinUrl: "https://www.linkedin.com/in/owen-karmel-b067a6280/",
       },
       {
+        imageSrc: "/team/TEAM_rittik_bhattacharya.jpeg",
+        name: "Rittik Bhattacharya",
+        role: "Co-Lead",
+        websiteUrl: "https://medium.com/@rittikb",
+        linkedinUrl: "https://www.linkedin.com/in/rittik-bh/",
+      },
+      {
         imageSrc: "/team/TEAM_ekadh_singh.png",
         name: "Ekadh Singh",
         role: "Co-Lead",
@@ -131,6 +138,10 @@ export const TEAM_GROUPS: TeamGroup[] = [
   {
     title: "Alumni",
     members: [
+      {
+        imageSrc: "/team/TEAM_leo_piff.jpg",
+        name: "Leo Piff",
+      },
       {
         imageSrc: "/team/TEAM_jonathn_chang.png",
         name: "Jonathn Chang",

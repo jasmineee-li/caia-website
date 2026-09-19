@@ -196,7 +196,22 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Limits of current methods and the challenge of scalable, safety-relevant auditing.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 4 slides (PDF)",
+          href: "/cs1998/week_4_slides.pdf",
+        },
+      ],
+      notebook: [
+        {
+          label: "Week 4 notebook",
+          href: "/cs1998/Week_4_Notebook_Abliteration.ipynb",
+        },
+        {
+          label: "Week 4 notebook (no-code version)",
+          href: "/cs1998/Week_4_Notebook_Abliteration_No_Code.ipynb",
+        },
+      ],
       discussionReading: [
         {
           label:
