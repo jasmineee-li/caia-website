@@ -18,6 +18,39 @@ export interface ResearchPaperDetail {
 
 export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
+    title: "Stubborn or Sycophantic? GEPA-Evolved Prompts Under Pressure",
+    href: "https://openreview.net/forum?id=5FcGoSA4WJ",
+    imageSrc: "/papers/paper-stubborn-sycophantic.png",
+    imageAlt: "First page of Stubborn or Sycophantic?",
+    imageWidth: 1082,
+    imageHeight: 1400,
+    authors: [
+      { name: "HanRui Zhang" },
+      { name: "Ashton Chew", isCaiaMember: true },
+      { name: "Ryan Soe" },
+      { name: "Ahmed Taha" },
+      { name: "Ruizhe Li" },
+      { name: "Aditya Shah" },
+      { name: "Maheep Chaudhary" },
+    ],
+    abstract:
+      "Prompts that discourage sycophancy can also make language models reject valid corrections. This study evaluates frozen system prompts on SycoBench-600 using both correct and misleading user suggestions, separating beneficial corrections from harmful answer changes. Results across Phi-3-mini, Llama-3.1-8B, and Mistral-7B vary by model and prompt. Some interventions reduce harmful reversals while also suppressing useful updates, and no prompt improves correction selectivity across all three models. The findings support evaluating resistance to misleading pressure alongside responsiveness to accurate feedback.",
+    tags: ["COLM 2026 Workshop on Efficient Reasoning", "Forthcoming"],
+    shortTag: "COLM 2026 Workshop",
+  },
+  {
+    title: "Math for AI safety: an invitation for mathematicians",
+    href: "https://arxiv.org/abs/2609.15289",
+    imageSrc: "/papers/paper-math-ai-safety.png",
+    imageAlt: "First page of Math for AI safety",
+    imageWidth: 1082,
+    imageHeight: 1400,
+    authors: [{ name: "Lionel Levine", isCaiaMember: true }],
+    abstract:
+      "This survey introduces mathematical research directions for making AI systems understandable, controllable, and cooperative. It connects cooperation to logic and game theory, agency and world models to probability, learned representations to algebra, and generalization and training dynamics to analysis and geometry. Organized by mathematical specialty, each section offers an open problem intended for mathematicians entering AI safety without prior experience in the field.",
+    tags: ["Survey preprint 2026"],
+  },
+  {
     title:
       "WARP: Measuring and Mitigating Evaluation Awareness in Browser-Agent Safety Benchmarks",
     href: "https://icml.cc/virtual/2026/76886",
@@ -57,6 +90,39 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
       "Character training is a key part of post-training large language models, but its broader effects across value systems are still underexplored. This work uses EigenBench to quantify how models trained on one constitution shift across other constitutions, studying intended value changes, cross-constitution side effects, prompt interactions, and the evolution of model character over training.",
     tags: ["ICML 2026 Workshop on Pluralistic Alignment"],
     shortTag: "ICML 2026 Workshop",
+  },
+  {
+    title: "Measuring AI-Induced Disempowerment: A Framework and Proposed Metrics",
+    href: "https://aclanthology.org/2026.evaleval-1.36/",
+    imageSrc: "/papers/paper-disempowerment.png",
+    imageAlt: "First page of Measuring AI-Induced Disempowerment",
+    imageWidth: 990,
+    imageHeight: 1400,
+    authors: [
+      { name: "Je Qin Chooi" },
+      { name: "Jaeho Lee" },
+      { name: "Jasmine Xinze Li", isCaiaMember: true },
+    ],
+    abstract:
+      "This paper proposes a framework for measuring whether AI reduces people's ability to shape outcomes that affect them. Drawing on Sen's account of agency, it distinguishes exposure to AI, erosion of human influence, and lock-in across economic, political, and cultural settings. Existing measurement work largely addresses exposure. The authors propose six complementary approaches covering human-AI performance, perceived disempowerment, cultural change, labor-related capital flows, human task capabilities, and institutional practices, while identifying challenges in causal attribution and measurement validity.",
+    tags: ["EvalEval 2026"],
+  },
+  {
+    title:
+      "Quantifying Theoretical AI Alignment Guarantees: Receiver-Utility Bounds in Bayesian Persuasion",
+    href: "https://arxiv.org/abs/2606.22226",
+    imageSrc: "/papers/paper-receiver-utility.png",
+    imageAlt: "First page of Quantifying Theoretical AI Alignment Guarantees",
+    imageWidth: 945,
+    imageHeight: 1400,
+    authors: [
+      { name: "Eric Yachbes", isCaiaMember: true },
+      { name: "Eva Tardos" },
+    ],
+    abstract:
+      "This paper models a misaligned AI's informational advantage using Bayesian persuasion. A human receiver wants to infer a bit string accurately, while an informed AI sender wants the receiver to guess more ones. Among signaling strategies that maximize the sender's utility, even the best outcome for the receiver provides at most 1.5 times the utility available from the prior alone. The authors derive a tighter bound for priors close to independent distributions and construct an example showing that a universal 1.25 bound cannot hold.",
+    tags: ["EC 2026 Poster", "EC 2026 Incentive-Based AI Alignment Workshop Poster"],
+    shortTag: "EC 2026 Poster",
   },
   {
     title:
@@ -129,6 +195,22 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     tags: ["Report", "Collaboration with Turing Award winner Andrew Yao"],
   },
   {
+    title: "Early Results on Monitorability in QA Settings",
+    href: "https://metr.org/notes/2025-10-06-early-results-on-monitorability-in-qa-settings/",
+    imageSrc: "/graphics/attention-patterns.svg",
+    imageAlt: "Abstract illustration of attention patterns for a research note on monitoring",
+    imageWidth: 720,
+    imageHeight: 480,
+    authors: [
+      { name: "Vincent Cheng", isCaiaMember: true },
+      { name: "Thomas Kwa" },
+      { name: "Neev Parikh" },
+    ],
+    abstract:
+      "This research note studies agents that answer a main question while covertly solving a second task. In preliminary experiments, harder hidden tasks correlate with lower monitor evasion rates, and prompting choices substantially affect evasion. Early reinforcement learning results show that an eight-billion-parameter model can exploit weaknesses in a GPT-4o monitor. The authors caution that these strategies are not robust, difficulty estimates are noisy, and broader testing with stronger monitors is needed before drawing general conclusions.",
+    tags: ["METR Research Note", "October 2025"],
+  },
+  {
     title: "EigenBench: A Comparative Behavior Measure of Value Alignment",
     href: "https://arxiv.org/pdf/2509.01938",
     imageSrc: "/papers/paper-eigenbench.png",
@@ -145,6 +227,21 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     abstract:
       "Aligning AI with human values is a pressing unsolved problem. To address the lack of quantitative metrics for value alignment, we propose EigenBench: a black-box method for comparatively benchmarking language models' values. Given an ensemble of models, a constitution describing a value system, and a dataset of scenarios, our method returns a vector of scores quantifying each model's alignment to the given constitution. To produce these scores, each model judges the outputs of other models across many scenarios, and these judgments are aggregated with EigenTrust (Kamvar et al., 2003), yielding scores that reflect a weighted consensus judgment of the whole ensemble. EigenBench uses no ground truth labels, as it is designed to quantify subjective traits for which reasonable judges may disagree on the correct label. Hence, to validate our method, we collect human judgments on the same ensemble of models and show that EigenBench's judgments align closely with those of human evaluators. We further demonstrate that EigenBench can recover model rankings on the GPQA benchmark without access to objective labels, supporting its viability as a framework for evaluating subjective values for which no ground truths exist.",
     tags: ["ICLR 2026 Oral"],
+  },
+  {
+    title: "Claude, GPT, and Gemini All Struggle to Evade Monitors",
+    href: "https://metr.org/notes/2025-08-22-claude-gpt-gemini-struggle-evade-monitors/",
+    imageSrc: "/graphics/aligned-trajectories.svg",
+    imageAlt: "Abstract illustration of trajectories for a research note on monitor evasion",
+    imageWidth: 720,
+    imageHeight: 480,
+    authors: [
+      { name: "Vincent Cheng", isCaiaMember: true },
+      { name: "Thomas Kwa" },
+    ],
+    abstract:
+      "This research note extends a Gemini monitoring study to Claude and GPT models on difficult science questions. Agents attempt to disguise the subject of their reasoning while preserving answer accuracy. Across the tested settings, evading monitors comes with substantial accuracy losses, and stronger monitors generally detect obfuscation more effectively. The study calibrates detection thresholds to account for false positives and provides an open-source replication. Its conclusions are limited by the artificial task, transferred attack prompts, and differences between prompted reasoning and dedicated reasoning traces.",
+    tags: ["METR Research Note", "August 2025"],
   },
   {
     title: "ProgressGym: Alignment with a Millennium of Moral Progress",
@@ -184,5 +281,36 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     abstract:
       "As large language models (LLMs) evolve in complexity and capability, the efficacy of less widely deployed alignment techniques are uncertain. Building on previous work on activation steering and contrastive activation addition (CAA), this paper explores the effectiveness of CAA with model scale using the family of Llama 2 models (7B, 13B, and 70B). CAA works by finding desirable 'directions' in the model's residual stream vector space using contrastive pairs (for example, hate to love) and adding this direction to the residual stream during the forward pass. It directly manipulates the residual stream and aims to extract features from language models to better control their outputs. Using answer matching questions centered around the refusal behavior, we found that 1) CAA is most effective when applied at early-mid layers. 2) The effectiveness of CAA diminishes with model size. 3) Negative steering has more pronounced effects than positive steering across all model sizes.",
     tags: ["SPAR S24", "Model Steering"],
+  },
+  {
+    title: "How to quantify the coherence of a set of beliefs",
+    href: "https://arxiv.org/abs/2412.02777",
+    imageSrc: "/papers/paper-belief-coherence.png",
+    imageAlt: "First page of How to quantify the coherence of a set of beliefs",
+    imageWidth: 1082,
+    imageHeight: 1400,
+    authors: [
+      { name: "Rowan Hess" },
+      { name: "Lionel Levine", isCaiaMember: true },
+    ],
+    abstract:
+      "This paper studies how to measure inconsistencies among probability estimates and reconcile them into a coherent distribution. It characterizes the geometric constraints defining jointly consistent beliefs and considers loss minimization, including binary KL divergence, to find distributions close to the original estimates. Applications include extracting language models' beliefs and combining expert predictions into a logically consistent forecast.",
+    tags: ["Preprint 2024"],
+  },
+  {
+    title: "Do language models plan ahead for future tokens?",
+    href: "https://arxiv.org/abs/2404.00859",
+    imageSrc: "/papers/paper-plan-ahead.png",
+    imageAlt: "First page of Do language models plan ahead for future tokens?",
+    imageWidth: 1082,
+    imageHeight: 1400,
+    authors: [
+      { name: "Wilson Wu" },
+      { name: "John X. Morris" },
+      { name: "Lionel Levine", isCaiaMember: true },
+    ],
+    abstract:
+      "Transformers compute hidden representations that later token predictions can reuse. This paper asks whether training encourages features specifically useful for future predictions, termed pre-caching, or whether useful current features incidentally provide breadcrumbs for later steps. The authors introduce myopic training, which blocks gradients to earlier time steps, to distinguish these explanations. Synthetic experiments demonstrate pre-caching, while language modeling results more strongly support the breadcrumbs explanation, with evidence for pre-caching increasing at larger model scales.",
+    tags: ["COLM 2024"],
   },
 ];

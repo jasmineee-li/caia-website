@@ -1,0 +1,962 @@
+{
+  "reviewed_on": "2026-09-20",
+  "selection_criteria": "Established work with evidence of research or teaching adoption, institutional uptake, major recognition, or sustained substantive community engagement. Recency alone does not qualify.",
+  "previous_items": 572,
+  "new_items": 37,
+  "total_items": 609,
+  "folders": [
+    {
+      "collection": "careers",
+      "subtopic": "Career paths",
+      "added": 2,
+      "review": "Added the 80,000 Hours core guide and jobs service, distinct from existing specialist career essays and the planning worksheet."
+    },
+    {
+      "collection": "careers",
+      "subtopic": "Fellowships & training",
+      "added": 0,
+      "review": "Unchanged. Established opportunities already appear here or in the page’s dedicated fellowships section. No filler was added to meet a quota."
+    },
+    {
+      "collection": "careers",
+      "subtopic": "Research practice",
+      "added": 2,
+      "review": "Added Keshav’s paper-reading method and Hamming’s research talk, both used in university research-skills teaching."
+    },
+    {
+      "collection": "forecasting",
+      "subtopic": "Capabilities & scaling",
+      "added": 1,
+      "review": "Added the NeurIPS Best Paper-winning GPT-3 paper as empirical context for the existing emergence debate."
+    },
+    {
+      "collection": "forecasting",
+      "subtopic": "Economics & society",
+      "added": 2,
+      "review": "Added complementary studies of occupational exposure and observed workplace productivity, published in Science and QJE."
+    },
+    {
+      "collection": "forecasting",
+      "subtopic": "Scenarios & trajectories",
+      "added": 0,
+      "review": "Unchanged. Existing scenarios and takeoff discussions cover the selected themes. No additional essay met both the novelty and establishment thresholds."
+    },
+    {
+      "collection": "forecasting",
+      "subtopic": "Timelines & scaling",
+      "added": 1,
+      "review": "Added the established 2016 expert survey, explicitly framed as a historical baseline rather than a current forecast."
+    },
+    {
+      "collection": "foundations",
+      "subtopic": "AI safety foundations",
+      "added": 1,
+      "review": "Added Richard Ngo’s established first-principles sequence. Existing introductory reports and essays were not duplicated."
+    },
+    {
+      "collection": "foundations",
+      "subtopic": "Arguments & critiques",
+      "added": 1,
+      "review": "Added Stochastic Parrots as a well-known critical perspective on language models. The working author landing page includes the paper and talk."
+    },
+    {
+      "collection": "foundations",
+      "subtopic": "Courses & curricula",
+      "added": 2,
+      "review": "Added Stanford CS229 notes and CS224N materials. The CS229 link goes directly to public notes rather than its restricted current course materials."
+    },
+    {
+      "collection": "foundations",
+      "subtopic": "ML fundamentals",
+      "added": 3,
+      "review": "Added the original Transformer paper and two established textbooks, complementing existing visual introductions and tutorials."
+    },
+    {
+      "collection": "foundations",
+      "subtopic": "Safety case studies",
+      "added": 1,
+      "review": "Added the original Therac-25 investigation, distinct from the existing Wikipedia overview."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Biosecurity",
+      "added": 2,
+      "review": "Added the established AI drug-discovery dual-use case study and WHO’s global biorisk governance framework."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Compute & hardware",
+      "added": 0,
+      "review": "Unchanged. Existing CSET chip resources and compute-governance papers cover the foundations. Considered reports overlapped with existing items."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Corporate governance",
+      "added": 1,
+      "review": "Added the G7 Hiroshima code as a shared baseline alongside company-specific policies."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "International coordination",
+      "added": 2,
+      "review": "Added the Bletchley Declaration and the UN AI advisory body’s final report."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Law & liability",
+      "added": 0,
+      "review": "Unchanged. Existing liability primers and legal research agendas cover the targeted ground. No new candidate cleared the evidence threshold in this pass."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Misuse & security",
+      "added": 1,
+      "review": "Added jointly endorsed operational security guidance from NCSC, CISA, and partner agencies."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Policy foundations",
+      "added": 2,
+      "review": "Added the original GovAI research agenda and adopted OECD AI Principles."
+    },
+    {
+      "collection": "governance",
+      "subtopic": "Regulation & standards",
+      "added": 1,
+      "review": "Added NIST AI RMF 1.0. Existing EU AI Act coverage was not duplicated."
+    },
+    {
+      "collection": "perspectives",
+      "subtopic": "Newsletters & blogs",
+      "added": 1,
+      "review": "Added the Alignment Newsletter archive and explicitly identified its hiatus."
+    },
+    {
+      "collection": "perspectives",
+      "subtopic": "Podcasts",
+      "added": 1,
+      "review": "Added AXRP, a sustained specialist interview series with researchers, transcripts, and research links."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "AI control",
+      "added": 0,
+      "review": "Unchanged. The original AI Control paper, case for control, monitoring, and red-handed detection resources are already present."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Alignment & training",
+      "added": 2,
+      "review": "Added Cooperative Inverse Reinforcement Learning and Learning to summarize from human feedback. Existing InstructGPT and DPO materials were not duplicated."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Evaluations & red teaming",
+      "added": 2,
+      "review": "Added the original MMLU and TruthfulQA benchmark papers, both adopted by the original Open LLM Leaderboard."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Interpretability",
+      "added": 2,
+      "review": "Added LIME and SHAP to complement the extensive mechanistic interpretability coverage with established feature-attribution foundations."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Reward hacking & misalignment",
+      "added": 1,
+      "review": "Added the author-posted introduction to Risks from Learned Optimization for the foundation of mesa-optimization and inner alignment."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Scalable oversight",
+      "added": 1,
+      "review": "Added Paul’s research agenda FAQ, an established explanation of amplification and its assumptions with substantive discussion."
+    },
+    {
+      "collection": "technical",
+      "subtopic": "Unlearning",
+      "added": 2,
+      "review": "Added the Test of Time-recognized foundational paper and the SISA paper, complementing the existing LLM-era benchmarks."
+    }
+  ],
+  "entries": [
+    {
+      "title": "Attention Is All You Need",
+      "href": "https://arxiv.org/abs/1706.03762",
+      "note": "Vaswani et al. (2017) introduce the Transformer, modeling sequences with attention instead of recurrence.",
+      "topic": "ML fundamentals",
+      "format": "Paper",
+      "collection": "foundations",
+      "subtopic": "ML fundamentals",
+      "evidence": {
+        "reason": "The original NeurIPS 2017 Transformer paper is assigned in Stanford CS224N, including its attention and Transformer lectures.",
+        "url": "https://web.stanford.edu/class/cs224n/"
+      }
+    },
+    {
+      "title": "Deep Learning",
+      "href": "https://www.deeplearningbook.org/",
+      "note": "Goodfellow, Bengio, and Courville (2016) cover the mathematical foundations, methods, and research directions of deep learning. Free to read online.",
+      "topic": "ML fundamentals",
+      "format": "Book",
+      "collection": "foundations",
+      "subtopic": "ML fundamentals",
+      "evidence": {
+        "reason": "MIT Press textbook listed among the reference texts for Stanford CS224N. The authors provide a free HTML edition.",
+        "url": "https://web.stanford.edu/class/cs224n/"
+      }
+    },
+    {
+      "title": "Reinforcement Learning: An Introduction",
+      "href": "http://incompleteideas.net/book/the-book-2nd.html",
+      "note": "Sutton and Barto (2018) explain value functions, temporal-difference learning, policy gradients, and exploration. Includes the full second edition and code.",
+      "topic": "ML fundamentals",
+      "format": "Book",
+      "collection": "foundations",
+      "subtopic": "ML fundamentals",
+      "evidence": {
+        "reason": "The second edition of the established MIT Press textbook, whose first edition appeared in 1998. Publisher describes its role as the standard reference. Author page and full-book link verified over HTTP, since the HTTPS endpoint currently has a certificate error.",
+        "url": "https://mitpress.mit.edu/9780262039246/reinforcement-learning/"
+      }
+    },
+    {
+      "title": "AGI Safety from First Principles",
+      "href": "https://www.lesswrong.com/s/mzgtmmTKKn5MuCzFJ",
+      "note": "Richard Ngo (2020) develops an argument about advanced AI, agency, alignment, and control, making the underlying assumptions explicit.",
+      "topic": "AI safety foundations",
+      "format": "Collection",
+      "collection": "foundations",
+      "subtopic": "AI safety foundations",
+      "evidence": {
+        "reason": "Established six-part LessWrong sequence recommended in AI safety research-engineering reading lists. Its introduction displayed 131 points and 18 comments when reviewed.",
+        "url": "https://www.lesswrong.com/posts/uLstPRyYwzfrx3enG/levelling-up-in-ai-safety-research-engineering"
+      }
+    },
+    {
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "href": "https://faculty.washington.edu/ebender/stochasticparrots/",
+      "note": "Bender et al. (2021) examine language-model training data, environmental costs, bias, and claims of understanding. The author’s page links the paper, talk, and audio version.",
+      "topic": "Arguments & critiques",
+      "format": "Paper",
+      "collection": "foundations",
+      "subtopic": "Arguments & critiques",
+      "evidence": {
+        "reason": "FAccT 2021 paper with extensive documented public discussion. The author maintains a record of its reception and links to primary paper and presentation. Linked the working author landing page rather than a blocked guessed PDF path.",
+        "url": "https://faculty.washington.edu/ebender/stochasticparrots/"
+      }
+    },
+    {
+      "title": "Stanford CS229: Machine Learning Lecture Notes",
+      "href": "https://cs229.stanford.edu/main_notes.pdf",
+      "note": "Tengyu Ma and Andrew Ng’s public course notes cover supervised and unsupervised learning, generalization, deep learning, and reinforcement learning.",
+      "topic": "Courses & curricula",
+      "format": "Curriculum",
+      "collection": "foundations",
+      "subtopic": "Courses & curricula",
+      "evidence": {
+        "reason": "Long-running Stanford machine learning course. Its official public notes were verified as a 278-page PDF. Linked the notes directly because current course logistics and assignments require Stanford access.",
+        "url": "https://cs229.stanford.edu/syllabus-fall2022.html"
+      }
+    },
+    {
+      "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
+      "href": "https://web.stanford.edu/class/cs224n/",
+      "note": "Public slides, assignments, and earlier lecture recordings from Stanford’s course on neural networks, Transformers, and language models.",
+      "topic": "Courses & curricula",
+      "format": "Curriculum",
+      "collection": "foundations",
+      "subtopic": "Courses & curricula",
+      "evidence": {
+        "reason": "Long-running Stanford NLP course with archived offerings, public assignments and slides, and links to prior public lecture recordings. Current enrolled-student recordings may require Canvas access.",
+        "url": "https://web.stanford.edu/class/cs224n/"
+      }
+    },
+    {
+      "title": "An Investigation of the Therac-25 Accidents",
+      "href": "https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html",
+      "note": "Leveson and Turner (1993) investigate radiation overdoses caused by interacting software, hardware, and organizational failures.",
+      "topic": "Safety case studies",
+      "format": "Paper",
+      "collection": "foundations",
+      "subtopic": "Safety case studies",
+      "evidence": {
+        "reason": "Original IEEE Computer investigation assigned in MIT 6.033 and hosted there as an authorized reprint. Distinct from the library’s existing Wikipedia overview.",
+        "url": "https://web.mit.edu/6.033/2006/wwwdocs/assignments/therac25.html"
+      }
+    },
+    {
+      "title": "AXRP: AI X-risk Research Podcast",
+      "href": "https://axrp.net/",
+      "note": "Daniel Filan interviews AI safety researchers about their work. Episodes include full transcripts and links to the research discussed.",
+      "topic": "Podcasts",
+      "format": "Podcast",
+      "collection": "perspectives",
+      "subtopic": "Podcasts",
+      "evidence": {
+        "reason": "Primary archive documents roughly 50 episodes since 2020, featuring researchers including Paul Christiano, Jan Leike, Neel Nanda, and Buck Shlegeris. A sustained specialist research interview series.",
+        "url": "https://axrp.net/"
+      }
+    },
+    {
+      "title": "Alignment Newsletter Archive",
+      "href": "https://rohinshah.com/alignment-newsletter/",
+      "note": "Rohin Shah’s summaries and analysis of AI alignment research. On hiatus, but useful for tracing established ideas and debates.",
+      "topic": "Newsletters & blogs",
+      "format": "Newsletter / blog",
+      "collection": "perspectives",
+      "subtopic": "Newsletters & blogs",
+      "evidence": {
+        "reason": "Author page reports more than 2,600 subscribers and provides the multi-year archive. It explicitly states that the newsletter is on indefinite hiatus.",
+        "url": "https://rohinshah.com/alignment-newsletter/"
+      }
+    },
+    {
+      "title": "80,000 Hours Career Guide",
+      "href": "https://80000hours.org/career-guide/",
+      "note": "A practical guide to choosing impactful work, testing career options, and developing useful skills.",
+      "topic": "Career paths",
+      "format": "Collection",
+      "collection": "careers",
+      "subtopic": "Career paths",
+      "evidence": {
+        "reason": "The established organization’s core public guide, distinct from its specialist AI career articles and individual planning worksheet already in the library.",
+        "url": "https://80000hours.org/career-guide/"
+      }
+    },
+    {
+      "title": "80,000 Hours Job Board",
+      "href": "https://jobs.80000hours.org/",
+      "note": "Curated roles in AI safety and other pressing problems, spanning research, policy, operations, and career development.",
+      "topic": "Career paths",
+      "format": "Collection",
+      "collection": "careers",
+      "subtopic": "Career paths",
+      "evidence": {
+        "reason": "The established career organization’s maintained public jobs service with filters and substantive current opportunities. Complements its guidance instead of duplicating an individual fellowship.",
+        "url": "https://jobs.80000hours.org/"
+      }
+    },
+    {
+      "title": "How to Read a Paper",
+      "href": "https://cs.uwaterloo.ca/~brecht/courses/854-http-video-2012/readings/keshav-paper-reading.pdf",
+      "note": "S. Keshav (2007) presents a three-pass method for reading research papers efficiently and building a literature review.",
+      "topic": "Research practice",
+      "format": "Paper",
+      "collection": "careers",
+      "subtopic": "Research practice",
+      "evidence": {
+        "reason": "Published in ACM SIGCOMM Computer Communication Review and assigned as research-skills guidance in Harvard CS260r. Full two-page paper verified on Waterloo’s course site.",
+        "url": "https://read.seas.harvard.edu/cs260r/2022/on-reading/"
+      }
+    },
+    {
+      "title": "You and Your Research",
+      "href": "https://www.cs.virginia.edu/~robins/YouAndYourResearch.html",
+      "note": "Richard Hamming (1986) discusses choosing important problems, developing research habits, and communicating results.",
+      "topic": "Research practice",
+      "format": "Essay",
+      "collection": "careers",
+      "subtopic": "Research practice",
+      "evidence": {
+        "reason": "Classic Bellcore talk preserved as a full transcript and used in research-skills teaching at Princeton.",
+        "url": "https://www.cs.princeton.edu/~jrex/teaching/spring2005/fft/hamming.html"
+      }
+    },
+    {
+      "title": "\"Why Should I Trust You?\": Explaining the Predictions of Any Classifier",
+      "href": "https://arxiv.org/abs/1602.04938",
+      "note": "Ribeiro, Singh and Guestrin (2016) introduce LIME, which explains individual predictions by fitting simple models around nearby inputs.",
+      "topic": "Interpretability",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Interpretability",
+      "evidence": {
+        "reason": "The original KDD 2016 LIME paper underlies the LimeTabular implementation in Microsoft InterpretML, whose official documentation explicitly cites this paper and teaches its use.",
+        "url": "https://interpret.ml/docs/lime.html"
+      }
+    },
+    {
+      "title": "A Unified Approach to Interpreting Model Predictions",
+      "href": "https://papers.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+      "note": "Lundberg and Lee (2017) introduce SHAP, a framework that assigns feature contributions to individual predictions using Shapley values.",
+      "topic": "Interpretability",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Interpretability",
+      "evidence": {
+        "reason": "Original NeurIPS 2017 SHAP paper, with established adoption documented by Microsoft Azure Machine Learning listing SHAP explainers among its supported model interpretation methods.",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-interpret/azureml.interpret?view=azure-ml-py"
+      }
+    },
+    {
+      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+      "href": "https://aclanthology.org/2022.acl-long.229/",
+      "note": "Lin, Hilton and Evans (2022) test whether language models repeat common misconceptions rather than answer questions truthfully.",
+      "topic": "Evaluations & red teaming",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Evaluations & red teaming",
+      "evidence": {
+        "reason": "ACL 2022 benchmark adopted as one of the original four Open LLM Leaderboard evaluations, as documented by the Hugging Face leaderboard team in its December 2023 retrospective.",
+        "url": "https://huggingface.co/blog/open-llm-leaderboard-drop"
+      }
+    },
+    {
+      "title": "Measuring Massive Multitask Language Understanding",
+      "href": "https://arxiv.org/abs/2009.03300",
+      "note": "Hendrycks and colleagues (2021) introduce MMLU, a benchmark covering 57 subjects that exposes gaps in model knowledge and problem solving.",
+      "topic": "Evaluations & red teaming",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Evaluations & red teaming",
+      "evidence": {
+        "reason": "ICLR 2021 benchmark adopted as one of the original four Open LLM Leaderboard evaluations, with the leaderboard team documenting its use across models in December 2023.",
+        "url": "https://huggingface.co/blog/open-llm-leaderboard-drop"
+      }
+    },
+    {
+      "title": "Risks from Learned Optimization: Introduction",
+      "href": "https://www.lesswrong.com/posts/FkgsxrGf3QxhfLWHG/risks-from-learned-optimization-introduction",
+      "note": "Hubinger and colleagues (2019) introduce mesa-optimization and explain how learned optimizers can pursue objectives different from their training objective.",
+      "topic": "Reward hacking & misalignment",
+      "format": "Essay",
+      "collection": "technical",
+      "subtopic": "Reward hacking & misalignment",
+      "evidence": {
+        "reason": "Author-posted introduction to the original mesa-optimization paper and sequence, with 189 points and 42 comments displayed on LessWrong when checked on 2026-09-20.",
+        "url": "https://www.lesswrong.com/posts/FkgsxrGf3QxhfLWHG/risks-from-learned-optimization-introduction"
+      }
+    },
+    {
+      "title": "Cooperative Inverse Reinforcement Learning",
+      "href": "https://proceedings.neurips.cc/paper/2016/hash/c3395dd46c34fa7fd8d729d8cf88b7a8-Abstract.html",
+      "note": "Hadfield-Menell and colleagues (2016) formalize value alignment as cooperation in which an AI learns an initially unknown human reward function.",
+      "topic": "Alignment & training",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Alignment & training",
+      "evidence": {
+        "reason": "NeurIPS 2016 foundation of assistance games, which CHAI's 2020 progress report identifies as the basis for an established research program on shutdown, obedience and learning human preferences.",
+        "url": "https://humancompatible.ai/app/uploads/2020/11/CHAI-2020-Progress-Report-public-9-30.pdf"
+      }
+    },
+    {
+      "title": "Learning to summarize from human feedback",
+      "href": "https://arxiv.org/abs/2009.01325",
+      "note": "Stiennon and colleagues (2020) train summarization models using human preference comparisons and show why learned rewards can outperform automatic text metrics.",
+      "topic": "Alignment & training",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Alignment & training",
+      "evidence": {
+        "reason": "NeurIPS 2020 RLHF paper whose released preference data remain a concrete training resource in Hugging Face TRL, with the official dataset preparation script loading openai/summarize_from_feedback.",
+        "url": "https://github.com/huggingface/trl/blob/main/examples/datasets/tldr_preference.py"
+      }
+    },
+    {
+      "title": "Paul's research agenda FAQ",
+      "href": "https://www.lesswrong.com/posts/Djs38EWYZG8o7JMWY/paul-s-research-agenda-faq",
+      "note": "zhukeepa (2018) explains iterated amplification, informed oversight and corrigibility while spelling out unresolved assumptions in Paul Christiano’s alignment agenda.",
+      "topic": "Scalable oversight",
+      "format": "Essay",
+      "collection": "technical",
+      "subtopic": "Scalable oversight",
+      "evidence": {
+        "reason": "Substantial long-running LessWrong discussion with 131 points and 74 comments displayed when checked on 2026-09-20, including direct discussion and feedback from Paul Christiano.",
+        "url": "https://www.lesswrong.com/posts/Djs38EWYZG8o7JMWY/paul-s-research-agenda-faq"
+      }
+    },
+    {
+      "title": "Towards Making Systems Forget with Machine Unlearning",
+      "href": "https://www.cs.columbia.edu/~junfeng/papers/unlearning/",
+      "note": "Cao and Yang (2015) introduce machine unlearning methods that remove training data contributions without rebuilding a learning system from scratch.",
+      "topic": "Unlearning",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Unlearning",
+      "evidence": {
+        "reason": "Received the IEEE Symposium on Security and Privacy 2025 Test of Time Award for its lasting impact, confirmed by the IEEE security community's official award announcement.",
+        "url": "https://www.ieee-security.org/Cipher/Newsbriefs/2025/news-052725.html"
+      }
+    },
+    {
+      "title": "Machine Unlearning",
+      "href": "https://arxiv.org/abs/1912.03817",
+      "note": "Bourtoule and colleagues (2021) introduce SISA training, which partitions training so that deleting data requires retraining only affected model components.",
+      "topic": "Unlearning",
+      "format": "Paper",
+      "collection": "technical",
+      "subtopic": "Unlearning",
+      "evidence": {
+        "reason": "IEEE S&P 2021 paper introducing SISA, subsequently extended to NLP in Amazon's IJCNLP-AACL 2023 research through SISA-FC and SISA-A, demonstrating adoption beyond the original experiments.",
+        "url": "https://www.amazon.science/publications/privacy-adhering-machine-un-learning-in-nlp"
+      }
+    },
+    {
+      "title": "AI Governance: A Research Agenda",
+      "href": "https://www.governance.ai/research-paper/agenda",
+      "note": "Allan Dafoe (2018) maps the technical, political, and institutional questions involved in governing advanced AI.",
+      "topic": "Policy foundations",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Policy foundations",
+      "evidence": {
+        "reason": "Foundational 2018 GovAI/Future of Humanity Institute research agenda, retained by GovAI as an introduction to the field and identified in its annual report as a comprehensive early framework for AI governance research.",
+        "url": "https://www.governance.ai/post/govai-annual-report-2018"
+      }
+    },
+    {
+      "title": "OECD AI Principles",
+      "href": "https://oecd.ai/en/ai-principles",
+      "note": "OECD (2019, updated 2024) sets principles for trustworthy AI and recommendations for public policy and international cooperation.",
+      "topic": "Policy foundations",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Policy foundations",
+      "evidence": {
+        "reason": "The first intergovernmental AI standard, adopted in 2019 and updated in 2024, with OECD member and partner adherents and G20 principles drawn from it. The official source documents uptake of its definitions in international regulatory frameworks.",
+        "url": "https://oecd.ai/en/ai-principles"
+      }
+    },
+    {
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "note": "Elham Tabassi and NIST (2023) organize AI risk management around governing, mapping, measuring, and managing risks.",
+      "topic": "Regulation & standards",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Regulation & standards",
+      "evidence": {
+        "reason": "Congress-directed framework issued by the US national standards agency following an 18-month public process. NIST documents input from more than 240 organizations and commitments by organizations to use or promote it.",
+        "url": "https://www.nist.gov/news-events/news/2023/01/nist-risk-management-framework-aims-improve-trustworthiness-artificial"
+      }
+    },
+    {
+      "title": "Guidelines for Secure AI System Development",
+      "href": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development",
+      "note": "NCSC, CISA, and partner agencies (2023) outline security practices across AI design, development, deployment, and operation.",
+      "topic": "Misuse & security",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Misuse & security",
+      "evidence": {
+        "reason": "Official joint cybersecurity guidance co-sealed by 23 domestic and international cybersecurity organizations, as confirmed by CISA, covering security throughout the AI system lifecycle.",
+        "url": "https://www.cisa.gov/news-events/alerts/2023/11/26/cisa-and-uk-ncsc-unveil-joint-guidelines-secure-ai-system-development"
+      }
+    },
+    {
+      "title": "Hiroshima Process International Code of Conduct for Organizations Developing Advanced AI Systems",
+      "href": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems",
+      "note": "G7 (2023) sets voluntary commitments for advanced AI developers on risk assessment, security, transparency, and incident reporting.",
+      "topic": "Corporate governance",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Corporate governance",
+      "evidence": {
+        "reason": "Official G7 agreement on a voluntary code for advanced AI developers, published by the European Commission on 30 October 2023. Its intergovernmental endorsement and lifecycle obligations establish it as a cross-company governance reference.",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems"
+      }
+    },
+    {
+      "title": "The Bletchley Declaration by Countries Attending the AI Safety Summit, 1-2 November 2023",
+      "href": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023",
+      "note": "AI Safety Summit participants (2023) establish a shared agenda for understanding frontier AI risks and coordinating international safety research.",
+      "topic": "International coordination",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "International coordination",
+      "evidence": {
+        "reason": "Official declaration from the inaugural AI Safety Summit, agreed by participating governments including the United States and China and the European Union. The primary document records the signatories and commitments to coordinated frontier AI safety research.",
+        "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023"
+      }
+    },
+    {
+      "title": "Governing AI for Humanity: Final Report",
+      "href": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+      "note": "United Nations AI Advisory Body (2024) proposes international institutions to assess AI risks, coordinate governance, and share benefits.",
+      "topic": "International coordination",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "International coordination",
+      "evidence": {
+        "reason": "Final report commissioned by the UN Secretary-General and produced by the High-level Advisory Body on AI following extensive global consultations, with seven recommendations for addressing gaps in global AI governance.",
+        "url": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_press_release.pdf"
+      }
+    },
+    {
+      "title": "Dual Use of Artificial Intelligence-Powered Drug Discovery",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9544280/",
+      "note": "Fabio Urbina, Filippa Lentzos, Cédric Invernizzi, and Sean Ekins (2022) demonstrate how drug discovery AI can be redirected toward harmful outcomes.",
+      "topic": "Biosecurity",
+      "format": "Paper",
+      "collection": "governance",
+      "subtopic": "Biosecurity",
+      "evidence": {
+        "reason": "Published in Nature Machine Intelligence in 2022, with the publisher reporting 368 citations when checked on 2026-09-20. The open author manuscript is linked so readers can access the full paper.",
+        "url": "https://www.nature.com/articles/s42256-022-00465-9"
+      }
+    },
+    {
+      "title": "Global Guidance Framework for the Responsible Use of the Life Sciences: Mitigating Biorisks and Governing Dual-Use Research",
+      "href": "https://www.who.int/publications/i/item/9789240056107",
+      "note": "World Health Organization (2022) provides principles, responsibilities, and practical tools for managing biorisks and overseeing dual-use research.",
+      "topic": "Biosecurity",
+      "format": "Report",
+      "collection": "governance",
+      "subtopic": "Biosecurity",
+      "evidence": {
+        "reason": "WHO identifies this as the first global technical and normative framework for national biorisk and dual-use research governance, with country implementation supported by regional offices and partners.",
+        "url": "https://www.who.int/news/item/13-09-2022-who-launches-guide-to-safely-unlock-benefits-of-the-life-sciences"
+      }
+    },
+    {
+      "title": "When Will AI Exceed Human Performance? Evidence from AI Experts",
+      "href": "https://arxiv.org/abs/1705.08807",
+      "note": "Katja Grace and colleagues (2018) report expert forecasts from 2016, providing a historical baseline for AI timelines and uncertainty.",
+      "topic": "Timelines & scaling",
+      "format": "Paper",
+      "collection": "forecasting",
+      "subtopic": "Timelines & scaling",
+      "evidence": {
+        "reason": "Published in the Journal of Artificial Intelligence Research in 2018. AI Impacts identifies this 2016 survey of 352 researchers as the first wave of its long-running expert survey series and documents its role in research and policy discussions.",
+        "url": "https://aiimpacts.org/surveys/"
+      }
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "href": "https://arxiv.org/abs/2005.14165",
+      "note": "Tom Brown and colleagues (2020) show how scaling GPT-3 enables broad task performance from a few examples without task-specific training.",
+      "topic": "Capabilities & scaling",
+      "format": "Paper",
+      "collection": "forecasting",
+      "subtopic": "Capabilities & scaling",
+      "evidence": {
+        "reason": "Winner of a NeurIPS 2020 Best Paper Award, confirmed by the conference organizers, for demonstrating strong few-shot performance through large-scale language modeling.",
+        "url": "https://blog.neurips.cc/2020/12/07/announcing-the-neurips-2020-award-recipients/"
+      }
+    },
+    {
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+      "href": "https://arxiv.org/abs/2303.10130",
+      "note": "Tyna Eloundou, Sam Manning, Pamela Mishkin, and Daniel Rock (2023) estimate occupational exposure to LLM assistance without equating exposure with job loss.",
+      "topic": "Economics & society",
+      "format": "Paper",
+      "collection": "forecasting",
+      "subtopic": "Economics & society",
+      "evidence": {
+        "reason": "Published in Science 384, pages 1306-1308 (2024), under the shorter title GPTs are GPTs: Labor market impact potential of LLMs. Its occupational exposure measures were reused and extended in the 2025 AEA Papers and Proceedings study Extending GPTs Are GPTs to Firms, providing concrete evidence of subsequent research uptake.",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20251045"
+      }
+    },
+    {
+      "title": "Generative AI at Work",
+      "href": "https://www.nber.org/papers/w31161",
+      "note": "Erik Brynjolfsson, Danielle Li, and Lindsey Raymond (2023) study AI assistance in customer support and find productivity gains concentrated among less experienced workers.",
+      "topic": "Economics & society",
+      "format": "Paper",
+      "collection": "forecasting",
+      "subtopic": "Economics & society",
+      "evidence": {
+        "reason": "One of the early large-scale workplace studies of generative AI, issued as NBER Working Paper 31161 in 2023 and published in the Quarterly Journal of Economics 140(2), pages 889-942 (2025), as documented by NBER.",
+        "url": "https://www.nber.org/papers/w31161"
+      }
+    }
+  ],
+  "link_checks": [
+    {
+      "title": "Attention Is All You Need",
+      "href": "https://arxiv.org/abs/1706.03762",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1706.03762",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Deep Learning",
+      "href": "https://www.deeplearningbook.org/",
+      "status": 200,
+      "final_url": "https://www.deeplearningbook.org/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Reinforcement Learning: An Introduction",
+      "href": "http://incompleteideas.net/book/the-book-2nd.html",
+      "status": 200,
+      "final_url": "http://incompleteideas.net/book/the-book-2nd.html",
+      "content_type": "text/html",
+      "sample_bytes": 1909
+    },
+    {
+      "title": "AGI Safety from First Principles",
+      "href": "https://www.lesswrong.com/s/mzgtmmTKKn5MuCzFJ",
+      "status": 200,
+      "final_url": "https://www.lesswrong.com/s/mzgtmmTKKn5MuCzFJ",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "href": "https://faculty.washington.edu/ebender/stochasticparrots/",
+      "status": 200,
+      "final_url": "https://faculty.washington.edu/ebender/stochasticparrots/",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Stanford CS229: Machine Learning Lecture Notes",
+      "href": "https://cs229.stanford.edu/main_notes.pdf",
+      "status": 200,
+      "final_url": "https://cs229.stanford.edu/main_notes.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
+      "href": "https://web.stanford.edu/class/cs224n/",
+      "status": 200,
+      "final_url": "https://web.stanford.edu/class/cs224n/",
+      "content_type": "text/html",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "An Investigation of the Therac-25 Accidents",
+      "href": "https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html",
+      "status": 200,
+      "final_url": "https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html",
+      "content_type": "text/html",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "AXRP: AI X-risk Research Podcast",
+      "href": "https://axrp.net/",
+      "status": 200,
+      "final_url": "https://axrp.net/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Alignment Newsletter Archive",
+      "href": "https://rohinshah.com/alignment-newsletter/",
+      "error": "HTTP Error 406: Not Acceptable",
+      "content_verification": "Full author page and archive verified with web reader on 2026-09-20. Direct HTTP client received 406. Page explicitly marks the publication as on indefinite hiatus."
+    },
+    {
+      "title": "80,000 Hours Career Guide",
+      "href": "https://80000hours.org/career-guide/",
+      "status": 200,
+      "final_url": "https://80000hours.org/career-guide/",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "80,000 Hours Job Board",
+      "href": "https://jobs.80000hours.org/",
+      "status": 200,
+      "final_url": "https://jobs.80000hours.org/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "How to Read a Paper",
+      "href": "https://cs.uwaterloo.ca/~brecht/courses/854-http-video-2012/readings/keshav-paper-reading.pdf",
+      "status": 200,
+      "final_url": "https://cs.uwaterloo.ca/~brecht/courses/854-http-video-2012/readings/keshav-paper-reading.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "You and Your Research",
+      "href": "https://www.cs.virginia.edu/~robins/YouAndYourResearch.html",
+      "status": 200,
+      "final_url": "https://www.cs.virginia.edu/~robins/YouAndYourResearch.html",
+      "content_type": "text/html",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "\"Why Should I Trust You?\": Explaining the Predictions of Any Classifier",
+      "href": "https://arxiv.org/abs/1602.04938",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1602.04938",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "A Unified Approach to Interpreting Model Predictions",
+      "href": "https://papers.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+      "status": 200,
+      "final_url": "https://papers.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+      "href": "https://aclanthology.org/2022.acl-long.229/",
+      "status": 200,
+      "final_url": "https://aclanthology.org/2022.acl-long.229/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Measuring Massive Multitask Language Understanding",
+      "href": "https://arxiv.org/abs/2009.03300",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2009.03300",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Risks from Learned Optimization: Introduction",
+      "href": "https://www.lesswrong.com/posts/FkgsxrGf3QxhfLWHG/risks-from-learned-optimization-introduction",
+      "status": 200,
+      "final_url": "https://www.lesswrong.com/posts/FkgsxrGf3QxhfLWHG/risks-from-learned-optimization-introduction",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Cooperative Inverse Reinforcement Learning",
+      "href": "https://proceedings.neurips.cc/paper/2016/hash/c3395dd46c34fa7fd8d729d8cf88b7a8-Abstract.html",
+      "status": 200,
+      "final_url": "https://proceedings.neurips.cc/paper/2016/hash/c3395dd46c34fa7fd8d729d8cf88b7a8-Abstract.html",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Learning to summarize from human feedback",
+      "href": "https://arxiv.org/abs/2009.01325",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2009.01325",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Paul's research agenda FAQ",
+      "href": "https://www.lesswrong.com/posts/Djs38EWYZG8o7JMWY/paul-s-research-agenda-faq",
+      "status": 200,
+      "final_url": "https://www.lesswrong.com/posts/Djs38EWYZG8o7JMWY/paul-s-research-agenda-faq",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Towards Making Systems Forget with Machine Unlearning",
+      "href": "https://www.cs.columbia.edu/~junfeng/papers/unlearning/",
+      "status": 200,
+      "final_url": "https://www.cs.columbia.edu/~junfeng/papers/unlearning/",
+      "content_type": "text/html",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Machine Unlearning",
+      "href": "https://arxiv.org/abs/1912.03817",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1912.03817",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "AI Governance: A Research Agenda",
+      "href": "https://www.governance.ai/research-paper/agenda",
+      "status": 200,
+      "final_url": "https://www.governance.ai/research-paper/agenda",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "OECD AI Principles",
+      "href": "https://oecd.ai/en/ai-principles",
+      "status": 200,
+      "final_url": "https://oecd.ai/en/ai-principles",
+      "content_type": "text/html;charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "href": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "status": 200,
+      "final_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Guidelines for Secure AI System Development",
+      "href": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development",
+      "status": 200,
+      "final_url": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Hiroshima Process International Code of Conduct for Organizations Developing Advanced AI Systems",
+      "href": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems",
+      "status": 200,
+      "final_url": "https://digital-strategy.ec.europa.eu/en/library/hiroshima-process-international-code-conduct-advanced-ai-systems",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "The Bletchley Declaration by Countries Attending the AI Safety Summit, 1-2 November 2023",
+      "href": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023",
+      "status": 200,
+      "final_url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Governing AI for Humanity: Final Report",
+      "href": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+      "status": 200,
+      "final_url": "https://www.un.org/sites/un2.un.org/files/governing_ai_for_humanity_final_report_en.pdf",
+      "content_type": "application/pdf",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Dual Use of Artificial Intelligence-Powered Drug Discovery",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9544280/",
+      "status": 200,
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9544280/",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Global Guidance Framework for the Responsible Use of the Life Sciences: Mitigating Biorisks and Governing Dual-Use Research",
+      "href": "https://www.who.int/publications/i/item/9789240056107",
+      "status": 200,
+      "final_url": "https://www.who.int/publications/i/item/9789240056107",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "When Will AI Exceed Human Performance? Evidence from AI Experts",
+      "href": "https://arxiv.org/abs/1705.08807",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1705.08807",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "href": "https://arxiv.org/abs/2005.14165",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2005.14165",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+      "href": "https://arxiv.org/abs/2303.10130",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2303.10130",
+      "content_type": "text/html; charset=utf-8",
+      "sample_bytes": 4096
+    },
+    {
+      "title": "Generative AI at Work",
+      "href": "https://www.nber.org/papers/w31161",
+      "status": 200,
+      "final_url": "https://www.nber.org/papers/w31161",
+      "content_type": "text/html; charset=UTF-8",
+      "sample_bytes": 4096
+    }
+  ]
+}

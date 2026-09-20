@@ -57,7 +57,7 @@ export default function ResearchPage() {
                     href={paper.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline decoration-slate-300 underline-offset-4 hover:text-brand-red"
+                    className="underline decoration-slate-300 underline-offset-4 hover:text-slate-950"
                   >
                     {paper.title}
                   </a>

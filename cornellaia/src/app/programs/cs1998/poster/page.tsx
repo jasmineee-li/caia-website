@@ -38,7 +38,7 @@ export default function CS1998PosterPage() {
             />
             <div className={styles.badge}>
               <span className={styles.badgeDot} aria-hidden="true" />
-              Fall 2026 · Open Enrollment
+              Fall 2026, Open Enrollment
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export default function CS1998PosterPage() {
             </div>
             <div className={styles.stat}>
               <p className={styles.label}>Credits</p>
-              <p className={styles.value}>1 credit · S/U</p>
+              <p className={styles.value}>1 credit, S/U</p>
             </div>
             <div className={styles.stat}>
               <p className={styles.label}>Duration</p>

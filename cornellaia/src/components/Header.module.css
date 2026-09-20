@@ -1,0 +1,62 @@
+/* Visual feedback only. Navigation uses Next Link directly, without waiting for transitions. */
+.navLink {
+  --nav-fill: #f1f5f9;
+  isolation: isolate;
+  white-space: nowrap;
+  transition: color 200ms ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 999px;
+  background: var(--nav-fill);
+  clip-path: inset(0 100% 0 0);
+  transition: none;
+}
+
+.navLink[aria-current="page"]::after {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 450ms cubic-bezier(.22, .61, .36, 1);
+}
+
+.outline {
+  position: absolute;
+  inset: 1.25px;
+  width: calc(100% - 2.5px);
+  height: calc(100% - 2.5px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.outline rect {
+  stroke: var(--nav-fill);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  transition: stroke-dashoffset 440ms ease, opacity 180ms ease;
+}
+
+.navLink:hover .outline rect,
+.navLink:focus-visible .outline rect,
+.navLink[aria-current="page"] .outline rect {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.label {
+  position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navLink,
+  .navLink::after,
+  .navLink[aria-current="page"]::after,
+  .outline rect {
+    transition: none;
+  }
+}

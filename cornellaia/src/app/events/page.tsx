@@ -1,78 +1,43 @@
-import type { Metadata } from "next";
-import Button from "@/components/ui/Button";
-import MotionReveal from "@/components/ui/MotionReveal";
+import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import {
-  EVENTS_CALENDAR_URL,
-  EVENTS_EMBED_URL,
-  PAST_EVENTS,
-} from "@/content/events";
+import Button from "@/components/ui/Button";
+import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENTS } from "@/content/events";
 import { createPageMetadata } from "@/content/seo";
 
-export const metadata: Metadata = createPageMetadata({
+export const metadata = createPageMetadata({
   title: "Events",
-  description:
-    "Explore upcoming Cornell AI Alignment talks, workshops, and socials, and browse selected past events.",
   path: "/events",
-  keywords: ["Cornell AI Alignment events", "Cornell AI", "talks", "workshops", "AI safety events"],
+  description: "Upcoming Cornell AI Alignment events and past talks, workshops, discussions, and socials.",
 });
 
 export default function EventsPage() {
   return (
     <main>
-      <Section
-        title="Talks, workshops, and socials"
-        subtitle="Discover what is coming up and browse highlights from previous CAIA events."
-      >
-        <MotionReveal>
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-slate-600 sm:text-base">
-              Subscribe to receive updates in your calendar.
-            </p>
-            <Button href={EVENTS_CALENDAR_URL} external variant="secondary">
-              Subscribe to Events Calendar
-            </Button>
-          </div>
+      <Container className="pt-14 sm:pt-20">
+        <h1 className="display-title text-4xl sm:text-5xl">Events</h1>
+        <p className="lead-copy mt-5 max-w-2xl">Upcoming events and past talks, workshops, discussions, and socials.</p>
+      </Container>
 
-          <div className="overflow-hidden">
-            <iframe
-              src={EVENTS_EMBED_URL}
-              className="h-[560px] w-full rounded-xl border border-slate-200"
-              style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
-              allowFullScreen
-              title="Upcoming CAIA events"
-            />
-          </div>
-        </MotionReveal>
+      <Section id="events" title="Upcoming Events" className="scroll-mt-24">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+          <p className="lead-copy">Subscribe to get upcoming events on your calendar.</p>
+          <Button href={EVENTS_CALENDAR_URL} external variant="secondary">Subscribe on Luma</Button>
+        </div>
+        <iframe src={EVENTS_EMBED_URL} title="Upcoming CAIA events" className="h-[520px] w-full rounded-xl border border-slate-200" allowFullScreen />
       </Section>
 
-      <Section
-        title="Past Events"
-        subtitle="Selected event pages from previous semesters."
-      >
+      <Section id="past-events" title="Past Events" className="scroll-mt-24">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {PAST_EVENTS.map((event, index) => (
-            <MotionReveal
-              key={event.embedUrl}
-              delayClass={
-                index % 3 === 1
-                  ? "motion-delay-1"
-                  : index % 3 === 2
-                    ? "motion-delay-2"
-                    : undefined
-              }
-            >
-              <div className="overflow-hidden p-2">
-                <iframe
-                  src={event.embedUrl}
-                  className="h-[450px] w-full rounded-lg border border-slate-200"
-                  style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
-                  allow="fullscreen; payment"
-                  title={event.title}
-                  loading="lazy"
-                />
-              </div>
-            </MotionReveal>
+          {PAST_EVENTS.map(event => (
+            <div key={event.embedUrl} className="overflow-hidden p-2">
+              <iframe
+                src={event.embedUrl}
+                title={event.title}
+                className="h-[450px] w-full rounded-lg border border-slate-200"
+                allow="fullscreen; payment"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </Section>

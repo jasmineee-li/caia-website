@@ -24,17 +24,11 @@ export const HOME_CTA_ITEMS: CTAItem[] = [
     external: true,
     style: "primary",
   },
-  {
-    label: "Join our mailing list",
-    href: "https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form",
-    external: true,
-    style: "secondary",
-  },
 ];
 
 export const HOME_SPONSORS: SponsorItem[] = [
-  { name: "Google DeepMind", src: "/orgs/gdm.png", href: "https://deepmind.google/" },
   { name: "Anthropic", src: "/orgs/anthropic.svg", href: "https://www.anthropic.com/" },
+  { name: "Google DeepMind", src: "/orgs/gdm.png", href: "https://deepmind.google/" },
   { name: "MATS", src: "/orgs/mats.svg", href: "https://www.matsprogram.org/" },
   { name: "Pivotal", src: "/orgs/pivotal.png", href: "https://www.pivotal-research.org/" },
   { name: "METR", src: "/orgs/metr.jpg", href: "https://metr.org/" },

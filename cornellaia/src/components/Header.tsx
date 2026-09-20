@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { NAV_ITEMS } from "@/content/navigation";
 import { cn } from "@/lib/cn";
+import styles from "./Header.module.css";
 
 function isRouteActive(pathname: string, href: string) {
   if (href === "/") {
@@ -85,8 +86,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95">
-      <div className="relative z-[60] mx-auto flex w-full max-w-page items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="focus-ring rounded-md">
+      <div className="relative z-[60] mx-auto flex w-full max-w-page items-center justify-between px-4 py-4 sm:px-6 lg:pl-8 lg:pr-0">
+        <Link href="/" prefetch={true} className="focus-ring rounded-md">
           <Image
             src="/serif-logo.svg"
             alt="Cornell AI Alignment Club"
@@ -98,22 +99,29 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
           {NAV_ITEMS.map((item) => {
-            const active = isRouteActive(pathname, item.href);
+            const active = [item.href, ...(item.activePaths ?? [])].some(href => isRouteActive(pathname, href));
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={true}
+                aria-current={active ? "page" : undefined}
                 className={cn(
-                  "focus-ring rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  "focus-ring relative rounded-full px-4 py-2.5 text-sm font-medium",
+                  styles.navLink,
+                  item.href === "/join" && "ml-5 underline decoration-slate-400 decoration-wavy decoration-1 underline-offset-[6px] before:absolute before:-left-3 before:top-1/2 before:-translate-y-1/2 before:font-normal before:text-slate-300 before:content-['/']",
                   active
-                    ? "bg-slate-900 text-white"
-                    : "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+                    ? "text-slate-950"
+                    : "text-slate-700 hover:text-slate-900",
                 )}
               >
-                {item.label}
+                <svg className={styles.outline} fill="none" aria-hidden="true">
+                  <rect width="100%" height="100%" rx="19" pathLength="1" />
+                </svg>
+                <span className={styles.label}>{item.label}</span>
               </Link>
             );
           })}
@@ -121,7 +129,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="focus-ring rounded-md bg-slate-50 p-2 text-slate-800 md:hidden"
+          className="focus-ring rounded-md bg-slate-50 p-2 text-slate-800 lg:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-site-nav"
@@ -144,7 +152,7 @@ export default function Header() {
 
       <div
         className={cn(
-          "fixed inset-0 z-30 transition-opacity md:hidden",
+          "fixed inset-0 z-30 transition-opacity lg:hidden",
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         onClick={() => setMenuOpen(false)}
@@ -153,28 +161,35 @@ export default function Header() {
 
       <nav
         id="mobile-site-nav"
+        inert={!menuOpen}
         aria-label="Mobile navigation"
         className={cn(
-          "fixed inset-0 z-40 bg-white transition-opacity duration-200 md:hidden [background-image:linear-gradient(rgba(15,23,42,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.045)_1px,transparent_1px)] [background-size:44px_44px]",
+          "fixed inset-0 z-40 overflow-y-auto bg-white transition-opacity duration-200 lg:hidden [background-image:linear-gradient(rgba(15,23,42,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.045)_1px,transparent_1px)] [background-size:44px_44px]",
           menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
         )}
         onClick={() => setMenuOpen(false)}
       >
         <div
-          className="relative z-10 flex h-full w-full items-center justify-center px-6 py-24"
+          className="relative z-10 flex min-h-full w-full items-center justify-center px-6 py-24"
           onClick={(event) => event.stopPropagation()}
         >
           <div className="w-full max-w-[26rem]">
-            <div className="flex flex-wrap items-center justify-center gap-3.5">
+            <div className="grid grid-cols-2 items-center justify-items-center gap-3.5">
               {NAV_ITEMS.map((item, index) => {
-                const active = isRouteActive(pathname, item.href);
+                const active = [item.href, ...(item.activePaths ?? [])].some(href => isRouteActive(pathname, href));
 
                 return (
                   <Link
                     key={`mobile-${item.href}`}
                     href={item.href}
+                    prefetch={true}
+                    aria-current={active ? "page" : undefined}
                     className={cn(
-                      "focus-ring inline-flex h-[5.15rem] min-w-[9.7rem] items-center justify-center rounded-[2.65rem] border border-slate-300 bg-white px-4 text-center text-[1.5rem] font-medium text-slate-900 transition-colors",
+                      "focus-ring inline-flex h-[5.15rem] items-center justify-center whitespace-nowrap rounded-[2.65rem] border border-slate-300 bg-white px-3 text-center text-[1.5rem] font-medium text-slate-900 transition-colors",
+                      item.href === "/" || item.href === "/join"
+                        ? "col-span-2 min-w-[9.7rem] px-5"
+                        : "w-full min-w-0",
+                      item.href === "/join" && "underline decoration-slate-400 decoration-wavy decoration-1 underline-offset-[6px]",
                       active
                         ? "bg-red-50 text-brand-red"
                         : "hover:bg-slate-50",
@@ -184,7 +199,7 @@ export default function Header() {
                     }}
                     onClick={() => setMenuOpen(false)}
                   >
-                    <span>{item.label}</span>
+                    <span>{item.label.toLowerCase()}</span>
                   </Link>
                 );
               })}

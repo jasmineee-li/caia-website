@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import styles from "./ProfileCard.module.css";
 
 interface ProfileCardProps {
   imageSrc: string;
@@ -10,6 +11,7 @@ interface ProfileCardProps {
   scholarUrl?: string;
   websiteUrl?: string;
   unframed?: boolean;
+  teamLayout?: boolean;
 }
 
 function LinkedInIcon() {
@@ -54,6 +56,7 @@ export default function ProfileCard({
   scholarUrl,
   websiteUrl,
   unframed = false,
+  teamLayout = false,
 }: ProfileCardProps) {
   const links = [
     websiteUrl ? { href: websiteUrl, label: "Personal Website", icon: <WebsiteIcon /> } : null,
@@ -65,24 +68,36 @@ export default function ProfileCard({
     <article
       className={cn(
         "flex h-full flex-col items-center text-center",
-        unframed ? "p-0" : "surface-card px-4 py-6",
+        teamLayout ? styles.profile : unframed ? "p-0" : "surface-card px-2 py-6",
       )}
     >
-      <div className="relative mb-4 h-28 w-28 overflow-hidden rounded-full ring-2 ring-slate-200">
+      <div className={teamLayout ? styles.portraitStage : "relative mb-4 h-28 w-28 shrink-0"}>
+      <div className={cn("overflow-hidden rounded-full ring-1 ring-slate-200", teamLayout ? styles.portrait : "absolute inset-0")}>
         <Image
           src={imageSrc}
           alt={altText || `${name}'s profile photo`}
           fill
-          sizes="112px"
+          sizes={teamLayout ? "133px" : "112px"}
           loading="lazy"
           quality={75}
           className="object-cover"
         />
       </div>
-      <h3 className="text-lg font-semibold text-slate-900">{name}</h3>
-      {role && <p className="mt-1 text-sm text-slate-600">{role}</p>}
+      </div>
+      {teamLayout && (
+        <div className={styles.linkRow}>
+          {links.map((link) => (
+            <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`${name} ${link.label}`} title={link.label} className={styles.profileLink}>
+              <span className={styles.iconButton}>{link.icon}</span>
+            </a>
+          ))}
+        </div>
+      )}
+      <div className="min-w-0">
+      <h3 className={cn("font-semibold text-slate-900", teamLayout ? "text-lg leading-snug" : "text-lg")}>{name}</h3>
+      {role && <p className={cn("mt-1 text-slate-600", teamLayout ? "text-sm leading-5" : "text-sm")}>{role}</p>}
 
-      {links.length > 0 && (
+      {!teamLayout && links.length > 0 && (
         <div className="mt-3 flex flex-wrap justify-center gap-2">
           {links.map((link) => (
             <a
@@ -99,6 +114,7 @@ export default function ProfileCard({
           ))}
         </div>
       )}
+      </div>
     </article>
   );
 }

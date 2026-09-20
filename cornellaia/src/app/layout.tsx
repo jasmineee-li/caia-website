@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Cornell AI Alignment",
   },
   description:
-    "Cornell AI Alignment is a student community conducting research and outreach to advance safe AI.",
+    "Cornell AI Alignment brings students, faculty, and researchers together to help AI align with human intentions and benefit all of humanity.",
   applicationName: "Cornell AI Alignment",
   openGraph: {
     siteName: "Cornell AI Alignment",

@@ -1,0 +1,15 @@
+.archive { position: relative; width: fit-content; max-width: 100%; }
+.label { margin-bottom: 12px; color: #64748b; font-size: .8125rem; font-weight: 500; }
+.label span { color: #94a3b8; }
+.blocks { display: grid; grid-template-columns: repeat(4, 28px); gap: 4px; list-style: none; margin: 0; padding: 0; }
+.blockLink { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; }
+.blockLink span { display: block; width: 20px; height: 20px; border-radius: 4px; background: #b31b1b; transition: transform .15s ease; }
+.blockLink[data-tone="1"] span { background: #cf6363; }
+.blockLink[data-tone="2"] span { background: #e6aaaa; }
+.blockLink:hover span, .blockLink:focus-visible span { transform: translateY(-2px); }
+.blockLink:focus-visible { outline: 2px solid #b31b1b; outline-offset: 2px; }
+.preview { position: absolute; z-index: 10; top: 100%; left: 0; width: 250px; max-width: calc(100vw - 48px); padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 10px; background: #fff; box-shadow: 0 8px 24px #0f172a12; }
+.preview time { display: block; color: #64748b; font-size: .75rem; }
+.preview p { margin-top: 5px; color: #0f172a; font-size: .875rem; line-height: 1.5; }
+@media (min-width: 1200px) { .preview { left: auto; right: 0; } }
+@media (prefers-reduced-motion: reduce) { .blockLink span { transition: none; } }

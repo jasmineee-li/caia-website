@@ -1,106 +1,62 @@
-import type { Metadata } from "next";
-import Accordion, { AccordionItem } from "@/components/ui/Accordion";
-import MotionReveal from "@/components/ui/MotionReveal";
+import Link from "next/link";
+import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import {
-  RESOURCE_SECTIONS,
-  ResourceGroup,
-  ResourceItem,
-  ResourceSection,
-} from "@/content/resources";
+import ResourceLibrary from "@/components/ResourceLibrary";
+import { ONLINE_COURSES, INTENSIVES, FELLOWSHIP_GROUPS } from "@/content/learning";
 import { createPageMetadata } from "@/content/seo";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Resources",
-  description:
-    "Curated AI safety resources from Cornell AI Alignment, spanning non-technical intros, technical papers, and governance material.",
-  path: "/resources",
-  keywords: ["AI safety resources", "alignment reading list", "Cornell AI Alignment resources"],
+export const metadata = createPageMetadata({
+  title: "Resources", path: "/resources",
+  description: "Courses, fellowships, and a curated library for exploring AI safety and governance.",
 });
+const linkStyle = "font-semibold underline decoration-wavy decoration-slate-400 underline-offset-4";
+const organizationLinks: Record<string, string> = {
+  "BlueDot Impact": "https://bluedot.org/",
+  CBAI: "https://www.cbai.ai/",
+  ARENA: "https://www.arena.education/",
+  Anthropic: "https://www.anthropic.com/",
+  Constellation: "https://constellation.org/",
+  Astra: "https://constellation.org/programs/astra",
+  Kairos: "https://kairos-project.org/",
+  RAND: "https://www.rand.org/",
+  "UC Berkeley": "https://www.berkeley.edu/",
+};
 
-function ResourceList({ items }: { items: ResourceItem[] }) {
-  return (
-    <ul className="space-y-3 pl-5 text-sm leading-7 text-slate-700 sm:text-base">
-      {items.map((item) => (
-        <li key={`${item.title}-${item.href ?? "plain"}`} className="list-disc">
-          {item.href ? (
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:text-brand-red"
-            >
-              {item.title}
-            </a>
-          ) : (
-            <span className="font-medium text-slate-900">{item.title}</span>
-          )}
-          {item.note && <span className="ml-1 text-slate-600">{item.note}</span>}
-          {item.children && item.children.length > 0 && (
-            <div className="mt-2">
-              <ResourceList items={item.children} />
-            </div>
-          )}
-        </li>
-      ))}
-    </ul>
+function LinkedOrganizations({ text }: { text: string }) {
+  return text.split(/\b(BlueDot Impact|CBAI|ARENA|Anthropic|Constellation|Astra|Kairos|RAND|UC Berkeley)\b/g).map((part, index) =>
+    organizationLinks[part]
+      ? <a key={index} href={organizationLinks[part]} target="_blank" rel="noopener noreferrer" className={linkStyle}>{part}</a>
+      : part
   );
-}
-
-function ResourceGroupBlock({ group }: { group: ResourceGroup }) {
-  return (
-    <section className="space-y-3">
-      <h4 className="text-lg font-semibold text-slate-900">{group.title}</h4>
-      {group.description && <p className="text-sm leading-7 text-slate-600 sm:text-base">{group.description}</p>}
-      <ResourceList items={group.items} />
-    </section>
-  );
-}
-
-function toAccordionItem(section: ResourceSection): AccordionItem {
-  return {
-    id: section.id,
-    title: section.title,
-    subtitle: section.intro,
-    content: (
-      <div className="space-y-6">
-        {section.groups.map((group) => (
-          <ResourceGroupBlock key={`${section.id}-${group.title}`} group={group} />
-        ))}
-      </div>
-    ),
-  };
 }
 
 export default function ResourcesPage() {
-  const sectionOrder: Record<string, number> = {
-    "non-technical": 1,
-    newsletters: 2,
-    fellowships: 3,
-    technical: 4,
-    policy: 5,
-  };
+  return <main>
+    <Container className="pt-14 sm:pt-20">
+      <h1 className="display-title text-4xl sm:text-5xl">Resources</h1>
+      <p className="lead-copy mt-5">Courses, readings, and fellowships in AI safety and governance.</p>
+    </Container>
 
-  const orderedSections = [...RESOURCE_SECTIONS].sort(
-    (a, b) => (sectionOrder[a.id] ?? 99) - (sectionOrder[b.id] ?? 99),
-  );
+    <Section id="learn" title="Get started" className="scroll-mt-24">
+      <div className="max-w-4xl space-y-4 text-base leading-8 sm:text-lg text-slate-600">
+        <p>At Cornell, start with <Link href="/programs/cs1998" className={linkStyle}>CS 1998</Link> and our <Link href="/events#events" className={linkStyle}>reading groups and workshops</Link>. Learn about AI safety with other students, or study independently using our public course materials.</p>
+        <p><LinkedOrganizations text="BlueDot Impact" /> runs facilitated online courses in {ONLINE_COURSES.map((course, i) => <span key={course.href}>{i > 0 ? i === ONLINE_COURSES.length - 1 ? ", and " : ", " : ""}<a href={course.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{course.title.replace(/^./, letter => letter.toLowerCase()).replace("Safety", "safety").replace("Governance", "governance")}</a></span>)}. Study the core ideas through readings, exercises, and discussions with a cohort.</p>
+        {INTENSIVES.map(program => <p key={program.href}><a href={program.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{program.title}</a> <LinkedOrganizations text={program.description} />{program.title === "ARENA" && <> Explore the <a href="https://learn.arena.education/" target="_blank" rel="noopener noreferrer" className={linkStyle}>self-study notebooks</a>.</>}</p>)}
+      </div>
+    </Section>
 
-  const accordionItems = orderedSections.map(toAccordionItem);
-  const sectionSummary = orderedSections.map((section) => section.title).join(" • ");
+    <Section id="opportunities" title="Fellowships &amp; training" className="scroll-mt-24">
+      <p className="max-w-4xl text-base leading-8 sm:text-lg text-slate-600">Explore opportunities in research, policy, community building, and starting new organizations. Program websites list eligibility, locations, and application dates.</p>
+      <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200">
+        {FELLOWSHIP_GROUPS.map(group => <details key={group.title} className="group py-4">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold [&::-webkit-details-marker]:hidden">{group.title}<span aria-hidden="true" className="text-xl text-slate-400 transition-transform group-open:rotate-45">+</span></summary>
+          <ul className="max-w-4xl space-y-3 pt-4 text-base leading-7 text-slate-600">{group.items.map(item => <li key={item.title}><a href={item.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{item.title}</a>. <LinkedOrganizations text={item.note} /></li>)}</ul>
+        </details>)}
+      </div>
+    </Section>
 
-  return (
-    <main>
-      <Section
-        title="Learning resources for AI safety"
-        subtitle="Curated material spanning introductions, technical papers, policy work, newsletters, and fellowships."
-      >
-        <MotionReveal>
-          <p className="mb-5 text-sm leading-7 text-slate-600 sm:text-base">{sectionSummary}</p>
-        </MotionReveal>
-        <MotionReveal>
-          <Accordion items={accordionItems} defaultOpenIds={[]} />
-        </MotionReveal>
-      </Section>
-    </main>
-  );
+    <Section id="library" title="Library" subtitle="Browse papers, articles, videos, and curricula by topic." className="scroll-mt-24">
+      <ResourceLibrary />
+    </Section>
+  </main>;
 }

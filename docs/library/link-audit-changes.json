@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Career Planning Template (80,000 Hours)",
+    "previousHref": "https://docs.google.com/document/d/1ypDUcZIzrnAIjpvCAPtrnRZfEHOGYgvccVRt40dyd1E",
+    "href": "https://80000hours.org/career-planning-template/",
+    "references": [
+      240
+    ],
+    "reason": "Original Google Doc returns HTTP 410. Replaced with a different, explicitly identified 80,000 Hours career-planning template. The provider landing page and linked public Google Doc text export both return 200 without login."
+  },
+  {
+    "title": "God Help Us, Let's Try to Understand the Paper on AI Monosemanticity",
+    "previousHref": "https://astralcodexten.com/p/god-help-us-lets-try-to-understand",
+    "href": "https://www.astralcodexten.com/p/god-help-us-lets-try-to-understand",
+    "references": [
+      431
+    ],
+    "reason": "Bare domain returns 404; publisher canonical www URL returns 200 with the assigned article."
+  },
+  {
+    "title": "ARENA: Transformer Interpretability",
+    "previousHref": "https://arena3-chapter1-transformer-interp.streamlit.app",
+    "href": "https://learn.arena.education/chapter1_transformer_interp/",
+    "references": [
+      87
+    ],
+    "reason": "Old Streamlit app loops through authentication redirects. Replaced with the official public ARENA chapter, verified 200 with chapter content."
+  },
+  {
+    "title": "ARENA: Reinforcement Learning from Human Feedback",
+    "previousHref": "https://arena3-chapter2-rl.streamlit.app/[2.4]_RLHF",
+    "href": "https://learn.arena.education/chapter2_rl/04_rlhf/intro/",
+    "references": [
+      39
+    ],
+    "reason": "Old Streamlit app loops through authentication redirects when fetched with URL globbing disabled. Replaced with the official public RLHF section, verified 200 with exercise content."
+  },
+  {
+    "title": "Autonomy Evaluation Resources",
+    "previousHref": "https://evaluations.metr.org/",
+    "href": "https://metr.org/blog/2024-03-13-autonomy-evaluation-resources/",
+    "references": [
+      306
+    ],
+    "reason": "Old destination is an HTML meta-refresh stub. Followed its declared canonical target to the public METR evaluation resources article."
+  },
+  {
+    "title": "Common Elements of Frontier AI Safety Policies (December 2025 Update)",
+    "previousHref": "https://metr.org/blog/2024-08-29-common-elements-of-frontier-ai-safety-policies",
+    "href": "https://metr.org/blog/2025-12-09-common-elements-of-frontier-ai-safety-policies/",
+    "references": [
+      496
+    ],
+    "reason": "Old destination is an HTML meta-refresh stub. Followed its declared canonical target to the December 2025 update, which also links the original 2024 report."
+  },
+  {
+    "title": "British Post Office Scandal",
+    "previousHref": "https://wikiwand.com/en/British_Post_Office_scandal",
+    "href": "https://en.wikipedia.org/wiki/British_Post_Office_scandal",
+    "references": [
+      317
+    ],
+    "reason": "Replaced bot-blocked Wikiwand mirror with the underlying Wikipedia article, verified HTTP 200 and matching title."
+  },
+  {
+    "title": "Death of Elaine Herzberg: Uber’s Self-Driving Car Crash",
+    "previousHref": "https://wikiwand.com/en/Death_of_Elaine_Herzberg",
+    "href": "https://en.wikipedia.org/wiki/Death_of_Elaine_Herzberg",
+    "references": [
+      318
+    ],
+    "reason": "Replaced bot-blocked Wikiwand mirror with the underlying Wikipedia article, verified HTTP 200 and matching title."
+  },
+  {
+    "title": "Therac-25 Radiation Therapy Machine",
+    "previousHref": "https://wikiwand.com/en/Therac-25",
+    "href": "https://en.wikipedia.org/wiki/Therac-25",
+    "references": [
+      321
+    ],
+    "reason": "Replaced bot-blocked Wikiwand mirror with the underlying Wikipedia article, verified HTTP 200 and matching title."
+  },
+  {
+    "title": "Volkswagen Emissions Scandal",
+    "previousHref": "https://wikiwand.com/en/Volkswagen_emissions_scandal",
+    "href": "https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal",
+    "references": [
+      320
+    ],
+    "reason": "Replaced bot-blocked Wikiwand mirror with the underlying Wikipedia article, verified HTTP 200 and matching title."
+  },
+  {
+    "title": "Aligning Language Models to Follow Instructions",
+    "previousHref": "https://openai.com/blog/instruction-following",
+    "href": "https://openai.com/index/instruction-following/",
+    "references": [
+      266
+    ],
+    "reason": "Main-agent web verification confirms the matching OpenAI article at this current canonical URL. Local curl may still be blocked by OpenAI bot protection."
+  },
+  {
+    "title": "Learning from Human Preferences",
+    "previousHref": "https://openai.com/blog/deep-reinforcement-learning-from-human-preferences",
+    "href": "https://openai.com/index/learning-from-human-preferences/",
+    "references": [
+      138
+    ],
+    "reason": "Main-agent web verification confirms the matching OpenAI article at this current canonical URL. Local curl may still be blocked by OpenAI bot protection."
+  },
+  {
+    "title": "OpenAI LP",
+    "previousHref": "https://openai.com/blog/openai-lp",
+    "href": "https://openai.com/index/openai-lp/",
+    "references": [
+      157
+    ],
+    "reason": "Main-agent web verification confirms the matching OpenAI article at this current canonical URL. Local curl may still be blocked by OpenAI bot protection."
+  },
+  {
+    "title": "Our Updated Preparedness Framework (2025)",
+    "previousHref": "https://openai.com/preparedness",
+    "href": "https://openai.com/index/updating-our-preparedness-framework/",
+    "references": [
+      504
+    ],
+    "reason": "Main-agent web verification: original URL redirects to generic /safety/. Replaced with the specific public 2025 framework update, preserving the separate historical beta PDF."
+  },
+  {
+    "title": "Reimagining Secure Infrastructure for Advanced AI",
+    "previousHref": "https://openai.com/index/reimagining-secure-infrastructure-for-advanced-ai",
+    "excluded": true,
+    "references": [
+      165
+    ],
+    "reason": "The original article redirects to the generic trust.openai.com compliance portal rather than the assigned reading (main-agent web verification, September 20, 2026). Exact-title search found citations and summaries, but no verified public copy of the original article. Excluded as unavailable, not because of the local HTTP 403 bot block."
+  },
+  {
+    "title": "AI Governance Needs a Theory of Victory",
+    "previousHref": "https://convergenceanalysis.org/publications/ai-governance-needs-a-theory-of-victory",
+    "href": "https://forum.effectivealtruism.org/posts/ntpu8qQGzFeqxRKhP/ai-governance-needs-a-theory-of-victory",
+    "references": [
+      216
+    ],
+    "reason": "Main agent verified the official author cross-post. Direct anonymous GET independently returned 200 with matching title. Replaced the bot-blocked publisher URL with this publicly readable version."
+  }
+]

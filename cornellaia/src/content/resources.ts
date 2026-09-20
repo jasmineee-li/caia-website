@@ -246,7 +246,7 @@ export const RESOURCE_SECTIONS: ResourceSection[] = [
     id: "policy",
     title: "Policy Papers",
     intro:
-      "For students and practitioners interested in public policy, law, governance, and economics approaches to reducing AI risk.",
+      "For students and practitioners interested in how public policy, law, governance, and economics can help AI benefit society.",
     groups: [
       {
         title: "Overviews and Surveys",

@@ -20,10 +20,38 @@ export interface NewsItem {
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    title: "CAIA members accepted to ICML 2026 workshops",
+    title: "CAIA open house & mocktail mixer",
+    summary:
+      "We welcomed new and returning members for mocktails and conversation at our open house. Thank you to everyone who came to meet the community and learn about getting involved in AI safety at Cornell.",
+    date: "2026-09-18",
+    displayDate: "September 18, 2026",
+    category: "Event",
+    imageSrc: "/news/open-house-mocktail-mixer-2026.webp",
+    imageAlt: "Attendees chatting over refreshments at the CAIA open house and mocktail mixer",
+  },
+  {
+    title: "Guest talk with Prof. Paul Gölz",
+    summary:
+      "Prof. Paul Gölz joined CAIA to present Distortion of AI Alignment: Does Preference Optimization Optimize for Preferences? The talk explored how preference optimization can distort diverse human preferences and what this means for pluralistic AI alignment. Thank you to Prof. Gölz and everyone who joined the discussion.",
+    date: "2026-09-08",
+    displayDate: "September 8, 2026",
+    category: "Event",
+    imageSrc: "/news/paul-goelz-guest-talk-2026.webp",
+    imageAlt: "Prof. Paul Gölz presenting to CAIA attendees in a Cornell classroom",
+    links: [
+      {
+        label: "Talk slides (PDF)",
+        href: "/news/paul-goelz-distortion-of-ai-alignment-slides.pdf",
+      },
+    ],
+  },
+  {
+    title: "CAIA papers accepted to ICML 2026 workshops",
     summary:
       "CAIA members contributed to multiple papers accepted to ICML 2026 workshops, spanning pluralistic alignment, trustworthy AI, and mechanistic interpretability.",
     date: "2026-06-11",
+    imageSrc: "/graphics/neural-pathways.svg",
+    imageAlt: "",
     displayDate: "June 11, 2026",
     category: "Research",
     links: [
@@ -55,7 +83,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     imageAlt: "CAIA members at an ice skating social",
   },
   {
-    title: "CAIA Mini-Hackathon finishes",
+    title: "CAIA mini-hackathon",
     summary: "Thank you to everyone who attended our workshop and mini-hackathon today.",
     date: "2025-11-19",
     displayDate: "November 19, 2025",
@@ -78,17 +106,21 @@ export const NEWS_ITEMS: NewsItem[] = [
     ],
   },
   {
-    title: "RAISE Act is signed by the NY Governor",
+    title: "New York signs the RAISE Act into law",
     summary: "Governor Kathy Hochul signed the RAISE Act into law, establishing nation-leading AI safety requirements for frontier model developers. CAIA helped canvass support for the bill.",
     date: "2025-12-19",
+    imageSrc: "/graphics/aligned-trajectories.svg",
+    imageAlt: "",
     displayDate: "December 19, 2025",
     category: "Announcement",
     href: "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-require-ai-frameworks-ai-frontier-models",
   },
   {
-    title: "EigenBench accepted to ICLR 2026 as an Oral paper!",
+    title: "EigenBench selected for an ICLR 2026 oral presentation",
     summary: "EigenBench was accepted to ICLR 2026 and selected for an Oral presentation.",
     date: "2026-02-06",
+    imageSrc: "/graphics/attention-patterns.svg",
+    imageAlt: "",
     displayDate: "February 6, 2026",
     category: "Research",
     href: "https://arxiv.org/pdf/2509.01938",
@@ -96,8 +128,10 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     title: "CAIA bowling social",
     summary:
-      "Bowling @ Helen Newman Hall was a success!",
+      "CAIA members gathered for an evening of bowling at Helen Newman Hall.",
     date: "2025-10-15",
+    imageSrc: "/graphics/shared-orbits.svg",
+    imageAlt: "",
     displayDate: "October 15, 2025",
     category: "Event",
   },

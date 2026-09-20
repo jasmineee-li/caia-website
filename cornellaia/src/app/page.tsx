@@ -1,9 +1,10 @@
 import Image from "next/image";
+import HomeCommunity from "@/components/HomeCommunity";
+import HomeHeroVisual from "@/components/HomeHeroVisual";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
-import Badge from "@/components/ui/Badge";
-import Card from "@/components/ui/Card";
+import NewsCarousel from "@/components/NewsCarousel";
 import CircularGallery from "@/components/CircularGallery";
 import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
@@ -15,55 +16,51 @@ import {
   HOME_SPONSORS,
 } from "@/content/home";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL } from "@/content/events";
-import { NEWS_ITEMS } from "@/content/news";
 import { RESEARCH_PAPERS } from "@/content/research";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Home",
   description:
-    "Cornell AI Alignment is a student community focused on AI safety research, programs, and events at Cornell.",
+    "Join Cornell’s community of students, faculty, and researchers working on technical AI safety, policy, and governance. Open events, hands-on learning, and research for a better AI future.",
   path: "/",
   keywords: ["Cornell AI Alignment", "AI safety", "student organization", "alignment research"],
 });
 
 export default function Home() {
-  const latestNews = [...NEWS_ITEMS]
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 3);
-
   return (
     <main>
       <section
         aria-label="CS 1998 course announcement"
-        className="border-b border-slate-200 bg-[linear-gradient(100deg,#fff1f2_0%,#ffffff_100%)]"
+        className="border-b border-slate-200 bg-white"
       >
         <Container>
           <Link
             href="/programs/cs1998"
-            className="group focus-ring flex flex-col items-center justify-between gap-2 py-3 text-center sm:flex-row sm:text-left"
+            aria-label="CS 1998: Intro to AI Safety & Alignment, Fall 2026 course details"
+            className="group focus-ring flex items-center justify-between gap-2 py-3 text-left"
           >
-            <span className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:justify-start">
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-red">
+            <span className="flex min-w-0 items-center gap-2 sm:gap-3">
+              <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-brand-red min-[380px]:text-sm sm:gap-2">
                 <span
                   aria-hidden="true"
-                  className="h-2 w-2 rounded-full bg-brand-red"
+                  className="hidden h-2 w-2 rounded-full bg-brand-red sm:block"
                 />
-                Fall 2026
+                <span className="sm:hidden">FA26</span>
+                <span className="hidden sm:inline">Fall 2026</span>
               </span>
-              <span className="font-semibold text-slate-950">
-                CS 1998: Intro to AI Safety &amp; Alignment
+              <span className="whitespace-nowrap text-xs font-semibold text-slate-950 min-[380px]:text-sm sm:text-base">
+                <span className="sm:hidden">CS 1998: Intro to AI Safety &amp; Alignment</span>
+                <span className="hidden sm:inline">CS 1998: Intro to AI Safety &amp; Alignment</span>
               </span>
-              <span className="text-sm text-slate-600">Enrollment open</span>
             </span>
             <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-red transition group-hover:text-brand-red-strong">
-              <span className="underline decoration-brand-red/35 underline-offset-4">
+              <span className="hidden underline decoration-brand-red/35 underline-offset-4 sm:inline">
                 Course details
               </span>
-              <span
-                aria-hidden="true"
-                className="h-2 w-2 -rotate-45 border-b-2 border-r-2 border-current transition-transform group-hover:translate-x-0.5"
-              />
+              <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="m6 3 5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </span>
           </Link>
         </Container>
@@ -105,81 +102,17 @@ export default function Home() {
               </MotionReveal>
 
               <MotionReveal delayClass="motion-delay-2">
-                <div className="relative mx-auto max-w-[27rem]">
-                  <Image
-                    src="/graphics/orb-grid.svg"
-                    alt="Decorative orbital graphic"
-                    width={460}
-                    height={460}
-                    className="h-auto w-full"
-                    priority
-                    sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 460px"
-                  />
-                  <Image
-                    src="/Title2.jpg"
-                    alt="Abstract illustration for AI safety"
-                    width={1280}
-                    height={889}
-                    className="absolute -bottom-6 right-0 w-[78%] rounded-3xl border border-white/80 object-cover"
-                    sizes="(max-width: 640px) 58vw, (max-width: 1024px) 38vw, 360px"
-                    quality={80}
-                  />
-                </div>
+                <HomeHeroVisual src="/graphics/robot-hand.avif" />
               </MotionReveal>
             </div>
         </Container>
       </section>
 
-      <Section
-        title="Managing risks from advanced AI is one of the most important challenges of our time."
-        subtitle="CAIA is a community of student technical and policy researchers at Cornell working to reduce these risks and improve the trajectory of AI development."
-      >
-        <div className="space-y-6 text-[1.02rem] leading-8 text-slate-700 sm:text-lg">
-          <MotionReveal>
-            <p>
-              We run an introduction to AI alignment fellowship covering topics like neural network
-              interpretability, learning from human feedback, goal misgeneralization, eliciting latent
-              knowledge, and evaluating dangerous capabilities in models. Interested students can learn
-              more on the{" "}
-              <Link href="/get-involved" className="font-semibold text-brand-red underline underline-offset-4">
-                programs page
-              </Link>
-              .
-            </p>
-          </MotionReveal>
-
-          <MotionReveal delayClass="motion-delay-1">
-            <p>
-              We also run an intermediate technical reading group, support undergraduate and graduate
-              students in original research, and host workshops and socials.
-            </p>
-          </MotionReveal>
-
-          <MotionReveal delayClass="motion-delay-2">
-            <p>
-              Managing risks from advanced artificial intelligence is an urgent global problem
-              <sup className="ml-1 text-brand-red">
-                <a href="https://arxiv.org/pdf/2310.17688" target="_blank" rel="noopener noreferrer">
-                  1
-                </a>
-              </sup>
-              . If you want to get involved, start by{" "}
-              <a
-                href="https://airtable.com/appWFSZWeVJ4rXa6l/pag8SMoRy0Hm9knXF/form"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-red underline underline-offset-4"
-              >
-                joining our mailing list
-              </a>
-              .
-            </p>
-          </MotionReveal>
-        </div>
-      </Section>
+      <HomeCommunity />
 
       <Section
         title="Upcoming Events"
+        className="mt-4"
         subtitle="Join talks, reading sessions, and workshops from the CAIA community."
       >
         <MotionReveal>
@@ -202,8 +135,8 @@ export default function Home() {
           </div>
           <div className="mt-6">
             <Link
-              href="/events"
-              className="inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong sm:text-base"
+              href="/events#events"
+              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
             >
               See all events
             </Link>
@@ -213,43 +146,15 @@ export default function Home() {
 
       <Section
         title="News"
-        subtitle="Most recent updates from Cornell AI Alignment."
+        className="mt-4"
       >
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {latestNews.map((item, index) => (
-            <MotionReveal
-              key={`${item.title}-${item.date}`}
-              delayClass={index === 1 ? "motion-delay-1" : index >= 2 ? "motion-delay-2" : undefined}
-            >
-              <Card className="flex h-full flex-col gap-3">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge>{item.category}</Badge>
-                  <time dateTime={item.date} className="text-sm text-slate-500">
-                    {item.displayDate}
-                  </time>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-sm leading-7 text-slate-700 sm:text-base">{item.summary}</p>
-                {item.href && (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong"
-                  >
-                    Read update
-                  </a>
-                )}
-              </Card>
-            </MotionReveal>
-          ))}
-        </div>
+        <NewsCarousel />
 
         <MotionReveal delayClass="motion-delay-2">
           <div className="mt-6">
             <Link
               href="/news"
-              className="inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong sm:text-base"
+              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
             >
               View all news
             </Link>
@@ -259,6 +164,7 @@ export default function Home() {
 
       <Section
         title="Recent Work"
+        className="mt-4"
         subtitle="Selected papers and projects by CAIA community members."
       >
         <MotionReveal>
@@ -282,7 +188,7 @@ export default function Home() {
           <div className="mt-6">
             <Link
               href="/research"
-              className="inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong sm:text-base"
+              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
             >
               Explore all research
             </Link>
@@ -290,7 +196,7 @@ export default function Home() {
         </MotionReveal>
       </Section>
 
-      <Section title="Our members have worked with:">
+      <Section title="Our members have worked with:" className="mt-4">
         <MotionReveal>
           <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
             <Image

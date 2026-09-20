@@ -1,0 +1,6345 @@
+[
+  {
+    "title": "“Long” Timelines to Advanced AI Have Gotten Crazy Short",
+    "href": "https://helentoner.substack.com/p/long-timelines-to-advanced-ai-have",
+    "note": "Helen Toner",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "12 Tentative Ideas for U.S. AI Policy",
+    "href": "https://openphilanthropy.org/research/12-tentative-ideas-for-us-ai-policy",
+    "note": "Luke Muehlhauser, Open Philanthropy, 2023",
+    "topic": "Policy foundations",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      2,
+      8
+    ]
+  },
+  {
+    "title": "3CB: The Catastrophic Cyber Capabilities Benchmark",
+    "href": "https://apartresearch.com/news/3cb-the-catastrophic-cyber-capabilities-benchmark",
+    "note": "Apart Research",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "4 Charts That Show Why AI Progress Is Unlikely to Slow Down",
+    "href": "https://time.com/6300942/ai-progress-charts",
+    "note": "Will Henshall, TIME, 2023",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "9 Examples of Specification Gaming",
+    "href": "https://www.youtube.com/watch?v=nKJlF-olKmg",
+    "note": "Robert Miles",
+    "topic": "Reward hacking & misalignment",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "A Deep Critique of AI 2027’s Bad Timeline Models",
+    "href": "https://www.lesswrong.com/posts/PAYfmG2aRbdb74mEp",
+    "note": "titotal, 2025",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3,
+      7
+    ]
+  },
+  {
+    "title": "A General Language Assistant as a Laboratory for Alignment",
+    "href": "https://arxiv.org/abs/2112.00861",
+    "note": "Askell et al., 2021",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "A Long Peek into Reinforcement Learning",
+    "href": "https://lilianweng.github.io/posts/2018-02-19-rl-overview",
+    "note": "Lilian Weng",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "A Long Way to Go: Investigating Length Correlations in RLHF",
+    "href": "https://arxiv.org/abs/2310.03716",
+    "note": "Prasann Singhal et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "A Longlist of Theories of Impact for Interpretability",
+    "href": "https://www.lesswrong.com/posts/uK6sQCNMw8WKzJeCQ",
+    "note": "Neel Nanda",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "A Mathematical Framework for Transformer Circuits",
+    "href": "https://transformer-circuits.pub/2021/framework",
+    "note": "Elhage et al., 2021",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      6
+    ]
+  },
+  {
+    "title": "A National Center for Advanced AI Reliability and Security",
+    "href": "https://fas.org/publication/a-national-center-for-advanced-ai-reliability-and-security",
+    "note": "Federation of American Scientists",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "A Path for Science- and Evidence-based AI Policy",
+    "href": "https://understanding-ai-safety.org",
+    "note": "Rishi Bommasani and colleagues",
+    "topic": "Policy foundations",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "A Pragmatic Vision for Interpretability",
+    "href": "https://www.lesswrong.com/posts/StENzDcD3kpfGJssR",
+    "note": "Google DeepMind interpretability research direction",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5
+    ]
+  },
+  {
+    "title": "A Primer on the Inner Workings of Transformer-based Language Models",
+    "href": "https://arxiv.org/abs/2405.00208",
+    "note": "Javier Ferrando et al., 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "A Short Introduction to Machine Learning",
+    "href": "https://www.lesswrong.com/posts/qE73pqxAZmeACsAdF",
+    "note": "Richard Ngo",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "A Simple Solution to Regulate AI",
+    "href": "https://thehill.com/opinion/technology/4106191-a-simple-solution-to-regulate-ai",
+    "note": "The Hill",
+    "topic": "Law & liability",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "A Walkthrough of A Mathematical Framework for Transformer Circuits",
+    "href": "https://www.youtube.com/watch?v=KV5gbOmHbjU",
+    "note": "Neel Nanda",
+    "topic": "Interpretability",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers",
+    "href": "https://arxiv.org/abs/2512.15674",
+    "note": "Adam Karvonen et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers",
+    "href": "https://alignment.anthropic.com/2025/activation-oracles",
+    "note": "Anthropic Alignment Science, research overview",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Adversarial Attacks Leverage Interference Between Features in Superposition",
+    "href": "https://arxiv.org/abs/2510.11709",
+    "note": "Edward Stevinson et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Adversarial Examples Are Not Bugs, They Are Features",
+    "href": "https://arxiv.org/abs/1905.02175",
+    "note": "Andrew Ilyas et al.",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Adversarial Examples Are Not Bugs, They Are Features",
+    "href": "https://gradientscience.org/adv",
+    "note": "Madry Lab research overview",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Adversarial Examples Are Not Bugs, They Are Superposition",
+    "href": "https://arxiv.org/abs/2508.17456",
+    "note": "Liv Gorton and Owen Lewis, 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Adversarial Robustness",
+    "href": "https://www.youtube.com/watch?v=wIX00bZ173k",
+    "note": "Center for AI Safety",
+    "topic": "Evaluations & red teaming",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Against Almost Every Theory of Impact of Interpretability",
+    "href": "https://www.lesswrong.com/posts/LNA8mubrByG7SFacm",
+    "note": "Charbel-Raphaël",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "AGI Ruin: A List of Lethalities",
+    "href": "https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc",
+    "note": "Eliezer Yudkowsky",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "AGI's Last Bottlenecks",
+    "href": "https://ai-frontiers.org/articles/agis-last-bottlenecks",
+    "note": "Adam Khoja",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI & Antitrust: Reconciling Tensions Between Competition Law and Cooperative AI Development",
+    "href": "https://yjolt.org/ai-antitrust-reconciling-tensions-between-competition-law-and-cooperative-ai-development",
+    "note": "Hua and Belfield, 2021",
+    "topic": "Law & liability",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AI 2027",
+    "href": "https://ai-2027.com",
+    "note": "AI Futures Project, 2025",
+    "topic": "Scenarios & trajectories",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      1,
+      2,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "AI 2027: A Realistic Scenario of AI Takeover",
+    "href": "https://www.youtube.com/watch?v=k_onqn68GHY",
+    "note": "Species, Documenting AGI",
+    "topic": "Scenarios & trajectories",
+    "format": "Video",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "AI and Its Impacts: A Brief Introduction",
+    "href": "https://bluedot.org/blog/ai-and-its-impacts",
+    "note": "BlueDot Impact",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "AI as Normal Technology",
+    "href": "https://knightcolumbia.org/content/ai-as-normal-technology",
+    "note": "Arvind Narayanan and Sayash Kapoor",
+    "topic": "Economics & society",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3,
+      7
+    ]
+  },
+  {
+    "title": "AI as Profoundly Abnormal Technology",
+    "href": "https://blog.ai-futures.org/p/ai-as-profoundly-abnormal-technology",
+    "note": "Scott Alexander, AI Futures Project",
+    "topic": "Economics & society",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Chips: What They Are and Why They Matter",
+    "href": "https://cset.georgetown.edu/publication/ai-chips-what-they-are-and-why-they-matter",
+    "note": "Saif M. Khan and Alexander Mann, CSET, 2020",
+    "topic": "Compute & hardware",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AI Control",
+    "href": "https://www.lesswrong.com/s/PC3yJgdKvk8kzqZyA",
+    "note": "Sequence including the case for controlling powerful AIs",
+    "topic": "AI control",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "AI Control: Improving Safety Despite Intentional Subversion",
+    "href": "https://arxiv.org/abs/2312.06942",
+    "note": "Ryan Greenblatt et al.",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "AI Control: Improving Safety Despite Intentional Subversion",
+    "href": "https://www.lesswrong.com/posts/d9FJHawgkiMSPjagR",
+    "note": "Redwood Research, research overview",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "AI Governance and Policy Careers",
+    "href": "https://80000hours.org/career-reviews/ai-policy-and-strategy",
+    "note": "80,000 Hours",
+    "topic": "Career paths",
+    "format": "Article",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Governance Needs a Theory of Victory",
+    "href": "https://forum.effectivealtruism.org/posts/ntpu8qQGzFeqxRKhP/ai-governance-needs-a-theory-of-victory",
+    "note": "Convergence Analysis",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Is Easy to Control",
+    "href": "https://optimists.ai/2023/11/28/ai-is-easy-to-control",
+    "note": "Nora Belrose, 2023",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "AI Is Pivotal for National Security",
+    "href": "https://nationalsecurity.ai/chapter/ai-is-pivotal-for-national-security",
+    "note": "Superintelligence Strategy, chapter 3",
+    "topic": "Misuse & security",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Is Testing the Limits of Corporate Governance",
+    "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4693045",
+    "note": "Roberto Tallarita, 2023",
+    "topic": "Corporate governance",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AI Outputs Are Not Protected Speech",
+    "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4687558",
+    "note": "Peter Salib, 2024",
+    "topic": "Law & liability",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AI Pause Proposal",
+    "href": "https://pauseai.info/proposal",
+    "note": "PauseAI",
+    "topic": "International coordination",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Policy Brief Writing Exercise",
+    "href": "https://docs.google.com/document/d/14n8HA2NtbTqxmw5GZIAY3jWb1SKh8Wnbpbld8PXTFNE",
+    "note": "GT AISI fellowship workshop document",
+    "topic": "Research practice",
+    "format": "Curriculum",
+    "collection": "careers",
+    "subtopic": "Research practice",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "AI Policy Resources",
+    "href": "https://emergingtechpolicy.org/areas/ai-policy",
+    "note": "Horizon Institute for Public Service",
+    "topic": "Policy foundations",
+    "format": "Collection",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AI Risks, Outlined by WAISI",
+    "href": "https://docs.google.com/document/d/1qJGjCajCnPdQR29TwQ0QWtyBaV2-59lEsyRW1cmsGc8",
+    "note": "Risk-debate reading and discussion guide",
+    "topic": "AI safety foundations",
+    "format": "Collection",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "AI Safety and the Age of Dislightenment",
+    "href": "https://fast.ai/posts/2023-11-07-dislightenment.html",
+    "note": "Jeremy Howard, fast.ai",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AI Safety via Debate",
+    "href": "https://arxiv.org/abs/1805.00899",
+    "note": "Geoffrey Irving, Paul Christiano and Dario Amodei, 2018",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "AI Safety via Debate: Research Overview",
+    "href": "https://openai.com/index/debate",
+    "note": "OpenAI",
+    "topic": "Scalable oversight",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1,
+      7
+    ]
+  },
+  {
+    "title": "AI Safety-Related Columbia Class Recommendations",
+    "href": "https://docs.google.com/document/d/1jBQ8yig6V5jzJ0QyOoGS75AnO4LReiUwH0PGDwGnh7g",
+    "note": "Yau-Meng Wong, 2025",
+    "topic": "Fellowships & training",
+    "format": "Collection",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "AI-Enabled Coups: How a Small Group Could Use AI to Seize Power",
+    "href": "https://forethought.org/research/ai-enabled-coups-how-a-small-group-could-use-ai-to-seize-power",
+    "note": "Forethought",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "AIs Accelerating AI Research",
+    "href": "https://www.planned-obsolescence.org/p/ais-accelerating-ai-research",
+    "note": "Ajeya Cotra, 2023",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "AISIs’ Roles in Domestic and International Governance",
+    "href": "https://www.oxfordmartin.ox.ac.uk/publications/aisis-roles-in-domestic-and-international-governance",
+    "note": "Marta Ziosi et al., Oxford Martin School, 2024",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "AISST Careers Guide for Technical Intro Fellows",
+    "href": "https://docs.google.com/document/d/1oEJwiX6K8Vr-49K8ftB096MlGTIVTOGfAlAv2H5qifs",
+    "note": "Naomi Bashkansky, maintained by JJ Andrade",
+    "topic": "Career paths",
+    "format": "Collection",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "Alex Bores’s AI Framework",
+    "href": "https://alexbores.nyc/files/Bores_AI_Framework.pdf",
+    "note": "Alex Bores",
+    "topic": "Regulation & standards",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Aligning Language Models to Follow Instructions",
+    "href": "https://openai.com/index/instruction-following/",
+    "note": "OpenAI research overview",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Alignment Faking in Large Language Models: Research Overview",
+    "href": "https://anthropic.com/research/alignment-faking",
+    "note": "Anthropic, 2024",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "title": "Alignment Is Not Solved, but It Increasingly Looks Solvable",
+    "href": "https://aligned.substack.com/p/alignment-is-not-solved-but-increasingly-looks-solvable",
+    "note": "Jan Leike",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Alignment Remains a Hard, Unsolved Problem",
+    "href": "https://www.lesswrong.com/posts/epjuxGnSPof3GnMSL",
+    "note": "Evan Hubinger",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "America’s AI Action Plan",
+    "href": "https://whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf",
+    "note": "The White House, July 2025",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "An Ambitious Vision for Interpretability",
+    "href": "https://www.lesswrong.com/posts/Hy6PX43HGgmfiTaKu",
+    "note": "Leo Gao",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5
+    ]
+  },
+  {
+    "title": "An International Agreement to Prevent the Premature Creation of Artificial Superintelligence",
+    "href": "https://arxiv.org/abs/2511.10783",
+    "note": "Aaron Scher et al.",
+    "topic": "International coordination",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "An Interpretability Illusion for BERT",
+    "href": "https://arxiv.org/abs/2104.07143",
+    "note": "Tolga Bolukbasi et al.",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "title": "An Intuitive Explanation of Sparse Autoencoders for LLM Interpretability",
+    "href": "https://adamkarvonen.github.io/machine_learning/2024/06/11/sae-intuitions.html",
+    "note": "Adam Karvonen",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "An Overview of Catastrophic AI Risks",
+    "href": "http://safe.ai/ai-risk",
+    "note": "Center for AI Safety, interactive overview",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "An Overview of Catastrophic AI Risks",
+    "href": "https://arxiv.org/abs/2306.12001",
+    "note": "Dan Hendrycks, Mantas Mazeika, and Thomas Woodside",
+    "topic": "AI safety foundations",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      3,
+      8
+    ]
+  },
+  {
+    "title": "Analysis of Global AI Governance Strategies",
+    "href": "https://convergenceanalysis.org/research/analysis-of-global-ai-governance-strategies",
+    "note": "Convergence Analysis",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Another (Outer) Alignment Failure Story",
+    "href": "https://www.lesswrong.com/posts/AyNHoTWWAJ5eb99ji",
+    "note": "Paul Christiano, 2021",
+    "topic": "Reward hacking & misalignment",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Anthropic’s Core Views on AI Safety",
+    "href": "https://anthropic.com/news/core-views-on-ai-safety",
+    "note": "Anthropic",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Anthropic’s Responsible Scaling Policy: Version 2.0",
+    "href": "https://www-cdn.anthropic.com/616dee633636e5bd309cb73aed8622e80fe47839.pdf",
+    "note": "October 15, 2024 edition",
+    "topic": "Corporate governance",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "ARENA: AI Safety Education",
+    "href": "https://arena.education",
+    "note": "Technical training in alignment research engineering",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "ARENA: Reinforcement Learning from Human Feedback",
+    "href": "https://learn.arena.education/chapter2_rl/04_rlhf/intro/",
+    "note": "Chapter 2.4 exercises",
+    "topic": "Alignment & training",
+    "format": "Curriculum",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "ARENA: Transformer Interpretability",
+    "href": "https://learn.arena.education/chapter1_transformer_interp/",
+    "note": "Hands-on interpretability curriculum",
+    "topic": "Interpretability",
+    "format": "Curriculum",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Astra Fellowship",
+    "href": "https://constellation.org/programs/astra-fellowship",
+    "note": "Constellation Institute",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Attribution Patching: Activation Patching at Industrial Scale",
+    "href": "https://www.lesswrong.com/posts/gtLLBhzQTG6nKTeCZ",
+    "note": "Neel Nanda",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Auditing Large Language Models: A Three-Layered Approach",
+    "href": "https://arxiv.org/abs/2302.08500",
+    "note": "Jakob Mökander et al., 2023",
+    "topic": "Corporate governance",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Automated Interpretability Metrics Do Not Distinguish Trained and Random Transformers",
+    "href": "https://arxiv.org/abs/2501.17727",
+    "note": "Thomas Heap et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Automatically Interpreting Millions of Features in Large Language Models",
+    "href": "https://arxiv.org/abs/2410.13928",
+    "note": "Gonçalo Paulo et al., 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Automatically Jailbreaking Frontier Language Models with Investigator Agents",
+    "href": "https://transluce.org/jailbreaking-frontier-models",
+    "note": "Transluce",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "Autonomy Evaluation Resources",
+    "href": "https://metr.org/blog/2024-03-13-autonomy-evaluation-resources/",
+    "note": "METR",
+    "topic": "Evaluations & red teaming",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders",
+    "href": "https://arxiv.org/abs/2501.17148",
+    "note": "Zhengxuan Wu et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Backpropagation, intuitively",
+    "href": "https://www.youtube.com/watch?v=Ilg3gGewQ5U",
+    "note": "3Blue1Brown, Deep Learning Chapter 3",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
+    "href": "https://arxiv.org/abs/2511.00617",
+    "note": "Eric Bigelow et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Believe It or Not: How Deeply Do LLMs Believe Implanted Facts?",
+    "href": "https://alignment-science-blog.pages.dev/2025/believe-it-or-not",
+    "note": "Anthropic Alignment Science",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Beyond Accidents and Misuse: Decoding the Structural Risk Dynamics of Artificial Intelligence",
+    "href": "https://arxiv.org/abs/2406.14873",
+    "note": "Kyle A. Kilian",
+    "topic": "Economics & society",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Biden Artificial Intelligence Executive Order Action Tracker",
+    "href": "https://mayerbrown.com/en/insights/publications/2024/02/biden-artificial-intelligence-executive-order-action-tracker",
+    "note": "Mayer Brown, 2024",
+    "topic": "Regulation & standards",
+    "format": "Collection",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Biological Anchors: A Trick That Might or Might Not Work",
+    "href": "https://astralcodexten.substack.com/p/biological-anchors-a-trick-that-might",
+    "note": "Scott Alexander",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "BlueDot Narrated on Apple Podcasts",
+    "href": "https://podcasts.apple.com/us/podcast/ai-safety-fundamentals/id1687830086",
+    "note": "Audio versions of AI Safety Fundamentals readings",
+    "topic": "Podcasts",
+    "format": "Podcast",
+    "collection": "perspectives",
+    "subtopic": "Podcasts",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "BlueDot Narrated on Spotify",
+    "href": "https://open.spotify.com/show/4LvXaqFpmG1GSBtIxcmJjc",
+    "note": "Audio versions of AI Safety Fundamentals readings",
+    "topic": "Podcasts",
+    "format": "Podcast",
+    "collection": "perspectives",
+    "subtopic": "Podcasts",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Boeing Charged with 737 MAX Fraud Conspiracy",
+    "href": "https://justice.gov/opa/pr/boeing-charged-737-max-fraud-conspiracy-and-agrees-pay-over-25-billion",
+    "note": "US Department of Justice",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Breaking Down the Biden AI EO: Ensuring Safe and Secure AI",
+    "href": "https://cset.georgetown.edu/article/breaking-down-the-biden-ai-eo-ensuring-safe-and-secure-ai",
+    "note": "Tessa Baker, CSET, 2023",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "British Post Office Scandal",
+    "href": "https://en.wikipedia.org/wiki/British_Post_Office_scandal",
+    "note": "Wikiwand",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Building a C Compiler with a Team of Parallel Claudes",
+    "href": "https://anthropic.com/engineering/building-c-compiler",
+    "note": "Anthropic",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "But what is a neural network?",
+    "href": "https://www.youtube.com/watch?v=aircAruvnKk",
+    "note": "3Blue1Brown, Deep Learning Chapter 1",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1,
+      3,
+      8
+    ]
+  },
+  {
+    "title": "CAIAC Careers Guide for Technical Intro Fellows",
+    "href": "https://docs.google.com/document/d/1kS1yqi3yK-IE1XV0ZEXc2XG4JANuBaaLgGZNz0nfR4U",
+    "note": "Naomi Bashkansky, adapted by CAIAC",
+    "topic": "Career paths",
+    "format": "Article",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "California SB 53: Transparency in Frontier Artificial Intelligence Act",
+    "href": "https://legiscan.com/CA/text/SB53/2025",
+    "note": "California Senate, 2025",
+    "topic": "Regulation & standards",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Can AI Scaling Continue Through 2030?",
+    "href": "https://epoch.ai/blog/can-ai-scaling-continue-through-2030",
+    "note": "Jaime Sevilla et al., Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3,
+      4,
+      8
+    ]
+  },
+  {
+    "title": "Can Generalized Adversarial Testing Enable More Rigorous LLM Safety Evals?",
+    "href": "https://www.lesswrong.com/posts/m6poxWegJkp8LPpjw",
+    "note": "Stephen Casper",
+    "topic": "Evaluations & red teaming",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Can LLMs Be Deceptive? Inside Anthropic’s Sleeper Agents Research",
+    "href": "https://jrodthoughts.medium.com/can-llms-be-deceptive-inside-anthropics-sleeper-agents-research-b88e4c71f701",
+    "note": "Jesus Rodriguez, paper summary",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Can We Scale Human Feedback for Complex AI Tasks? An Intro to Scalable Oversight",
+    "href": "https://bluedot.org/blog/scalable-oversight-intro",
+    "note": "Adam Jones, BlueDot Impact",
+    "topic": "Scalable oversight",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Career Planning Template (80,000 Hours)",
+    "href": "https://80000hours.org/career-planning-template/",
+    "note": "80,000 Hours: Free worksheet for comparing career options and planning concrete next steps.",
+    "topic": "Career paths",
+    "format": "Tool",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Career Resources on AI Governance, Policy, and Strategy",
+    "href": "https://notion.so/cee69676b77e4d86ae4f88d761186f53?pvs=21",
+    "note": "AISST and 80,000 Hours, 2023",
+    "topic": "Career paths",
+    "format": "Collection",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "CASI AI Alignment Fundamentals",
+    "href": "https://docs.google.com/document/d/1Wq5SRwbvHy-ZAZg3EpSgpBErPRoOn5Ne5iJtEExGynw",
+    "note": "CASI, Fall 2025",
+    "topic": "Courses & curricula",
+    "format": "Curriculum",
+    "collection": "foundations",
+    "subtopic": "Courses & curricula",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Catching AIs Red-Handed",
+    "href": "https://www.lesswrong.com/posts/i2nmBfCXnadeGmhzW",
+    "note": "Detecting intentional model misbehavior",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Causal Scrubbing: A Method for Rigorously Testing Interpretability Hypotheses",
+    "href": "https://www.lesswrong.com/posts/JvZhhzycHu2Yd57RN",
+    "note": "Redwood Research",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Certified Adversarial Robustness via Randomized Smoothing",
+    "href": "https://arxiv.org/abs/1902.02918",
+    "note": "Jeremy M Cohen et al., 2019",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "CHAI Research Jobs",
+    "href": "https://humancompatible.ai/jobs",
+    "note": "Center for Human-Compatible Artificial Intelligence",
+    "topic": "Career paths",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Chain of Thought Imitation with Procedure Cloning",
+    "href": "https://arxiv.org/abs/2205.10816",
+    "note": "Mengjiao Yang, Dale Schuurmans, and Pieter Abbeel",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+    "href": "https://arxiv.org/abs/2507.11473",
+    "note": "Tomek Korbak et al., 2025",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "href": "https://arxiv.org/abs/2201.11903",
+    "note": "Wei et al., 2022",
+    "topic": "ML fundamentals",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "China's AI Regulations and How They Get Made",
+    "href": "https://carnegieendowment.org/2023/07/10/china-s-ai-regulations-and-how-they-get-made-pub-90117",
+    "note": "Matt Sheehan, Carnegie Endowment, 2023",
+    "topic": "Regulation & standards",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "China's Views on AI Safety Are Changing Quickly",
+    "href": "https://carnegieendowment.org/research/2024/08/china-artificial-intelligence-ai-safety-regulation?lang=en",
+    "note": "Matt Sheehan, Carnegie Endowment, 2024",
+    "topic": "International coordination",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Chris Olah on What the Hell Is Going On Inside Neural Networks",
+    "href": "https://80000hours.org/podcast/episodes/chris-olah-interpretability-research",
+    "note": "80,000 Hours Podcast",
+    "topic": "Interpretability",
+    "format": "Podcast",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Chris Olah’s Views on AGI Safety",
+    "href": "https://www.lesswrong.com/posts/X2i9dQQK3gETCyqh2",
+    "note": "Evan Hubinger’s account of Olah’s perspective",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Chunky Post-Training: Data Driven Failures of Generalization",
+    "href": "https://arxiv.org/abs/2602.05910",
+    "note": "Seoirse Murray et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Circuit Tracing: Revealing Computational Graphs in Language Models",
+    "href": "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
+    "note": "Anthropic",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Circuits Updates: July 2025",
+    "href": "https://transformer-circuits.pub/2025/july-update",
+    "note": "Transformer Circuits research update",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Clarifying AI Alignment",
+    "href": "https://ai-alignment.com/clarifying-ai-alignment-cec47cd69dd6",
+    "note": "Paul Christiano",
+    "topic": "AI safety foundations",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Claude’s Constitution",
+    "href": "https://anthropic.com/constitution",
+    "note": "Anthropic, principles guiding Claude’s behavior",
+    "topic": "Alignment & training",
+    "format": "Report",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Combining Weak-to-Strong Generalization with Scalable Oversight",
+    "href": "https://aligned.substack.com/p/combining-w2sg-with-scalable-oversight",
+    "note": "Jan Leike",
+    "topic": "Scalable oversight",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Common Elements of Frontier AI Safety Policies (December 2025 Update)",
+    "href": "https://metr.org/blog/2025-12-09-common-elements-of-frontier-ai-safety-policies/",
+    "note": "METR, updated December 2025",
+    "topic": "Corporate governance",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Compositional Explanations of Neurons",
+    "href": "https://arxiv.org/abs/2006.14032",
+    "note": "Explaining neurons through combinations of concepts",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Computing Power and the Governance of AI",
+    "href": "https://governance.ai/analysis/computing-power-and-the-governance-of-ai",
+    "note": "Centre for the Governance of AI",
+    "topic": "Compute & hardware",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Computing Power and the Governance of Artificial Intelligence",
+    "href": "https://arxiv.org/abs/2402.08797",
+    "note": "Girish Sastry et al., 2024",
+    "topic": "Compute & hardware",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Concrete Reasons Why Alignment Is on Track to Be Solved",
+    "href": "https://agarriga.substack.com/p/concrete-reasons-why-alignment-is",
+    "note": "The Column Space",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Consistency Checks for Language Model Forecasters",
+    "href": "https://openreview.net/forum?id=r5IXBlTCGc",
+    "note": "Consistency-based evaluation of probabilistic forecasts",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "href": "https://arxiv.org/abs/2212.08073",
+    "note": "Bai et al., 2022",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Constitutional Classifiers: Defending Against Universal Jailbreaks",
+    "href": "https://anthropic.com/news/constitutional-classifiers",
+    "note": "Anthropic",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Continuous Doesn't Mean Slow",
+    "href": "https://www.planned-obsolescence.org/p/continuous-doesnt-mean-slow",
+    "note": "Tom Davidson, 2023",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Cooperative AI PhD Fellowship 2026",
+    "href": "https://cooperativeai.com/phd-fellowship/2026",
+    "note": "Cooperative AI Foundation",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Cost-Effective Constitutional Classifiers via Representation Re-use",
+    "href": "https://alignment.anthropic.com/2025/cheap-monitors",
+    "note": "Anthropic Alignment Science",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "CoT Red-Handed: Stress Testing Chain-of-Thought Monitoring",
+    "href": "https://arxiv.org/abs/2505.23575",
+    "note": "Benjamin Arnav et al., 2025",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Counterarguments to the Basic AI Existential-Risk Case",
+    "href": "https://www.lesswrong.com/posts/LDRQ5Zfqwi8GjzPYG",
+    "note": "Critiques of arguments for catastrophic AI risk",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Counting Arguments Provide No Evidence for AI Doom",
+    "href": "https://optimists.ai/2024/02/27/counting-arguments-provide-no-evidence-for-ai-doom",
+    "note": "Nora Belrose, 2024",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Ctrl-Z: Controlling AI Agents via Resampling",
+    "href": "https://arxiv.org/abs/2504.10374",
+    "note": "Aryan Bhatt et al.",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Current Activation Oracles Are Hard to Use",
+    "href": "https://www.lesswrong.com/posts/LXQBcztrWKhtcgQfJ",
+    "note": "MATS research with Senthooran Rajamanoharan and Neel Nanda",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Cyber Attacks on Critical Infrastructure",
+    "href": "https://commercial.allianz.com/news-and-insights/expert-risk-articles/cyber-attacks-on-critical-infrastructure.html",
+    "note": "Allianz Commercial",
+    "topic": "Misuse & security",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Data-Efficient Deep Reinforcement Learning for Dexterous Manipulation",
+    "href": "https://arxiv.org/abs/1704.03073",
+    "note": "Ivaylo Popov et al.",
+    "topic": "ML fundamentals",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Death of Elaine Herzberg: Uber’s Self-Driving Car Crash",
+    "href": "https://en.wikipedia.org/wiki/Death_of_Elaine_Herzberg",
+    "note": "Wikiwand",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Debate Update: Obfuscated Arguments Problem",
+    "href": "https://www.lesswrong.com/posts/PJLABqQ962hZEqhdB",
+    "note": "Beth Barnes and Paul Christiano",
+    "topic": "Scalable oversight",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Debating with More Persuasive LLMs Leads to More Truthful Answers",
+    "href": "https://arxiv.org/abs/2402.06782",
+    "note": "Akbir Khan et al.",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Deceptive AI Is Not the Same as Deceptively Aligned AI",
+    "href": "https://www.lesswrong.com/posts/a392MCzsGXAZP5KaS",
+    "note": "Steven Byrnes",
+    "topic": "Reward hacking & misalignment",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Deep Forgetting & Unlearning for Safely-Scoped LLMs",
+    "href": "https://www.lesswrong.com/posts/mFAvspg4sXkrfZ7FA",
+    "note": "Stephen Casper",
+    "topic": "Unlearning",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Deep Reinforcement Learning for Dexterous Manipulation: Grasp and Stack",
+    "href": "https://www.youtube.com/watch?v=8QnD8ZM0YCo",
+    "note": "Timothy Lillicrap",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Deep Reinforcement Learning from Human Preferences",
+    "href": "https://arxiv.org/abs/1706.03741",
+    "note": "Paul Christiano et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Defining the Intelligence Curse",
+    "href": "https://intelligence-curse.ai/defining",
+    "note": "Luke Drago and Rudolf Laine",
+    "topic": "Economics & society",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Deliberative Alignment: Reasoning Enables Safer Language Models",
+    "href": "https://arxiv.org/abs/2412.16339",
+    "note": "Melody Y. Guan et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Deliberative Alignment: Reasoning Enables Safer Language Models",
+    "href": "https://openai.com/index/deliberative-alignment",
+    "note": "OpenAI",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Designing and Interpreting Probes",
+    "href": "https://cs.columbia.edu/~johnhew/interpreting-probes.html",
+    "note": "John Hewitt",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Detecting High-Stakes Interactions with Activation Probes",
+    "href": "https://arxiv.org/abs/2506.10805",
+    "note": "Alex McKenzie et al., 2025",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Detecting Misbehavior in Frontier Reasoning Models",
+    "href": "https://openai.com/index/chain-of-thought-monitoring",
+    "note": "Bowen Baker et al., OpenAI, 2025",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Direct Preference Optimization: Your Language Model Is Secretly a Reward Model",
+    "href": "https://arxiv.org/abs/2305.18290",
+    "note": "Rafael Rafailov et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Discovering Latent Knowledge in Language Models Without Supervision",
+    "href": "https://arxiv.org/abs/2212.03827",
+    "note": "Burns et al., 2022",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Do Activation Verbalization Methods Convey Privileged Information?",
+    "href": "https://arxiv.org/abs/2509.13316",
+    "note": "Millicent Li et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "DrAttack: Prompt Decomposition and Reconstruction Makes Powerful LLM Jailbreakers",
+    "href": "https://arxiv.org/abs/2402.16914",
+    "note": "Xirui Li et al., 2024",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Eight Methods to Evaluate Robust Unlearning in LLMs",
+    "href": "https://arxiv.org/abs/2402.16835",
+    "note": "Tests for whether forgotten knowledge can be recovered",
+    "topic": "Unlearning",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Emergent Deception and Emergent Optimization",
+    "href": "https://bounded-regret.ghost.io/emergent-deception-optimization",
+    "note": "Jacob Steinhardt",
+    "topic": "Reward hacking & misalignment",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Emergent Introspective Awareness in LLMs",
+    "href": "https://anthropic.com/research/introspection",
+    "note": "Anthropic, research overview",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Emergent Misalignment Notebook",
+    "href": "https://colab.research.google.com/drive/1cyy1vlW1v1venWUsWkmhSU0zY4p4w1r4",
+    "note": "Colab exercise from the technical fellowship",
+    "topic": "Reward hacking & misalignment",
+    "format": "Notebook",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs",
+    "href": "https://arxiv.org/abs/2502.17424",
+    "note": "Jan Betley et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task",
+    "href": "https://arxiv.org/abs/2210.13382",
+    "note": "Li et al., Othello world-model study",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Emerging Technology Policy Careers",
+    "href": "http://emergingtechpolicy.org",
+    "note": "Policy career guides and resources",
+    "topic": "Career paths",
+    "format": "Collection",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "ERA AI Fellowship",
+    "href": "https://erafellowship.org",
+    "note": "AI risk research training in Cambridge",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Evaluating Frontier AI R&D Capabilities of Language Model Agents Against Human Experts",
+    "href": "https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms",
+    "note": "METR",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Evaluating Language-Model Agents on Realistic Autonomous Tasks",
+    "href": "https://arxiv.org/abs/2312.11671",
+    "note": "Megan Kinniment et al., 2023",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Evaluating Language-Model Agents on Realistic Autonomous Tasks",
+    "href": "https://evals.alignment.org/blog/2023-08-01-new-report",
+    "note": "ARC Evals, 2023, report overview",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Everything might change forever this century (or we’ll go extinct)",
+    "href": "https://www.youtube.com/watch?v=3K25VPdbAjU",
+    "note": "Rational Animations",
+    "topic": "Scenarios & trajectories",
+    "format": "Video",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Existing Authorities for Oversight of Frontier AI Models",
+    "href": "https://law-ai.org/existing-authorities-for-oversight",
+    "note": "Bullock et al., Institute for Law & AI, 2024",
+    "topic": "Law & liability",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "href": "https://arxiv.org/abs/1412.6572",
+    "note": "Ian Goodfellow, Jonathon Shlens, and Christian Szegedy",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Explosive Growth from AI: A Review of the Arguments",
+    "href": "https://epoch.ai/blog/explosive-growth-from-ai-a-review-of-the-arguments",
+    "note": "Epoch AI",
+    "topic": "Economics & society",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Exposing the Systematic Vulnerability of Open-Weight Models to Prefill Attacks",
+    "href": "https://arxiv.org/abs/2602.14689",
+    "note": "Lukas Struppek et al., 2026",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Extracting Latent Steering Vectors from Pretrained Language Models",
+    "href": "https://aclanthology.org/2022.findings-acl.48",
+    "note": "Nishant Subramani et al., 2022",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Extreme Power Concentration",
+    "href": "https://80000hours.org/problem-profiles/extreme-power-concentration",
+    "note": "80,000 Hours",
+    "topic": "Policy foundations",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Factored Cognition",
+    "href": "https://ought.org/research/factored-cognition",
+    "note": "Ought",
+    "topic": "Scalable oversight",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Faulty Reward Functions in the Wild",
+    "href": "https://openai.com/index/faulty-reward-functions",
+    "note": "OpenAI, CoastRunners reward-hacking example",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Featherless AI",
+    "href": "https://featherless.ai/",
+    "note": "Model inference provider for hands-on experiments",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Feature Visualization",
+    "href": "https://distill.pub/2017/feature-visualization",
+    "note": "Distill, 2017",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Four Places Where You Can Put LLM Monitoring",
+    "href": "https://www.lesswrong.com/posts/AmcEyFErJc9TQ5ySF",
+    "note": "Monitoring options for potentially misaligned agents",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Freedom of Speech and AI Output",
+    "href": "https://journaloffreespeechlaw.org/volokhlemleyhenderson.pdf",
+    "note": "Eugene Volokh, Mark Lemley and Peter Henderson, 2023",
+    "topic": "Law & liability",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "From AGI to Superintelligence: The Intelligence Explosion",
+    "href": "https://situational-awareness.ai/from-agi-to-superintelligence",
+    "note": "Leopold Aschenbrenner, Situational Awareness",
+    "topic": "Scenarios & trajectories",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "title": "From GPT-4 to AGI: Counting the OOMs",
+    "href": "https://situational-awareness.ai/from-gpt-4-to-agi",
+    "note": "Leopold Aschenbrenner, Situational Awareness",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "From Principles to Rules: A Regulatory Approach for Frontier AI",
+    "href": "https://arxiv.org/abs/2407.07300",
+    "note": "Jonas Schuett et al., 2024",
+    "topic": "Regulation & standards",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Frontier AI Regulation Blueprint",
+    "href": "https://miro.com/app/board/uXjVM2FXuDY=",
+    "note": "Shahar Avin, 2023, interactive policy map",
+    "topic": "Regulation & standards",
+    "format": "Tool",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
+    "href": "https://arxiv.org/abs/2307.03718",
+    "note": "Anderljung et al., 2023",
+    "topic": "Regulation & standards",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      2,
+      8
+    ]
+  },
+  {
+    "title": "Frontier Models Are Capable of In-Context Scheming",
+    "href": "https://arxiv.org/abs/2412.04984",
+    "note": "Alexander Meinke et al., 2024",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Future Impact Group Fellowship",
+    "href": "https://futureimpact.group/",
+    "note": "Part-time remote research with experienced mentors",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Future ML Systems Will Be Qualitatively Different",
+    "href": "https://bounded-regret.ghost.io/future-ml-systems-will-be-qualitatively-different",
+    "note": "Jacob Steinhardt",
+    "topic": "Scenarios & trajectories",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Gallery of Deceptive Behavior",
+    "href": "https://docs.google.com/presentation/d/1U_B1eciz0zW2sVnt_28W9zHPrB8nCUBvyffBlvPVnm0",
+    "note": "Samuel Marks, 2023, slides",
+    "topic": "Reward hacking & misalignment",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Games for AI Control: Models of Safety Evaluations of AI Deployment Protocols",
+    "href": "https://arxiv.org/abs/2409.07985",
+    "note": "Game-theoretic models of deployment safety",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Gandalf",
+    "href": "https://gandalf.lakera.ai/intro",
+    "note": "Lakera, interactive prompt-injection challenge",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Gemini Deep Think Achieves Gold-Medal Standard at the International Mathematical Olympiad",
+    "href": "https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad",
+    "note": "Google DeepMind",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      3,
+      5
+    ]
+  },
+  {
+    "title": "Gemma Scope on Neuronpedia",
+    "href": "https://neuronpedia.org/gemma-scope",
+    "note": "Explore and steer features in Gemma models",
+    "topic": "Interpretability",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+    "href": "https://arxiv.org/abs/2105.14111",
+    "note": "Langosco et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Goal Misgeneralization: Why Correct Specifications Aren’t Enough for Correct Goals",
+    "href": "https://arxiv.org/abs/2210.01790",
+    "note": "Rohin Shah et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "God Help Us, Let's Try to Understand the Paper on AI Monosemanticity",
+    "href": "https://www.astralcodexten.com/p/god-help-us-lets-try-to-understand",
+    "note": "Scott Alexander, Astral Codex Ten",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Golden Gate Claude",
+    "href": "https://anthropic.com/news/golden-gate-claude",
+    "note": "Anthropic",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Goodhart’s Law",
+    "href": "https://en.wikipedia.org/wiki/Goodhart's_law",
+    "note": "Wikipedia",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "GPT-oss-20B Abliterated NEO Imatrix GGUF",
+    "href": "https://huggingface.co/DavidAU/OpenAi-GPT-oss-20b-abliterated-uncensored-NEO-Imatrix-gguf",
+    "note": "DavidAU, model demonstrating refusal removal",
+    "topic": "Interpretability",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Gradient descent, how neural networks learn",
+    "href": "https://www.youtube.com/watch?v=IHZwWFHWa-w",
+    "note": "3Blue1Brown, Deep Learning Chapter 2",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Gradual Disempowerment",
+    "href": "https://gradual-disempowerment.ai",
+    "note": "Structural risks to human influence",
+    "topic": "Economics & society",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack",
+    "href": "https://arxiv.org/abs/2404.01833",
+    "note": "Mark Russinovich et al., 2024",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "HarmBench Text Behavior Dataset",
+    "href": "https://github.com/centerforaisafety/HarmBench/blob/main/data/behavior_datasets/harmbench_behaviors_text_all.csv",
+    "note": "Center for AI Safety, harmful behavior evaluation examples",
+    "topic": "Evaluations & red teaming",
+    "format": "Dataset",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Harms from Increasingly Agentic Algorithmic Systems",
+    "href": "https://arxiv.org/abs/2302.10329",
+    "note": "Alan Chan et al., 2023",
+    "topic": "Policy foundations",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "High-Level Summary of the AI Act",
+    "href": "https://artificialintelligenceact.eu/high-level-summary",
+    "note": "EU AI Act overview from the Future of Life Institute",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      2,
+      8
+    ]
+  },
+  {
+    "title": "How AI Could Create the World’s Biggest Problems",
+    "href": "https://80000hours.org/problem-profiles/artificial-intelligence",
+    "note": "80,000 Hours problem profile",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "How AI Threatens Democracy",
+    "href": "https://journalofdemocracy.org/articles/how-ai-threatens-democracy",
+    "note": "Journal of Democracy",
+    "topic": "Policy foundations",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "How Complex Systems Fail",
+    "href": "https://how.complexsystems.fail",
+    "note": "Richard I. Cook",
+    "topic": "Safety case studies",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "How Developers Steer Language Model Outputs: Large Language Models Explained, Part 2",
+    "href": "https://cset.georgetown.edu/article/how-developers-steer-language-model-outputs-large-language-models-explained-part-2",
+    "note": "Center for Security and Emerging Technology",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "How Does AI Learn? A Beginner’s Guide with Examples",
+    "href": "https://bluedot.org/blog/how-does-ai-learn",
+    "note": "Adam Jones, BlueDot Impact",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      2,
+      3
+    ]
+  },
+  {
+    "title": "How Facebook Became a Tool for Genocide",
+    "href": "https://www.youtube.com/watch?v=K8B0bWO9u3M",
+    "note": "Johnny Harris",
+    "topic": "Safety case studies",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "How Far Does Alignment Midtraining Generalize?",
+    "href": "https://alignment.openai.com/how-far-does-alignment-midtraining-generalize",
+    "note": "Tomek Korbak et al., OpenAI",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "How Fast Can Algorithms Advance Capabilities?",
+    "href": "https://epochai.substack.com/p/how-fast-can-algorithms-advance-capabilities",
+    "note": "Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "How Likely Is Deceptive Alignment?",
+    "href": "https://www.lesswrong.com/posts/A9NxPTwbw6r6Awuwt",
+    "note": "Evan Hubinger",
+    "topic": "Reward hacking & misalignment",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "How Much Economic Growth from AI Should We Expect, How Soon?",
+    "href": "https://inferencemagazine.substack.com/p/how-much-economic-growth-from-ai",
+    "note": "Inference magazine",
+    "topic": "Economics & society",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "How Predictable Is Language Model Benchmark Performance?",
+    "href": "https://epochai.org/blog/how-predictable-is-language-model-benchmark-performance",
+    "note": "Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "How to Become a Mechanistic Interpretability Researcher",
+    "href": "https://www.alignmentforum.org/posts/jP9KDyMkchuv6tHwm/how-to-become-a-mechanistic-interpretability-researcher",
+    "note": "Neel Nanda",
+    "topic": "Research practice",
+    "format": "Article",
+    "collection": "careers",
+    "subtopic": "Research practice",
+    "sources": [
+      1,
+      7
+    ]
+  },
+  {
+    "title": "How to Pursue a Career in Technical AI Alignment",
+    "href": "https://forum.effectivealtruism.org/posts/7WXPkpqKGKewAymJf/how-to-pursue-a-career-in-technical-ai-alignment",
+    "note": "Charlie Rogers-Smith, 2022",
+    "topic": "Career paths",
+    "format": "Article",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "How to Use and Interpret Activation Patching",
+    "href": "https://arxiv.org/abs/2404.15255",
+    "note": "Stefan Heimersheim and Neel Nanda, 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "How US Export Controls Have (and Haven’t) Curbed Chinese AI",
+    "href": "https://ai-frontiers.org/articles/us-chip-export-controls-china-ai",
+    "note": "Chris Miller",
+    "topic": "Compute & hardware",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "How Useful Is Mechanistic Interpretability?",
+    "href": "https://www.lesswrong.com/posts/tEPHGZAb63dfq2v8n",
+    "note": "Debate among AI safety researchers",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "How we could stumble into AI catastrophe",
+    "href": "https://cold-takes.com/how-we-could-stumble-into-ai-catastrophe",
+    "note": "Holden Karnofsky, Cold Takes",
+    "topic": "AI safety foundations",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1,
+      7
+    ]
+  },
+  {
+    "title": "How We Monitor Internal Coding Agents for Misalignment",
+    "href": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+    "note": "OpenAI, 2026",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Hubble: A Model Suite to Advance the Study of LLM Memorization",
+    "href": "https://arxiv.org/abs/2510.19811",
+    "note": "Johnny Tian-Zheng Wei et al., 2025",
+    "topic": "Unlearning",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Humans Can Be Assigned Any Values Whatsoever",
+    "href": "https://www.lesswrong.com/posts/ANupXf8XfZo2EJxGv",
+    "note": "Stuart Armstrong, 2018",
+    "topic": "Alignment & training",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Humans Consulting HCH",
+    "href": "https://ai-alignment.com/humans-consulting-hch-f893f6051455",
+    "note": "Paul Christiano",
+    "topic": "Scalable oversight",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "If-Then Commitments for AI Risk Reduction",
+    "href": "https://carnegieendowment.org/research/2024/09/if-then-commitments-for-ai-risk-reduction?lang=en",
+    "note": "Holden Karnofsky",
+    "topic": "Corporate governance",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      3,
+      8
+    ]
+  },
+  {
+    "title": "IH-Challenge: A Training Dataset to Improve Instruction Hierarchy on Frontier LLMs",
+    "href": "https://openai.com/index/instruction-hierarchy-challenge",
+    "note": "OpenAI, instruction hierarchy training data",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+    "href": "https://huggingface.co/blog/rlhf",
+    "note": "Hugging Face",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Improving Alignment and Robustness with Circuit Breakers",
+    "href": "https://arxiv.org/abs/2406.04313",
+    "note": "Andy Zou et al.",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "In Search of a Dynamist Vision for Safe Superhuman AI",
+    "href": "https://helentoner.substack.com/p/dynamism-vs-stasis",
+    "note": "Helen Toner",
+    "topic": "Policy foundations",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "In-Context Representation Hijacking",
+    "href": "https://arxiv.org/abs/2512.03771",
+    "note": "Itay Yona et al., 2025",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Inference Scaling Reshapes AI Governance",
+    "href": "https://tobyord.com/writing/inference-scaling-reshapes-ai-governance",
+    "note": "Toby Ord",
+    "topic": "Compute & hardware",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Inference-Time Intervention: Eliciting Truthful Answers from a Language Model",
+    "href": "https://arxiv.org/abs/2306.03341",
+    "note": "Li et al., 2023",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "title": "Inoculation Prompting: Eliciting Traits from LLMs During Training Can Suppress Them at Test-Time",
+    "href": "https://arxiv.org/abs/2510.04340",
+    "note": "Daniel Tan et al., 2025",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Insights on Crosscoder Model Diffing",
+    "href": "https://transformer-circuits.pub/2025/crosscoder-diffing-update",
+    "note": "Anthropic",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Instrumental Convergence? Draft",
+    "href": "https://www.lesswrong.com/posts/w8PNjCS8ZsQuqYWhD",
+    "note": "J. Dmitri Gallow, 2023",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Intelligence and Stupidity: The Orthogonality Thesis",
+    "href": "https://www.youtube.com/watch?v=hEUO6pjwFOo",
+    "note": "Robert Miles",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "International Institutions for Advanced AI",
+    "href": "https://arxiv.org/abs/2307.04699",
+    "note": "Ho et al., 2023",
+    "topic": "International coordination",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      2,
+      8
+    ]
+  },
+  {
+    "title": "International Scientific Report on the Safety of Advanced AI: Interim Report",
+    "href": "https://assets.publishing.service.gov.uk/media/6655982fdc15efdddf1a842f/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf",
+    "note": "Yoshua Bengio et al., 2024",
+    "topic": "AI safety foundations",
+    "format": "Report",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)",
+    "href": "https://arxiv.org/abs/1711.11279",
+    "note": "Testing model sensitivity to human-defined concepts",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Interpretability in the Wild: A Circuit for Indirect Object Identification in GPT-2 Small",
+    "href": "https://arxiv.org/abs/2211.00593",
+    "note": "Kevin Wang et al.",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "title": "Interpreting GPT: The Logit Lens",
+    "href": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru",
+    "note": "nostalgebraist",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Intro to AI Safety, Remastered",
+    "href": "https://www.youtube.com/watch?v=pYXy-A4siMw",
+    "note": "Robert Miles",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Introducing Anthropic's Responsible Scaling Policy",
+    "href": "https://anthropic.com/news/anthropics-responsible-scaling-policy",
+    "note": "Anthropic, 2023 policy announcement",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Introducing OpenAI o1",
+    "href": "https://openai.com/o1",
+    "note": "Introduction to reasoning models and inference-time scaling",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Introduction to Mechanistic Interpretability",
+    "href": "https://bluedot.org/blog/introduction-to-mechanistic-interpretability",
+    "note": "BlueDot Impact",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Introduction to Reinforcement Learning",
+    "href": "https://www.youtube.com/watch?v=TCCjZe0y4Qc",
+    "note": "Hado van Hasselt, DeepMind and UCL lecture series",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Introspection or Confusion?",
+    "href": "https://www.lesswrong.com/posts/kfgmHvxcTbav9gnxe",
+    "note": "Victor Godet",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Introspective Interpretability: A Definition, Motivation, and Open Problems",
+    "href": "https://belindal.github.io/introspection",
+    "note": "Belinda Zou Li",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Is China Serious About AI Safety?",
+    "href": "https://aifrontiersmedia.substack.com/p/is-china-serious-about-ai-safety",
+    "note": "AI Frontiers",
+    "topic": "International coordination",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data",
+    "href": "https://arxiv.org/abs/2404.01413",
+    "note": "Matthias Gerstgrasser et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Is Power-Seeking AI an Existential Risk?",
+    "href": "https://arxiv.org/abs/2206.13353",
+    "note": "Joseph Carlsmith",
+    "topic": "Arguments & critiques",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Jailbroken: How Does LLM Safety Training Fail?",
+    "href": "https://arxiv.org/abs/2307.02483",
+    "note": "Alexander Wei, Nika Haghtalab, and Jacob Steinhardt",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Key Concepts in Reinforcement Learning",
+    "href": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html",
+    "note": "OpenAI, Spinning Up",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Kinds of Reinforcement Learning Algorithms",
+    "href": "https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html",
+    "note": "OpenAI, Spinning Up",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Language Models as Agent Models",
+    "href": "https://arxiv.org/abs/2212.01681",
+    "note": "Jacob Andreas",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Language Models Learn to Mislead Humans via RLHF",
+    "href": "https://arxiv.org/abs/2409.12822",
+    "note": "Jiaxin Wen et al.",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Language Models Perform Reasoning via Chain of Thought",
+    "href": "https://ai.googleblog.com/2022/05/language-models-perform-reasoning-via.html",
+    "note": "Jason Wei and Denny Zhou, Google Research",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Large Language Models Can Strategically Deceive Their Users When Put Under Pressure",
+    "href": "https://arxiv.org/abs/2311.07590",
+    "note": "Jérémy Scheurer, Mikita Balesni, and Marius Hobbhahn",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "Large Language Models Explained Briefly",
+    "href": "https://www.youtube.com/watch?v=LPZh9BOjkQs",
+    "note": "3Blue1Brown",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      2,
+      3
+    ]
+  },
+  {
+    "title": "LASR Labs Research Programme",
+    "href": "https://lasrlabs.org",
+    "note": "Supervised technical AI safety research in London",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Latent Adversarial Training Improves Robustness to Persistent Harmful Behaviors in LLMs",
+    "href": "https://arxiv.org/abs/2407.15549",
+    "note": "Training defenses against harmful model behavior",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Learning from Human Preferences",
+    "href": "https://openai.com/index/learning-from-human-preferences/",
+    "note": "OpenAI research overview, 2017",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      2,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Learning to Interpret Weight Differences in Language Models",
+    "href": "https://arxiv.org/abs/2510.05092",
+    "note": "Avichal Goel et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Legal Challenges to Compute Governance",
+    "href": "https://lawfaremedia.org/article/legal-challenges-to-compute-governance",
+    "note": "Diane Bernabei, James Baker and Cosimo Fabrizio, 2024",
+    "topic": "Law & liability",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Lessons from 10 Years of Adversarial Machine Learning",
+    "href": "https://www.youtube.com/watch?v=umfeF0Dx-r4",
+    "note": "Nicholas Carlini, FAR.AI talk",
+    "topic": "Evaluations & red teaming",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1,
+      5
+    ]
+  },
+  {
+    "title": "Literature Review of Transformative Artificial Intelligence Timelines",
+    "href": "https://epochai.org/blog/literature-review-of-transformative-artificial-intelligence-timelines",
+    "note": "Keith Wynroe et al., Epoch AI, 2023",
+    "topic": "Timelines & scaling",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Llama 3 70B Base Model",
+    "href": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+    "note": "Meta, pretrained model weights and model card",
+    "topic": "ML fundamentals",
+    "format": "Tool",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Llama 3 Jailbreak",
+    "href": "https://github.com/haizelabs/llama3-jailbreak",
+    "note": "Haize Labs, prefill-attack demonstration code",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "LLM Critics Help Catch LLM Bugs",
+    "href": "https://arxiv.org/abs/2407.00215",
+    "note": "Nat McAleese et al.",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Locating and Editing Factual Associations in GPT: Project Overview",
+    "href": "https://rome.baulab.info",
+    "note": "Meng et al., ROME model editing",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Lock Down the Labs: Security for AGI",
+    "href": "https://situational-awareness.ai/lock-down-the-labs",
+    "note": "Leopold Aschenbrenner, Situational Awareness",
+    "topic": "Misuse & security",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "London Ambulance Service Software Failure",
+    "href": "https://web.archive.org/web/20231020230153/https://bedford-computing.co.uk/learning/wp-content/uploads/2016/09/Report_London_Ambulance_Service-Jan2015.pdf",
+    "note": "Archived software failure case study",
+    "topic": "Safety case studies",
+    "format": "Report",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Machine Learning",
+    "href": "https://xkcd.com/1838",
+    "note": "Randall Munroe, xkcd comic",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Machine Learning for Humans",
+    "href": "https://medium.com/machine-learning-for-humans/why-machine-learning-matters-6164faf1df12",
+    "note": "Vishal Maini and Samer Sabri",
+    "topic": "ML fundamentals",
+    "format": "Curriculum",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Machine Learning for Humans, Part 2.1: Supervised Learning",
+    "href": "https://medium.com/@v_maini/supervised-learning-740383a2feab",
+    "note": "Vishal Maini and Samer Sabri, 2017",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Machine Learning Glossary",
+    "href": "https://developers.google.com/machine-learning/glossary",
+    "note": "Google",
+    "topic": "ML fundamentals",
+    "format": "Collection",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Machines of Loving Grace",
+    "href": "https://darioamodei.com/essay/machines-of-loving-grace",
+    "note": "Dario Amodei",
+    "topic": "Scenarios & trajectories",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Managing Extreme AI Risks Amid Rapid Progress",
+    "href": "https://arxiv.org/abs/2310.17688",
+    "note": "Yoshua Bengio et al., 2023",
+    "topic": "Regulation & standards",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Many-Shot Jailbreaking",
+    "href": "https://anthropic.com/research/many-shot-jailbreaking",
+    "note": "Anthropic",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Mapping LLMs with Sparse Autoencoders",
+    "href": "https://pair.withgoogle.com/explorables/sae",
+    "note": "Google PAIR, interactive explainer",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Mapping the Chip Smuggling Pipeline and Improving Export Control Compliance",
+    "href": "https://csis.org/analysis/mapping-chip-smuggling-pipeline-and-improving-export-control-compliance",
+    "note": "Barath Harithas, CSIS, 2024",
+    "topic": "Compute & hardware",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "MATS Research Program",
+    "href": "https://matsprogram.org",
+    "note": "Mentorship in AI alignment, governance and security",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Measuring AI Ability to Complete Long Software Tasks",
+    "href": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks",
+    "note": "METR research overview",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      3,
+      5,
+      7
+    ]
+  },
+  {
+    "title": "Measuring AI Ability to Complete Long Software Tasks",
+    "href": "https://arxiv.org/abs/2503.14499",
+    "note": "Thomas Kwa et al.",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "Measuring Progress on Scalable Oversight for Large Language Models",
+    "href": "https://arxiv.org/abs/2211.03540",
+    "note": "Samuel R. Bowman et al.",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "href": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
+    "note": "METR research overview",
+    "topic": "Economics & society",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "href": "https://arxiv.org/abs/2507.09089",
+    "note": "Joel Becker et al.",
+    "topic": "Economics & society",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "Mechanistic Anomaly Detection and ELK",
+    "href": "https://ai-alignment.com/mechanistic-anomaly-detection-and-elk-fb84f4c6d0dc",
+    "note": "Paul Christiano",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Mechanistic Interpretability, Variables, and the Importance of Interpretable Bases",
+    "href": "https://transformer-circuits.pub/2022/mech-interp-essay",
+    "note": "Chris Olah, Transformer Circuits",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Mechanistic?",
+    "href": "https://arxiv.org/abs/2410.09087",
+    "note": "Naomi Saphra and Sarah Wiegreffe, 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Misaligned AI Is No Longer Just Theory",
+    "href": "https://transformernews.ai/p/ai-misalignment-evidence",
+    "note": "Lynette Bye, Transformer",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Misrepresentations of California’s AI Safety Bill",
+    "href": "https://brookings.edu/articles/misrepresentations-of-californias-ai-safety-bill",
+    "note": "Brookings analysis of SB 1047",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Mistral-7B-Instruct v0.2",
+    "href": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
+    "note": "Mistral AI, instruction-tuned model",
+    "topic": "Alignment & training",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "ML Systems Will Have Weird Failure Modes",
+    "href": "https://bounded-regret.ghost.io/ml-systems-will-have-weird-failure-modes-2",
+    "note": "Jacob Steinhardt",
+    "topic": "Reward hacking & misalignment",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Model Evaluation for Extreme Risks",
+    "href": "https://arxiv.org/abs/2305.15324",
+    "note": "Shevlane et al., 2023",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Model Organisms for Emergent Misalignment",
+    "href": "https://arxiv.org/abs/2506.11613",
+    "note": "Edward Turner et al., 2025",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Multimodal Neurons in Artificial Neural Networks",
+    "href": "https://distill.pub/2021/multimodal-neurons",
+    "note": "Goh et al., Distill, 2021",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "My Highly Personal Skepticism Braindump on Existential Risk from Artificial Intelligence",
+    "href": "https://nunosempere.com/blog/2023/01/23/my-highly-personal-skepticism-braindump-on-existential-risk",
+    "note": "Nuño Sempere, 2023",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "My Objections to “We’re All Gonna Die with Eliezer Yudkowsky”",
+    "href": "https://www.lesswrong.com/posts/wAczufCpMdaamF9fy",
+    "note": "Quintin Pope, 2023",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "nanoGCG: Greedy Coordinate Gradient Optimization",
+    "href": "https://github.com/GraySwanAI/nanoGCG",
+    "note": "Gray Swan AI, PyTorch implementation",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Negative Results for SAEs on Downstream Tasks and Deprioritising SAE Research",
+    "href": "https://www.lesswrong.com/posts/4uXCAJNuPKtKBsi28",
+    "note": "Google DeepMind, mechanistic interpretability progress update",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Neural Networks",
+    "href": "https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+    "note": "3Blue1Brown, video series",
+    "topic": "ML fundamentals",
+    "format": "Collection",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Neural Scaling Laws and GPT-3",
+    "href": "https://www.youtube.com/watch?v=QMqPAM_knrE",
+    "note": "Jared Kaplan",
+    "topic": "Timelines & scaling",
+    "format": "Video",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Nonproliferation Is the Wrong Approach to AI Misuse",
+    "href": "https://helentoner.substack.com/p/nonproliferation-is-the-wrong-approach",
+    "note": "Helen Toner",
+    "topic": "Misuse & security",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "On Scalable Oversight with Weak LLMs Judging Strong LLMs",
+    "href": "https://arxiv.org/abs/2407.04622",
+    "note": "Zachary Kenton et al.",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4
+    ]
+  },
+  {
+    "title": "On the Biology of a Large Language Model",
+    "href": "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
+    "note": "Lindsey et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "title": "On the Extinction Risk from Artificial Intelligence",
+    "href": "https://rand.org/content/dam/rand/pubs/research_reports/RRA3000/RRA3034-1/RAND_RRA3034-1.pdf",
+    "note": "RAND, includes malicious geoengineering risks",
+    "topic": "Misuse & security",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "On the Opportunities and Risks of Foundation Models",
+    "href": "https://arxiv.org/abs/2108.07258",
+    "note": "Rishi Bommasani et al.",
+    "topic": "AI safety foundations",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback",
+    "href": "https://arxiv.org/abs/2307.15217",
+    "note": "Casper et al., 2023",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Open Problems in Mechanistic Interpretability",
+    "href": "https://arxiv.org/abs/2501.16496",
+    "note": "Lee Sharkey et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+    "href": "https://lawfaremedia.org/article/open-questions-in-law-and-ai-safety-an-emerging-research-agenda",
+    "note": "Yonathan Arbel et al., Lawfare, 2024",
+    "topic": "Law & liability",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "OpenAI Charter",
+    "href": "https://openai.com/charter",
+    "note": "Organizational mission and commitments",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "OpenAI LP",
+    "href": "https://openai.com/index/openai-lp/",
+    "note": "2019 announcement of the capped-profit structure",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "OpenRouter Chat Playground",
+    "href": "https://openrouter.ai/chat",
+    "note": "Compare and test language models",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Optimal Policies Tend to Seek Power",
+    "href": "https://nips.cc/virtual/2021/poster/28400",
+    "note": "Alexander Turner et al., NeurIPS spotlight",
+    "topic": "Reward hacking & misalignment",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Out-of-Context Reasoning in LLMs",
+    "href": "https://outofcontextreasoning.com",
+    "note": "Owain Evans, primer and reading list",
+    "topic": "Alignment & training",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Oversight for Frontier AI through a Know-Your-Customer Scheme for Compute Providers",
+    "href": "https://arxiv.org/abs/2310.13625",
+    "note": "Janet Egan and Lennart Heim, 2023",
+    "topic": "Compute & hardware",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Persona Features Control Emergent Misalignment",
+    "href": "https://arxiv.org/abs/2506.19823",
+    "note": "Miles Wang et al., 2025",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
+    "href": "https://arxiv.org/abs/2507.21509",
+    "note": "Runjin Chen et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Persuade Me If You Can: Evaluating AI Agent Influence on Safety Monitors",
+    "href": "https://openreview.net/pdf?id=lY3YVJ84kS",
+    "note": "Persuasion attacks against safety monitors",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Picking and Planning AI Safety Projects and Careers",
+    "href": "https://docs.google.com/presentation/d/11KlM1wOpQ09xhGOFusTk_uOq4RIWKH8_q4I6iEEy28I",
+    "note": "Michael Aird, career-planning slides",
+    "topic": "Career paths",
+    "format": "Curriculum",
+    "collection": "careers",
+    "subtopic": "Career paths",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Pivotal AI Safety Research Fellowship",
+    "href": "https://pivotal-research.org/fellowship",
+    "note": "Pivotal Research",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Playing the Training Game",
+    "href": "https://www.planned-obsolescence.org/p/the-training-game",
+    "note": "Kelsey Piper",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples",
+    "href": "https://arxiv.org/abs/2510.07192",
+    "note": "Alexandra Souly et al., 2025",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Policy Briefs",
+    "href": "https://writingcenter.unc.edu/tips-and-tools/policy-briefs",
+    "note": "University of North Carolina Writing Center",
+    "topic": "Research practice",
+    "format": "Article",
+    "collection": "careers",
+    "subtopic": "Research practice",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Position: Adversarial ML for LLMs Is Not Making Any Progress",
+    "href": "https://arxiv.org/abs/2502.02260",
+    "note": "Javier Rando et al., 2025",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Position: Mechanistic Interpretability Should Prioritize Feature Consistency in SAEs",
+    "href": "https://arxiv.org/abs/2505.20254",
+    "note": "Xiangchen Song et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Position: Use Sparse Autoencoders to Discover Unknowns",
+    "href": "https://arxiv.org/abs/2506.23845",
+    "note": "Kenny Peng et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Predicting AI’s Impact on Work",
+    "href": "https://governance.ai/post/predicting-ais-impact-on-work",
+    "note": "Centre for the Governance of AI",
+    "topic": "Economics & society",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Predictive Concept Decoders: Training Scalable End-to-End Interpretability Assistants",
+    "href": "https://arxiv.org/abs/2512.15712",
+    "note": "Vincent Huang et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Prefix Cache Untrusted Monitors: A Method to Apply After You Catch Your AI",
+    "href": "https://www.lesswrong.com/posts/Mxucm6BmJyCvxptPu",
+    "note": "Ryan Greenblatt",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Our Updated Preparedness Framework (2025)",
+    "href": "https://openai.com/index/updating-our-preparedness-framework/",
+    "note": "OpenAI: April 2025 update to the Preparedness Framework. The beta framework is a separate historical resource.",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Preparedness Framework: Beta",
+    "href": "https://cdn.openai.com/openai-preparedness-framework-beta.pdf",
+    "note": "OpenAI, 2023 beta version",
+    "topic": "Corporate governance",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Preparing for Launch",
+    "href": "https://ifp.org/preparing-for-launch",
+    "note": "Institute for Progress",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Primer on Safety Standards and Regulations for Industrial-Scale AI Development",
+    "href": "https://blog.bluedot.org/p/standards-and-regulations-primer",
+    "note": "BlueDot Impact, 2023",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Priority List of AI Safety Opportunities and Resources",
+    "href": "https://docs.google.com/document/d/10fRYN3dm_rNMqgRAf32xy6gelNIzbSdzFgLmCClWMgE",
+    "note": "AISST career resources",
+    "topic": "Fellowships & training",
+    "format": "Collection",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Prompt Injection in Google Translate Reveals Base Model Behaviors Behind Task-Specific Fine-Tuning",
+    "href": "https://www.lesswrong.com/posts/tAh2keDNEEHMXvLvz",
+    "note": "megasilverfist, LessWrong",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Radical Optionality: Governing Transformative AI Under Uncertainty",
+    "href": "https://radical-optionality.ai",
+    "note": "Christoph Winter and Charlie Bullock",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Real-Time Detection of Hallucinated Entities in Long-Form Generation",
+    "href": "https://arxiv.org/abs/2509.03531",
+    "note": "Oscar Obeso et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Reasoning Models Struggle to Control Their Chains of Thought",
+    "href": "https://arxiv.org/abs/2603.05706",
+    "note": "Chen Yueh-Han et al., 2026",
+    "topic": "AI control",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Red Teaming Language Models with Language Models",
+    "href": "https://arxiv.org/abs/2202.03286",
+    "note": "Ethan Perez et al.",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Red-Teaming Guide",
+    "href": "https://docs.google.com/document/d/1c68zZ1ZQKBfdk71NiMfQun-DmjrUEyk0",
+    "note": "GT AISI prompt-testing techniques",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Refusal in Language Models Is Mediated by a Single Direction",
+    "href": "https://arxiv.org/abs/2406.11717",
+    "note": "Andy Arditi et al., 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Refusal-Trained LLMs Are Easily Jailbroken As Browser Agents",
+    "href": "https://arxiv.org/abs/2410.13886",
+    "note": "Priyanshu Kumar et al., 2024",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Regulatory Markets: The Future of AI Governance",
+    "href": "https://arxiv.org/abs/2304.04914",
+    "note": "Gillian K. Hadfield and Jack Clark",
+    "topic": "Regulation & standards",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Rethinking Machine Unlearning for Large Language Models",
+    "href": "https://arxiv.org/abs/2402.08787",
+    "note": "Limits and evaluation of LLM unlearning",
+    "topic": "Unlearning",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Revisiting Model Stitching to Compare Neural Representations",
+    "href": "https://arxiv.org/abs/2106.07682",
+    "note": "Yamini Bansal, Preetum Nakkiran, and Boaz Barak",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Reward Hacking Reloaded: Concrete Problems in AI Safety Part 3.5",
+    "href": "https://www.youtube.com/watch?v=46nsTFfsBuc",
+    "note": "Robert Miles",
+    "topic": "Reward hacking & misalignment",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Risks from Power-Seeking AI Systems",
+    "href": "https://80000hours.org/problem-profiles/risks-from-power-seeking-ai",
+    "note": "Cody Fenwick, 80,000 Hours",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "RLHF with Custom Datasets",
+    "href": "https://colab.research.google.com/github/heartexlabs/RLHF/blob/master/tutorials/RLHF_with_Custom_Datasets.ipynb",
+    "note": "Heartex Labs tutorial notebook",
+    "topic": "Alignment & training",
+    "format": "Notebook",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "RLHF: Reinforcement Learning from Human Feedback",
+    "href": "https://huyenchip.com/2023/05/02/rlhf.html",
+    "note": "Chip Huyen",
+    "topic": "Alignment & training",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Robust Feature-Level Adversaries Are Interpretability Tools",
+    "href": "https://arxiv.org/abs/2110.03605",
+    "note": "Adversarial methods for understanding learned features",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
+    "href": "https://federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+    "note": "The White House, Executive Order 14110, 2023",
+    "topic": "Regulation & standards",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Safety Alignment Should Be Made More Than Just a Few Tokens Deep",
+    "href": "https://arxiv.org/abs/2406.05946",
+    "note": "Xiangyu Qi et al., 2024",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Safety Alignment Should Be Made More Than Just a Few Tokens Deep: Paper Explained",
+    "href": "https://www.youtube.com/watch?v=-r0XPC7TLzY",
+    "note": "Yannic Kilcher",
+    "topic": "Evaluations & red teaming",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "title": "Safety Pretraining: Toward the Next Generation of Safe AI",
+    "href": "https://arxiv.org/abs/2504.16980",
+    "note": "Pratyush Maini et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Sanity Checks for Saliency Maps",
+    "href": "https://arxiv.org/abs/1810.03292",
+    "note": "Julius Adebayo et al., 2018",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Scalable Agent Alignment via Reward Modeling: A Research Direction",
+    "href": "https://arxiv.org/abs/1811.07871",
+    "note": "Leike et al., 2018",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Scalable Mechanisms for Solving Cognitive Tasks",
+    "href": "https://ought.org/research/factored-cognition/scalability",
+    "note": "Ought",
+    "topic": "Scalable oversight",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Scaling AI Safely: Can Preparedness Frameworks Pull Their Weight?",
+    "href": "https://fas.org/publication/scaling-ai-safety",
+    "note": "Jack Titus, Federation of American Scientists, 2024",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Scaling Laws",
+    "href": "https://aisafetybook.com/textbook/scaling-laws",
+    "note": "AI Safety, Ethics, and Society textbook chapter",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Scaling Laws for Neural Language Models",
+    "href": "https://arxiv.org/abs/2001.08361",
+    "note": "Jared Kaplan et al.",
+    "topic": "Timelines & scaling",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Scaling Laws for Reward Model Overoptimization",
+    "href": "https://arxiv.org/abs/2210.10760",
+    "note": "Leo Gao, John Schulman, and Jacob Hilton",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Scaling Laws for Scalable Oversight",
+    "href": "https://arxiv.org/abs/2504.18530",
+    "note": "Joshua Engels et al.",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+    "href": "https://transformer-circuits.pub/2024/scaling-monosemanticity",
+    "note": "Anthropic, 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Schneier’s Law",
+    "href": "https://schneier.com/blog/archives/2011/04/schneiers_law.html",
+    "note": "Bruce Schneier on evaluating security claims",
+    "topic": "Misuse & security",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Searching for the Jennifer Aniston Neuron",
+    "href": "https://scientificamerican.com/article/brain-cells-searching-for-jennifer-aniston-neuron",
+    "note": "Rodrigo Quian Quiroga, Scientific American",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Section 230 Won't Protect ChatGPT",
+    "href": "https://journaloffreespeechlaw.org/perault.pdf",
+    "note": "Matt Perault, 2023",
+    "topic": "Law & liability",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Securing AI Model Weights",
+    "href": "https://rand.org/pubs/research_briefs/RBA2849-1.html",
+    "note": "RAND research brief",
+    "topic": "Misuse & security",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models",
+    "href": "https://rand.org/pubs/research_reports/RRA2849-1.html",
+    "note": "RAND, 2024",
+    "topic": "Misuse & security",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Securing Semiconductor Supply Chains",
+    "href": "https://cset.georgetown.edu/publication/securing-semiconductor-supply-chains",
+    "note": "Saif M. Khan, CSET, 2021",
+    "topic": "Compute & hardware",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "SelfIE: Self-Interpretation of Large Language Model Embeddings",
+    "href": "https://selfie.cs.columbia.edu",
+    "note": "Columbia University, research overview",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Simple Probes Can Catch Sleeper Agents",
+    "href": "https://anthropic.com/news/probes-catch-sleeper-agents",
+    "note": "Anthropic",
+    "topic": "AI control",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Situational Awareness",
+    "href": "https://www.planned-obsolescence.org/p/situational-awareness",
+    "note": "Kelsey Piper",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Sleeper Agents: Evan Hubinger at EA Global Bay Area 2024",
+    "href": "https://www.youtube.com/watch?v=BgfT0AcosHw",
+    "note": "Effective Altruism conference talk",
+    "topic": "Reward hacking & misalignment",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training",
+    "href": "https://arxiv.org/abs/2401.05566",
+    "note": "Hubinger et al., 2024",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Softmax Linear Units",
+    "href": "https://transformer-circuits.pub/2022/solu/index.html",
+    "note": "Anthropic",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Sorting Pebbles Into Correct Heaps",
+    "href": "https://www.youtube.com/watch?v=cLXQnnVWJGo",
+    "note": "Eliezer Yudkowsky, animated by Rational Animations",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "SPAR: Research Program for AI Risks",
+    "href": "https://sparai.org",
+    "note": "Mentored AI safety and policy research",
+    "topic": "Fellowships & training",
+    "format": "Opportunity",
+    "collection": "careers",
+    "subtopic": "Fellowships & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Sparse Autoencoders Do Not Find Canonical Units of Analysis",
+    "href": "https://arxiv.org/abs/2502.04878",
+    "note": "Patrick Leask et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Sparse Autoencoders Trained on the Same Data Learn Different Features",
+    "href": "https://arxiv.org/abs/2501.16615",
+    "note": "Gonçalo Paulo and Nora Belrose, 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Sparse Crosscoders for Cross-Layer Features and Model Diffing",
+    "href": "https://transformer-circuits.pub/2024/crosscoders",
+    "note": "Anthropic",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+    "href": "https://arxiv.org/abs/2403.19647",
+    "note": "Samuel Marks et al., 2024",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Specification Gaming Examples in AI: Master List",
+    "href": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRPiprOaC3HsCf5Tuum8bRfzYUiKLRqJmbOoC-32JorNdfyTiRRsR7Ea5eWtvsWzuxo8bjOxCG84dAg/pubhtml",
+    "note": "Collected examples of unintended reward optimization",
+    "topic": "Reward hacking & misalignment",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Specification Gaming Examples: GT AISI Selection",
+    "href": "https://docs.google.com/spreadsheets/d/1lq_Ei3qBhTcosL3IAIt8CmQrILqKyaTIOwuJWaOWqmM",
+    "note": "Annotated examples for discussion",
+    "topic": "Reward hacking & misalignment",
+    "format": "Collection",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Specification Gaming: The Flip Side of AI Ingenuity",
+    "href": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity",
+    "note": "Victoria Krakovna and colleagues, DeepMind",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Statement on AI Risk",
+    "href": "https://aistatement.com",
+    "note": "Center for AI Safety",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Steering Llama 2 via Contrastive Activation Addition",
+    "href": "https://arxiv.org/abs/2312.06681",
+    "note": "Nina Panickssery et al., 2023",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Stress-Testing Capability Elicitation with Password-Locked Models: Research Overview",
+    "href": "https://www.lesswrong.com/posts/c4sZqhqPwNKGz3fFW",
+    "note": "Fabien Roger and Ryan Greenblatt",
+    "topic": "Evaluations & red teaming",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Structured Access: An Emerging Paradigm for Safe AI Deployment",
+    "href": "https://arxiv.org/abs/2201.05159",
+    "note": "Toby Shevlane, 2022",
+    "topic": "Misuse & security",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Subliminal Effects in Your Data: A General Mechanism via Log-Linearity",
+    "href": "https://arxiv.org/abs/2602.04863",
+    "note": "Ishaq Aden-Ali et al., 2026",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Subliminal Learning: Language Models Transmit Behavioral Traits via Hidden Signals in Data",
+    "href": "https://alignment.anthropic.com/2025/subliminal-learning",
+    "note": "Anthropic Alignment Science",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Superintelligence Strategy",
+    "href": "https://nationalsecurity.ai",
+    "note": "National security and strategic competition",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Superintelligence Strategy: Expert Version",
+    "href": "https://arxiv.org/abs/2503.05628",
+    "note": "Dan Hendrycks, Eric Schmidt, and Alexandr Wang",
+    "topic": "Policy foundations",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Superposition, Memorization, and Double Descent",
+    "href": "https://transformer-circuits.pub/2023/toy-double-descent",
+    "note": "Tom Henighan et al.",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Sycophancy to Subterfuge: Investigating Reward Tampering in Language Models",
+    "href": "https://anthropic.com/research/reward-tampering",
+    "note": "Anthropic research overview",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Testing the Limits of Jailbreaking Defenses with the Purple Problem",
+    "href": "https://arxiv.org/abs/2403.14725",
+    "note": "Taeyoun Kim et al., 2024",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The (Un)reliability of Saliency Methods",
+    "href": "https://arxiv.org/abs/1711.00867",
+    "note": "Pieter-Jan Kindermans et al., 2017",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "The AI Regulator’s Toolbox: A List of Concrete AI Governance Practices",
+    "href": "https://adamjones.me/blog/ai-regulator-toolbox",
+    "note": "Adam Jones",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "The AI Triad and What It Means for National Security Strategy",
+    "href": "https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Triad-Report.pdf",
+    "note": "Ben Buchanan, CSET, 2020",
+    "topic": "Policy foundations",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "The Alignment Problem from a Deep Learning Perspective",
+    "href": "https://arxiv.org/abs/2209.00626",
+    "note": "Richard Ngo, Lawrence Chan and Soeren Mindermann",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      1,
+      3,
+      4,
+      7,
+      8
+    ]
+  },
+  {
+    "title": "The Bitter Lesson",
+    "href": "http://incompleteideas.net/IncIdeas/BitterLesson.html",
+    "note": "Richard Sutton",
+    "topic": "ML fundamentals",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      3,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Case Against AI Control Research",
+    "href": "https://www.lesswrong.com/posts/8wBN8cdNAv3c7vt6p",
+    "note": "John Wentworth",
+    "topic": "AI control",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "The Case for AGI by 2030",
+    "href": "https://benjamintodd.substack.com/p/the-case-for-agi-by-2030",
+    "note": "Benjamin Todd",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Case for AI Liability",
+    "href": "https://ai-frontiers.org/articles/case-for-ai-liability",
+    "note": "Gabriel Weil",
+    "topic": "Law & liability",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Case for Ensuring That Powerful AIs Are Controlled",
+    "href": "https://www.lesswrong.com/posts/kcKrE9mzEHrdqtDpE",
+    "note": "AI control as a deployment safeguard",
+    "topic": "AI control",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "AI control",
+    "sources": [
+      1,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "The Case for Multi-Decade AI Timelines",
+    "href": "https://epoch.ai/gradient-updates/the-case-for-multi-decade-ai-timelines",
+    "note": "Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Circuits Research Landscape: Results and Perspectives",
+    "href": "https://neuronpedia.org/graph/info",
+    "note": "Anthropic, Decode, Google DeepMind, EleutherAI and Goodfire",
+    "topic": "Interpretability",
+    "format": "Report",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "The Easy Goal Inference Problem Is Still Hard",
+    "href": "https://ai-alignment.com/the-easy-goal-inference-problem-is-still-hard-fad030e0a876",
+    "note": "Paul Christiano, 2018",
+    "topic": "Alignment & training",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "The Economic Impacts and the Regulation of AI: A Review of the Academic Literature and Policy Actions",
+    "href": "https://imf.org/en/Publications/WP/Issues/2024/03/22/The-Economic-Impacts-and-the-Regulation-of-AI-A-Review-of-the-Academic-Literature-and-546645",
+    "note": "Mariarosaria Comunale and Andrea Manera, IMF, 2024",
+    "topic": "Economics & society",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "The Free World Must Prevail",
+    "href": "https://situational-awareness.ai/the-free-world-must-prevail",
+    "note": "Leopold Aschenbrenner, Situational Awareness",
+    "topic": "International coordination",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      2,
+      3
+    ]
+  },
+  {
+    "title": "The Future of Phishing",
+    "href": "https://civai.org/p/email-phishing",
+    "note": "CivAI",
+    "topic": "Misuse & security",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The H20 Problem: Inference, Supercomputers, and US Export Control Gaps",
+    "href": "https://ifp.org/the-h20-problem",
+    "note": "Institute for Progress",
+    "topic": "Compute & hardware",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Compute & hardware",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "The Implausibility of an Intelligence Explosion",
+    "href": "https://medium.com/@francois.chollet/the-impossibility-of-intelligence-explosion-5be4a9eda6ec",
+    "note": "François Chollet",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+    "href": "https://arxiv.org/abs/2404.13208",
+    "note": "Eric Wallace et al., 2024",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Limits of Preference Data for Post-Training",
+    "href": "https://arxiv.org/abs/2505.19964",
+    "note": "Eric Zhao et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Linear Representation Hypothesis and the Geometry of Large Language Models",
+    "href": "https://arxiv.org/abs/2311.03658",
+    "note": "Kiho Park et al., 2023",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "The Long-Term Benefit Trust",
+    "href": "https://anthropic.com/news/the-long-term-benefit-trust",
+    "note": "Anthropic, 2023",
+    "topic": "Corporate governance",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "The Misguided Quest for Mechanistic AI Interpretability",
+    "href": "https://ai-frontiers.org/articles/the-misguided-quest-for-mechanistic-ai-interpretability",
+    "note": "Dan Hendrycks, AI Frontiers",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Neural Net Tank Urban Legend",
+    "href": "https://gwern.net/tank",
+    "note": "Gwern",
+    "topic": "Safety case studies",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "The Overton Window",
+    "href": "https://mackinac.org/OvertonWindow",
+    "note": "Mackinac Center for Public Policy",
+    "topic": "Policy foundations",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "The Persona Selection Model: Why AI Assistants Might Behave Like Humans",
+    "href": "https://alignment.anthropic.com/2026/psm",
+    "note": "Anthropic Alignment Science",
+    "topic": "Alignment & training",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "The Platonic Representation Hypothesis",
+    "href": "https://arxiv.org/abs/2405.07987",
+    "note": "Convergence of learned model representations",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "The Power of Intelligence",
+    "href": "https://www.youtube.com/watch?v=q9Figerh89g",
+    "note": "Eliezer Yudkowsky, animated by Rational Animations",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "The Problem",
+    "href": "https://intelligence.org/the-problem",
+    "note": "Machine Intelligence Research Institute",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "The Problem",
+    "href": "https://www.lesswrong.com/posts/kgb58RL88YChkkBNf",
+    "note": "Rob Bensinger, tanagrabeast, and yams",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Scaling Hypothesis",
+    "href": "https://gwern.net/scaling-hypothesis",
+    "note": "Gwern",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Spelled-Out Intro to Neural Networks and Backpropagation: Building Micrograd",
+    "href": "https://www.youtube.com/watch?v=VMj-3S1tku0",
+    "note": "Andrej Karpathy",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "The State of State AI Law: What’s Coming Now That the Federal Moratorium Is Dead",
+    "href": "https://carnegieendowment.org/research/2025/07/state-ai-law-whats-coming-now-that-the-federal-moratorium-is-dead?lang=en",
+    "note": "Alasdair Phillips-Robins and Scott Singer",
+    "topic": "Regulation & standards",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "Regulation & standards",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Superintelligent Will",
+    "href": "https://nickbostrom.com/superintelligentwill.pdf",
+    "note": "Nick Bostrom",
+    "topic": "Arguments & critiques",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Surprising Power of Next Word Prediction: Large Language Models Explained, Part 1",
+    "href": "https://cset.georgetown.edu/article/the-surprising-power-of-next-word-prediction-large-language-models-explained-part-1",
+    "note": "Center for Security and Emerging Technology",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Urgency of Interpretability",
+    "href": "https://darioamodei.com/post/the-urgency-of-interpretability",
+    "note": "Dario Amodei",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "The Vulnerable World Hypothesis",
+    "href": "https://nickbostrom.com/papers/vulnerable.pdf",
+    "note": "Nick Bostrom",
+    "topic": "Misuse & security",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "The Windfall Clause: Distributing the Benefits of AI for the Common Good",
+    "href": "https://arxiv.org/abs/1912.11595",
+    "note": "Cullen O'Keefe et al., 2019",
+    "topic": "Corporate governance",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+    "href": "https://arxiv.org/abs/2403.03218",
+    "note": "Benchmark paper on hazardous knowledge and unlearning",
+    "topic": "Unlearning",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Therac-25 Radiation Therapy Machine",
+    "href": "https://en.wikipedia.org/wiki/Therac-25",
+    "note": "Wikiwand",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "This Can’t Go On",
+    "href": "https://cold-takes.com/this-cant-go-on",
+    "note": "Holden Karnofsky, Cold Takes",
+    "topic": "Scenarios & trajectories",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Tiktokenizer",
+    "href": "https://tiktokenizer.vercel.app",
+    "note": "Interactive tokenizer and token visualization",
+    "topic": "ML fundamentals",
+    "format": "Tool",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Timelines Forecast",
+    "href": "https://ai-2027.com/research/timelines-forecast",
+    "note": "Eli Lifeland and colleagues, AI 2027",
+    "topic": "Timelines & scaling",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "TOFU: A Task of Fictitious Unlearning for LLMs",
+    "href": "https://arxiv.org/abs/2401.06121",
+    "note": "Pratyush Maini et al., 2024",
+    "topic": "Unlearning",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Together AI Chat",
+    "href": "https://chat.together.ai",
+    "note": "Chat interface used for red-teaming exercises",
+    "topic": "Evaluations & red teaming",
+    "format": "Tool",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Token Entanglement in Subliminal Learning",
+    "href": "https://openreview.net/pdf?id=auKgpBRzIW",
+    "note": "Amir Zur et al., 2025",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Tom Davidson on How AI-Enabled Coups Could Allow a Tiny Group to Seize Power",
+    "href": "https://80000hours.org/podcast/episodes/tom-davidson-ai-enabled-human-power-grabs",
+    "note": "80,000 Hours",
+    "topic": "Policy foundations",
+    "format": "Podcast",
+    "collection": "governance",
+    "subtopic": "Policy foundations",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+    "href": "https://arxiv.org/abs/1706.06083",
+    "note": "Aleksander Madry et al.",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Towards Developmental Interpretability",
+    "href": "https://www.lesswrong.com/posts/TjaeCWvLZtEDAS5Ex",
+    "note": "A research agenda connecting learning dynamics and interpretability",
+    "topic": "Interpretability",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+    "href": "https://transformer-circuits.pub/2023/monosemantic-features",
+    "note": "Anthropic, 2023",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Toy Models of Superposition",
+    "href": "https://transformer-circuits.pub/2022/toy_model",
+    "note": "Elhage et al., 2022",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Toyota to Pay $1.2 Billion for Hiding Deadly Unintended Acceleration",
+    "href": "https://abcnews.go.com/Blotter/toyota-pay-12b-hiding-deadly-unintended-acceleration/story?id=22972214",
+    "note": "ABC News",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Tracking Large-Scale AI Models",
+    "href": "https://epochai.org/blog/tracking-large-scale-ai-models",
+    "note": "Robi Rahman et al., Epoch AI, 2024",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "href": "https://arxiv.org/abs/2204.05862",
+    "note": "Yuntao Bai et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Training AGI in Secret Would Be Unsafe and Unethical",
+    "href": "https://blog.ai-futures.org/p/training-agi-in-secret-would-be-unsafe",
+    "note": "Daniel Kokotajlo",
+    "topic": "Corporate governance",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Training Compute-Optimal Large Language Models",
+    "href": "https://arxiv.org/abs/2203.15556",
+    "note": "Jordan Hoffmann et al.",
+    "topic": "Timelines & scaling",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Training Language Models to Explain Their Own Computations",
+    "href": "https://arxiv.org/abs/2511.08579",
+    "note": "Belinda Z. Li et al., 2025",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Training Language Models to Follow Instructions with Human Feedback",
+    "href": "https://arxiv.org/abs/2203.02155",
+    "note": "Long Ouyang et al.",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Training Language Models with Language Feedback",
+    "href": "https://arxiv.org/abs/2204.14146",
+    "note": "Scheurer et al., 2022",
+    "topic": "Alignment & training",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Alignment & training",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Training on Documents About Reward Hacking Induces Reward Hacking",
+    "href": "https://alignment.anthropic.com/2025/reward-hacking-ooc",
+    "note": "Anthropic Alignment Science",
+    "topic": "Reward hacking & misalignment",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Transformers from Scratch",
+    "href": "https://e2eml.school/transformers.html",
+    "note": "Brandon Rohrer",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Transformers, the Tech Behind LLMs",
+    "href": "https://www.youtube.com/watch?v=wjZofJX0v4M",
+    "note": "3Blue1Brown, Deep Learning Chapter 5",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      2,
+      8
+    ]
+  },
+  {
+    "title": "Trends in AI: Training Costs and Diffusion Speed",
+    "href": "https://dewierwan.github.io/ai-training-diffusion",
+    "note": "Interactive training-cost and diffusion visualizations",
+    "topic": "Timelines & scaling",
+    "format": "Tool",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Trends in Artificial Intelligence",
+    "href": "https://epochai.org/trends",
+    "note": "Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Collection",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "U.S. AI Statecraft",
+    "href": "https://cset.georgetown.edu/publication/u-s-ai-statecraft",
+    "note": "Center for Security and Emerging Technology",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "U.S. Export Controls of AI Models",
+    "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4741033",
+    "note": "Bloomfield, 2024",
+    "topic": "Misuse & security",
+    "format": "Paper",
+    "collection": "governance",
+    "subtopic": "Misuse & security",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "U.S. Tort Liability for Large-Scale Artificial Intelligence Damages: A Primer for Developers and Policymakers",
+    "href": "https://rand.org/pubs/research_reports/RRA3084-1.html",
+    "note": "Ramakrishnan, Smith and Downey, RAND, 2024",
+    "topic": "Law & liability",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Understanding Intermediate Layers Using Linear Classifier Probes",
+    "href": "https://arxiv.org/abs/1610.01644",
+    "note": "Guillaume Alain and Yoshua Bengio",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Understanding Memorization via Loss Curvature",
+    "href": "https://goodfire.ai/research/understanding-memorization-via-loss-curvature",
+    "note": "Goodfire",
+    "topic": "Unlearning",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Unlearning",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "Understanding the Difference Between AI, ML, and DL: Using an Incredibly Simple Example",
+    "href": "https://advancinganalytics.co.uk/blog/2021/12/15/understanding-the-difference-between-ai-ml-and-dl-using-an-incredibly-simple-example",
+    "note": "Advancing Analytics",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+    "href": "https://arxiv.org/abs/2307.15043",
+    "note": "Zou et al., 2023",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Universal Jailbreak Backdoors from Poisoned Human Feedback",
+    "href": "https://arxiv.org/abs/2311.14455",
+    "note": "Javier Rando and Florian Tramèr",
+    "topic": "Evaluations & red teaming",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "Unresolved Debates About the Future of AI",
+    "href": "https://helentoner.substack.com/p/unresolved-debates-about-the-future",
+    "note": "Helen Toner",
+    "topic": "Scenarios & trajectories",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Verifying International Agreements on AI",
+    "href": "https://rand.org/pubs/working_papers/WRA4077-1.html",
+    "note": "RAND working paper",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Visualizing the Deep Learning Revolution",
+    "href": "https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5",
+    "note": "Richard Ngo, 2023",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Volkswagen Emissions Scandal",
+    "href": "https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal",
+    "note": "Wikiwand",
+    "topic": "Safety case studies",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "Safety case studies",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "We’re Not Ready for AI Liability",
+    "href": "https://ai-frontiers.org/articles/options-for-ai-liability",
+    "note": "Kevin Frazier",
+    "topic": "Law & liability",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Law & liability",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "We’re Not Ready for Superintelligence",
+    "href": "https://www.youtube.com/watch?v=5KVDDfAkRgc",
+    "note": "AI In Context, AI 2027 scenario",
+    "topic": "Scenarios & trajectories",
+    "format": "Video",
+    "collection": "forecasting",
+    "subtopic": "Scenarios & trajectories",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision",
+    "href": "https://arxiv.org/abs/2312.09390",
+    "note": "Burns et al., 2023",
+    "topic": "Scalable oversight",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "title": "Weaponized AI: A New Era of Threats and How We Can Counter It",
+    "href": "https://ash.harvard.edu/articles/weaponized-ai-a-new-era-of-threats/",
+    "note": "Shlomit Wagman on international safeguards modeled on the Financial Action Task Force",
+    "topic": "International coordination",
+    "format": "Article",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Weird Generalization and Inductive Backdoors: New Ways to Corrupt LLMs",
+    "href": "https://arxiv.org/abs/2512.09742",
+    "note": "Jan Betley et al., 2025",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Welcome to the Era of Experience",
+    "href": "https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf",
+    "note": "David Silver and Richard Sutton",
+    "topic": "ML fundamentals",
+    "format": "Paper",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "What AI Companies Can Do Today to Help with the Most Important Century",
+    "href": "https://cold-takes.com/what-ai-companies-can-do-today-to-help-with-the-most-important-century",
+    "note": "Holden Karnofsky",
+    "topic": "Corporate governance",
+    "format": "Essay",
+    "collection": "governance",
+    "subtopic": "Corporate governance",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "What Are Probing Classifiers?",
+    "href": "https://blog.bluedot.org/p/what-are-probing-classifiers",
+    "note": "BlueDot Impact",
+    "topic": "Interpretability",
+    "format": "Article",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      5,
+      6
+    ]
+  },
+  {
+    "title": "What Do Neural Networks Really Learn? Exploring the Brain of an AI Model",
+    "href": "https://www.youtube.com/watch?v=jGCvY4gNnA8",
+    "note": "Rational Animations",
+    "topic": "Interpretability",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "What Is a Foundation Model?",
+    "href": "https://www.adalovelaceinstitute.org/resource/explainer-foundation-models/",
+    "note": "Elliot Jones, Ada Lovelace Institute, 2023",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "What Is AI Alignment?",
+    "href": "https://bluedot.org/blog/what-is-ai-alignment",
+    "note": "Adam Jones, BlueDot Impact",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "What Is Mechanistic Interpretability? Neel Nanda Explains",
+    "href": "https://www.youtube.com/watch?v=sISodZSxNvc",
+    "note": "AXRP interview clip",
+    "topic": "Interpretability",
+    "format": "Video",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "What Is Self-Supervised Learning?",
+    "href": "https://www.youtube.com/watch?v=sJzuNAisXHA",
+    "note": "Codebasics",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "What risks does AI pose?",
+    "href": "https://bluedot.org/blog/ai-risks",
+    "note": "Adam Jones, BlueDot Impact",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1,
+      5,
+      6
+    ]
+  },
+  {
+    "title": "What Will GPT-2030 Look Like?",
+    "href": "https://bounded-regret.ghost.io/what-will-gpt-2030-look-like/",
+    "note": "Jacob Steinhardt",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "title": "When Can We Trust Model Evaluations?",
+    "href": "https://www.lesswrong.com/posts/dBmfb76zx6wjPsBC7",
+    "note": "Evan Hubinger, 2023",
+    "topic": "Evaluations & red teaming",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Evaluations & red teaming",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "When ChatGPT Broke an Entire Field: An Oral History",
+    "href": "https://quantamagazine.org/when-chatgpt-broke-an-entire-field-an-oral-history-20250430",
+    "note": "Quanta Magazine",
+    "topic": "ML fundamentals",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "title": "When Decades Become Days: Dissecting AI 2027",
+    "href": "https://secondthoughts.ai/p/ai-2027",
+    "note": "Steve Newman, Second Thoughts",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Where’s My Ten Minute AGI?",
+    "href": "https://epochai.substack.com/p/wheres-my-ten-minute-agi",
+    "note": "Anson Ho, Epoch AI",
+    "topic": "Timelines & scaling",
+    "format": "Essay",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Which Economic Tasks Are Performed with AI? Evidence from Millions of Claude Conversations",
+    "href": "https://arxiv.org/abs/2503.04761",
+    "note": "Handa et al., Anthropic Economic Index, 2025",
+    "topic": "Economics & society",
+    "format": "Paper",
+    "collection": "forecasting",
+    "subtopic": "Economics & society",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Why AI Alignment Could Be Hard with Modern Deep Learning",
+    "href": "https://cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning",
+    "note": "Ajeya Cotra",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      4,
+      7,
+      8
+    ]
+  },
+  {
+    "title": "Why Do Large Language Models Hallucinate?",
+    "href": "https://garymarcus.substack.com/p/why-do-large-language-models-hallucinate",
+    "note": "Gary Marcus",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Why Do People Disagree About When Powerful AI Will Arrive?",
+    "href": "https://bluedot.org/blog/agi-timelines",
+    "note": "BlueDot Impact",
+    "topic": "Timelines & scaling",
+    "format": "Article",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Why Do Some Language Models Fake Alignment While Others Don't?",
+    "href": "https://arxiv.org/abs/2506.18032",
+    "note": "Abhay Sheshadri et al., 2025",
+    "topic": "Reward hacking & misalignment",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Reward hacking & misalignment",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "title": "Why I’m Excited About AI-Assisted Human Feedback",
+    "href": "https://aligned.substack.com/p/ai-assisted-human-feedback",
+    "note": "Jan Leike",
+    "topic": "Scalable oversight",
+    "format": "Essay",
+    "collection": "technical",
+    "subtopic": "Scalable oversight",
+    "sources": [
+      4,
+      7
+    ]
+  },
+  {
+    "title": "Why Might Misaligned, Advanced AI Cause Catastrophe?",
+    "href": "https://bluedot.org/blog/why-might-misaligned-advanced-ai-cause-catastrophe-compilation",
+    "note": "BlueDot Impact compilation",
+    "topic": "AI safety foundations",
+    "format": "Article",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Why Would AI Want to Do Bad Things? Instrumental Convergence",
+    "href": "https://www.youtube.com/watch?v=ZeecOKBus3Q",
+    "note": "Robert Miles",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      1,
+      2
+    ]
+  },
+  {
+    "title": "Will AI R&D Automation Cause a Software Intelligence Explosion?",
+    "href": "https://forethought.org/research/will-ai-r-and-d-automation-cause-a-software-intelligence-explosion",
+    "note": "Forethought",
+    "topic": "Timelines & scaling",
+    "format": "Report",
+    "collection": "forecasting",
+    "subtopic": "Timelines & scaling",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "title": "Winning the Tech Talent Competition",
+    "href": "https://csis.org/analysis/winning-tech-talent-competition",
+    "note": "Remco Zwetsloot, CSIS, 2021",
+    "topic": "International coordination",
+    "format": "Report",
+    "collection": "governance",
+    "subtopic": "International coordination",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Without Specific Countermeasures, the Easiest Path to Transformative AI Likely Leads to AI Takeover",
+    "href": "https://www.lesswrong.com/posts/pRkFkzwKZ2zfa3R6H",
+    "note": "Ajeya Cotra, 2022",
+    "topic": "Arguments & critiques",
+    "format": "Essay",
+    "collection": "foundations",
+    "subtopic": "Arguments & critiques",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "title": "Writing Doom",
+    "href": "https://www.youtube.com/watch?v=xfMQ7hzyFW4",
+    "note": "Foregone Films, 2024 short film",
+    "topic": "AI safety foundations",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "AI safety foundations",
+    "sources": [
+      2
+    ]
+  },
+  {
+    "title": "Yann LeCun: Self-Supervised Learning Explained",
+    "href": "https://www.youtube.com/watch?v=JNiY0RXxFZY",
+    "note": "Lex Fridman Podcast Clips",
+    "topic": "ML fundamentals",
+    "format": "Video",
+    "collection": "foundations",
+    "subtopic": "ML fundamentals",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "title": "Zoom In: An Introduction to Circuits",
+    "href": "https://distill.pub/2020/circuits/zoom-in",
+    "note": "Chris Olah and colleagues, Distill",
+    "topic": "Interpretability",
+    "format": "Paper",
+    "collection": "technical",
+    "subtopic": "Interpretability",
+    "sources": [
+      1,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+]

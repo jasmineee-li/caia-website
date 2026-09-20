@@ -139,10 +139,6 @@ export const TEAM_GROUPS: TeamGroup[] = [
     title: "Alumni",
     members: [
       {
-        imageSrc: "/team/TEAM_leo_piff.jpg",
-        name: "Leo Piff",
-      },
-      {
         imageSrc: "/team/TEAM_jonathn_chang.png",
         name: "Jonathn Chang",
         role: "MATS Scholar at SaferAI",

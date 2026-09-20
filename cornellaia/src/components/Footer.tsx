@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import CircularText from "@/components/ui/CircularText";
+import { HOME_CTA_ITEMS } from "@/content/home";
 
 export default function Footer() {
   return (
@@ -15,13 +16,16 @@ export default function Footer() {
             >
               CAIA members
             </Link>
-            . Email us at{" "}
+            . Reach out to us on our{" "}
             <a
-              href="mailto:cornellaialignment@gmail.com"
+              href={HOME_CTA_ITEMS[0].href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="focus-ring rounded-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong"
             >
-              cornellaialignment@gmail.com
+              Slack
             </a>
+            .
           </p>
 
           <div className="space-y-2 text-sm text-slate-600 sm:text-[0.95rem]">

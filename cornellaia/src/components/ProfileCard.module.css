@@ -1,0 +1,11 @@
+.profile { min-width: 0; padding: 0 2px; }
+.portraitStage { position: relative; width: min(calc(85% - 20.4px), 132.6px); aspect-ratio: 1; flex-shrink: 0; }
+.portrait { position: absolute; inset: 0; }
+.linkRow { display: flex; justify-content: center; min-height: 40px; margin: 8px 0; }
+.profileLink { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #475569; }
+.iconButton { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #e2e8f0; border-radius: 50%; background: #fff; transition: border-color .2s, color .2s, background .2s; }
+.profileLink:hover .iconButton, .profileLink:focus-visible .iconButton { border-color: #b31b1b66; color: #b31b1b; background: #fff8f7; }
+.profileLink:focus-visible { outline: 2px solid #b31b1b; outline-offset: 1px; }
+@media (prefers-reduced-motion: reduce) {
+  .iconButton { transition: none; }
+}

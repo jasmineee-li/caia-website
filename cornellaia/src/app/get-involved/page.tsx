@@ -18,7 +18,7 @@ export default function GetInvolvedPage() {
   return (
     <main>
       <Section
-        title="CS 1998 — Intro to AI Safety & Alignment"
+        title="CS 1998: Intro to AI Safety & Alignment"
         subtitle="A student-led Cornell course focused on AI safety and alignment."
       >
         <MotionReveal>
@@ -33,6 +33,7 @@ export default function GetInvolvedPage() {
                 The format emphasizes hands-on notebooks, paper-driven discussion, and a final
                 project to help students build both conceptual understanding and practical skills.
               </p>
+              <p>Fall 2026 enrollment is closed. We’ll run the course in future semesters. Join our Slack for updates.</p>
             </div>
             <div className="mt-6">
               <Button href="/programs/cs1998">View CS 1998 course page</Button>
@@ -63,7 +64,7 @@ export default function GetInvolvedPage() {
                       Reach out at{" "}
                       <a
                         href="mailto:cornellaialignment@gmail.com"
-                        className="font-semibold text-brand-red underline underline-offset-4"
+                        className="font-semibold text-slate-900 underline underline-offset-4"
                       >
                         cornellaialignment@gmail.com
                       </a>{" "}

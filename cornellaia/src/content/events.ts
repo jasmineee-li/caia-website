@@ -17,6 +17,10 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Open House & Mocktail Mixer",
+    embedUrl: "https://luma.com/embed/event/evt-9DwdWxEE8Bizvmj/simple",
+  },
+  {
     title: "CAIA Reading Group #2: Emergent Misalignment & Narrow Finetuning",
     embedUrl: "https://luma.com/embed/event/evt-KyYeXM2StPOWIzg/simple",
   },

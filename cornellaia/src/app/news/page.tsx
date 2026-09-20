@@ -1,92 +1,55 @@
 import Image from "next/image";
-import type { Metadata } from "next";
-import Card from "@/components/ui/Card";
-import MotionReveal from "@/components/ui/MotionReveal";
-import Section from "@/components/ui/Section";
-import Badge from "@/components/ui/Badge";
+import Container from "@/components/ui/Container";
+import NewsArchive from "@/components/NewsArchive";
 import { NEWS_ITEMS } from "@/content/news";
 import { createPageMetadata } from "@/content/seo";
+import styles from "./news.module.css";
 
-export const metadata: Metadata = createPageMetadata({
+export const metadata = createPageMetadata({
   title: "News",
-  description:
-    "Read recent Cornell AI Alignment news covering research milestones, events, and policy announcements.",
   path: "/news",
-  keywords: ["CAIA news", "AI safety updates", "Cornell AI Alignment news"],
+  description: "Research news, community milestones, and the latest from Cornell AI Alignment.",
 });
 
 export default function NewsPage() {
-  const chronologicalNews = [...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+  const news = [...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+  const linkStyle = "font-semibold underline decoration-slate-400 underline-offset-4 hover:decoration-current";
 
   return (
     <main>
-      <Section
-        title="News"
-        subtitle="Updates from Cornell AI Alignment."
-      >
-        <div className="space-y-6">
-          {chronologicalNews.map((item, index) => (
-            <MotionReveal
-              key={`${item.title}-${item.date}`}
-              delayClass={index > 0 ? "motion-delay-1" : undefined}
-            >
-              <Card className="space-y-4">
-                {item.imageSrc && (
-                  <div className="relative overflow-hidden rounded-lg border border-slate-200">
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.imageAlt || item.title}
-                      width={1200}
-                      height={760}
-                      className="h-auto w-full object-cover"
-                      loading="lazy"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 92vw, 1100px"
-                      quality={80}
-                    />
-                  </div>
-                )}
-
-                <div className="flex flex-wrap items-center gap-3">
-                  <Badge>{item.category}</Badge>
-                  <time dateTime={item.date} className="text-sm text-slate-500">
-                    {item.displayDate}
-                  </time>
-                </div>
-
-                <h3 className="text-2xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-slate-700">{item.summary}</p>
-
-                {item.href && (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong"
-                  >
-                    Read update
-                  </a>
-                )}
-
-                {item.links && item.links.length > 0 && (
-                  <div className="flex flex-wrap gap-3">
-                    {item.links.map((link) => (
-                      <a
-                        key={`${item.title}-${link.label}`}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </Card>
-            </MotionReveal>
-          ))}
+      <Container className="pt-14 sm:pt-20">
+        <div className={styles.layout}>
+        <div className={styles.intro}>
+        <h1 className="display-title text-4xl sm:text-5xl">News</h1>
+        <p className="lead-copy mt-5 max-w-2xl">Research publications, program announcements, and member news.</p>
         </div>
-      </Section>
+        <aside className={styles.index}><NewsArchive news={news} /></aside>
+        <ol aria-label="News updates, newest first" className={`${styles.feed} list-none space-y-12 sm:space-y-16`}>
+          {news.map(item => (
+            <li key={`${item.date}-${item.title}`}>
+              <article id={item.date} aria-labelledby={`news-${item.date}`} className="scroll-mt-28">
+                  <time dateTime={item.date} className="block text-sm text-slate-500 sm:text-base">{item.displayDate}</time>
+                  <h2 id={`news-${item.date}`} className="mt-3 text-2xl leading-snug text-brand-red sm:text-3xl">{item.title}</h2>
+                  {item.imageSrc?.startsWith("/news/") && (
+                    <Image src={item.imageSrc} alt={item.imageAlt ?? ""} width={360} height={240} sizes="(max-width: 400px) calc(100vw - 32px), 360px" className="mt-6 h-auto w-full max-w-[360px]" />
+                  )}
+                  <p className="mt-5 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">{item.summary}</p>
+                  {item.href && (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className={`mt-4 inline-block text-base ${linkStyle}`}>Read more<span className="sr-only"> about {item.title} (opens in a new tab)</span></a>
+                  )}
+                  {!!item.links?.length && (
+                    <ul aria-label={`Links for ${item.title}`} className="mt-4 list-none space-y-2 text-base leading-6 text-slate-700">
+                      {item.links.map(link => (
+                        <li key={link.href}><a href={link.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{link.label}<span className="sr-only"> (opens in a new tab)</span></a></li>
+                      ))}
+                    </ul>
+                  )}
+              </article>
+            </li>
+          ))}
+        </ol>
+        </div>
+      </Container>
     </main>
   );
 }

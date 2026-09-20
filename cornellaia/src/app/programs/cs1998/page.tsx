@@ -3,6 +3,7 @@ import ProfileCard from "@/components/ProfileCard";
 import Badge from "@/components/ui/Badge";
 import Squares from "@/components/ui/Squares";
 import { SITE_URL } from "@/content/seo";
+import { HOME_CTA_ITEMS } from "@/content/home";
 import styles from "./cs1998.module.css";
 
 interface MaterialItem {
@@ -240,7 +241,7 @@ const COURSE_WEEKS: CourseWeek[] = [
   },
   {
     number: 5,
-    description: "Evaluations—Evaluating Dangerous Capabilities",
+    description: "Evaluating Dangerous Capabilities",
     topics: [
       "Threat modeling and capability elicitation before benchmark design.",
       "Evaluations for cyber, biological, persuasion, deception, autonomy, and self-proliferation capabilities.",
@@ -398,7 +399,7 @@ const COURSE_STAFF: CourseStaffMember[] = [
 ];
 
 const COURSE_DESCRIPTION =
-  "CS 1998 is a student-led, technically focused introduction to AI Safety and Alignment at Cornell for Fall 2026.";
+  "CS 1998 is a student-led introduction to AI Safety and Alignment at Cornell. Fall 2026 enrollment is closed. Future semesters are planned.";
 
 const COURSE_OG_DESCRIPTION =
   "Fall 2026 CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with discussion readings and technical notebooks.";
@@ -578,7 +579,7 @@ export default function CS1998Page() {
                 CS 1998: Intro to AI Safety &amp; Alignment
               </h1>
               <p className="max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
-                1 Credit · 7 Weeks First · S/U Grading · Open Enrollment
+                1 Credit, 7 Weeks First, S/U Grading, Fall enrollment closed
               </p>
               <nav
                 aria-label="CS 1998 sections"
@@ -586,37 +587,37 @@ export default function CS1998Page() {
               >
                 <a
                   href="#content"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Content
                 </a>
                 <a
                   href="#logistics"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Logistics
                 </a>
                 <a
                   href="#staff"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Staff
                 </a>
                 <a
                   href="#grading"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Grading
                 </a>
                 <a
                   href="#calendar"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Calendar
                 </a>
                 <a
                   href="#syllabus"
-                  className="focus-ring text-sm font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 transition hover:text-brand-red hover:decoration-brand-red"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Syllabus
                 </a>
@@ -626,25 +627,25 @@ export default function CS1998Page() {
         </header>
 
         <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
-          <section aria-label="Enroll" className="mt-10">
+          <section aria-label="Enrollment status" className="mt-10">
             <article className="rounded-2xl border border-brand-red/30 bg-gradient-to-br from-brand-red/5 via-white to-white p-6 sm:p-8">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="min-w-0">
                   <h2 className="display-title text-2xl sm:text-3xl">
-                    Enroll today!
+                    Enrollment is closed for Fall 2026
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-                    CS 1998, PRJ 608 · Class number{" "}
-                    <span className="font-semibold text-slate-900">18589</span>
+                    We’ll also run the course in future semesters. Join our Slack for updates.
+                    All course materials are openly accessible below.
                   </p>
                 </div>
                 <a
-                  href="https://classes.cornell.edu/browse/roster/FA26/class/CS/1998"
+                  href={HOME_CTA_ITEMS[0].href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="focus-ring inline-flex shrink-0 items-center justify-center rounded-lg bg-brand-red px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-red-strong sm:text-base"
                 >
-                  Enroll on Class Roster
+                  Join Slack for course updates
                 </a>
               </div>
             </article>
@@ -687,22 +688,11 @@ export default function CS1998Page() {
             <article className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
               <h2 className="display-title text-2xl sm:text-3xl">Content</h2>
               <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
-                CS 1998: Intro to AI Safety &amp; Alignment is a student-led
-                course that explores why advanced AI systems can fail in
-                unexpected and dangerous ways. We begin by building a solid
-                understanding of how modern language models are trained, from
-                pretraining on web-scale data through supervised fine-tuning
-                and reinforcement learning from human feedback. From there, we
-                turn to the core question: how do we ensure these systems do
-                what we actually want? Students will learn key technical ideas
-                in mechanistic interpretability (reverse-engineering model
-                internals to understand what they&apos;ve learned), reward
-                learning (how optimization pressure can produce unintended
-                behaviors like sycophancy and reward hacking), red teaming and
-                adversarial evaluation (systematically probing models for
-                failure modes), and scalable oversight (supervising systems
-                that may exceed human-level performance on the tasks we&apos;re
-                evaluating them on).
+                How can we make AI systems do what we actually want? This
+                student-led course introduces language model training, alignment,
+                interpretability, evaluations, and scalable oversight. Through
+                lectures, hands-on work, and discussion, we connect technical
+                methods with broader questions about AI policy and governance.
               </p>
             </article>
           </section>
@@ -714,8 +704,7 @@ export default function CS1998Page() {
                 <li>This is a 1-credit, 7-week, first S/U course.</li>
                 <li>Location: Phillips Hall 203.</li>
                 <li>
-                  This course is open enrollment (without application), with
-                  around 75 seats.
+                  Enrollment is closed for Fall 2026. Future offerings will be announced through CAIA.
                 </li>
               </ul>
             </article>

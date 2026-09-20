@@ -79,7 +79,7 @@ export default function LetterGlitch({
   centerVignette = false,
   outerVignette = true,
   smooth = true,
-  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789",
+  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{}:<>.,0123456789",
   imageSrc,
   imageFit = "cover",
   quantizationLevels = 6,
