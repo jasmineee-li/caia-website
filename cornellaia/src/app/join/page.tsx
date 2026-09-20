@@ -28,9 +28,9 @@ export default function JoinPage() {
           <div>
             <h2 className="display-title mb-4 text-3xl sm:mb-6 sm:text-4xl">We’re open to everyone</h2>
             <p className="max-w-xl text-base leading-8 sm:text-lg text-slate-600">
-              Our events are open to everyone. Join our Slack and you’re a
-              CAIA member. Come to a discussion, workshop, or social, and meet
-              people exploring how AI can benefit humanity.
+              All of our events are open to everyone. <strong>If you join our Slack, you’re considered a CAIA member!</strong> It’s where we share conversations,
+              announcements, and opportunities. Active and engaged members will
+              be recognized as fellows.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-5">
               <Button href={HOME_CTA_ITEMS[0].href} external>Join our Slack</Button>
