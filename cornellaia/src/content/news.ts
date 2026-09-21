@@ -79,8 +79,6 @@ export const NEWS_ITEMS: NewsItem[] = [
     date: "2025-12-07",
     displayDate: "December 7, 2025",
     category: "Event",
-    imageSrc: "/news/ice-skate-social.jpeg",
-    imageAlt: "CAIA members at an ice skating social",
   },
   {
     title: "CAIA mini-hackathon",
