@@ -18,6 +18,22 @@ export interface ResearchPaperDetail {
 
 export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
   {
+    title: "CogGym: Towards Large-Scale Comparative Evaluation of Human and Machine Cognition",
+    href: "https://arxiv.org/abs/2609.21259",
+    imageSrc: "/papers/paper-coggym.jpg",
+    imageAlt: "First page of CogGym: Towards Large-Scale Comparative Evaluation of Human and Machine Cognition",
+    imageWidth: 2550,
+    imageHeight: 3300,
+    authors: [
+      { name: "Lance Ying" },
+      { name: "Jinzhou Wu", isCaiaMember: true },
+      { name: "et al." },
+    ],
+    abstract:
+      "Understanding and modeling human intelligence are parallel goals shared by artificial intelligence (AI) and cognitive science. As AI systems grow increasingly capable, in what ways do model responses resemble human responses, and where do they systematically diverge? The sheer breadth and diversity of the tasks humans can perform and think about pose a challenge for scalable and rigorous comparison between humans and models. We introduce CogGym, a scalable, unified framework grounded in cognitive science for systematically comparing model and human behavior on matched experimental trials. CogGym uses a semi-automated, human-in-the-loop pipeline to standardize diverse experimental paradigms into a task-agnostic Experiment Markup Language (EML), enabling reproducible and faithful comparison at scale. For initial release, we curate and standardize 258 cognitive experiments from 100 papers that focuses on human commonsense reasoning, and evaluate 50 large language models against human responses. We find a clear scaling trend where larger and more recent AI models better reproduce human judgments. Yet AI models' improvement on such common reasoning tasks is considerably slower than the gains observed on formal-reasoning benchmarks like math and coding, and model--human fit remains well below human splithalf reliability (R2=0.93 on text, 0.95 on image, and 0.92 on video) with the best models achieving R2=0.59 on text, 0.58 on image, and 0.43 on video experiments. We intend for CogGym to provide a living evaluation framework that continually incorporates new cognitive science experiments to characterize where model behavior resembles human behavior, where it systematically diverges, and how those patterns change as models and experiments evolve.",
+    tags: ["Preprint 2026"],
+  },
+  {
     title: "Stubborn or Sycophantic? GEPA-Evolved Prompts Under Pressure",
     href: "https://openreview.net/forum?id=5FcGoSA4WJ",
     imageSrc: "/papers/paper-stubborn-sycophantic.png",
@@ -35,7 +51,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     ],
     abstract:
       "Prompts that discourage sycophancy can also make language models reject valid corrections. This study evaluates frozen system prompts on SycoBench-600 using both correct and misleading user suggestions, separating beneficial corrections from harmful answer changes. Results across Phi-3-mini, Llama-3.1-8B, and Mistral-7B vary by model and prompt. Some interventions reduce harmful reversals while also suppressing useful updates, and no prompt improves correction selectivity across all three models. The findings support evaluating resistance to misleading pressure alongside responsiveness to accurate feedback.",
-    tags: ["COLM 2026 Workshop on Efficient Reasoning", "Forthcoming"],
+    tags: ["COLM 2026 Workshop on Efficient Reasoning"],
     shortTag: "COLM 2026 Workshop",
   },
   {

@@ -89,7 +89,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         name: "Suvadip Sana",
         role: "Co-Lead",
         scholarUrl: "https://scholar.google.com/citations?user=sbXiEbUAAAAJ&hl=en&oi=sra",
-        websiteUrl: "https://sites.google.com/view/suvadipsana/",
+        websiteUrl: "https://suvadip2776.github.io/Suvadip_Website/index.html",
         linkedinUrl: "https://www.linkedin.com/in/suvadip-sana-58779913a/",
       },
       {
