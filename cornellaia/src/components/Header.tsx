@@ -129,19 +129,19 @@ export default function Header() {
 
         <button
           type="button"
-          className="focus-ring rounded-md bg-slate-50 p-2 text-slate-800 lg:hidden"
+          className="focus-ring rounded-md bg-transparent p-2 text-slate-800 lg:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-site-nav"
           onClick={() => setMenuOpen((state) => !state)}
         >
           {menuOpen ? (
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M6 6L18 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
               <path d="M18 6L6 18" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
             </svg>
           ) : (
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 7H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               <path d="M4 17H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />

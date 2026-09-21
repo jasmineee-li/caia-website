@@ -7,6 +7,7 @@ import Card from "@/components/ui/Card";
 import { HOME_CTA_ITEMS } from "@/content/home";
 import { EVENTS_CALENDAR_URL } from "@/content/events";
 import { createPageMetadata } from "@/content/seo";
+import styles from "./join.module.css";
 
 export const metadata = createPageMetadata({
   title: "Join the AI Safety Community",
@@ -79,8 +80,8 @@ export default function JoinPage() {
               We host weekly reading groups and discussions, alongside guest
               talks, workshops, and socials. All events are open to everyone.
             </p>
-            <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 text-sm">
-              <Button href={EVENTS_CALENDAR_URL} external variant="primary">Subscribe on Luma</Button>
+            <div className={`${styles.eventActions} mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 text-sm`}>
+              <Button href={EVENTS_CALENDAR_URL} external variant="primary" aria-label="Subscribe on Luma" className="whitespace-nowrap"><span>Subscribe<span className={styles.lumaSuffix}> on Luma</span></span></Button>
               <Link href="/events#events" className={inlineLink}>Upcoming events</Link>
             </div>
           </Card>

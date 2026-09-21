@@ -560,6 +560,12 @@ export default function CS1998Page() {
                 className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1"
               >
                 <a
+                  href="#staff"
+                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
+                >
+                  Staff
+                </a>
+                <a
                   href="#content"
                   className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
@@ -570,12 +576,6 @@ export default function CS1998Page() {
                   className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
                 >
                   Logistics
-                </a>
-                <a
-                  href="#staff"
-                  className="focus-ring text-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red"
-                >
-                  Staff
                 </a>
                 <a
                   href="#grading"

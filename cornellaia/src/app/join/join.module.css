@@ -1,0 +1,9 @@
+.eventActions {
+  container-type: inline-size;
+}
+
+@container (max-width: 350px) {
+  .lumaSuffix {
+    display: none;
+  }
+}

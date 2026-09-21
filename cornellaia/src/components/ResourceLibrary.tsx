@@ -142,8 +142,8 @@ export default function ResourceLibrary() {
           <div><h3 ref={heading} tabIndex={-1}>{title}</h3><p role="status" aria-live="polite">{resourceCount(results.length)}{searching ? " matched" : " to explore"}</p></div>
           <div className={styles.headerActions}>
           <div className={styles.viewSwitch} role="group" aria-label="Library view">
-            <button type="button" aria-pressed={view === "folders"} onClick={() => { setView("folders"); resetScroll(); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h5v5h-5z" stroke="currentColor" strokeWidth="1.3" /></svg>Folders</button>
-            <button type="button" aria-pressed={view === "list"} onClick={() => { setView("list"); resetScroll(); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4h10M7 10h10M7 16h10M3 4h.1M3 10h.1M3 16h.1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>List</button>
+            <button type="button" aria-label="Folders" title="Folders" aria-pressed={view === "folders"} onClick={() => { setView("folders"); resetScroll(); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h5v5h-5z" stroke="currentColor" strokeWidth="1.3" /></svg><span>Folders</span></button>
+            <button type="button" aria-label="List" title="List" aria-pressed={view === "list"} onClick={() => { setView("list"); resetScroll(); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4h10M7 10h10M7 16h10M3 4h.1M3 10h.1M3 16h.1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg><span>List</span></button>
           </div>
           <button ref={expandButton} type="button" className={styles.expandButton} onClick={toggleExpanded} aria-label={expanded ? "Collapse library" : "Expand library"} title={expanded ? "Collapse library (Esc)" : "Expand library"} aria-expanded={expanded}>
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
