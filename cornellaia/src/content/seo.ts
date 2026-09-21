@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 
-const FALLBACK_SITE_URL = "https://cornellaia.vercel.app";
+const FALLBACK_SITE_URL = "https://www.cornell-aia.org";
 
 function normalizeSiteUrl(value: string) {
-  if (!value) {
+  if (!value.trim()) {
     return FALLBACK_SITE_URL;
   }
 
-  if (value.startsWith("http://") || value.startsWith("https://")) {
-    return value;
+  try {
+    const input = value.trim();
+    const url = new URL(/^[a-z][a-z\d+.-]*:/i.test(input) ? input : `https://${input}`);
+    if (!["https:", "http:"].includes(url.protocol) || url.username || url.password) return FALLBACK_SITE_URL;
+    if (["cornell-aia.org", "www.cornell-aia.org"].includes(url.hostname)) return FALLBACK_SITE_URL;
+    return url.origin;
+  } catch {
+    return FALLBACK_SITE_URL;
   }
-
-  return `https://${value}`;
 }
 
-export const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_URL ?? "");
+// Deployment-specific Vercel URLs must never become the site's canonical origin.
+export const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? "");
+export const IS_PREVIEW = process.env.VERCEL_ENV === "preview";
 
 const OG_IMAGE_PATH = "/Title5.webp";
 
@@ -31,31 +37,38 @@ export function createPageMetadata({
   path,
   keywords = [],
 }: PageMetadataInput): Metadata {
+  const url = new URL(path, SITE_URL).toString();
+  const socialTitle = `${title} | Cornell AI Alignment`;
   return {
-    title,
+    // Root pages do not inherit the title template from their own layout.
+    title: { absolute: socialTitle },
     description,
     keywords,
     alternates: {
-      canonical: path,
+      canonical: url,
     },
     openGraph: {
-      title,
+      title: socialTitle,
       description,
-      url: path,
+      url,
       siteName: "Cornell AI Alignment",
       type: "website",
+      locale: "en_US",
       images: [
         {
-          url: OG_IMAGE_PATH,
+          url: new URL(OG_IMAGE_PATH, SITE_URL).toString(),
+          width: 2560,
+          height: 1440,
+          type: "image/webp",
           alt: "Cornell AI Alignment",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: socialTitle,
       description,
-      images: [OG_IMAGE_PATH],
+      images: [{ url: new URL(OG_IMAGE_PATH, SITE_URL).toString(), alt: "Cornell AI Alignment" }],
     },
   };
 }

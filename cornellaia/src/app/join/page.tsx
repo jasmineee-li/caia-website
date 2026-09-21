@@ -9,9 +9,9 @@ import { EVENTS_CALENDAR_URL } from "@/content/events";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata = createPageMetadata({
-  title: "Join Us",
+  title: "Join the AI Safety Community",
   path: "/join",
-  description: "Everyone is welcome at Cornell AI Alignment. Join our events, explore our programs and fellows community, or help organize CAIA.",
+  description: "Join Cornell AI Alignment on Slack, attend open events, explore AI safety programs and research opportunities, or help organize the community.",
 });
 
 const inlineLink = "font-semibold text-slate-900 underline decoration-wavy decoration-slate-400 underline-offset-4";
@@ -68,7 +68,7 @@ export default function JoinPage() {
                 to everyone. Join our Slack for future semester announcements.
               </p>
             </div>
-            <Button href="/programs/cs1998" variant="secondary">Course &amp; materials</Button>
+            <Button href="/programs/cs1998" variant="primary">Course &amp; materials</Button>
           </div>
         </Card>
 
@@ -79,13 +79,13 @@ export default function JoinPage() {
               We host weekly reading groups and discussions, alongside guest
               talks, workshops, and socials. All events are open to everyone.
             </p>
-            <div className="mt-auto flex flex-wrap gap-x-5 gap-y-3 text-sm">
+            <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 text-sm">
+              <Button href={EVENTS_CALENDAR_URL} external variant="primary">Subscribe on Luma</Button>
               <Link href="/events#events" className={inlineLink}>Upcoming events</Link>
-              <a href={EVENTS_CALENDAR_URL} target="_blank" rel="noopener noreferrer" className={inlineLink}>Subscribe on Luma</a>
             </div>
           </Card>
           <Card id="research" className="flex scroll-mt-28 flex-col">
-            <h3 className="text-2xl">Student Research</h3>
+            <h3 className="text-2xl">Research</h3>
             <p className="mb-5 mt-3 text-base leading-7 sm:text-lg text-slate-600">
               Meet members working on technical AI safety and policy, discuss
               project ideas, and find collaborators and mentors. If you’re interested

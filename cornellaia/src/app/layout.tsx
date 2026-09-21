@@ -3,7 +3,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { SITE_URL } from "@/content/seo";
+import { IS_PREVIEW, SITE_URL } from "@/content/seo";
+import JsonLd from "@/components/JsonLd";
+import { SITE_SCHEMA } from "@/content/site-schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -14,6 +16,11 @@ export const metadata: Metadata = {
   description:
     "Cornell AI Alignment brings students, faculty, and researchers together to help AI align with human intentions and benefit all of humanity.",
   applicationName: "Cornell AI Alignment",
+  robots: IS_PREVIEW ? { index: false, follow: false } : {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
   openGraph: {
     siteName: "Cornell AI Alignment",
     type: "website",
@@ -33,7 +40,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="app-shell page-grid">
+        <JsonLd data={SITE_SCHEMA} />
         <Header />
         <ScrollToTop />
         {children}

@@ -20,9 +20,9 @@ import { RESEARCH_PAPERS } from "@/content/research";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Home",
+  title: "AI Safety at Cornell",
   description:
-    "Join Cornell’s community of students, faculty, and researchers working on technical AI safety, policy, and governance. Open events, hands-on learning, and research for a better AI future.",
+    "Explore AI safety at Cornell through student research, talks, workshops, and courses. Connect with the Cornell AI Alignment community.",
   path: "/",
   keywords: ["Cornell AI Alignment", "AI safety", "student organization", "alignment research"],
 });
@@ -40,12 +40,8 @@ export default function Home() {
             aria-label="CS 1998: Intro to AI Safety & Alignment, Fall 2026 course details"
             className="group focus-ring flex items-center justify-between gap-2 py-3 text-left"
           >
-            <span className="flex min-w-0 items-center gap-2 sm:gap-3">
-              <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-brand-red min-[380px]:text-sm sm:gap-2">
-                <span
-                  aria-hidden="true"
-                  className="hidden h-2 w-2 rounded-full bg-brand-red sm:block"
-                />
+            <span className="flex min-w-0 items-center gap-1 min-[360px]:gap-2 sm:gap-3">
+              <span className="inline-flex h-4 shrink-0 items-center justify-center whitespace-nowrap rounded-full border-2 border-slate-200 bg-transparent px-1 text-xs font-semibold leading-none text-brand-red min-[360px]:px-2 min-[380px]:h-5 sm:h-6 sm:px-2.5 sm:text-sm">
                 <span className="sm:hidden">FA26</span>
                 <span className="hidden sm:inline">Fall 2026</span>
               </span>
@@ -120,7 +116,7 @@ export default function Home() {
             <p className="text-sm text-slate-600 sm:text-base">
               Subscribe to get events directly on your calendar.
             </p>
-            <Button href={EVENTS_CALENDAR_URL} external variant="secondary">
+            <Button href={EVENTS_CALENDAR_URL} external variant="primary">
               Subscribe to Events Calendar
             </Button>
           </div>

@@ -11,11 +11,12 @@ interface MotionRevealProps {
 
 export default function MotionReveal({ children, className, delayClass }: MotionRevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
+  // SSR and the first client render are readable; hiding is a JS enhancement.
+  const [visible, setVisible] = useState<boolean | null>(null);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) {
+    if (!node || typeof IntersectionObserver === "undefined") {
       return;
     }
 
@@ -26,12 +27,23 @@ export default function MotionReveal({ children, className, delayClass }: Motion
           observer.disconnect();
         }
       },
-      { threshold: 0.12 },
+      // Tall sections should reveal as soon as they enter the viewport.
+      { threshold: 0 },
     );
 
-    observer.observe(node);
+    const frame = requestAnimationFrame(() => {
+      const { top, bottom } = node.getBoundingClientRect();
+      if (top < window.innerHeight && bottom > 0) {
+        // Do not hide content that was already visible in the server render.
+        setVisible(true);
+        return;
+      }
+      setVisible(false);
+      observer.observe(node);
+    });
 
     return () => {
+      cancelAnimationFrame(frame);
       observer.disconnect();
     };
   }, []);
@@ -40,7 +52,7 @@ export default function MotionReveal({ children, className, delayClass }: Motion
     <div
       ref={ref}
       className={cn(
-        "motion-reveal",
+        visible !== null && "motion-reveal",
         visible && "motion-reveal-visible",
         visible && delayClass,
         className,

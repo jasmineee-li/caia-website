@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ProfileCard from "@/components/ProfileCard";
-import Badge from "@/components/ui/Badge";
 import Squares from "@/components/ui/Squares";
-import { SITE_URL } from "@/content/seo";
-import { HOME_CTA_ITEMS } from "@/content/home";
+import { createPageMetadata, SITE_URL } from "@/content/seo";
+import JsonLd from "@/components/JsonLd";
 import styles from "./cs1998.module.css";
 
 interface MaterialItem {
@@ -399,14 +398,12 @@ const COURSE_STAFF: CourseStaffMember[] = [
 ];
 
 const COURSE_DESCRIPTION =
-  "CS 1998 is a student-led introduction to AI Safety and Alignment at Cornell. Fall 2026 enrollment is closed. Future semesters are planned.";
-
-const COURSE_OG_DESCRIPTION =
-  "Fall 2026 CS 1998 at Cornell: a 1-credit, 7-week S/U course on AI Safety and Alignment with discussion readings and technical notebooks.";
+  "Explore Cornell’s CS 1998 AI Safety and Alignment course, with open slides, readings, and hands-on notebooks. Fall 2026 enrollment is closed.";
 
 const COURSE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Course",
+  "@id": `${COURSE_URL}#course`,
   name: "CS 1998: Intro to AI Safety & Alignment",
   description: COURSE_DESCRIPTION,
   url: COURSE_URL,
@@ -425,17 +422,23 @@ const COURSE_SCHEMA = {
     "Dangerous capability evaluations",
     "AI control, scalable oversight, and governance",
   ],
-  instructor: COURSE_STAFF.map((member) => ({
-    "@type": "Person",
-    name: member.name,
-  })),
+  hasCourseInstance: {
+    "@type": "CourseInstance",
+    name: "Fall 2026",
+    courseMode: "onsite",
+    instructor: {
+      "@type": "Person",
+      name: "Jinzhou Wu",
+    },
+  },
   timeRequired: "P7W",
   inLanguage: "en",
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "CS 1998: Intro to AI Safety & Alignment",
   description: COURSE_DESCRIPTION,
+  path: COURSE_PATH,
   keywords: [
     "CS 1998",
     "AI Safety course",
@@ -443,29 +446,7 @@ export const metadata: Metadata = {
     "Cornell student-led course",
     "Fall 2026",
   ],
-  alternates: {
-    canonical: COURSE_PATH,
-  },
-  openGraph: {
-    title: "CS 1998: Intro to AI Safety & Alignment (Fall 2026)",
-    description: COURSE_OG_DESCRIPTION,
-    url: COURSE_PATH,
-    siteName: "Cornell AI Alignment",
-    type: "website",
-    images: [
-      {
-        url: "/Title5.webp",
-        alt: "CS 1998: Intro to AI Safety & Alignment",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "CS 1998: Intro to AI Safety & Alignment",
-    description: COURSE_OG_DESCRIPTION,
-    images: ["/Title5.webp"],
-  },
-};
+});
 
 function MaterialList({ items }: { items: MaterialItem[] }) {
   return (
@@ -553,10 +534,7 @@ export default function CS1998Page() {
       </div>
 
       <div className="relative z-10">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(COURSE_SCHEMA) }}
-        />
+        <JsonLd data={COURSE_SCHEMA} />
         <header className="relative overflow-hidden border-b border-slate-200 bg-[linear-gradient(145deg,#fff5f5_0%,#ffffff_45%,#f8fafc_100%)]">
           <div
             aria-hidden="true"
@@ -568,13 +546,9 @@ export default function CS1998Page() {
           </div>
           <div className="mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8">
             <div className="relative space-y-5 py-10 sm:py-16">
-              <Badge className="inline-flex items-center gap-2 rounded-lg border border-brand-red/25 bg-white/75 px-3 py-1.5 text-sm font-semibold text-slate-800 shadow-none sm:text-[0.95rem]">
-                <span
-                  aria-hidden="true"
-                  className="h-2 w-2 rounded-full bg-brand-red"
-                />
+              <p className="inline-flex h-6 items-center justify-center rounded-full border-2 border-slate-200 bg-white px-2.5 text-sm font-semibold leading-none text-brand-red">
                 Fall 2026
-              </Badge>
+              </p>
               <h1 className="display-title text-3xl sm:text-5xl">
                 CS 1998: Intro to AI Safety &amp; Alignment
               </h1>
@@ -635,18 +609,10 @@ export default function CS1998Page() {
                     Enrollment is closed for Fall 2026
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base">
-                    We’ll also run the course in future semesters. Join our Slack for updates.
+                    We’ll also run the course in future semesters. Watch out for updates for future semesters.
                     All course materials are openly accessible below.
                   </p>
                 </div>
-                <a
-                  href={HOME_CTA_ITEMS[0].href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="focus-ring inline-flex shrink-0 items-center justify-center rounded-lg bg-brand-red px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-red-strong sm:text-base"
-                >
-                  Join Slack for course updates
-                </a>
               </div>
             </article>
           </section>

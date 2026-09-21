@@ -1,0 +1,24 @@
+.layout {
+  display: inline-grid;
+  max-width: 100%;
+}
+
+.fallback,
+.animated {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+
+.animated {
+  visibility: hidden;
+}
+
+.typing .fallback {
+  /* Retain layout and accessibility while the visual layer types. */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.typing .animated {
+  visibility: visible;
+}

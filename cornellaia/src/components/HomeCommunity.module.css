@@ -10,14 +10,30 @@
 .step p { margin-top: 1.2rem; }
 .step p, .paragraph, .foundation p { color: #475569; line-height: 1.85; font-size: 1rem; }
 .paragraph { max-width: 970px; }
-.foundation { position: relative; display: grid; grid-template-columns: 1fr 2fr; gap: 1.25rem; align-items: center; padding: 2rem; margin-top: 28px; border: 1px solid #e2e8f0; border-radius: 12px; background: #ffffff; }
+.foundation { --community-blocks-width: 112px; --community-border-gap: 8px; position: relative; display: grid; grid-template-columns: 1fr 2fr; gap: 1.25rem; align-items: center; padding: 2rem; margin-top: 28px; border: 1px solid transparent; border-radius: 12px; background: #ffffff; }
+/* Cut the border short of the artwork without moving the content or blocks. */
+.foundation::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid #e2e8f0;
+  border-radius: inherit;
+  pointer-events: none;
+  --cutout-width: calc(var(--community-blocks-width) + var(--community-border-gap));
+  --cutout-height: calc(var(--community-blocks-width) * 84 / 113 + var(--community-border-gap));
+  /* Fade only the bottom and right endpoints over their final 24px. */
+  mask-image:
+    linear-gradient(to right, #000 calc(100% - var(--cutout-width) - 24px), transparent calc(100% - var(--cutout-width))),
+    linear-gradient(to bottom, #000 calc(100% - var(--cutout-height) - 24px), transparent calc(100% - var(--cutout-height)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--cutout-height)), calc(100% - var(--cutout-width)) calc(100% - var(--cutout-height)), calc(100% - var(--cutout-width)) 100%, 0 100%);
+}
 .foundation h2 { font-size: 1.8rem; }
 .foundation { overflow: visible; }
 .communityHeading { --community-inset: 15px; position: relative; align-self: stretch; display: grid; place-items: center; text-align: center; }
 .communityHeading h2 { align-self: start; transform: translateY(var(--community-inset)); }
 /* Compensate for the PNG's transparent bottom margin at its 200px display width. */
 .communityIllustration { position: absolute; bottom: calc(var(--community-inset) - 12px); left: 50%; transform: translateX(-50%); display: block; width: 200px; max-width: 100%; height: auto; pointer-events: none; }
-.communityBlocks { position: absolute; right: -1px; bottom: -1px; width: 112px; height: auto; pointer-events: none; }
+.communityBlocks { position: absolute; right: -1px; bottom: -1px; width: var(--community-blocks-width); height: auto; pointer-events: none; }
 .root a { color: inherit; font-weight: 600; text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #94a3b8; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .root a:hover { text-decoration-color: currentColor; }
 @media (min-width: 768px) { .mission, .pathway { padding-top: 5rem; } }
@@ -25,11 +41,10 @@
   .steps { grid-template-columns: 1fr; gap: 1.5rem; }
   .step { padding-bottom: 1.5rem; }
   .step::after { display: none; }
-  .foundation { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; margin-top: .5rem; }
+  .foundation { --community-blocks-width: 56px; --community-border-gap: 6px; grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; margin-top: .5rem; }
   .communityHeading { display: block; text-align: left; }
   .communityHeading h2 { transform: none; }
   .communityIllustration { display: none; }
-  .communityBlocks { width: 56px; }
 }
 
 @media (min-width: 640px) {

@@ -6,8 +6,8 @@ import { ONLINE_COURSES, INTENSIVES, FELLOWSHIP_GROUPS } from "@/content/learnin
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata = createPageMetadata({
-  title: "Resources", path: "/resources",
-  description: "Courses, fellowships, and a curated library for exploring AI safety and governance.",
+  title: "AI Safety Learning Resources", path: "/resources",
+  description: "Explore AI safety and governance courses, readings, fellowships, and training, with Cornell programs and a library of papers, articles, and videos.",
 });
 const linkStyle = "font-semibold underline decoration-wavy decoration-slate-400 underline-offset-4";
 const organizationLinks: Record<string, string> = {
@@ -39,14 +39,14 @@ export default function ResourcesPage() {
 
     <Section id="learn" title="Get started" className="scroll-mt-24">
       <div className="max-w-4xl space-y-4 text-base leading-8 sm:text-lg text-slate-600">
-        <p>At Cornell, start with <Link href="/programs/cs1998" className={linkStyle}>CS 1998</Link> and our <Link href="/events#events" className={linkStyle}>reading groups and workshops</Link>. Learn about AI safety with other students, or study independently using our public course materials.</p>
-        <p><LinkedOrganizations text="BlueDot Impact" /> runs facilitated online courses in {ONLINE_COURSES.map((course, i) => <span key={course.href}>{i > 0 ? i === ONLINE_COURSES.length - 1 ? ", and " : ", " : ""}<a href={course.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{course.title.replace(/^./, letter => letter.toLowerCase()).replace("Safety", "safety").replace("Governance", "governance")}</a></span>)}. Study the core ideas through readings, exercises, and discussions with a cohort.</p>
+        <p>At Cornell, you can start with <Link href="/programs/cs1998" className={linkStyle}>CS 1998</Link> and our <Link href="/events#events" className={linkStyle}>reading groups and workshops</Link>. You can learn about AI safety with other students or study independently using our public course materials.</p>
+        <p><LinkedOrganizations text="BlueDot Impact" /> runs facilitated online courses in {ONLINE_COURSES.map((course, i) => <span key={course.href}>{i > 0 ? i === ONLINE_COURSES.length - 1 ? ", and " : ", " : ""}<a href={course.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{course.title.replace(/^./, letter => letter.toLowerCase()).replace("Safety", "safety").replace("Governance", "governance")}</a></span>)}. You can study the core ideas through readings, exercises, and discussions with a cohort.</p>
         {INTENSIVES.map(program => <p key={program.href}><a href={program.href} target="_blank" rel="noopener noreferrer" className={linkStyle}>{program.title}</a> <LinkedOrganizations text={program.description} />{program.title === "ARENA" && <> Explore the <a href="https://learn.arena.education/" target="_blank" rel="noopener noreferrer" className={linkStyle}>self-study notebooks</a>.</>}</p>)}
       </div>
     </Section>
 
     <Section id="opportunities" title="Fellowships &amp; training" className="scroll-mt-24">
-      <p className="max-w-4xl text-base leading-8 sm:text-lg text-slate-600">Explore opportunities in research, policy, community building, and starting new organizations. Program websites list eligibility, locations, and application dates.</p>
+      <p className="max-w-4xl text-base leading-8 sm:text-lg text-slate-600">You can explore opportunities in research, policy, community building, and starting new organizations. You’ll find eligibility, locations, and application dates on each program’s website.</p>
       <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200">
         {FELLOWSHIP_GROUPS.map(group => <details key={group.title} className="group py-4">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold [&::-webkit-details-marker]:hidden">{group.title}<span aria-hidden="true" className="text-xl text-slate-400 transition-transform group-open:rotate-45">+</span></summary>

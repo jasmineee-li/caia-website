@@ -8,9 +8,9 @@ import { TEAM_GROUPS } from "@/content/team";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Team",
+  title: "Team and Advisors",
   description:
-    "Meet the Cornell AI Alignment leadership, advisors, and alumni working on AI safety research and outreach.",
+    "Meet Cornell AI Alignment's student leaders, advisors, and alumni, and learn how to help organize AI safety research, events, and outreach.",
   path: "/team",
   keywords: ["Cornell AI Alignment team", "AI safety students", "CAIA advisors"],
 });

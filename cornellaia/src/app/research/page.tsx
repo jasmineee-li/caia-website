@@ -10,9 +10,9 @@ import { RESEARCH_PAPERS } from "@/content/research";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Research",
+  title: "AI Safety Research",
   description:
-    "Browse research by Cornell AI Alignment members and collaborators, including papers, reports, and accepted conference work.",
+    "Explore AI safety and alignment publications by Cornell AI Alignment members and collaborators, with abstracts, authors, and links to papers.",
   path: "/research",
   keywords: ["AI alignment research", "CAIA papers", "Cornell AI safety research"],
 });

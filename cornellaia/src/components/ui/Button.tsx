@@ -11,7 +11,7 @@ export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const VARIANT_CLASS: Record<NonNullable<ButtonProps["variant"]>, string> = {
   primary:
-    "bg-brand-red text-white border border-brand-red hover:bg-brand-red-strong hover:border-brand-red-strong",
+    "bg-transparent text-brand-red border-2 border-slate-200 hover:text-brand-red-strong",
   secondary:
     "bg-white text-brand-red border border-brand-red/30 hover:border-brand-red hover:bg-red-50",
   ghost: "bg-transparent text-ink-muted border border-slate-300 hover:border-brand-cyan hover:text-slate-900",

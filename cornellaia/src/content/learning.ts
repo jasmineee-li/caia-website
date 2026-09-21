@@ -9,8 +9,8 @@ export const ONLINE_COURSES = [
 ];
 
 export const INTENSIVES = [
-  { title: "ARENA", href: "https://www.arena.education/", description: "develops practical research-engineering skills in deep learning, interpretability, reinforcement learning, and evaluations. Work through the notebooks independently or apply to a four-to-five-week cohort in London. Python and relevant mathematics are expected." },
-  { title: "CAMBRIA", href: "https://www.cbai.ai/cambria", description: "is CBAI’s three-week AI safety bootcamp using ARENA materials, focused on interpretability and reinforcement learning. It has offered cohorts in Cambridge, Massachusetts, and New York City. Check CBAI for the next cohort and location." },
+  { title: "ARENA", href: "https://www.arena.education/", description: "develops practical research-engineering skills in deep learning, interpretability, reinforcement learning, and evaluations. You can work through the notebooks independently or apply to a four-to-five-week cohort in London. You’ll need a background in Python and the relevant mathematics." },
+  { title: "CAMBRIA", href: "https://www.cbai.ai/cambria", description: "is CBAI’s three-week AI safety bootcamp using ARENA materials, focused on interpretability and reinforcement learning. It has offered cohorts in Cambridge, Massachusetts, and New York City. You can check CBAI for the next cohort and location." },
   { title: "Iliad Intensive", href: "https://www.iliad.ac/intensive", description: "is a four-week, full-time course on the mathematical foundations of AI alignment, including deep learning theory, agent foundations, and interpretability. It is aimed at people with strong mathematical backgrounds, with cohorts in London and Berkeley." },
 ];
 

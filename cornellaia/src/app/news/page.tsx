@@ -6,14 +6,14 @@ import { createPageMetadata } from "@/content/seo";
 import styles from "./news.module.css";
 
 export const metadata = createPageMetadata({
-  title: "News",
+  title: "Research and Community News",
   path: "/news",
-  description: "Research news, community milestones, and the latest from Cornell AI Alignment.",
+  description: "Read Cornell AI Alignment updates on research publications, program announcements, member news, and AI safety community events.",
 });
 
 export default function NewsPage() {
   const news = [...NEWS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
-  const linkStyle = "font-semibold underline decoration-slate-400 underline-offset-4 hover:decoration-current";
+  const linkStyle = "font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 transition hover:text-brand-red-strong hover:decoration-brand-red";
 
   return (
     <main>
@@ -29,7 +29,7 @@ export default function NewsPage() {
             <li key={`${item.date}-${item.title}`}>
               <article id={item.date} aria-labelledby={`news-${item.date}`} className="scroll-mt-28">
                   <time dateTime={item.date} className="block text-sm text-slate-500 sm:text-base">{item.displayDate}</time>
-                  <h2 id={`news-${item.date}`} className="mt-3 text-2xl leading-snug text-brand-red sm:text-3xl">{item.title}</h2>
+                  <h2 id={`news-${item.date}`} className="mt-3 text-2xl leading-snug text-black underline decoration-wavy decoration-slate-400 decoration-1 underline-offset-4 sm:text-3xl">{item.title}</h2>
                   {item.imageSrc?.startsWith("/news/") && (
                     <Image src={item.imageSrc} alt={item.imageAlt ?? ""} width={360} height={240} sizes="(max-width: 400px) calc(100vw - 32px), 360px" className="mt-6 h-auto w-full max-w-[360px]" />
                   )}

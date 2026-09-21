@@ -12,6 +12,7 @@ import {
   useState,
 } from "react";
 import { gsap } from "gsap";
+import styles from "./TextType.module.css";
 
 interface TextTypeProps extends HTMLAttributes<HTMLElement> {
   className?: string;
@@ -64,6 +65,7 @@ export default function TextType({
   ...props
 }: TextTypeProps) {
   const [displayedText, setDisplayedText] = useState("");
+  const [hasStarted, setHasStarted] = useState(false);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -108,6 +110,11 @@ export default function TextType({
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) {
+      return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
+      // Keep the complete fallback readable when visibility observation is unavailable.
       return;
     }
 
@@ -180,6 +187,7 @@ export default function TextType({
       } else if (currentCharIndex < processedText.length) {
         timeout = setTimeout(
           () => {
+            setHasStarted(true);
             setDisplayedText((prev) => prev + processedText[currentCharIndex]);
             setCurrentCharIndex((prev) => prev + 1);
           },
@@ -233,16 +241,34 @@ export default function TextType({
       className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
       ...props,
     },
-    <span className="inline" style={{ color: currentTextColor }}>
-      {displayedText}
-    </span>,
-    showCursor && (
-      <span
-        ref={cursorRef}
-        className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
-      >
-        {cursorCharacter}
+    <span
+      className={`${styles.layout} ${hasStarted ? styles.typing : ""}`}
+      style={{ color: currentTextColor }}
+    >
+      {/* Full sentences remain accessible and reserve space throughout typing. */}
+      <span className={styles.fallback}>
+        {currentSentence}
+        {showCursor && (
+          <span
+            aria-hidden="true"
+            className={`ml-1 inline-block ${cursorClassName}`}
+            style={{ visibility: "hidden" }}
+          >
+            {cursorCharacter}
+          </span>
+        )}
       </span>
-    ),
+      <span className={styles.animated} aria-hidden="true">
+        {displayedText}
+        {showCursor && (
+          <span
+            ref={cursorRef}
+            className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
+          >
+            {cursorCharacter}
+          </span>
+        )}
+      </span>
+    </span>,
   );
 }
