@@ -436,7 +436,7 @@ const COURSE_SCHEMA = {
 };
 
 export const metadata: Metadata = createPageMetadata({
-  title: "CS 1998: Intro to AI Safety & Alignment",
+  title: "CS 1998",
   description: COURSE_DESCRIPTION,
   path: COURSE_PATH,
   keywords: [

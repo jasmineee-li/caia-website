@@ -10,7 +10,7 @@ import { createPageMetadata } from "@/content/seo";
 import styles from "./join.module.css";
 
 export const metadata = createPageMetadata({
-  title: "Join the AI Safety Community",
+  title: "Get Involved",
   path: "/join",
   description: "Join Cornell AI Alignment on Slack, attend open events, explore AI safety programs and research opportunities, or help organize the community.",
 });

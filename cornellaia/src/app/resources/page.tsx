@@ -6,7 +6,7 @@ import { ONLINE_COURSES, INTENSIVES, FELLOWSHIP_GROUPS } from "@/content/learnin
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata = createPageMetadata({
-  title: "AI Safety Learning Resources", path: "/resources",
+  title: "Resources", path: "/resources",
   description: "Explore AI safety and governance courses, readings, fellowships, and training, with Cornell programs and a library of papers, articles, and videos.",
 });
 const linkStyle = "font-semibold underline decoration-wavy decoration-slate-400 underline-offset-4";

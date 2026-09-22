@@ -5,7 +5,7 @@ import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENTS } from "@/content/ev
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata = createPageMetadata({
-  title: "AI Safety Events",
+  title: "Events",
   path: "/events",
   description: "Find upcoming AI safety talks, workshops, discussions, and socials at Cornell. Browse past events and subscribe to the Cornell AI Alignment calendar.",
 });

@@ -41,4 +41,6 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Amazon AGI", src: "/orgs/amazon.png", href: "https://huggingface.co/amazon-agi" },
   { name: "RAND", src: "/orgs/rand.svg", href: "https://www.rand.org/" },
   { name: "SAIF", src: "/orgs/saif.svg", href: "https://saif.org/" },
+  { name: "Foresight Institute", src: "/orgs/foresight.svg", href: "https://foresight.org/" },
+  { name: "Gray Swan", src: "/orgs/gray_swan.png", href: "https://www.grayswan.ai/" },
 ];

@@ -139,6 +139,13 @@ export const TEAM_GROUPS: TeamGroup[] = [
     title: "Alumni",
     members: [
       {
+        imageSrc: "/alumni/jonathan_gabor.jpeg",
+        name: "Jonathan Gabor",
+        role: "METR",
+        websiteUrl: "https://jonathangabor.github.io/",
+        linkedinUrl: "https://www.linkedin.com/in/jonathan-gabor/",
+      },
+      {
         imageSrc: "/team/TEAM_jonathn_chang.png",
         name: "Jonathn Chang",
         role: "MATS Scholar at SaferAI",

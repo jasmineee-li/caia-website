@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/content/seo";
 import styles from "./news.module.css";
 
 export const metadata = createPageMetadata({
-  title: "Research and Community News",
+  title: "News",
   path: "/news",
   description: "Read Cornell AI Alignment updates on research publications, program announcements, member news, and AI safety community events.",
 });
