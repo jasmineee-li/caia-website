@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="1340" viewBox="0 0 1128 1340" fill="none">
+  <title>An AI agent for NYC Council workflows</title>
+  <desc>A civic building connects to an AI router, which branches into legislative records, documents, and data. A returning line represents information grounded in these tools.</desc>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="#E2E8F0" stroke-width="2"/></pattern>
+  </defs>
+  <path fill="#FFFFFF" d="M0 0h1128v1340H0z"/>
+  <path fill="url(#grid)" d="M0 0h1128v1340H0z"/>
+  <circle cx="564" cy="304" r="222" fill="#EFF8FA"/>
+  <!-- A civic facade, connected directly to the tool-routing diagram. -->
+  <g stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m340 254 224-128 224 128H340Z" fill="#FFFFFF"/>
+    <path d="M360 282h408M360 466h408M330 494h468"/>
+    <path d="M394 308v130m112-130v130m116-130v130m112-130v130" stroke-width="18" stroke="#A9DADD"/>
+    <circle cx="564" cy="212" r="19" fill="#FFFFFF"/>
+    <path d="M564 494v89" stroke="#6BBFC3"/>
+  </g>
+  <rect x="420" y="590" width="288" height="204" rx="34" fill="#D6EEF2" stroke="#6BBFC3" stroke-width="5"/>
+  <g stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M495 668h138m-138 48h138M520 641v102m88-102v102" stroke-opacity=".3"/>
+    <circle cx="520" cy="668" r="16" fill="#FFFFFF"/>
+    <circle cx="608" cy="716" r="16" fill="#B31B1B" stroke="#B31B1B"/>
+  </g>
+  <g stroke="#6BBFC3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M564 794v96M240 966v-66q0-36 36-36h576q36 0 36 36v66M564 864v102"/>
+    <path d="m227 951 13 15 13-15m298 0 13 15 13-15m298 0 13 15 13-15"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#A9DADD" stroke-width="4">
+    <rect x="126" y="980" width="228" height="202" rx="24"/>
+    <rect x="450" y="980" width="228" height="202" rx="24"/>
+    <rect x="774" y="980" width="228" height="202" rx="24"/>
+  </g>
+  <g stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M198 1030h63l21 22v81h-84v-103Zm63 0v22h21m-64 23h44m-44 20h34"/>
+    <path d="M521 1044v-18h87v99h-18m-86-81h85v99h-85v-99Zm20 29h44m-44 22h44m-44 22h29"/>
+    <path d="M839 1137h101M852 1117v-39m35 39v-73m35 73v-103" stroke-width="9"/>
+  </g>
+  <g fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">
+    <text x="564" y="558">Council staff</text>
+    <text x="564" y="764">AI router</text>
+    <text x="240" y="1240">Legislation</text>
+    <text x="564" y="1240">Documents</text>
+    <text x="888" y="1240">Data</text>
+  </g>
+  <!-- Tool results return through the same grounded workflow. -->
+  <path d="M1002 1080h32q34 0 34-34V674q0-34-34-34H743" stroke="#B31B1B" stroke-width="5" stroke-linecap="round"/>
+  <path d="m759 627-16 13 16 13" stroke="#B31B1B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

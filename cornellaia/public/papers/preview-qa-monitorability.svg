@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="1340" viewBox="0 0 1128 1340" fill="none">
+  <title>Monitoring visible reasoning and hidden tasks</title>
+  <desc>A question branches into a visible aqua reasoning path and a red hidden-task path, inspected by a large monitoring lens.</desc>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="#E2E8F0" stroke-width="2"/></pattern>
+  </defs>
+  <path fill="#FFFFFF" d="M0 0h1128v1340H0z"/>
+  <path fill="url(#grid)" d="M0 0h1128v1340H0z"/>
+  <rect x="164" y="124" width="800" height="238" rx="32" fill="#EFF8FA" stroke="#A9DADD" stroke-width="5"/>
+  <g stroke="#334155" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M242 204h396m-396 50h287m-287 50h342" stroke-opacity=".45"/>
+    <path d="M762 212c0-43 87-43 87 2 0 33-45 30-45 62"/>
+    <circle cx="804" cy="306" r="5" fill="#334155"/>
+  </g>
+  <path d="M400 362v113M400 420h354q34 0 34 34v80" stroke="#6BBFC3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M754 420q34 0 34 34v80" stroke="#B31B1B" stroke-width="6" stroke-dasharray="12 15" stroke-linecap="round"/>
+  <g fill="#D6EEF2" stroke="#6BBFC3" stroke-width="4">
+    <rect x="206" y="486" width="388" height="152" rx="24"/>
+    <rect x="206" y="742" width="388" height="152" rx="24"/>
+    <rect x="206" y="998" width="388" height="152" rx="24"/>
+  </g>
+  <path d="M400 638v104m0 152v104" stroke="#6BBFC3" stroke-width="6"/>
+  <g stroke="#334155" stroke-width="7" stroke-linecap="round" opacity=".55">
+    <path d="M262 542h271m-271 41h178M262 798h271m-271 41h212M262 1054h271m-271 41h157"/>
+  </g>
+  <path d="M788 534c-98 55 98 127 0 188s-93 87-41 161" stroke="#B31B1B" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <circle cx="788" cy="552" r="17" fill="#B31B1B"/>
+  <circle cx="788" cy="720" r="17" fill="#B31B1B"/>
+  <circle cx="741" cy="957" r="186" fill="#FFFFFF" fill-opacity=".94" stroke="#334155" stroke-width="7"/>
+  <circle cx="741" cy="957" r="158" fill="#EFF8FA" stroke="#A9DADD" stroke-width="3"/>
+  <path d="m873 1090 130 130" stroke="#334155" stroke-width="34" stroke-linecap="round"/>
+  <path d="M616 957q125-130 250 0-125 130-250 0Z" fill="#FFFFFF" stroke="#6BBFC3" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="741" cy="957" r="43" fill="#D6EEF2" stroke="#334155" stroke-width="5"/>
+  <circle cx="741" cy="957" r="17" fill="#B31B1B"/>
+  <g fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">
+    <text x="400" y="1230">Visible reasoning</text>
+    <text x="805" y="480" fill="#B31B1B">Hidden task</text>
+  </g>
+</svg>

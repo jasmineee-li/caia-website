@@ -12,7 +12,7 @@ import { createPageMetadata } from "@/content/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Research",
   description:
-    "Explore AI safety and alignment publications by Cornell AI Alignment members and collaborators, with abstracts, authors, and links to papers.",
+    "Explore AI safety and alignment publications and projects by Cornell AI Alignment members and collaborators, with summaries, authors, and links to their work.",
   path: "/research",
   keywords: ["AI alignment research", "CAIA papers", "Cornell AI safety research"],
 });
@@ -44,7 +44,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <Section subtitle="Publications by CAIA members and collaborators." className="pt-2 sm:pt-4">
+      <Section subtitle="Publications and projects by CAIA members and collaborators." className="pt-2 sm:pt-4">
         <div className="space-y-6">
           {RESEARCH_PAPERS.map((paper, index) => (
             <MotionReveal
@@ -94,7 +94,7 @@ export default function ResearchPage() {
                   ))}
                 </p>
 
-                <p className="text-sm leading-7 text-slate-700 sm:text-base"><b>Abstract: </b>{paper.abstract}</p>
+                <p className="text-sm leading-7 text-slate-700 sm:text-base"><b>{paper.summaryLabel ?? "Abstract"}: </b>{paper.abstract}</p>
               </Card>
             </MotionReveal>
           ))}

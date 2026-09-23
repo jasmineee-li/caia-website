@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="1340" viewBox="0 0 1128 1340" fill="none">
+  <title>Three models under a shared monitor</title>
+  <desc>Three different reasoning traces pass through a wide monitoring lens. The red trace is visible within the lens, illustrating scrutiny of attempted obfuscation rather than a quantitative result.</desc>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" stroke="#E2E8F0" stroke-width="2"/></pattern>
+    <clipPath id="lens"><rect x="154" y="550" width="820" height="322" rx="161"/></clipPath>
+  </defs>
+  <path fill="#FFFFFF" d="M0 0h1128v1340H0z"/>
+  <path fill="url(#grid)" d="M0 0h1128v1340H0z"/>
+  <g fill="#EFF8FA" stroke="#A9DADD" stroke-width="5">
+    <rect x="124" y="158" width="232" height="222" rx="34"/>
+    <rect x="448" y="158" width="232" height="222" rx="34"/>
+    <rect x="772" y="158" width="232" height="222" rx="34"/>
+  </g>
+  <g stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m240 211 55 32v64l-55 32-55-32v-64l55-32Zm-55 32 55 33 55-33m-55 33v63"/>
+    <circle cx="540" cy="268" r="37"/><circle cx="588" cy="268" r="37"/>
+    <path d="m888 205 18 48 49 18-49 18-18 48-18-48-49-18 49-18 18-48Z"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#334155" text-anchor="middle">
+    <text x="240" y="119">Claude</text><text x="564" y="119">GPT</text><text x="888" y="119">Gemini</text>
+  </g>
+  <g stroke-width="7" stroke-linecap="round">
+    <path d="M240 380c0 105 130 96 130 190s-88 157-73 262 59 181 23 278" stroke="#6BBFC3"/>
+    <path d="M564 380c-5 88-80 110-54 182s114 108 71 185-66 116-43 194 38 133 26 169" stroke="#B31B1B" stroke-dasharray="14 15"/>
+    <path d="M888 380c0 105-136 96-136 190s90 157 75 262-59 181-23 278" stroke="#334155" stroke-opacity=".65"/>
+  </g>
+  <rect x="154" y="550" width="820" height="322" rx="161" fill="#D6EEF2" fill-opacity=".7"/>
+  <g clip-path="url(#lens)" stroke-width="10" stroke-linecap="round">
+    <path d="M240 380c0 105 130 96 130 190s-88 157-73 262 59 181 23 278" stroke="#6BBFC3"/>
+    <path d="M564 380c-5 88-80 110-54 182s114 108 71 185-66 116-43 194 38 133 26 169" stroke="#B31B1B"/>
+    <path d="M888 380c0 105-136 96-136 190s90 157 75 262-59 181-23 278" stroke="#334155"/>
+  </g>
+  <rect x="154" y="550" width="820" height="322" rx="161" stroke="#334155" stroke-width="6"/>
+  <rect x="178" y="574" width="772" height="274" rx="137" stroke="#6BBFC3" stroke-width="3"/>
+  <path d="M976 710h61v300q0 34-34 34h-36" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="567" cy="700" r="24" fill="#B31B1B" stroke="#FFFFFF" stroke-width="7"/>
+  <g fill="#FFFFFF" stroke="#A9DADD" stroke-width="4">
+    <rect x="252" y="1110" width="136" height="100" rx="20"/>
+    <rect x="496" y="1110" width="136" height="100" rx="20"/>
+    <rect x="736" y="1110" width="136" height="100" rx="20"/>
+  </g>
+  <g stroke="#6BBFC3" stroke-width="7" stroke-linecap="round"><path d="M286 1160h68m-68 20h43M530 1160h68m-68 20h43M770 1160h68m-68 20h43"/></g>
+  <text x="564" y="1280" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="34" text-anchor="middle">Reasoning under observation</text>
+</svg>
