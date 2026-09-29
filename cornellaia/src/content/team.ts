@@ -123,7 +123,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_lionel_levine.jpeg",
         name: "Lionel Levine",
         role: "Faculty Advisor",
-        websiteUrl: "https://pi.math.cornell.edu/~levine/",
+        websiteUrl: "https://lionellevine.github.io/",
         scholarUrl: "https://scholar.google.co.uk/citations?user=uaiskTYAAAAJ&hl=en",
       },
       {
@@ -162,7 +162,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
       {
         imageSrc: "/team/TEAM_vincent_cheng.png",
         name: "Vincent Cheng",
-        role: "METR",
+        role: "Apollo Research",
         websiteUrl: "https://vvvincent.me/about/",
         scholarUrl: "https://scholar.google.com/citations?user=z5Mtc6cAAAAJ&hl=en",
         linkedinUrl: "https://www.linkedin.com/in/vincentchengvc/",
