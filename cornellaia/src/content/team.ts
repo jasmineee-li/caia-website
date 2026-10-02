@@ -106,6 +106,12 @@ export const TEAM_GROUPS: TeamGroup[] = [
         websiteUrl: "https://www.arjunmulchandani.com/",
         linkedinUrl: "https://www.linkedin.com/in/arjunbmulchandani/",
       },
+      {
+        imageSrc: "/team/TEAM_lydia_huang.jpeg",
+        name: "Lydia Huang",
+        role: "Outreach Lead",
+        linkedinUrl: "https://www.linkedin.com/in/lh729/",
+      },
     ],
   },
   {
