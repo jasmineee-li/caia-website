@@ -1,6 +1,8 @@
 .layout {
   display: inline-grid;
   max-width: 100%;
+  /* Leave room for the overlay cursor without changing line breaks as it moves. */
+  padding-inline-end: 0.5em;
 }
 
 .fallback,
@@ -10,6 +12,7 @@
 }
 
 .animated {
+  position: relative;
   visibility: hidden;
 }
 
@@ -21,4 +24,16 @@
 
 .typing .animated {
   visibility: visible;
+}
+
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Align the block glyph with the letters rather than the font's descender space. */
+  transform: translateY(calc(-100% - 0.32em));
+  line-height: 1;
+  margin-left: 0.1em;
+  width: 0.4em;
+  overflow: hidden;
 }

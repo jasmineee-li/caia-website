@@ -7,6 +7,7 @@ import {
   createElement,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -72,6 +73,8 @@ export default function TextType({
   const [isVisible, setIsVisible] = useState(!startOnVisible);
 
   const cursorRef = useRef<HTMLSpanElement>(null);
+  const animatedRef = useRef<HTMLSpanElement>(null);
+  const typedTextRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
   const textArray = useMemo(() => {
@@ -107,6 +110,44 @@ export default function TextType({
   }, [resolvedVariableSpeed, typingSpeed]);
 
   const currentSentence = safeTextArray[currentTextIndex] ?? "";
+  const renderedSentence = reverseMode ? currentSentence.split("").reverse().join("") : currentSentence;
+
+  useLayoutEffect(() => {
+    const cursor = cursorRef.current;
+    const animated = animatedRef.current;
+    const textNode = typedTextRef.current?.firstChild;
+    if (!showCursor || !cursor || !animated) return;
+
+    let cancelled = false;
+    const positionCursor = () => {
+      if (cancelled) return;
+      const lastCharacter = displayedText.trimEnd().length - 1;
+      if (!textNode || lastCharacter < 0) {
+        cursor.style.visibility = "hidden";
+        return;
+      }
+
+      // Inline spans can have empty fragments on the next line. Measure the
+      // actual glyph instead so the caret stays beside the typed character.
+      const range = document.createRange();
+      range.setStart(textNode, lastCharacter);
+      range.setEnd(textNode, lastCharacter + 1);
+      const letter = range.getBoundingClientRect();
+      const container = animated.getBoundingClientRect();
+      cursor.style.left = `${letter.right - container.left}px`;
+      cursor.style.top = `${letter.bottom - container.top}px`;
+      cursor.style.visibility = "visible";
+    };
+
+    positionCursor();
+    const observer = new ResizeObserver(positionCursor);
+    observer.observe(animated);
+    void document.fonts.ready.then(positionCursor);
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+    };
+  }, [displayedText, showCursor]);
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) {
@@ -248,26 +289,19 @@ export default function TextType({
       {/* Full sentences remain accessible and reserve space throughout typing. */}
       <span className={styles.fallback}>
         {currentSentence}
-        {showCursor && (
-          <span
-            aria-hidden="true"
-            className={`ml-1 inline-block ${cursorClassName}`}
-            style={{ visibility: "hidden" }}
-          >
-            {cursorCharacter}
-          </span>
-        )}
       </span>
-      <span className={styles.animated} aria-hidden="true">
-        {displayedText}
+      <span ref={animatedRef} className={styles.animated} aria-hidden="true">
+        <span ref={typedTextRef}>{displayedText}</span>
         {showCursor && (
-          <span
-            ref={cursorRef}
-            className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
-          >
-            {cursorCharacter}
-          </span>
+            <span
+              ref={cursorRef}
+              className={`${styles.cursor} ${shouldHideCursor ? "hidden" : ""} ${cursorClassName}`}
+            >
+              {cursorCharacter}
+            </span>
         )}
+        {/* Hidden letters preserve the final word wrapping during typing and deletion. */}
+        <span style={{ visibility: "hidden" }}>{renderedSentence.slice(displayedText.length)}</span>
       </span>
     </span>,
   );

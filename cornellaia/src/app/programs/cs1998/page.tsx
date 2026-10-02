@@ -249,7 +249,22 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Using evaluation evidence to inform deployment safeguards and safety cases.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 5 slides (PDF)",
+          href: "/cs1998/week_5_slides.pdf",
+        },
+      ],
+      notebook: [
+        {
+          label: "Week 5 notebook",
+          href: "/cs1998/Week%205%20Evaluation%20Awareness%20Notebook.ipynb",
+        },
+        {
+          label: "Week 5 notebook (no-code version)",
+          href: "/cs1998/Week%205%20Evaluation%20Awareness%20No-Code%20Notebook.ipynb",
+        },
+      ],
       discussionReading: [
         {
           label:

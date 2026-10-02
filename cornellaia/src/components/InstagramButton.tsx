@@ -10,15 +10,15 @@ export default function InstagramButton({ compact = false }: { compact?: boolean
       title="Follow @cornell.aia on Instagram"
       data-social-icon="instagram"
       className={cn(
-        "focus-ring inline-flex shrink-0 items-center justify-center rounded-full border-2 border-slate-200 bg-transparent text-brand-red transition-colors duration-200 hover:text-brand-red-strong",
-        compact ? "h-8 w-8 align-middle" : "h-11 w-11 sm:h-12 sm:w-12",
+        "focus-ring inline-flex shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-900 transition-colors duration-200 hover:bg-slate-200 motion-reduce:transition-none",
+        compact ? "h-8 w-8 align-middle" : "h-11 w-11",
       )}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        width={compact ? 17 : 22}
-        height={compact ? 17 : 22}
+        width={compact ? 17 : 20}
+        height={compact ? 17 : 20}
         fill="none"
         stroke="currentColor"
         strokeWidth="1.8"

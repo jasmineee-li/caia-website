@@ -31,39 +31,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function Home() {
   return (
     <main>
-      <section
-        aria-label="CS 1998 course announcement"
-        className="border-b border-slate-200 bg-white"
-      >
-        <Container>
-          <Link
-            href="/programs/cs1998"
-            aria-label="CS 1998: Intro to AI Safety & Alignment, Fall 2026 course details"
-            className="group focus-ring flex items-center justify-between gap-2 py-3 text-left"
-          >
-            <span className="flex min-w-0 items-center gap-1 min-[360px]:gap-2 sm:gap-3">
-              <span className="inline-flex h-4 shrink-0 items-center justify-center whitespace-nowrap rounded-full border-2 border-slate-200 bg-transparent px-1 text-xs font-semibold leading-none text-brand-red min-[360px]:px-2 min-[380px]:h-5 sm:h-6 sm:px-2.5 sm:text-sm">
-                <span className="sm:hidden">FA26</span>
-                <span className="hidden sm:inline">Fall 2026</span>
-              </span>
-              <span className="whitespace-nowrap text-xs font-semibold text-slate-950 min-[380px]:text-sm sm:text-base">
-                <span className="sm:hidden">CS 1998: Intro to AI Safety &amp; Alignment</span>
-                <span className="hidden sm:inline">CS 1998: Intro to AI Safety &amp; Alignment</span>
-              </span>
-            </span>
-            <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-red transition group-hover:text-brand-red-strong">
-              <span className="hidden underline decoration-brand-red/35 underline-offset-4 sm:inline">
-                Course details
-              </span>
-              <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="m6 3 5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          </Link>
-        </Container>
-      </section>
-
-      <section className="pt-12 pb-10 sm:pt-24 sm:pb-16">
+      <section className="pt-12 pb-10 sm:pt-24 sm:pb-16 lg:pt-32">
         <Container>
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
               <MotionReveal>

@@ -14,7 +14,7 @@ export interface SponsorItem {
 export const HOME_HERO = {
   title: "AI will change the world as we know it.",
   subtitle:
-    "We conduct research and outreach to advance the development of safe AI.",
+    "We are dedicated to securing its benefits and mitigating its risks.",
 };
 
 export const HOME_CTA_ITEMS: CTAItem[] = [
