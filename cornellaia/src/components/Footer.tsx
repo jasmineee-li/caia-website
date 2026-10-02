@@ -25,6 +25,15 @@ export default function Footer() {
             >
               Slack
             </a>
+            {" "}or{" "}
+            <a
+              href="https://www.instagram.com/cornell.aia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring rounded-sm font-semibold text-brand-red underline decoration-brand-red/35 underline-offset-4 hover:text-brand-red-strong"
+            >
+              Instagram
+            </a>
             .
           </p>
 

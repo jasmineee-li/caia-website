@@ -32,6 +32,7 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "MATS", src: "/orgs/mats.svg", href: "https://www.matsprogram.org/" },
   { name: "Pivotal", src: "/orgs/pivotal.png", href: "https://www.pivotal-research.org/" },
   { name: "METR", src: "/orgs/metr.jpg", href: "https://metr.org/" },
+  { name: "Apollo Research", src: "/orgs/apollo.png", href: "https://www.apolloresearch.ai/" },
   { name: "SaferAI", src: "/orgs/saferai.svg", href: "https://www.safer-ai.org/" },
   { name: "Center for AI Safety", src: "/orgs/cas.png", href: "https://safe.ai/" },
   { name: "LISA", src: "/orgs/lisa.svg", href: "https://www.safeai.org.uk/" },
@@ -41,6 +42,5 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Amazon AGI", src: "/orgs/amazon.png", href: "https://huggingface.co/amazon-agi" },
   { name: "RAND", src: "/orgs/rand.svg", href: "https://www.rand.org/" },
   { name: "SAIF", src: "/orgs/saif.svg", href: "https://saif.org/" },
-  { name: "Foresight Institute", src: "/orgs/foresight.svg", href: "https://foresight.org/" },
   { name: "Gray Swan", src: "/orgs/gray_swan.png", href: "https://www.grayswan.ai/" },
 ];

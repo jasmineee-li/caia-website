@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HomeCommunity from "@/components/HomeCommunity";
 import HomeHeroVisual from "@/components/HomeHeroVisual";
+import InstagramButton from "@/components/InstagramButton";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
@@ -94,6 +95,7 @@ export default function Home() {
                       {item.label}
                     </Button>
                   ))}
+                  <InstagramButton />
                 </div>
               </MotionReveal>
 

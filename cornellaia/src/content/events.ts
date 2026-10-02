@@ -17,6 +17,10 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Reading Group: OpenAI’s Model Misalignment Incidents",
+    embedUrl: "https://luma.com/embed/event/evt-XlFFh5Bew5Ck1Fe/simple",
+  },
+  {
     title: "CAIA Open House & Mocktail Mixer",
     embedUrl: "https://luma.com/embed/event/evt-9DwdWxEE8Bizvmj/simple",
   },

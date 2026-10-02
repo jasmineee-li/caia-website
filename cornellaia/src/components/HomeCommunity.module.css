@@ -34,8 +34,8 @@
 /* Compensate for the PNG's transparent bottom margin at its 200px display width. */
 .communityIllustration { position: absolute; bottom: calc(var(--community-inset) - 12px); left: 50%; transform: translateX(-50%); display: block; width: 200px; max-width: 100%; height: auto; pointer-events: none; }
 .communityBlocks { position: absolute; right: -1px; bottom: -1px; width: var(--community-blocks-width); height: auto; pointer-events: none; }
-.root a { color: inherit; font-weight: 600; text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #94a3b8; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-.root a:hover { text-decoration-color: currentColor; }
+.root a:not([data-social-icon]) { color: inherit; font-weight: 600; text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #94a3b8; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.root a:not([data-social-icon]):hover { text-decoration-color: currentColor; }
 @media (min-width: 768px) { .mission, .pathway { padding-top: 5rem; } }
 @media (max-width: 767px) {
   .steps { grid-template-columns: 1fr; gap: 1.5rem; }

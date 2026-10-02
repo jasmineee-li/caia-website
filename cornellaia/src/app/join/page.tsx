@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import InstagramButton from "@/components/InstagramButton";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
@@ -34,7 +35,10 @@ export default function JoinPage() {
               be recognized as fellows.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-5">
-              <Button href={HOME_CTA_ITEMS[0].href} external>Join our Slack</Button>
+              <div className="inline-flex items-center gap-3">
+                <Button href={HOME_CTA_ITEMS[0].href} external>Join our Slack</Button>
+                <InstagramButton />
+              </div>
               <Link href="/events#events" className={inlineLink}>Find an event</Link>
             </div>
           </div>
