@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const destination = path.join(root,'dist');
+await fs.mkdir(destination,{recursive:true});
+const zip = path.join(destination,'caia-social-design.zip');
+await fs.rm(zip,{force:true});
+const result = spawnSync('zip',['-qr',zip,path.basename(root),'-x','*/node_modules/*','*/dist/*','*/.DS_Store','*/.git/*','*/.npm-cache/*','*/.playwright-browsers/*'],{cwd:path.dirname(root),stdio:'inherit'});
+if(result.error) throw new Error('Install zip, or manually archive design excluding node_modules and dist.');
+if(result.status!==0) process.exit(result.status);
+console.log(`Share ${zip}`);

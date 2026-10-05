@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import LetterGlitch from "@/components/ui/LetterGlitch";
 import MotionReveal from "@/components/ui/MotionReveal";
@@ -12,10 +11,24 @@ import { createPageMetadata } from "@/content/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Research",
   description:
-    "Explore AI safety and alignment publications and projects by Cornell AI Alignment members and collaborators, with summaries, authors, and links to their work.",
+    "Explore AI safety and alignment publications and projects by Cornell AI Alignment members and collaborators, with authors and links to their work.",
   path: "/research",
   keywords: ["AI alignment research", "CAIA papers", "Cornell AI safety research"],
 });
+
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/** "2026-09" -> "September, 2026" */
+function formatMonth(date: string) {
+  const [year, month] = date.split("-").map(Number);
+  return `${MONTHS[month - 1]}, ${year}`;
+}
+
+/** Same pill as the site's buttons (see ui/Button), sized down for tags. */
+const TAG_CLASS = "inline-flex items-center rounded-full px-3 py-0.5 text-xs font-medium leading-5";
 
 export default function ResearchPage() {
   return (
@@ -52,7 +65,10 @@ export default function ResearchPage() {
               delayClass={index > 0 ? "motion-delay-1" : undefined}
             >
               <Card className="space-y-3">
-                <h2 className="text-2xl font-semibold text-slate-900">
+                <time dateTime={paper.date} className="block text-sm text-slate-500">
+                  {formatMonth(paper.date)}
+                </time>
+                <h2 className="!mt-2 text-2xl font-semibold text-slate-900">
                   <a
                     href={paper.href}
                     target="_blank"
@@ -63,13 +79,25 @@ export default function ResearchPage() {
                   </a>
                 </h2>
 
-                {paper.tags.length > 0 && (
+                {paper.tags.length + paper.topics.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {paper.tags.map((tag) => (
-                      <Badge key={`${paper.title}-${tag}`}>{tag}</Badge>
+                      <span key={`${paper.title}-${tag}`} className={`${TAG_CLASS} bg-slate-100 text-slate-900`}>
+                        {tag}
+                      </span>
+                    ))}
+                    {paper.topics.map((topic) => (
+                      <span
+                        key={`${paper.title}-topic-${topic}`}
+                        className={`${TAG_CLASS} bg-white text-slate-600 ring-1 ring-inset ring-slate-200`}
+                      >
+                        {topic}
+                      </span>
                     ))}
                   </div>
                 )}
+
+                <p className="text-base leading-7 text-slate-700">{paper.summary}</p>
 
                 <p className="text-sm text-slate-600 sm:text-base">
                   {paper.authors.map((author, authorIndex) => (
@@ -93,8 +121,6 @@ export default function ResearchPage() {
                     </Fragment>
                   ))}
                 </p>
-
-                <p className="text-sm leading-7 text-slate-700 sm:text-base"><b>{paper.summaryLabel ?? "Abstract"}: </b>{paper.abstract}</p>
               </Card>
             </MotionReveal>
           ))}

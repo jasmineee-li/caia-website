@@ -1,0 +1,14 @@
+{
+  "format": "linkedin",
+  "width": 1200,
+  "height": 627,
+  "fonts": [
+    "Young Serif",
+    "Inter"
+  ],
+  "qrDestination": "https://luma.com/cornellaia",
+  "qrAt432pxPreview": true,
+  "layoutChecks": "passed",
+  "manualVisualReview": "required",
+  "source": "linkedin.html"
+}

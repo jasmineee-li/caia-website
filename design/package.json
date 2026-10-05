@@ -1,0 +1,19 @@
+{
+  "name": "caia-social-design",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "export": "node scripts/export.mjs",
+    "example": "node scripts/render.mjs examples/test-event/brief.json examples/test-event && node scripts/export.mjs examples/test-event/instagram.html && node scripts/export.mjs examples/test-event/linkedin.html",
+    "pack": "node scripts/pack.mjs"
+  },
+  "dependencies": {
+    "jsqr": "1.4.0",
+    "playwright": "1.58.2",
+    "pngjs": "7.0.0",
+    "qrcode": "1.5.4"
+  }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" fill="none">
+  <title>Overlapping orbits and connected paths</title>
+  <defs>
+    <linearGradient id="background" x1="70" y1="0" x2="620" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h720v480H0z"/>
+  <circle cx="260" cy="232" r="148" stroke="#B31B1B" stroke-opacity=".32" stroke-width="1.4"/>
+  <circle cx="460" cy="232" r="148" stroke="#0EA5A3" stroke-opacity=".32" stroke-width="1.4"/>
+  <circle cx="360" cy="282" r="111" stroke="#1E293B" stroke-opacity=".32" stroke-width="1.4"/>
+  <path d="M67 334C196 360 278 206 372 153S576 123 651 165" stroke="#0EA5A3" stroke-width="1.6"/>
+  <path d="M83 119C225 114 267 298 401 308S562 265 647 367" stroke="#B31B1B" stroke-width="1.6"/>
+  <path d="M126 378C269 403 380 81 597 79" stroke="#1E293B" stroke-opacity=".35" stroke-width="1.3"/>
+  <circle cx="141" cy="144" r="7" fill="#B31B1B"/>
+  <circle cx="236" cy="272" r="6" fill="#0EA5A3"/>
+  <circle cx="360" cy="174" r="8" fill="#1E293B"/>
+  <circle cx="488" cy="298" r="7" fill="#B31B1B"/>
+  <circle cx="582" cy="166" r="7" fill="#0EA5A3"/>
+  <circle cx="326" cy="365" r="6" fill="#1E293B"/>
+</svg>

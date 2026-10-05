@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HomeCommunity from "@/components/HomeCommunity";
-import HomeHeroVisual from "@/components/HomeHeroVisual";
+import FuturesField from "@/components/FuturesField";
 import InstagramButton from "@/components/InstagramButton";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -10,7 +10,6 @@ import CircularGallery from "@/components/CircularGallery";
 import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
-import TextType from "@/components/ui/TextType";
 import {
   HOME_CTA_ITEMS,
   HOME_HERO,
@@ -31,50 +30,40 @@ export const metadata: Metadata = createPageMetadata({
 export default function Home() {
   return (
     <main>
-      <section className="pt-12 pb-10 sm:pt-24 sm:pb-16 lg:pt-32">
-        <Container>
-            <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-              <MotionReveal>
-                <TextType
-                  as="h1"
-                  text={HOME_HERO.title}
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor
-                  cursorCharacter="▎"
-                  deletingSpeed={50}
-                  variableSpeedEnabled={false}
-                  variableSpeedMin={60}
-                  variableSpeedMax={120}
-                  cursorBlinkDuration={0.5}
-                  loop={false}
-                  className="display-title text-4xl leading-tight sm:text-5xl lg:text-6xl"
-                />
-                <p className="lead-copy mt-5 max-w-2xl">{HOME_HERO.subtitle}</p>
+      <section className="relative isolate overflow-hidden">
+        <FuturesField
+          anchorSelector="[data-hero-copy]"
+          className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,#000_86%,transparent)]"
+        />
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {HOME_CTA_ITEMS.map((item) => (
-                    <Button
-                      key={item.label}
-                      href={item.href}
-                      external={item.external}
-                      variant={item.style === "secondary" ? "secondary" : "primary"}
-                    >
-                      {item.label}
-                    </Button>
-                  ))}
-                  <InstagramButton />
-                </div>
-              </MotionReveal>
+        <Container className="relative z-10 flex flex-col pt-12 pb-[min(92vw,400px)] sm:pt-16 sm:pb-[min(70vw,520px)] lg:min-h-[calc(100svh-86px)] lg:pb-[22rem] lg:pt-[13vh]">
+          <MotionReveal>
+            <div data-hero-copy className="max-w-[46rem]">
+              <h1 className="display-title text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4.25rem]">
+                {HOME_HERO.title}
+              </h1>
+              <p className="lead-copy mt-5 max-w-[40rem]">{HOME_HERO.subtitle}</p>
 
-              <MotionReveal delayClass="motion-delay-2">
-                <HomeHeroVisual src="/graphics/robot-hand.avif" />
-              </MotionReveal>
+              <div className="mt-8 flex flex-wrap gap-3">
+                {HOME_CTA_ITEMS.map((item) => (
+                  <Button
+                    key={item.label}
+                    href={item.href}
+                    external={item.external}
+                    variant={item.style === "secondary" ? "secondary" : "primary"}
+                  >
+                    {item.label}
+                  </Button>
+                ))}
+                <InstagramButton />
+              </div>
             </div>
+          </MotionReveal>
         </Container>
       </section>
 
       <HomeCommunity />
+
 
       <Section
         title="Upcoming Events"

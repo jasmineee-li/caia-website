@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" fill="none">
+  <title>Fine trajectories converging on a shared target</title>
+  <defs>
+    <linearGradient id="background" x1="70" y1="0" x2="620" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h720v480H0z"/>
+  <path d="M65 125H657" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M65 205H657" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M65 285H657" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M65 365H657" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M155 65V415" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M255 65V415" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M355 65V415" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M455 65V415" stroke="#1E293B" stroke-opacity=".055"/>
+  <path d="M555 65V415" stroke="#1E293B" stroke-opacity=".055"/>
+  <circle cx="548" cy="219" r="126" stroke="#B31B1B" stroke-opacity=".28" stroke-width="1.3"/>
+  <circle cx="548" cy="219" r="85" stroke="#0EA5A3" stroke-opacity=".32" stroke-width="1.3"/>
+  <circle cx="548" cy="219" r="43" stroke="#1E293B" stroke-opacity=".3" stroke-width="1.3"/>
+  <path d="M65 368C200 299 234 383 347 292S479 230 548 219" stroke="#0EA5A3" stroke-width="2"/>
+  <path d="M65 151C184 166 228 258 352 225S478 208 548 219" stroke="#B31B1B" stroke-width="1.8"/>
+  <path d="M65 286C210 281 252 308 375 255S493 231 548 219" stroke="#1E293B" stroke-width="1.7"/>
+  <circle cx="171" cy="285" r="6" fill="#0EA5A3"/>
+  <circle cx="257" cy="229" r="6" fill="#B31B1B"/>
+  <circle cx="400" cy="246" r="6" fill="#1E293B"/>
+  <circle cx="548" cy="219" r="8" fill="#1E293B"/>
+</svg>
