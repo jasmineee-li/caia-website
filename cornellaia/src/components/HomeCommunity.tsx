@@ -52,7 +52,7 @@ export default function HomeCommunity() {
       </div>
 
       <Section id="join" title="Join Us" className="mt-4">
-        <p className={styles.paragraph}>All of our events are open to everyone. If you <a href={HOME_CTA_ITEMS[0].href} target="_blank" rel="noopener noreferrer">join our Slack</a>, you’re considered a member! It’s where we share conversations, announcements, and opportunities. Active and engaged members will be recognized as <Link href="/join#fellows">Friends of CAIA</Link>. Come to an event or explore <Link href="/join">ways to get involved</Link>.</p>
+        <p className={styles.paragraph}>All of our events are open to everyone. If you <a href={HOME_CTA_ITEMS[0].href} target="_blank" rel="noopener noreferrer">join our Slack</a>, you’re considered a member! It’s where we share conversations, announcements, and opportunities. Come to an event or explore <Link href="/join">ways to get involved</Link>.</p>
       </Section>
     </div>
   );

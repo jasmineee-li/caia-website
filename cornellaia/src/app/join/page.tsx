@@ -31,8 +31,7 @@ export default function JoinPage() {
             <h2 className="display-title mb-4 text-3xl sm:mb-6 sm:text-4xl">We’re open to everyone</h2>
             <p className="max-w-xl text-base leading-8 sm:text-lg text-slate-600">
               All of our events are open to everyone. <strong>If you join our Slack, you’re considered a CAIA member!</strong> It’s where we share conversations,
-              announcements, and opportunities. Active and engaged members will
-              be recognized as Friends of CAIA.
+              announcements, and opportunities.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-5">
               <div className="inline-flex items-center gap-3">
@@ -51,17 +50,6 @@ export default function JoinPage() {
             sizes="(max-width: 1024px) 100vw, 550px"
           />
         </div>
-      </Section>
-
-      <Section id="fellows" title="Friends of CAIA">
-        <p className="max-w-4xl text-base leading-8 sm:text-lg text-slate-600">
-          CAIA is open to everyone, while Friends of CAIA recognizes members who
-          demonstrate particular promise, commitment, and initiative in AI safety.
-          We look for thoughtful participation and meaningful contributions, rather
-          than prior credentials. Friends are invited to exclusive socials and
-          receive priority for opportunities shared through CAIA, including
-          fellowships and research projects.
-        </p>
       </Section>
 
       <Section id="programs" title="Programs">

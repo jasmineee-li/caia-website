@@ -17,6 +17,10 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "When Do Intrinsic Rewards Lead to Exploration? | Scott Viteri (Stanford)",
+    embedUrl: "https://luma.com/embed/event/evt-FxZcmdOC3dYSKMH/simple",
+  },
+  {
     title: "CAIA Reading Group: OpenAI’s Model Misalignment Incidents",
     embedUrl: "https://luma.com/embed/event/evt-XlFFh5Bew5Ck1Fe/simple",
   },
