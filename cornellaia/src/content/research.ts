@@ -34,6 +34,8 @@ export interface ResearchPaperDetail {
   date: string;
   topics: ResearchTopic[];
   shortTag?: string;
+  /** Set for work that isn't a paper; only papers appear in the home page gallery. */
+  kind?: "project" | "research note";
 }
 
 export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
@@ -41,6 +43,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     title: "Building AI Agent for NYC Council Workflows",
     href: "https://www.pi.tech.cornell.edu/spotlight/building-ai-agent-for-nyc-council-workflows",
     imageSrc: "/papers/preview-council-agent.svg",
+    kind: "project",
     imageAlt: "Illustration of an AI router connecting NYC Council staff to legislative records, documents, and data",
     imageWidth: 1128,
     imageHeight: 1340,
@@ -298,6 +301,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     href: "https://metr.org/notes/2025-10-06-early-results-on-monitorability-in-qa-settings/",
     summaryLabel: "Research summary",
     imageSrc: "/papers/preview-qa-monitorability.svg",
+    kind: "research note",
     imageAlt: "Illustration of a monitor inspecting visible reasoning and a hidden task branching from a question",
     imageWidth: 1128,
     imageHeight: 1340,
@@ -341,6 +345,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     href: "https://metr.org/notes/2025-08-22-claude-gpt-gemini-struggle-evade-monitors/",
     summaryLabel: "Research summary",
     imageSrc: "/papers/preview-monitor-evasion.svg",
+    kind: "research note",
     imageAlt: "Illustration of three model reasoning paths passing through a shared monitoring lens",
     imageWidth: 1128,
     imageHeight: 1340,

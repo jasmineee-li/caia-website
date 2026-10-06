@@ -14,7 +14,7 @@ export interface SponsorItem {
 export const HOME_HERO = {
   title: "AI will change the world as we know it.",
   subtitle:
-    "We’re dedicated to securing its benefits and mitigating its risks.",
+    "We’re a community of students and faculty at Cornell working toward reducing risks and improving the trajectory of AI development.",
 };
 
 export const HOME_CTA_ITEMS: CTAItem[] = [

@@ -11,15 +11,22 @@ import { cn } from "@/lib/cn";
  * reads as a halftone print. One trajectory is highlighted in red.
  *
  * Map geometry (poster points, y up): x 0..780, y -60..1400, sampled at 0.5 px/pt.
+ * The fan's tip sits a little left of today (MAP_SHIFT), so the cloud already has
+ * some height where the highlighted path starts and tapers to a point behind it.
  * The simulated futures drift upward, so the fan opens mostly toward the top right.
  * Pixel values store sqrt(density) so the faint fringe keeps precision.
  *
- * Interaction: dots reveal left to right on load, the area under the pointer
- * darkens and swells, and the red trajectory bends toward the pointer.
+ * Interaction: on load the dots drop in from above and land in place, sweeping left
+ * to right, and the red trajectory draws in behind them. The area under the pointer
+ * darkens and swells, and the red trajectory bends toward the pointer. With the pointer
+ * in the lower part of the fan the trajectory turns downward instead, and over the
+ * cloud the cursor shows how things are going: 😃 while it rises, 😵 once it falls.
  */
 const MAP_SRC = "/graphics/futures-density.png";
 const MAP = { x0: 0, y1: 1400, scale: 0.5 };
 const ORIGIN = { x: 40, y: 505 };
+// How far the fan's tip sits left of today, in poster points.
+const MAP_SHIFT = 14;
 
 // Highlighted trajectory, in poster points relative to ORIGIN (y up). It follows a
 // rising percentile of the simulated paths, so it always sits inside the cloud.
@@ -38,9 +45,10 @@ const PATH: ReadonlyArray<readonly [number, number]> = [
   [675.3, 316.5], [680, 320.2], [680, 320.2],
 ];
 
-// Dot colours from resting (index 0) to darkest, under the pointer. Kept close
-// together so hovering reads as a gentle shadow.
-const DOT_SHADES = ["#1748b0", "#1543a5", "#133d99"];
+// Dot colours from resting (index 0) to darkest, under the pointer, so hovering
+// reads as a gentle shadow. A cornflower blue (the site's pale background hue, four
+// steps deeper) keeps the cloud light and lets the red trajectory lead.
+const DOT_SHADES = ["#589bee", "#4690ec", "#3385eb"];
 // The highlighted path uses the logo red, read from the site token at runtime.
 const RED_FALLBACK = "#b31b1b";
 const INK = "#0f172a";
@@ -62,7 +70,31 @@ interface Dots {
   x: Float32Array;
   y: Float32Array;
   r: Float32Array; // base radius
+  j: Float32Array; // 0..1 per dot, staggers its drop
+  h: Float32Array; // 0..1 per dot, varies its drop height
   count: number;
+}
+
+// Intro: each dot falls from above and lands, sweeping left to right (seconds, px).
+const DROP = {
+  delay: 0.2, // before the first column starts falling
+  sweep: 2.2, // for the start of the fall to travel across the cloud
+  jitter: 0.35, // random extra delay per dot, so columns don't fall as a wall
+  fall: 0.75, // one dot's fall
+  height: 16, // average drop distance
+};
+const INTRO_END = DROP.delay + DROP.sweep + DROP.jitter + DROP.fall;
+
+// Fraction of the drop height still above the resting spot at fall progress p (0..1):
+// a fall at constant speed that stops where the dot lands.
+function dropOffset(p: number) {
+  return 1 - p;
+}
+
+// Stable pseudo-random value in 0..1 for dot i.
+function hash01(i: number, salt: number) {
+  const v = Math.sin(i * 12.9898 + salt * 78.233) * 43758.5453;
+  return v - Math.floor(v);
 }
 
 function clamp01(t: number) {
@@ -72,11 +104,6 @@ function clamp01(t: number) {
 function smoothstep(t: number) {
   const c = clamp01(t);
   return c * c * (3 - 2 * c);
-}
-
-function easeInOut(t: number) {
-  const c = clamp01(t);
-  return c < 0.5 ? 4 * c * c * c : 1 - Math.pow(-2 * c + 2, 3) / 2;
 }
 
 export default function FuturesField({
@@ -105,6 +132,12 @@ export default function FuturesField({
     let layout: Layout | null = null;
     let dots: Dots | null = null;
     let base: Array<[number, number]> = []; // red path in canvas px, before steering
+    let fall: Array<[number, number]> = []; // the downward alternative, along the cloud's lower edge
+    let mode = 0; // 0 = rising path, 1 = falling path (eased)
+    let wantFall = false;
+    const host = wrap.parentElement; // the hero section; it carries the emoji cursor
+    let cursorFace: "up" | "down" | null = null;
+    const faceCursor: Partial<Record<"up" | "down", string>> = {};
     // per-column vertical band (canvas px) where the cloud is solid; the red line stays inside it
     let envTop = new Float32Array(0);
     let envBot = new Float32Array(0);
@@ -120,7 +153,7 @@ export default function FuturesField({
     function sample(px: number, py: number) {
       if (!map || !layout) return 0;
       // canvas px -> poster points -> map pixels
-      const x = ORIGIN.x + (px - layout.ox) / layout.kx;
+      const x = ORIGIN.x + MAP_SHIFT + (px - layout.ox) / layout.kx;
       const y = ORIGIN.y - (py - layout.oy) / layout.ky;
       const mx = (x - MAP.x0) * MAP.scale;
       const my = (MAP.y1 - y) * MAP.scale;
@@ -196,6 +229,8 @@ export default function FuturesField({
       const dx = new Float32Array(n);
       const dy = new Float32Array(n);
       const dr = new Float32Array(n);
+      const dj = new Float32Array(n);
+      const dh = new Float32Array(n);
       let dc = 0;
       // align the grid to the origin so the first dots sit on the line
       const offX = ((ox % pitch) + pitch) % pitch;
@@ -204,16 +239,18 @@ export default function FuturesField({
         for (let col = -1; col < cols - 1; col++) {
           const x = col * pitch + offX;
           const y = row * pitch + offY;
-          if (x < ox - pitch) continue;
+          if (x < ox - (MAP_SHIFT + 6) * kx) continue; // the tip sits left of today
           const v = sample(x, y);
           if (v < 0.2) continue; // v is sqrt(density); 0.2 ~ the poster's cutoff
           dx[dc] = x;
           dy[dc] = y;
           dr[dc] = pitch * 0.55 * v;
+          dj[dc] = hash01(col * 131 + row, 1);
+          dh[dc] = hash01(col * 131 + row, 2);
           dc++;
         }
       }
-      dots = { x: dx, y: dy, r: dr, count: dc };
+      dots = { x: dx, y: dy, r: dr, j: dj, h: dh, count: dc };
 
       envStep = pitch;
       const envCols = Math.ceil(width / envStep) + 1;
@@ -257,20 +294,62 @@ export default function FuturesField({
       envBot = smoothBand(envBot, Math.min);
 
       base = PATH.map(([px, py]) => [ox + px * kx, oy - py * ky]);
+      // The falling path keeps just inside the cloud's lower edge and never climbs back up.
+      fall = base.map(([bx]) => {
+        const c = Math.min(envBot.length - 1, Math.max(0, Math.round(bx / envStep)));
+        return [bx, oy + Math.max(0, envBot[c] - 22 - oy)];
+      });
+      for (let pass = 0; pass < 8; pass++) {
+        for (let i = 1; i < fall.length - 1; i++) {
+          fall[i][1] = (fall[i - 1][1] + 2 * fall[i][1] + fall[i + 1][1]) / 4;
+        }
+      }
+      fall[0][1] = oy;
+      for (let i = 1; i < fall.length; i++) fall[i][1] = Math.max(fall[i - 1][1], fall[i][1]);
       steered.length = 0;
       for (const p of base) steered.push([p[0], p[1]]);
     }
 
-    function baseYAt(x: number) {
-      for (let i = 1; i < base.length; i++) {
-        if (base[i][0] >= x) {
-          const [ax, ay] = base[i - 1];
-          const [bx, by] = base[i];
+    function pathYAt(path: Array<[number, number]>, x: number) {
+      for (let i = 1; i < path.length; i++) {
+        if (path[i][0] >= x) {
+          const [ax, ay] = path[i - 1];
+          const [bx, by] = path[i];
           const t = (x - ax) / (bx - ax || 1);
           return ay + (by - ay) * t;
         }
       }
-      return base[base.length - 1][1];
+      return path[path.length - 1][1];
+    }
+
+    // A 32px cursor drawn from the system's colour emoji.
+    function emojiCursor(face: "up" | "down") {
+      if (faceCursor[face]) return faceCursor[face]!;
+      const c = document.createElement("canvas");
+      c.width = 32;
+      c.height = 32;
+      const g = c.getContext("2d");
+      if (!g) return "auto";
+      g.textAlign = "center";
+      g.textBaseline = "middle";
+      g.font = '26px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif';
+      g.fillText(face === "up" ? "😃" : "😵", 16, 18);
+      // without a colour emoji font nothing is drawn; keep the normal cursor then
+      const px = g.getImageData(0, 0, 32, 32).data;
+      let ink = 0;
+      for (let i = 3; i < px.length; i += 4) ink += px[i];
+      faceCursor[face] = ink > 0 ? `url(${c.toDataURL("image/png")}) 16 16, auto` : "auto";
+      return faceCursor[face]!;
+    }
+
+    function setCursor(face: "up" | "down" | null) {
+      if (face === cursorFace || !host) return;
+      cursorFace = face;
+      host.style.cursor = face ? emojiCursor(face) : "";
+    }
+
+    function baseYAt(x: number) {
+      return pathYAt(base, x) * (1 - mode) + pathYAt(fall, x) * mode;
     }
 
     function draw(now: number) {
@@ -278,11 +357,10 @@ export default function FuturesField({
       const { width, height, lens, ox, oy } = layout;
       const t = (now - start) / 1000;
 
-      // left-to-right reveal front, in canvas px
-      const revealT = reduceMotion ? 1 : easeInOut((t - 0.2) / 2.6);
-      const fade = 90;
-      const front = ox - 10 + (width - ox + fade + 20) * revealT;
-      const flowAmp = reduceMotion ? 0 : 0.05 * smoothstep(t - 2.8);
+      // the trajectory draws in just behind the landing dots, at an even pace
+      const lineT = reduceMotion ? 1 : clamp01((t - DROP.delay - DROP.fall - DROP.jitter * 0.5) / DROP.sweep);
+      const lineFront = ox + (width - ox + 20) * lineT;
+      const flowAmp = reduceMotion ? 0 : 0.05 * smoothstep(t - INTRO_END + 0.2);
 
       // ease the pointer and the lens strength
       pointer.x += (pointer.tx - pointer.x) * 0.16;
@@ -290,6 +368,19 @@ export default function FuturesField({
       const lensTarget = reduceMotion ? 0 : pointer.ts * smoothstep((pointer.tx - (ox - 20)) / 120);
       pointer.s += (lensTarget - pointer.s) * 0.1;
       const lensOn = pointer.s > 0.003;
+
+      // In the lower part of the fan (below the midway line between the rising and the
+      // falling path) the trajectory turns downward; it rises again everywhere else.
+      if (lensTarget > 0 && pointer.tx > ox + 30) {
+        const mid = (pathYAt(base, pointer.tx) + pathYAt(fall, pointer.tx)) / 2;
+        if (pointer.ty > mid + 12) wantFall = true;
+        else if (pointer.ty < mid - 12) wantFall = false;
+      } else if (lensTarget === 0) {
+        wantFall = false;
+      }
+      const modeTarget = wantFall ? 1 : 0;
+      mode += (modeTarget - mode) * 0.07;
+      if (Math.abs(modeTarget - mode) < 0.001) mode = modeTarget;
 
       // steering: nudge the red line toward the pointer, gently and only within the cloud
       const maxSteer = width >= 1024 ? 130 : 70;
@@ -302,7 +393,8 @@ export default function FuturesField({
       const reach = Math.max(ox + 60, pointer.x);
       const margin = 16;
       for (let i = 0; i < base.length; i++) {
-        const [bx, by] = base[i];
+        const bx = base[i][0];
+        const by = base[i][1] * (1 - mode) + fall[i][1] * mode;
         const g = bx <= reach ? smoothstep((bx - ox) / (reach - ox)) : 1;
         let offset = pointer.steer * g;
         const c = Math.min(envTop.length - 1, Math.max(0, Math.round(bx / envStep)));
@@ -323,16 +415,26 @@ export default function FuturesField({
 
       // the probability cloud, bucketed by how strongly the pointer touches each dot
       const paths: Path2D[] = DOT_SHADES.map(() => new Path2D());
-      const { x, y, r, count } = dots;
+      const { x, y, r, j, h, count } = dots;
       const span = width - ox;
       const last = DOT_SHADES.length - 1;
+      const intro = !reduceMotion && t < INTRO_END;
       for (let i = 0; i < count; i++) {
-        const shown = smoothstep((front - x[i]) / fade);
-        if (shown <= 0) continue;
-        let rad = r[i] * shown;
+        let rad = r[i];
+        let lift = 0;
+        if (intro) {
+          // each dot falls in from above, columns starting left to right
+          const t0 = DROP.delay + DROP.sweep * clamp01((x[i] - ox) / span) + DROP.jitter * j[i];
+          const p = (t - t0) / DROP.fall;
+          if (p <= 0) continue;
+          if (p < 1) {
+            rad *= smoothstep(p / 0.25);
+            lift = dropOffset(p) * DROP.height * (0.75 + 0.5 * h[i]);
+          }
+        }
         if (flowAmp > 0) rad *= 1 + flowAmp * Math.sin(Math.PI * 2 * (((x[i] - ox) / span) * 3.2 - t * 0.22));
         let px = x[i];
-        let py = y[i];
+        let py = y[i] - lift;
         let shade = 0;
         if (lensOn) {
           const ddx = px - pointer.x;
@@ -359,11 +461,11 @@ export default function FuturesField({
         ctx!.fill(paths[s]);
       }
 
-      // highlighted trajectory, revealed with the same front
-      if (front > ox && steered.length > 1) {
+      // highlighted trajectory, drawn smoothly behind the landing dots
+      if (lineFront > ox && steered.length > 1) {
         ctx!.save();
         ctx!.beginPath();
-        ctx!.rect(0, 0, Math.max(0, front - fade * 0.4), height);
+        ctx!.rect(0, 0, Math.max(0, lineFront), height);
         ctx!.clip();
         ctx!.lineCap = "round";
         ctx!.lineJoin = "round";
@@ -383,7 +485,8 @@ export default function FuturesField({
       }
 
       // "today" marker
-      const markerIn = reduceMotion ? 1 : smoothstep(t / 0.45);
+      // appears as the first dots land
+      const markerIn = reduceMotion ? 1 : smoothstep((t - DROP.delay - DROP.fall * 0.8) / 0.45);
       ctx!.fillStyle = "#ffffff";
       ctx!.beginPath();
       ctx!.arc(ox, oy, 8 * markerIn, 0, Math.PI * 2);
@@ -400,13 +503,19 @@ export default function FuturesField({
       ctx!.fillText("TODAY", ox - 4, oy + 26);
       ctx!.globalAlpha = 1;
 
+      // over the cloud the cursor shows where the highlighted future is heading
+      const overCloud =
+        !reduceMotion && pointer.ts > 0 && pointer.tx >= ox - 8 && sample(pointer.tx, pointer.ty) >= 0.2;
+      const rising = steered[steered.length - 1][1] < steered[0][1];
+      setCursor(overCloud ? (rising ? "up" : "down") : null);
+
       const settling =
+        mode !== modeTarget ||
         Math.abs(lensTarget - pointer.s) > 0.002 ||
         Math.abs(steerTarget - pointer.steer) > 0.3 ||
         Math.abs(pointer.tx - pointer.x) > 0.3 ||
         Math.abs(pointer.ty - pointer.y) > 0.3;
-      const intro = !reduceMotion && t < 3.2;
-      return intro || settling || flowAmp > 0;
+      return intro || lineT < 1 || settling || flowAmp > 0;
     }
 
     function frame(now: number) {
@@ -502,6 +611,7 @@ export default function FuturesField({
       window.removeEventListener("pointermove", onPointerMove);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibility);
+      if (host) host.style.cursor = "";
     };
   }, [anchorSelector]);
 
@@ -510,7 +620,7 @@ export default function FuturesField({
       ref={wrapRef}
       className={cn("pointer-events-none select-none", className)}
       role="img"
-      aria-label="A fan of possible futures for AI spreading out from today, with one highlighted path rising upward."
+      aria-label="A fan of possible futures for AI spreading out from today, with one highlighted path rising upward. Pointing at the lower part of the fan turns the path downward."
     >
       <canvas ref={canvasRef} className="block h-full w-full" />
     </div>

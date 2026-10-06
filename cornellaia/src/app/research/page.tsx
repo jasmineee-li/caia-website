@@ -37,7 +37,7 @@ export default function ResearchPage() {
         <LetterGlitch
           glitchColors={["#fb051b", "#22043a", "#e684a6", "#ee3c55", "#fdf7f8"]}
           imageSrc="/Title5.webp"
-          imageFit="contain"
+          imageFit="cover"
           glitchSpeed={50}
           centerVignette={false}
           outerVignette={false}

@@ -40,18 +40,18 @@
   gap: 0.8rem;
 }
 
-/* One, two, three dots per step; they swell a little when the step is hovered. */
-.dots {
+/* One, two, three blocks per step; they swell a little when the step is hovered. */
+.icon {
   display: block;
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   overflow: visible;
   transform: translateY(-2px);
   transition: transform 300ms ease;
 }
 
-.step[data-active] .dots {
+.step[data-active] .icon {
   transform: translateY(-2px) scale(1.1);
 }
 
@@ -75,10 +75,27 @@
   margin-top: 3.5rem;
 }
 
-.communityTitle {
+/* Title with the little figures under it, centred in the first column beside the paragraph. */
+.communityHeading {
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.communityTitle {
   font-size: 1.9rem;
   line-height: 1.1;
+}
+
+.communityFigures {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  pointer-events: none;
 }
 
 .communityCopy {
@@ -93,55 +110,56 @@
   display: none;
 }
 
+/* All steps share one grid cell, so the slot is as tall as the tallest one. */
 .mDesc {
   display: grid;
+  margin-top: 1.25rem;
 }
 
-.mCopy {
+.mItem {
   grid-area: 1 / 1;
-  align-self: end;
-  color: #475569;
-  font-size: 1rem;
-  line-height: 1.75;
+  align-self: start;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 300ms ease, transform 300ms ease;
   pointer-events: none;
 }
 
-.mCopy[data-on] {
+.mItem[data-on] {
   opacity: 1;
   transform: none;
   pointer-events: auto;
 }
 
+.mCopy {
+  margin-top: 0.85rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
 .mBand {
   position: relative;
-  height: 150px;
-  margin-top: 0.75rem;
+  height: 104px;
 }
 
-.mLabel {
+/* Invisible 44px tap targets over the circles drawn on the line. */
+.mDot {
   position: absolute;
-  padding: 6px 4px 8px 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: 0;
+  border-radius: 50%;
   background: none;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #94a3b8;
+  transform: translate(-50%, -50%);
   cursor: pointer;
-  transition: color 250ms ease, opacity 350ms ease, transform 350ms ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.mLabel[aria-pressed="true"] {
-  color: var(--color-ink-900);
-}
-
-.mBand[data-pending] .mLabel:not([data-shown]) {
-  opacity: 0;
-  transform: translateY(8px);
+.mDot:focus-visible {
+  outline: 2px solid var(--color-ink-900);
+  outline-offset: -8px;
 }
 
 @media (max-width: 767px) {
@@ -178,20 +196,28 @@
   .community {
     grid-template-columns: 1fr;
     gap: 0.75rem;
-    margin-top: 4.875rem;
+    margin-top: 2.5rem;
   }
 
   .communityCopy {
     grid-column: auto;
     font-size: 1.0625rem;
   }
+
+  .communityHeading {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .communityFigures {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dots,
+  .icon,
   .step,
-  .mCopy,
-  .mLabel {
+  .mItem {
     transition: none;
   }
 }

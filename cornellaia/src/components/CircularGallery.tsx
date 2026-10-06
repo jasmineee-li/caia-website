@@ -839,11 +839,14 @@ class App {
     }
   }
 
+  // Only a sideways swipe over the gallery (trackpad or tilt wheel) turns it. Vertical
+  // scrolling is left to the page, so the gallery is still at its first item when the
+  // visitor scrolls down to it.
   private onWheel(event: Event) {
     const wheelEvent = event as WheelEvent;
-    const delta = wheelEvent.deltaY;
+    const delta = wheelEvent.deltaX;
 
-    if (delta === 0) {
+    if (delta === 0 || Math.abs(delta) <= Math.abs(wheelEvent.deltaY)) {
       return;
     }
 
@@ -905,7 +908,7 @@ class App {
     this.boundOnTouchUp = this.onTouchUp.bind(this);
 
     window.addEventListener("resize", this.boundOnResize);
-    window.addEventListener("wheel", this.boundOnWheel);
+    this.container.addEventListener("wheel", this.boundOnWheel, { passive: true });
 
     this.container.addEventListener("mousedown", this.boundOnTouchDown);
     window.addEventListener("mousemove", this.boundOnTouchMove);
@@ -920,7 +923,7 @@ class App {
     window.cancelAnimationFrame(this.raf);
 
     window.removeEventListener("resize", this.boundOnResize);
-    window.removeEventListener("wheel", this.boundOnWheel);
+    this.container.removeEventListener("wheel", this.boundOnWheel);
 
     this.container.removeEventListener("mousedown", this.boundOnTouchDown);
     window.removeEventListener("mousemove", this.boundOnTouchMove);

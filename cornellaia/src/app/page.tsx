@@ -120,12 +120,12 @@ export default function Home() {
       <Section
         title="Recent Work"
         className="mt-4"
-        subtitle="Selected papers and projects by CAIA community members."
+        subtitle="Selected papers by CAIA community members."
       >
         <MotionReveal>
           <div className="relative h-[520px] overflow-hidden rounded-xl border border-slate-200 sm:h-[620px] lg:h-[680px]">
             <CircularGallery
-              items={RESEARCH_PAPERS.map((paper) => ({
+              items={RESEARCH_PAPERS.filter((paper) => !paper.kind).map((paper) => ({
                 image: paper.imageSrc,
                 title: paper.title,
                 badge: paper.shortTag ?? (paper.tags.length > 0 ? paper.tags[0] : undefined),

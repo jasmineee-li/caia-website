@@ -9,3 +9,79 @@
 @media (min-width: 640px) {
   .missionCopy, .paragraph { font-size: 1.125rem; }
 }
+
+/* Join Us. Phones: the whole photo at the card's width, a white fade at its foot, then
+   the copy on solid white below it. Tablets and up: the copy sits over the photo's lower
+   part, on a taller fade that turns solid white behind the paragraph. */
+.joinCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+.joinMedia { position: relative; aspect-ratio: 16 / 9; }
+.joinMedia::after {
+  content: "";
+  position: absolute;
+  /* reaches a little past the photo, and is solid white over its last strip, so the
+     photo blends into the white below without a visible edge */
+  inset: auto -1px -2px;
+  height: calc(54% + 2px);
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    #fff 0%,
+    #fff 16%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.68) 46%,
+    rgba(255, 255, 255, 0.42) 62%,
+    rgba(255, 255, 255, 0.18) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.joinPhoto { object-fit: cover; }
+.joinCopy { position: relative; margin-top: -1.75rem; padding: 0 1.25rem 1.5rem; }
+.joinCopy .paragraph { margin-top: 0.75rem; color: #334155; }
+
+@media (min-width: 640px) {
+  .joinCard { border: 0; }
+  /* The card's grey border (the same as the other cards) shows only on the lower part,
+     fading in where the white fade over the photo begins. */
+  .joinCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 1px solid #e2e8f0;
+    border-radius: inherit;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 30%, #000 46%);
+    mask-image: linear-gradient(to bottom, transparent 30%, #000 46%);
+  }
+  .joinMedia::after {
+    height: calc(70% + 2px);
+    background: linear-gradient(
+      to top,
+      #fff 0%,
+      #fff 40%,
+      rgba(255, 255, 255, 0.9) 52%,
+      rgba(255, 255, 255, 0.68) 64%,
+      rgba(255, 255, 255, 0.42) 76%,
+      rgba(255, 255, 255, 0.18) 88%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .joinCopy { position: absolute; inset: auto 0 0; margin-top: 0; padding: 0 2rem 2rem; }
+  .joinCopy .paragraph { margin-top: 1rem; }
+}
+
+@media (min-width: 1024px) {
+  .joinMedia::after { height: calc(58% + 2px); }
+  .joinCard::before {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 42%, #000 58%);
+    mask-image: linear-gradient(to bottom, transparent 42%, #000 58%);
+  }
+  .joinCopy { padding: 0 2.75rem 2.5rem; }
+}

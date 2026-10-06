@@ -26,7 +26,7 @@ export default function EventsPage() {
         <iframe src={EVENTS_EMBED_URL} title="Upcoming CAIA events" className="h-[520px] w-full rounded-xl border border-slate-200" allowFullScreen />
       </Section>
 
-      <Section id="past-events" title="Past Events" className="scroll-mt-24">
+      <Section id="past-events" title="Past Events" titleNote={`(${PAST_EVENTS.length})`} className="scroll-mt-24">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {PAST_EVENTS.map(event => (
             <div key={event.embedUrl} className="overflow-hidden p-2">

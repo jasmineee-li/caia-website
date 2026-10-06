@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Container from "@/components/ui/Container";
@@ -59,59 +60,42 @@ function easeInOut(t: number) {
 }
 
 
-// Step marks: one dot, two dots, three dots in the hero blue, loosely clustered and
-// rising to the right like the line. Each is [x, y, radius] around the mark's centre.
-const DOT_BLUE = "#1748B0";
+// Step marks: one block, two blocks, three blocks in light tints of the paper preview
+// art's pale blue (#86B7F3 up to #C7DEF9), stacking up and to the right like the line.
+// Each block is [x, y, size, radius, fill] in a 32-unit box.
+type Block = readonly [x: number, y: number, size: number, r: number, fill: string];
 
-type Dot = readonly [x: number, y: number, r: number];
-
-const ICON_CLOUDS: Dot[][] = [
-  [[0, 0, 9]],
+const STEP_BLOCKS: Block[][] = [
+  [[5, 5, 22, 3, "#9FC5F5"]],
   [
-    [-5, 4.5, 6.2],
-    [6.2, -5, 4.6],
+    [1, 17, 14, 2, "#B6D3F8"],
+    [17, 1, 14, 2, "#86B7F3"],
   ],
   [
-    [-6, 5, 5.3],
-    [5.2, 3.4, 4.2],
-    [2, -7.2, 3.9],
-  ],
-];
-
-const PHONE_CLOUDS: Dot[][] = [
-  [[0, 0, 7]],
-  [
-    [-4.4, 3.6, 5.4],
-    [6.4, -4.8, 4.2],
-  ],
-  [
-    [-5.6, 4.6, 4.8],
-    [5.4, 3.2, 4],
-    [2, -6.8, 3.8],
+    [1, 17, 14, 2, "#C7DEF9"],
+    [17, 17, 14, 2, "#9FC5F5"],
+    [17, 1, 14, 2, "#86B7F3"],
   ],
 ];
 
-// how far each phone cloud reaches below its marker, so the title can sit just under it
-const PHONE_CLOUD_BELOW = PHONE_CLOUDS.map((cloud) => Math.max(...cloud.map(([, y, r]) => y + r)) * 1.14);
-
-function StepDots({ index }: { index: number }) {
+function StepBlocks({ index }: { index: number }) {
   return (
-    <svg className={styles.dots} viewBox="-16 -16 32 32" aria-hidden="true">
-      {ICON_CLOUDS[index].map(([x, y, r], k) => (
-        <circle key={k} cx={x.toFixed(2)} cy={y.toFixed(2)} r={r.toFixed(2)} fill={DOT_BLUE} />
+    <svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true">
+      {STEP_BLOCKS[index].map(([x, y, size, r, fill], k) => (
+        <rect key={k} x={x} y={y} width={size} height={size} rx={r} fill={fill} />
       ))}
     </svg>
   );
 }
 
 /*
- * Phones: the same rising line with only the step titles on it. Tapping a title shows
- * its description above the line; Community stays below.
+ * Phones: the same rising line with three open circles on it. Tapping one fills it red
+ * and shows that step (its blocks, title and description) under the line, in a slot
+ * sized to the tallest step, so Community below never moves.
  */
 function MobilePath() {
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const labelRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const selectedRef = useRef(0);
   const kickRef = useRef<() => void>(() => {});
   const [selected, setSelected] = useState(0);
@@ -155,7 +139,7 @@ function MobilePath() {
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
       const K = 1.8;
       const shape = (x: number) => (Math.exp((K * x) / W) - 1) / (Math.exp(K) - 1);
-      const y0 = H - 50; // leaves room for the first label under its marker
+      const y0 = H - 16;
       const amp = y0 - 14;
       const yAt = (x: number) => y0 - amp * shape(x);
       curve = [];
@@ -165,7 +149,9 @@ function MobilePath() {
       for (let i = 1; i < curve.length; i++) {
         curveLen += Math.hypot(curve[i][0] - curve[i - 1][0], curve[i][1] - curve[i - 1][1]);
       }
-      markers = [10, W / 3, (2 * W) / 3].map((x) => [x, yAt(x)] as [number, number]);
+      // three evenly spaced circles, centred on the line as a group
+      const gap = W / 3 - 6;
+      markers = [W / 2 - gap, W / 2, W / 2 + gap].map((x) => [x, yAt(x)] as [number, number]);
       setMarks(markers.map(([x, y]) => [x, y]));
     }
 
@@ -192,26 +178,26 @@ function MobilePath() {
       const frontX = curve[Math.min(curve.length - 1, Math.floor(reveal * (curve.length - 1)))][0];
       markers.forEach(([mx, my], c) => {
         if (mx > frontX + 1 && reveal < 1) return;
-        const label = labelRefs.current[c];
-        if (label && !label.hasAttribute("data-shown")) label.setAttribute("data-shown", "");
-        // one, two, three dots on the line for the three steps
+        // an open ink circle; the selected step fills in red
         const w = weights[c];
-        const cloud = PHONE_CLOUDS[c];
-        const grow = 1 + 0.14 * w;
+        const r = 6 + 0.8 * w;
         ctx!.fillStyle = "#ffffff";
         ctx!.beginPath();
-        cloud.forEach(([dx, dy, r]) => {
-          ctx!.moveTo(mx + dx * grow + r + 1.6, my + dy * grow);
-          ctx!.arc(mx + dx * grow, my + dy * grow, r + 1.6, 0, Math.PI * 2);
-        });
+        ctx!.arc(mx, my, r + 3, 0, Math.PI * 2);
         ctx!.fill();
-        ctx!.fillStyle = DOT_BLUE;
+        ctx!.lineWidth = 2;
+        ctx!.strokeStyle = INK;
         ctx!.beginPath();
-        cloud.forEach(([dx, dy, r]) => {
-          ctx!.moveTo(mx + dx * grow + r * grow, my + dy * grow);
-          ctx!.arc(mx + dx * grow, my + dy * grow, r * grow, 0, Math.PI * 2);
-        });
-        ctx!.fill();
+        ctx!.arc(mx, my, r - 1, 0, Math.PI * 2);
+        ctx!.stroke();
+        if (w > 0.01) {
+          ctx!.globalAlpha = w;
+          ctx!.fillStyle = red;
+          ctx!.beginPath();
+          ctx!.arc(mx, my, r, 0, Math.PI * 2);
+          ctx!.fill();
+          ctx!.globalAlpha = 1;
+        }
       });
       return (started && !reduceMotion && t < 1.5) || settling;
     }
@@ -255,41 +241,37 @@ function MobilePath() {
 
   return (
     <div className={styles.mobile}>
-      <div className={styles.mDesc} aria-live="polite">
-        {STEPS.map((step, i) => (
-          <p
-            key={step.n}
-            id={`step-desc-${i}`}
-            className={styles.mCopy}
-            data-on={selected === i ? "" : undefined}
-            aria-hidden={selected !== i}
-            inert={selected !== i}
-          >
-            {step.body}
-          </p>
-        ))}
-      </div>
       <div ref={wrapRef} className={styles.mBand}>
         <canvas ref={canvasRef} className={styles.canvas} aria-hidden="true" />
         {STEPS.map((step, i) => (
           <button
             key={step.n}
             type="button"
-            ref={(el) => {
-              labelRefs.current[i] = el;
-            }}
-            className={styles.mLabel}
-            style={
-              marks[i]
-                ? { left: i === 0 ? 0 : marks[i][0] - 6, top: marks[i][1] + PHONE_CLOUD_BELOW[i] + 6 }
-                : { visibility: "hidden" }
-            }
+            className={styles.mDot}
+            style={marks[i] ? { left: marks[i][0], top: marks[i][1] } : { visibility: "hidden" }}
+            aria-label={step.title}
             aria-pressed={selected === i}
-            aria-controls={`step-desc-${i}`}
+            aria-controls={`step-panel-${i}`}
             onClick={() => choose(i)}
+          />
+        ))}
+      </div>
+      <div className={styles.mDesc} aria-live="polite">
+        {STEPS.map((step, i) => (
+          <div
+            key={step.n}
+            id={`step-panel-${i}`}
+            className={styles.mItem}
+            data-on={selected === i ? "" : undefined}
+            aria-hidden={selected !== i}
+            inert={selected !== i}
           >
-            {step.title}
-          </button>
+            <div className={styles.heading}>
+              <StepBlocks index={i} />
+              <h3 className={styles.title}>{step.title}</h3>
+            </div>
+            <p className={styles.mCopy}>{step.body}</p>
+          </div>
         ))}
       </div>
     </div>
@@ -554,7 +536,7 @@ export default function CommunityPath() {
                 onBlur={() => setStep(null)}
               >
                 <div className={styles.heading}>
-                  <StepDots index={i} />
+                  <StepBlocks index={i} />
                   <h2 className={styles.title}>{step.title}</h2>
                 </div>
                 <p
@@ -573,9 +555,18 @@ export default function CommunityPath() {
         <MobilePath />
 
         <div ref={communityRef} className={styles.community}>
-          <h2 ref={communityTitleRef} className={styles.communityTitle}>
-            Community
-          </h2>
+          <div className={styles.communityHeading}>
+            <h2 ref={communityTitleRef} className={styles.communityTitle}>
+              Community
+            </h2>
+            <Image
+              className={styles.communityFigures}
+              src="/graphics/community-people-light.png"
+              width={2079}
+              height={756}
+              alt=""
+            />
+          </div>
           <p ref={communityCopyRef} className={styles.communityCopy}>
             Above all, we aim to build trust and community where people exchange ideas, challenge each
             other’s thinking, and work together to make AI go well. We welcome questions, perspectives from

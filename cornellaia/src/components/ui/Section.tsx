@@ -5,6 +5,8 @@ import Container from "@/components/ui/Container";
 interface SectionProps {
   id?: string;
   title?: string;
+  /** Shown after the title in grey, e.g. a count like "(18)". */
+  titleNote?: ReactNode;
   subtitle?: string;
   children: ReactNode;
   className?: string;
@@ -21,6 +23,7 @@ const TONE_CLASS: Record<NonNullable<SectionProps["tone"]>, string> = {
 export default function Section({
   id,
   title,
+  titleNote,
   subtitle,
   children,
   className,
@@ -33,7 +36,12 @@ export default function Section({
         <div className={cn(TONE_CLASS[tone], tone !== "default" && "p-6 sm:p-10", contentClassName)}>
           {(title || subtitle) && (
             <header className="mb-4 sm:mb-6">
-              {title && <h2 className="display-title text-3xl sm:text-4xl">{title}</h2>}
+              {title && (
+                <h2 className="display-title text-3xl sm:text-4xl">
+                  {title}
+                  {titleNote != null && <span className="text-slate-400"> {titleNote}</span>}
+                </h2>
+              )}
               {subtitle && <p className="mt-4 lead-copy">{subtitle}</p>}
             </header>
           )}

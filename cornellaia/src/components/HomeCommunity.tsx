@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import CommunityPath from "@/components/CommunityPath";
@@ -17,8 +18,22 @@ export default function HomeCommunity() {
 
       <CommunityPath />
 
-      <Section id="join" title="Join Us" className="mt-4">
-        <p className={styles.paragraph}>All of our events are open to everyone. If you <a href={HOME_CTA_ITEMS[0].href} target="_blank" rel="noopener noreferrer">join our Slack</a>, you’re considered a member! It’s where we share conversations, announcements, and opportunities. Come to an event or explore <Link href="/join">ways to get involved</Link>.</p>
+      <Section id="join" className="mt-4 mb-4 sm:mt-16 sm:mb-16">
+        <div className={styles.joinCard}>
+          <div className={styles.joinMedia}>
+            <Image
+              src="/graphics/join-us-discussion.jpg"
+              alt="CAIA members in a discussion around a seminar table"
+              fill
+              sizes="(min-width: 1280px) 1216px, 100vw"
+              className={styles.joinPhoto}
+            />
+          </div>
+          <div className={styles.joinCopy}>
+            <h2 className="display-title text-3xl sm:text-4xl">Join Us</h2>
+            <p className={styles.paragraph}>All of our events are open to everyone. If you <a href={HOME_CTA_ITEMS[0].href} target="_blank" rel="noopener noreferrer">join our Slack</a>, you’re considered a member! It’s where we share conversations, announcements, and opportunities. Come to an event or explore <Link href="/join">ways to get involved</Link>.</p>
+          </div>
+        </div>
       </Section>
     </div>
   );
