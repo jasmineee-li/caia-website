@@ -36,7 +36,7 @@ export default function Home() {
           className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,#000_86%,transparent)]"
         />
 
-        <Container className="relative z-10 flex flex-col pt-12 pb-[min(92vw,400px)] sm:pt-16 sm:pb-[min(70vw,520px)] lg:min-h-[calc(100svh-86px)] lg:pb-[22rem] lg:pt-[13vh]">
+        <Container className="relative z-10 flex flex-col pt-12 pb-[calc(min(92vw,400px)_-_28px)] sm:pt-16 sm:pb-[min(70vw,520px)] lg:min-h-[calc(100svh-86px)] lg:pb-[22rem] lg:pt-[13vh]">
           <MotionReveal>
             <div data-hero-copy className="max-w-[46rem]">
               <h1 className="display-title text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4.25rem]">

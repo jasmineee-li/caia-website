@@ -207,11 +207,13 @@ export default function FuturesField({
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
       populate();
 
-      // On narrow screens the fan sits under the copy: tuck its top edge in close.
+      // On narrow screens the fan sits under the copy: tuck its top edge in close
+      // (closest on phones).
       if (!layout.wide && layout.copyBottom !== null && dots && dots.count > 0) {
         let top = Infinity;
         for (let i = 0; i < dots.count; i++) if (dots.y[i] < top) top = dots.y[i];
-        const shift = layout.copyBottom + 40 - top;
+        const gap = layout.width < 640 ? 12 : 40;
+        const shift = layout.copyBottom + gap - top;
         if (Math.abs(shift) > 1) {
           layout.oy += shift;
           populate();
