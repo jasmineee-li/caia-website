@@ -6,6 +6,7 @@ export interface ResearchAuthor {
 export type ResearchTopic =
   | "Agents"
   | "Cognitive Science"
+  | "Corrigibility"
   | "Deception"
   | "Evaluation"
   | "Interpretability"
@@ -20,10 +21,11 @@ export type ResearchTopic =
 export interface ResearchPaperDetail {
   title: string;
   href: string;
-  imageSrc: string;
-  imageAlt: string;
-  imageWidth: number;
-  imageHeight: number;
+  /** Preview for the home page gallery; work outside the gallery can leave these out. */
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   /** One-line summary shown under the title on the research page. */
   summary: string;
   authors: ResearchAuthor[];
@@ -35,7 +37,7 @@ export interface ResearchPaperDetail {
   topics: ResearchTopic[];
   shortTag?: string;
   /** Set for work that isn't a paper; only papers appear in the home page gallery. */
-  kind?: "project" | "research note";
+  kind?: "project" | "research note" | "blog post";
 }
 
 export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
@@ -130,7 +132,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     summary:
       "Frontier models often recognize browser-agent safety benchmarks as tests, which skews reported attack success rates, so WARP generates more realistic prompt-injection tasks that models are less likely to flag.",
     authors: [
-      { name: "Jasmine X Li", isCaiaMember: true },
+      { name: "Jasmine Li", isCaiaMember: true },
       { name: "Ashton Chew", isCaiaMember: true },
       { name: "Maxwell Lin" },
       { name: "Eliot Jones" },
@@ -180,7 +182,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     authors: [
       { name: "Je Qin Chooi" },
       { name: "Jaeho Lee" },
-      { name: "Jasmine Xinze Li", isCaiaMember: true },
+      { name: "Jasmine Li", isCaiaMember: true },
     ],
     abstract:
       "AI systems are embedded in economic production, public discourse, governance, and personal decision-making, yet there is little empirical infrastructure for tracking whether this integration erodes humans’ ability to meaningfully shape outcomes that affect their lives. We argue that measuring AI-induced disempowerment is both urgent and tractable, and lay out a research agenda for doing so. We first operationalize disempowerment through Sen’s model of agency and a three-layer model of exposure, erosion, and lock-in, applied across economic, political, and cultural domains at individual, institutional, and civilizational scales. We survey existing measurement efforts and show that current work clusters almost entirely at exposure, leaving erosion and lock-in largely unaddressed. We then propose six concrete metrics (centaur evaluations, disempowerment perception surveys, AI content saturation and cultural convergence monitoring, monitoring capital flow to and from human labor, human task frontier tracking, and institutional ethnography) and identify which actors are best positioned to implement each. We close by discussing limitations and open challenges, including construct validity across levels of analysis, causal attribution, the distinction between disempowerment and adaptation, and the political economy of measurement.",
@@ -210,6 +212,40 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     shortTag: "EC 2026 Poster",
   },
   {
+    title: "AI Epistemic Risks: Emerging Mechanisms & Evidence",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6873005",
+    summaryLabel: "Executive summary excerpt",
+    imageSrc: "/papers/paper-epistemic-risks.png",
+    imageAlt: "Cover image for AI Epistemic Risks paper",
+    imageWidth: 1654,
+    imageHeight: 2339,
+    summary:
+      "A cross-disciplinary account of how AI threatens humanity's collective capacity to know things accurately, reason well, and maintain a healthy information environment.",
+    authors: [
+      { name: "Jasmine Li", isCaiaMember: true },
+      { name: "et al." },
+    ],
+    abstract:
+      "Humanity's ability to know, reason, judge, and act well is the foundation of the institutions that enable scientific progress, democratic governance, crisis response, and the management of AI itself. This paper argues that AI advances pose serious risks to that foundation. We call these epistemic risks—threats to humanity's collective capacity to know things accurately, reason well, form beliefs, and maintain a healthy information environment. Epistemic risk is not misinformation by another name. It runs deeper: it arises from AI's integration into the very infrastructure through which we think, form beliefs, and make sense of the world together. Across fields including technical machine learning, AI safety, human-computer interaction, philosophy and ethics, cognitive neuroscience, and education, researchers are studying different fragments of a shared problem. This paper strives to connect those fragments, analyze how their harms amplify one another to pose systemic and potentially catastrophic risks, and help surface cross-cutting solutions that no single research community has yet found on its own.",
+    tags: ["SSRN"],
+    date: "2026-06",
+    topics: ["Societal Impact"],
+  },
+  {
+    title: "Eval Cooperativeness May Be a Scalable Mitigation for Eval Gaming",
+    href: "https://turntrout.com/eval-cooperation",
+    summary:
+      "Prompting or training models to want evaluators to get accurate results closed 70–100% of the eval gaming gap in five of eight model settings, which may scale better than hiding evaluations from models.",
+    authors: [{ name: "Jasmine Li", isCaiaMember: true }, { name: "Alex Turner" }],
+    summaryLabel: "Research summary",
+    abstract:
+      "Misaligned models may recognize when they are being evaluated and behave well only then, which makes behavioral evaluations unreliable. Rather than trying to stop models from noticing evaluations, this post proposes eval cooperativeness: a situational desire to help developers acquire whatever information they are trying to acquire through their evaluations. Using system prompts that emphasize cooperation and synthetic document finetuning that describes models as evaluation-cooperative, the authors close 70–100% of the eval gaming gap in five of eight model settings, including a Nemotron-49B model organism and several commercial models. The interventions fail on a few models, including one deliberately trained for covert misalignment, and the authors note open questions about how reliably the effect holds.",
+    tags: ["MATS"],
+    date: "2026-05",
+    topics: ["Corrigibility", "Evaluation"],
+    kind: "blog post",
+  },
+  {
     title:
       "PLOT: Progressive Localization via Optimal Transport in Neural Causal Abstraction",
     href: "https://arxiv.org/abs/2605.06979",
@@ -230,26 +266,6 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     date: "2026-05",
     topics: ["Interpretability"],
     shortTag: "ICML 2026 Workshop",
-  },
-  {
-    title: "AI Epistemic Risks: Emerging Mechanisms & Evidence",
-    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6873005",
-    summaryLabel: "Executive summary excerpt",
-    imageSrc: "/papers/paper-epistemic-risks.png",
-    imageAlt: "Cover image for AI Epistemic Risks paper",
-    imageWidth: 1654,
-    imageHeight: 2339,
-    summary:
-      "A cross-disciplinary account of how AI threatens humanity's collective capacity to know things accurately, reason well, and maintain a healthy information environment.",
-    authors: [
-      { name: "Jasmine Li", isCaiaMember: true },
-      { name: "et al." },
-    ],
-    abstract:
-      "Humanity's ability to know, reason, judge, and act well is the foundation of the institutions that enable scientific progress, democratic governance, crisis response, and the management of AI itself. This paper argues that AI advances pose serious risks to that foundation. We call these epistemic risks—threats to humanity's collective capacity to know things accurately, reason well, form beliefs, and maintain a healthy information environment. Epistemic risk is not misinformation by another name. It runs deeper: it arises from AI's integration into the very infrastructure through which we think, form beliefs, and make sense of the world together. Across fields including technical machine learning, AI safety, human-computer interaction, philosophy and ethics, cognitive neuroscience, and education, researchers are studying different fragments of a shared problem. This paper strives to connect those fragments, analyze how their harms amplify one another to pose systemic and potentially catastrophic risks, and help surface cross-cutting solutions that no single research community has yet found on its own.",
-    tags: ["SSRN"],
-    date: "2026-06",
-    topics: ["Societal Impact"],
   },
   {
     title: "Pluralistic Preference Alignment via Sortition-weighted RLHF",
@@ -331,7 +347,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
       { name: "Jonathn Chang", isCaiaMember: true },
       { name: "Leonhard Piff", isCaiaMember: true },
       { name: "Suvadip Sana", isCaiaMember: true },
-      { name: "Jasmine X. Li", isCaiaMember: true },
+      { name: "Jasmine Li", isCaiaMember: true },
       { name: "Lionel Levine", isCaiaMember: true },
     ],
     abstract:
@@ -374,7 +390,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
       { name: "Tianyi Qiu" },
       { name: "Yang Zhang" },
       { name: "Xuchuan Huang" },
-      { name: "Jasmine Xinze Li", isCaiaMember: true },
+      { name: "Jasmine Li", isCaiaMember: true },
       { name: "Jiaming Ji" },
       { name: "Yaodong Yang" },
     ],
@@ -398,7 +414,7 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
       { name: "Sheikh Abdur Raheem Ali" },
       { name: "Justin Xu" },
       { name: "Ivory Yang" },
-      { name: "Jasmine Xinze Li", isCaiaMember: true },
+      { name: "Jasmine Li", isCaiaMember: true },
       { name: "Ayse Arslan" },
       { name: "Clark Benham" },
     ],

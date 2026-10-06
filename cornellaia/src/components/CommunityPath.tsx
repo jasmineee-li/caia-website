@@ -37,7 +37,7 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Research",
+    title: "Contribute",
     body: (
       <>
         We help members find <Link href="/research">research collaborators</Link>, mentors, and{" "}

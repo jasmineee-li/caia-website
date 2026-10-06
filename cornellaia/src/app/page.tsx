@@ -125,7 +125,9 @@ export default function Home() {
         <MotionReveal>
           <div className="relative h-[520px] overflow-hidden rounded-xl border border-slate-200 sm:h-[620px] lg:h-[680px]">
             <CircularGallery
-              items={RESEARCH_PAPERS.filter((paper) => !paper.kind).map((paper) => ({
+              items={RESEARCH_PAPERS.filter(
+                (paper): paper is typeof paper & { imageSrc: string } => !paper.kind && Boolean(paper.imageSrc),
+              ).map((paper) => ({
                 image: paper.imageSrc,
                 title: paper.title,
                 badge: paper.shortTag ?? (paper.tags.length > 0 ? paper.tags[0] : undefined),
