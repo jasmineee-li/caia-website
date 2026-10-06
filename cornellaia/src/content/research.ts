@@ -40,7 +40,7 @@ export interface ResearchPaperDetail {
   kind?: "project" | "research note" | "blog post";
 }
 
-export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
+const PAPERS: ResearchPaperDetail[] = [
   {
     title: "Building AI Agent for NYC Council Workflows",
     href: "https://www.pi.tech.cornell.edu/spotlight/building-ai-agent-for-nyc-council-workflows",
@@ -378,29 +378,6 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     topics: ["Monitoring"],
   },
   {
-    title: "ProgressGym: Alignment with a Millennium of Moral Progress",
-    href: "https://arxiv.org/abs/2406.20087",
-    imageSrc: "/papers/paper-progressgym.png",
-    imageAlt: "Cover image for ProgressGym paper",
-    imageWidth: 1046,
-    imageHeight: 1356,
-    summary:
-      "ProgressGym uses nine centuries of historical text to benchmark alignment methods that can follow, anticipate, and respond to moral progress over time.",
-    authors: [
-      { name: "Tianyi Qiu" },
-      { name: "Yang Zhang" },
-      { name: "Xuchuan Huang" },
-      { name: "Jasmine Li", isCaiaMember: true },
-      { name: "Jiaming Ji" },
-      { name: "Yaodong Yang" },
-    ],
-    abstract:
-      "Frontier AI systems, including large language models (LLMs), hold increasing influence over the epistemology of human users. Such influence can reinforce prevailing societal values, potentially contributing to the lock-in of misguided moral beliefs and, consequently, the perpetuation of problematic moral practices on a broad scale. We introduce progress alignment as a technical solution to mitigate this imminent risk. Progress alignment algorithms learn to emulate the mechanics of human moral progress, thereby addressing the susceptibility of existing alignment methods to contemporary moral blindspots. To empower research in progress alignment, we introduce ProgressGym, an experimental framework allowing the learning of moral progress mechanics from history, in order to facilitate future progress in real-world moral decisions. Leveraging 9 centuries of historical text and 18 historical LLMs, ProgressGym enables codification of real-world progress alignment challenges into concrete benchmarks. Specifically, we introduce three core challenges: tracking evolving values (PG-Follow), preemptively anticipating moral progress (PG-Predict), and regulating the feedback loop between human and AI value shifts (PG-Coevolve). Alignment methods without a temporal dimension are inapplicable to these tasks. In response, we present lifelong and extrapolative algorithms as baseline methods of progress alignment, and build an open leaderboard soliciting novel algorithms and challenges.",
-    tags: ["NeurIPS 2024 Spotlight"],
-    date: "2024-06",
-    topics: ["Value Alignment", "Evaluation"],
-  },
-  {
     title:
       "Scaling laws for contrastive activation addition with refusal mechanisms",
     href: "https://arxiv.org/abs/2507.11771",
@@ -444,6 +421,29 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     topics: ["Theory"],
   },
   {
+    title: "ProgressGym: Alignment with a Millennium of Moral Progress",
+    href: "https://arxiv.org/abs/2406.20087",
+    imageSrc: "/papers/paper-progressgym.png",
+    imageAlt: "Cover image for ProgressGym paper",
+    imageWidth: 1046,
+    imageHeight: 1356,
+    summary:
+      "ProgressGym uses nine centuries of historical text to benchmark alignment methods that can follow, anticipate, and respond to moral progress over time.",
+    authors: [
+      { name: "Tianyi Qiu" },
+      { name: "Yang Zhang" },
+      { name: "Xuchuan Huang" },
+      { name: "Jasmine Li", isCaiaMember: true },
+      { name: "Jiaming Ji" },
+      { name: "Yaodong Yang" },
+    ],
+    abstract:
+      "Frontier AI systems, including large language models (LLMs), hold increasing influence over the epistemology of human users. Such influence can reinforce prevailing societal values, potentially contributing to the lock-in of misguided moral beliefs and, consequently, the perpetuation of problematic moral practices on a broad scale. We introduce progress alignment as a technical solution to mitigate this imminent risk. Progress alignment algorithms learn to emulate the mechanics of human moral progress, thereby addressing the susceptibility of existing alignment methods to contemporary moral blindspots. To empower research in progress alignment, we introduce ProgressGym, an experimental framework allowing the learning of moral progress mechanics from history, in order to facilitate future progress in real-world moral decisions. Leveraging 9 centuries of historical text and 18 historical LLMs, ProgressGym enables codification of real-world progress alignment challenges into concrete benchmarks. Specifically, we introduce three core challenges: tracking evolving values (PG-Follow), preemptively anticipating moral progress (PG-Predict), and regulating the feedback loop between human and AI value shifts (PG-Coevolve). Alignment methods without a temporal dimension are inapplicable to these tasks. In response, we present lifelong and extrapolative algorithms as baseline methods of progress alignment, and build an open leaderboard soliciting novel algorithms and challenges.",
+    tags: ["NeurIPS 2024 Spotlight"],
+    date: "2024-06",
+    topics: ["Value Alignment", "Evaluation"],
+  },
+  {
     title: "Do language models plan ahead for future tokens?",
     href: "https://arxiv.org/abs/2404.00859",
     imageSrc: "/papers/paper-plan-ahead.png",
@@ -464,3 +464,6 @@ export const RESEARCH_PAPERS: ResearchPaperDetail[] = [
     topics: ["Interpretability"],
   },
 ];
+
+/** Newest first by release month; entries from the same month keep their order above. */
+export const RESEARCH_PAPERS: ResearchPaperDetail[] = [...PAPERS].sort((a, b) => b.date.localeCompare(a.date));
