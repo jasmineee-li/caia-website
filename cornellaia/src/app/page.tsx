@@ -6,7 +6,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import NewsCarousel from "@/components/NewsCarousel";
-import CircularGallery from "@/components/CircularGallery";
+import ResearchCard from "@/components/ResearchCard";
 import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
@@ -26,6 +26,9 @@ export const metadata: Metadata = createPageMetadata({
   path: "/",
   keywords: ["Cornell AI Alignment", "AI safety", "student organization", "alignment research"],
 });
+
+/** Papers only (not projects, notes, or posts), newest first. */
+const RECENT_PAPERS = RESEARCH_PAPERS.filter((paper) => !paper.kind).slice(0, 6);
 
 export default function Home() {
   return (
@@ -122,25 +125,18 @@ export default function Home() {
         className="mt-4"
         subtitle="Selected papers by CAIA community members."
       >
-        <MotionReveal>
-          <div className="relative h-[520px] overflow-hidden rounded-xl border border-slate-200 sm:h-[620px] lg:h-[680px]">
-            <CircularGallery
-              items={RESEARCH_PAPERS.filter(
-                (paper): paper is typeof paper & { imageSrc: string } => !paper.kind && Boolean(paper.imageSrc),
-              ).map((paper) => ({
-                image: paper.imageSrc,
-                title: paper.title,
-                badge: paper.shortTag ?? (paper.tags.length > 0 ? paper.tags[0] : undefined),
-                href: paper.href,
-              }))}
-              textColor="#0f172a"
-              borderRadius={0.03}
-              bend={2}
-              scrollSpeed={0.5}
-              scrollEase={0.05}
-            />
-          </div>
-        </MotionReveal>
+        {/* Two rows: four papers on phones and tablets, six on wide screens. */}
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {RECENT_PAPERS.map((paper, index) => (
+            <MotionReveal
+              key={paper.title}
+              className={index >= 4 ? "hidden h-full lg:block" : "h-full"}
+              delayClass={index % 3 === 1 ? "motion-delay-1" : index % 3 === 2 ? "motion-delay-2" : undefined}
+            >
+              <ResearchCard paper={paper} variant="compact" />
+            </MotionReveal>
+          ))}
+        </div>
         <MotionReveal delayClass="motion-delay-1">
           <div className="mt-6">
             <Link

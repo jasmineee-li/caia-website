@@ -58,14 +58,14 @@ export default function Button({
 
   if (isExternal) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" {...props}>
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer" data-button="" {...props}>
         {content}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={classes} {...props}>
+    <Link href={href} className={classes} data-button="" {...props}>
       {content}
     </Link>
   );

@@ -44,3 +44,41 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "SAIF", src: "/orgs/saif.svg", href: "https://saif.org/" },
   { name: "Gray Swan", src: "/orgs/gray_swan.png", href: "https://www.grayswan.ai/" },
 ];
+
+export interface AiSafetySlide {
+  id: string;
+  /** Short name shown in the slide's label and the progress nav. */
+  label: string;
+  body: string;
+  links: { label: string; href: string }[];
+}
+
+/** Where the slide text comes from, credited under the deck. */
+export const AI_SAFETY_SOURCE = {
+  label: "Core views on AI safety: When, why, what, and how (Anthropic, 2023)",
+  href: "https://www.anthropic.com/news/core-views-on-ai-safety",
+};
+
+export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
+  {
+    id: "technical-alignment",
+    label: "Technical alignment",
+    body:
+      "First, it may be tricky to build safe, reliable, and steerable systems when those systems are starting to become as intelligent and as aware of their surroundings as their designers. To use an analogy, it is easy for a chess grandmaster to detect bad moves in a novice but very hard for a novice to detect bad moves in a grandmaster. If we build an AI system that’s significantly more competent than human experts but it pursues goals that conflict with our best interests, the consequences could be dire. This is the technical alignment problem.",
+    links: [
+      { label: "Technical research", href: "/research" },
+      { label: "Technical reading group", href: "/join#technical-reading-group" },
+      { label: "CS 1998", href: "/programs/cs1998" },
+    ],
+  },
+  {
+    id: "societal-disruption",
+    label: "Policy, governance, and societal impacts",
+    body:
+      "Second, rapid AI progress would be very disruptive, changing employment, macroeconomics, and power structures both within and between nations. These disruptions could be catastrophic in their own right, and they could also make it more difficult to build AI systems in careful, thoughtful ways, leading to further chaos and even more problems with AI.",
+    links: [
+      { label: "Policy research", href: "/research#our-work" },
+      { label: "Policy reading group", href: "/join#policy-reading-group" },
+    ],
+  },
+];
