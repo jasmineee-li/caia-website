@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/cn";
 import type { ResearchPaperDetail } from "@/content/research";
 import { TopicTags } from "@/components/ui/Tag";
+import Arrow from "@/components/ui/Arrow";
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -129,7 +130,7 @@ function ResearchRow({ paper, className }: { paper: ResearchPaperDetail; classNa
             </Fragment>
           ))}
         </span>
-        <span aria-hidden="true" className="hidden text-slate-400 transition-colors group-hover:text-ink sm:inline">↗</span>
+        <Arrow direction="out" className="mt-1 hidden text-slate-400 transition-colors group-hover:text-ink sm:inline-block" />
       </p>
     </article>
   );

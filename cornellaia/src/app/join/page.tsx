@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ApplicationButton from "@/components/ApplicationButton";
 import ProgramCard from "@/components/ProgramCard";
+import Arrow from "@/components/ui/Arrow";
 import Button from "@/components/ui/Button";
 import CommunityField from "@/components/ui/CommunityField";
 import Container from "@/components/ui/Container";
@@ -41,6 +42,7 @@ export default function JoinPage() {
       <PageHeader
         title="Join Us"
         renderField={(className) => <CommunityField className={className} />}
+        dotAccent="#d9413a"
         lead={
           <p>
             All of our events are open to everyone. If you join our Slack, you’re considered a CAIA member. It’s where we
@@ -131,7 +133,7 @@ export default function JoinPage() {
             action={
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                 <ApplicationButton href={APPLICATIONS.researchTeam} label="Apply" />
-                <Link href="/research#projects" className="text-link text-[0.9375rem]">Projects <span aria-hidden="true">→</span></Link>
+                <Link href="/research#projects" className="group text-link inline-flex items-center text-[0.9375rem]">Projects <Arrow className="ml-1.5 transition-transform group-hover:translate-x-0.5" /></Link>
               </div>
             }
           >

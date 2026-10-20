@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Container from "@/components/ui/Container";
+import DotRows from "@/components/ui/DotRows";
 import HalftoneField from "@/components/ui/HalftoneField";
 
 /** The design system's dark halftone blue, as in the home hero's fan. */
@@ -12,16 +13,18 @@ interface PageHeaderProps {
   eyebrow?: string;
   lead?: ReactNode;
   children?: ReactNode;
-  /** Draws a different dot field in place of the red halftone field, given its classes. */
+  /** Draws a different dot field in place of the halftone field on wider screens, given its classes. */
   renderField?: (className: string) => ReactNode;
+  /** A colour scattered among the dots in the phone strip. */
+  dotAccent?: string;
 }
 
 /**
  * The top of an inner page: grid paper, as on the home hero, closing on a rule, with the
  * halftone field growing in from the right, a large serif title and a short lead.
- * On phones the field runs as a strip along the bottom, clear of the text.
+ * On phones a few even rows of dots run across the bottom instead, clear of the text.
  */
-export default function PageHeader({ title, titleContent, eyebrow, lead, children, renderField }: PageHeaderProps) {
+export default function PageHeader({ title, titleContent, eyebrow, lead, children, renderField, dotAccent }: PageHeaderProps) {
   return (
     <header className="grid-paper relative isolate overflow-hidden border-b border-grid [background-position:center_bottom]">
       {renderField ? (
@@ -37,11 +40,8 @@ export default function PageHeader({ title, titleContent, eyebrow, lead, childre
           {children && <div className="mt-8 sm:mt-10">{children}</div>}
         </div>
       </Container>
-      {renderField ? (
-        renderField("relative block h-16 w-full md:hidden")
-      ) : (
-        <HalftoneField color={DOT} className="relative h-16 md:hidden" pitch={12} radii={[0.7, 1.1, 1.5, 1.9, 2.3, 2.7, 3.1, 3.5]} />
-      )}
+      {/* Phones: a few even rows of dots across the full width, just above the closing rule. */}
+      <DotRows color={DOT} accent={dotAccent} className="mb-3 md:hidden" />
     </header>
   );
 }

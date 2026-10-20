@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import FuturesField from "@/components/FuturesField";
+import Arrow from "@/components/ui/Arrow";
 import Button from "@/components/ui/Button";
 import NewsCarousel from "@/components/NewsCarousel";
 import ResearchCard, { ResearchRowHeader } from "@/components/ResearchCard";
@@ -31,8 +32,8 @@ const SLACK = HOME_CTA_ITEMS[0];
 
 function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="text-link whitespace-nowrap text-[0.9375rem]">
-      {children} <span aria-hidden="true">→</span>
+    <Link href={href} className="group text-link inline-flex items-center whitespace-nowrap text-[0.9375rem]">
+      {children} <Arrow className="ml-1 transition-transform group-hover:translate-x-0.5" />
     </Link>
   );
 }
