@@ -1,4 +1,4 @@
-import Container from "@/components/ui/Container";
+import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL, PAST_EVENTS } from "@/content/events";
@@ -13,31 +13,28 @@ export const metadata = createPageMetadata({
 export default function EventsPage() {
   return (
     <main>
-      <Container className="pt-14 sm:pt-20">
-        <h1 className="display-title text-4xl sm:text-5xl">Events</h1>
-        <p className="lead-copy mt-5 max-w-2xl">Upcoming events and past talks, workshops, discussions, and socials.</p>
-      </Container>
+      <PageHeader
+        title="Events"
+        lead={<p>Guest talks, workshops, reading groups and socials. Every event is open to everyone.</p>}
+      >
+        <Button href={EVENTS_CALENDAR_URL} external>Subscribe on Luma</Button>
+      </PageHeader>
 
-      <Section id="events" title="Upcoming Events" className="scroll-mt-24">
-        <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
-          <p className="lead-copy">Subscribe to get upcoming events on your calendar.</p>
-          <Button href={EVENTS_CALENDAR_URL} external variant="primary">Subscribe on Luma</Button>
-        </div>
-        <iframe src={EVENTS_EMBED_URL} title="Upcoming CAIA events" className="h-[520px] w-full rounded-xl border border-slate-200" allowFullScreen />
+      <Section id="events" title="Upcoming Events" className="pt-16 sm:pt-20 lg:pt-24">
+        <iframe src={EVENTS_EMBED_URL} title="Upcoming CAIA events" className="h-[560px] w-full border border-slate-200 bg-white" allowFullScreen />
       </Section>
 
-      <Section id="past-events" title="Past Events" titleNote={`(${PAST_EVENTS.length})`} className="scroll-mt-24">
+      <Section id="past-events" title="Past Events" titleNote={`(${PAST_EVENTS.length})`}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {PAST_EVENTS.map(event => (
-            <div key={event.embedUrl} className="overflow-hidden p-2">
-              <iframe
-                src={event.embedUrl}
-                title={event.title}
-                className="h-[450px] w-full rounded-lg border border-slate-200"
-                allow="fullscreen; payment"
-                loading="lazy"
-              />
-            </div>
+            <iframe
+              key={event.embedUrl}
+              src={event.embedUrl}
+              title={event.title}
+              className="h-[450px] w-full border border-slate-200 bg-white"
+              allow="fullscreen; payment"
+              loading="lazy"
+            />
           ))}
         </div>
       </Section>

@@ -46,9 +46,8 @@ const PATH: ReadonlyArray<readonly [number, number]> = [
 ];
 
 // Dot colours from resting (index 0) to darkest, under the pointer, so hovering
-// reads as a gentle shadow. A cornflower blue (the site's pale background hue, four
-// steps deeper) keeps the cloud light and lets the red trajectory lead.
-const DOT_SHADES = ["#589bee", "#4690ec", "#3385eb"];
+// reads as a gentle shadow. The design system's dark halftone blue.
+const DOT_SHADES = ["#0c4da2", "#0a4392", "#083a82"];
 // The highlighted path uses the logo red, read from the site token at runtime.
 const RED_FALLBACK = "#b31b1b";
 const INK = "#0f172a";

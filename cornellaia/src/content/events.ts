@@ -21,6 +21,10 @@ export const PAST_EVENTS = [
     embedUrl: "https://luma.com/embed/event/evt-FxZcmdOC3dYSKMH/simple",
   },
   {
+    title: "CAIA Friends Exclusive Social",
+    embedUrl: "https://luma.com/embed/event/evt-yp2ppbOLOE9h36a/simple",
+  },
+  {
     title: "CAIA Reading Group: OpenAI’s Model Misalignment Incidents",
     embedUrl: "https://luma.com/embed/event/evt-XlFFh5Bew5Ck1Fe/simple",
   },

@@ -1,20 +1,17 @@
 import Image from "next/image";
-import HomeCommunity from "@/components/HomeCommunity";
-import FuturesField from "@/components/FuturesField";
-import InstagramButton from "@/components/InstagramButton";
 import Link from "next/link";
 import type { Metadata } from "next";
+import FuturesField from "@/components/FuturesField";
 import Button from "@/components/ui/Button";
 import NewsCarousel from "@/components/NewsCarousel";
-import ResearchCard from "@/components/ResearchCard";
+import ResearchCard, { ResearchRowHeader } from "@/components/ResearchCard";
 import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
-import {
-  HOME_CTA_ITEMS,
-  HOME_HERO,
-  HOME_SPONSORS,
-} from "@/content/home";
+import AiSafetyIntro from "@/components/home/AiSafetyIntro";
+import HighlightStatement from "@/components/home/HighlightStatement";
+import LogoBand from "@/components/home/LogoBand";
+import { HOME_CTA_ITEMS, HOME_HERO } from "@/content/home";
 import { EVENTS_CALENDAR_URL, EVENTS_EMBED_URL } from "@/content/events";
 import { RESEARCH_PAPERS } from "@/content/research";
 import { createPageMetadata } from "@/content/seo";
@@ -30,163 +27,143 @@ export const metadata: Metadata = createPageMetadata({
 /** Papers only (not projects, notes, or posts), newest first. */
 const RECENT_PAPERS = RESEARCH_PAPERS.filter((paper) => !paper.kind).slice(0, 6);
 
+const SLACK = HOME_CTA_ITEMS[0];
+
+function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="text-link whitespace-nowrap text-[0.9375rem]">
+      {children} <span aria-hidden="true">→</span>
+    </Link>
+  );
+}
+
 export default function Home() {
   return (
     <main>
-      <section className="relative isolate overflow-hidden">
+      {/* Hero: the futures fan over grid paper, as on the campaign poster and the slide cover.
+          The grid is centred and anchored to the bottom edge, so its last row closes on a rule. */}
+      <section className="grid-paper relative isolate overflow-hidden border-b border-grid [background-position:center_bottom] lg:[background-position:184px_bottom] xl:[background-position:center_bottom]">
         <FuturesField
           anchorSelector="[data-hero-copy]"
           className="absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,#000_86%,transparent)]"
         />
 
-        <Container className="relative z-10 flex flex-col pt-12 pb-[calc(min(92vw,400px)_-_28px)] sm:pt-16 sm:pb-[min(70vw,520px)] lg:min-h-[calc(100svh-86px)] lg:pb-[22rem] lg:pt-[13vh]">
+        <Container className="relative z-10 flex flex-col pt-14 pb-[calc(min(92vw,400px)_-_28px)] sm:pt-20 sm:pb-[min(70vw,520px)] lg:min-h-[calc(100svh-76px)] lg:pb-[22rem] lg:pt-[12vh]">
           <MotionReveal>
-            <div data-hero-copy className="max-w-[46rem]">
-              <h1 className="display-title text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-[4.25rem]">
+            <div data-hero-copy className="max-w-[52rem]">
+              <h1 className="display-title text-[2.75rem] leading-[1.04] sm:text-[3.75rem] lg:text-[clamp(3.75rem,5.4vw,4.875rem)]">
                 {HOME_HERO.title}
               </h1>
-              <p className="lead-copy mt-5 max-w-[40rem]">{HOME_HERO.subtitle}</p>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                {HOME_CTA_ITEMS.map((item) => (
-                  <Button
-                    key={item.label}
-                    href={item.href}
-                    external={item.external}
-                    variant={item.style === "secondary" ? "secondary" : "primary"}
-                  >
-                    {item.label}
-                  </Button>
-                ))}
-                <InstagramButton />
+              <p className="lead-copy mt-6 max-w-[34rem] sm:mt-8">{HOME_HERO.subtitle}</p>
+              <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
+                <Button href={SLACK.href} external>
+                  {SLACK.label}
+                </Button>
+                <Button href="/join" variant="secondary">
+                  Get Involved
+                </Button>
               </div>
             </div>
           </MotionReveal>
         </Container>
       </section>
 
-      <HomeCommunity />
+      {/* Mission, set like a page of Cornell notes: the label in the cue column, a margin
+          rule dropping from the line above, and the statement written on ruled lines. The
+          rule sits midway between the label and the statement. The cue column is 136px, and
+          the hero grid is positioned so that one of its lines lands on the rule. */}
+      <section aria-label="Our mission">
+        <Container>
+          <div className="grid lg:grid-cols-[136px_minmax(0,1fr)]">
+            <div className="pt-20 sm:pt-28 lg:pt-40">
+              <p className="mono-label text-brand-red lg:pt-4">Our mission</p>
+            </div>
+            <div className="pb-24 pt-6 sm:pb-32 lg:border-l lg:border-grid lg:pb-40 lg:pl-10 lg:pt-40">
+              <HighlightStatement
+                ruled
+                className="display-title text-[1.875rem] leading-[1.32] sm:text-[2.5rem] lg:text-[3rem]"
+                before="We believe that AI could bring immense benefits to the world, provided that it’s "
+                marked="developed safely and governed responsibly."
+              />
+              <p className="lead-copy mt-8 max-w-2xl sm:mt-10">
+                We bring together technical AI safety, policy, governance, and broader conversations about AI to ensure
+                that increasingly capable AI systems remain aligned with human intentions and benefit all of humanity.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
 
+      <AiSafetyIntro />
 
       <Section
+        id="events"
         title="Upcoming Events"
-        className="mt-4"
-        subtitle="Join talks, reading sessions, and workshops from the CAIA community."
+        subtitle="Talks, reading groups, workshops and socials, open to everyone."
+        action={<Button href={EVENTS_CALENDAR_URL} external variant="secondary">Subscribe on Luma</Button>}
       >
-        <MotionReveal>
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-slate-600 sm:text-base">
-              Subscribe to get events directly on your calendar.
-            </p>
-            <Button href={EVENTS_CALENDAR_URL} external variant="primary">
-              Subscribe to Events Calendar
-            </Button>
-          </div>
-          <div className="overflow-hidden">
-            <iframe
-              src={EVENTS_EMBED_URL}
-              className="h-[520px] w-full rounded-xl border border-slate-200"
-              style={{ border: "1px solid rgba(148, 163, 184, 0.35)" }}
-              allowFullScreen
-              title="CAIA upcoming events"
-            />
-          </div>
-          <div className="mt-6">
-            <Link
-              href="/events#events"
-              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
-            >
-              See all events
-            </Link>
-          </div>
-        </MotionReveal>
+        <iframe
+          src={EVENTS_EMBED_URL}
+          className="h-[560px] w-full border border-slate-200 bg-white"
+          allowFullScreen
+          loading="lazy"
+          title="CAIA upcoming events"
+        />
+        <div className="mt-6">
+          <ArrowLink href="/events#past-events">Past events</ArrowLink>
+        </div>
       </Section>
 
-      <Section
-        title="News"
-        className="mt-4"
-      >
+      <Section id="news" title="News" action={<ArrowLink href="/news">All news</ArrowLink>}>
         <NewsCarousel />
-
-        <MotionReveal delayClass="motion-delay-2">
-          <div className="mt-6">
-            <Link
-              href="/news"
-              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
-            >
-              View all news
-            </Link>
-          </div>
-        </MotionReveal>
       </Section>
 
       <Section
+        id="recent-work"
         title="Recent Work"
-        className="mt-4"
-        subtitle="Selected papers by CAIA community members."
+        subtitle="Selected papers by CAIA members."
+        action={<ArrowLink href="/research">All research</ArrowLink>}
       >
-        {/* Two rows: four papers on phones and tablets, six on wide screens. */}
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {RECENT_PAPERS.map((paper, index) => (
-            <MotionReveal
-              key={paper.title}
-              className={index >= 4 ? "hidden h-full lg:block" : "h-full"}
-              delayClass={index % 3 === 1 ? "motion-delay-1" : index % 3 === 2 ? "motion-delay-2" : undefined}
-            >
-              <ResearchCard paper={paper} variant="compact" />
-            </MotionReveal>
+        <ResearchRowHeader />
+        <div className="border-t border-blue">
+          {RECENT_PAPERS.map((paper) => (
+            <ResearchCard key={paper.title} paper={paper} variant="row" />
           ))}
         </div>
-        <MotionReveal delayClass="motion-delay-1">
-          <div className="mt-6">
-            <Link
-              href="/research"
-              className="inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-400 underline-offset-4 hover:text-slate-950 sm:text-base"
-            >
-              Explore all research
-            </Link>
-          </div>
-        </MotionReveal>
       </Section>
 
-      <Section title="Our members have worked with:" className="mt-4">
-        <MotionReveal>
-          <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
-            <Image
-              src="/graphics/beam-lines.svg"
-              alt="Decorative AI data beams"
-              width={980}
-              height={220}
-              className="h-auto w-full"
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 980px"
-            />
+      <LogoBand />
+
+      {/* Join: a real photo beside the invitation, ending the page on the call to action. */}
+      <section aria-labelledby="join-title" className="pt-24 sm:pt-32">
+        <Container>
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[4px] lg:col-span-7">
+              <Image
+                src="/graphics/join-us-discussion.jpg"
+                alt="CAIA members in a discussion around a seminar table"
+                fill
+                sizes="(min-width: 1024px) 700px, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="lg:col-span-5">
+              <p className="mono-label text-brand-red">Join us</p>
+              <h2 id="join-title" className="display-title mt-4 text-[2.125rem] leading-[1.08] sm:text-5xl">
+                Open to Everyone
+              </h2>
+              <p className="lead-copy mt-6">
+                All of our events are open to everyone. If you join our Slack, you’re considered a member. It’s where we
+                share conversations, announcements, and opportunities.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href={SLACK.href} external>{SLACK.label}</Button>
+                <Button href="/join" variant="secondary">Ways to Get Involved</Button>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-            {HOME_SPONSORS.map((sponsor) => (
-              <a
-                key={sponsor.name}
-                href={sponsor.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="focus-ring surface-card flex min-h-28 items-center justify-center p-5 transition hover:border-slate-300 sm:min-h-32"
-                aria-label={`${sponsor.name} website`}
-              >
-                <Image
-                  src={sponsor.src}
-                  alt={`${sponsor.name} logo`}
-                  width={320}
-                  height={120}
-                  className="h-auto max-h-16 w-auto sm:max-h-20"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 26vw, 220px"
-                  quality={75}
-                />
-              </a>
-            ))}
-          </div>
-        </MotionReveal>
-      </Section>
+        </Container>
+      </section>
     </main>
   );
 }

@@ -10,7 +10,7 @@ interface ContainerProps {
 const SIZE_CLASS: Record<NonNullable<ContainerProps["size"]>, string> = {
   narrow: "max-w-content",
   page: "max-w-page",
-  wide: "max-w-[88rem]",
+  wide: "max-w-[96rem]",
 };
 
 export default function Container({
@@ -19,7 +19,7 @@ export default function Container({
   size = "page",
 }: ContainerProps) {
   return (
-    <div className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", SIZE_CLASS[size], className)}>
+    <div className={cn("mx-auto w-full px-5 sm:px-8 lg:px-12", SIZE_CLASS[size], className)}>
       {children}
     </div>
   );

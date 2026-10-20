@@ -114,3 +114,21 @@
   .viewSwitch button span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .desktop * { transition: none !important; } .folderCard:hover .paperOne, .folderCard:focus-visible .paperOne, .folderCard:hover .paperTwo, .folderCard:focus-visible .paperTwo, .folderCard:hover .folderFront, .folderCard:focus-visible .folderFront { transform: none; } }
+
+/* CAIA design system: a flat panel frame, a white reading room, and folders in soft tints of
+   one lightness, each labelled in a deeper shade of its own hue. Top level, in order: Start
+   here, Technical AI safety, Policy & governance, Forecasting & society, Conversations &
+   ideas, Paths to contribute. */
+.desktop { border-color: var(--rule); border-radius: 8px; background: var(--panel); box-shadow: none; }
+.readingRoom { border-radius: 4px; background: #fff; }
+.headingRow h3 { color: var(--ink); }
+.credit { font-family: var(--font-mono); font-size: .8125rem; color: var(--muted); }
+.folderCard, .folderCard[data-tone="0"] { --folder-front: #f4dcd8; --folder-back: #e8c4be; --folder-ink: #9a2a22; }
+.folderCard[data-tone="1"] { --folder-front: #d9ebf6; --folder-back: #bcd9ec; --folder-ink: #0c4da2; }
+.folderCard[data-tone="2"] { --folder-front: #f3ecd2; --folder-back: #e4d9b2; --folder-ink: #7a6216; }
+.folderCard[data-tone="3"] { --folder-front: #dcebe0; --folder-back: #c1dbc8; --folder-ink: #2f6a45; }
+.folderCard[data-tone="4"] { --folder-front: #e5e1f2; --folder-back: #cfc8e6; --folder-ink: #4f3f8f; }
+.folderCard[data-tone="5"] { --folder-front: #ebe8e4; --folder-back: #d9d6d2; --folder-ink: #534e49; }
+.folderCard:hover { background: var(--panel); }
+.search, .tools select, .viewSwitch { border-radius: 4px; }
+.viewSwitch button { border-radius: 3px; }

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 import type { ResearchPaperDetail } from "@/content/research";
+import { TopicTags } from "@/components/ui/Tag";
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -14,10 +15,8 @@ function formatMonth(date: string) {
   return `${MONTHS[month - 1]}, ${year}`;
 }
 
-/** Same pill as the site's buttons (see ui/Button), sized down for tags. */
-export const TAG_CLASS = "inline-flex items-center rounded-full px-3 py-0.5 text-xs font-medium leading-5";
-const VENUE_TAG = `${TAG_CLASS} bg-slate-100 text-slate-900`;
-const TOPIC_TAG = `${TAG_CLASS} bg-white text-slate-600 ring-1 ring-inset ring-slate-200`;
+/** Mono tag style, shared with the research page. */
+export const TAG_CLASS = "inline-flex items-center font-mono text-xs uppercase tracking-[0.06em]";
 
 function CaiaLogo() {
   return (
@@ -38,83 +37,100 @@ interface ResearchCardProps {
    * "compact" (home page): title, CAIA members, and tags.
    * "full" (research page): date, title, tags, summary, and every author.
    */
-  variant?: "compact" | "full";
+  variant?: "compact" | "full" | "row";
   className?: string;
 }
 
-/** A research card; the whole card links to the work. */
+/** A research entry; the title links to the work. */
 export default function ResearchCard({ paper, variant = "full", className }: ResearchCardProps) {
+  if (variant === "row") return <ResearchRow paper={paper} className={className} />;
   const compact = variant === "compact";
   const venues = compact && paper.shortTag ? [paper.shortTag] : paper.tags;
-  const members = paper.authors.filter((author) => author.isCaiaMember);
-
-  const tags = venues.length + paper.topics.length > 0 && (
-    <div className={cn("flex flex-wrap gap-2", compact && "mt-auto pt-5")}>
-      {venues.map((tag) => (
-        <span key={`venue-${tag}`} className={VENUE_TAG}>
-          {tag}
-        </span>
-      ))}
-      {paper.topics.map((topic) => (
-        <span key={`topic-${topic}`} className={TOPIC_TAG}>
-          {topic}
-        </span>
-      ))}
-    </div>
-  );
 
   return (
-    <article
-      className={cn(
-        "surface-card group/card relative flex h-full flex-col p-5 transition-colors duration-200 hover:border-slate-300 sm:p-6",
-        className,
-      )}
-    >
-      {!compact && (
-        <time dateTime={paper.date} className="mb-2 block text-sm text-slate-500">
-          {formatMonth(paper.date)}
-        </time>
-      )}
+    <article className={cn("group relative grid gap-3 border-b border-slate-200 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10", className)}>
+      <div className="space-y-2 sm:col-span-3 sm:pt-1.5">
+        <time dateTime={paper.date} className="mono-label block text-slate-500">{formatMonth(paper.date)}</time>
+        {venues.map((tag) => (
+          <p key={`venue-${tag}`} className="mono-caption">{tag}</p>
+        ))}
+      </div>
+      <div className="sm:col-span-9 lg:col-span-8">
+        <h3 className="font-display text-[1.375rem] leading-[1.25] sm:text-[1.75rem]">
+          <a
+            href={paper.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring underline decoration-transparent decoration-1 underline-offset-4 transition-colors hover:decoration-slate-400"
+          >
+            {paper.title}
+          </a>
+        </h3>
+        {!compact && <p className="mt-4 text-[1rem] leading-[1.7] text-slate-600">{paper.summary}</p>}
+        <p className="mt-4 text-[0.9375rem] leading-6 text-slate-500">
+          {paper.authors.map((author, index) => (
+            <Fragment key={`${author.name}-${index}`}>
+              {index > 0 ? ", " : ""}
+              <span className={author.isCaiaMember ? "inline-flex items-center gap-1 align-middle font-medium text-ink" : ""}>
+                {author.isCaiaMember && <CaiaLogo />}
+                {author.name}
+              </span>
+            </Fragment>
+          ))}
+        </p>
+        {paper.topics.length > 0 && <TopicTags topics={paper.topics} className="mt-5" />}
+      </div>
+    </article>
+  );
+}
 
-      <h3 className={cn("leading-snug text-slate-900", compact ? "text-xl" : "text-[1.35rem]")}>
+/** Column labels for a list of rows, shown from the small breakpoint up. */
+export function ResearchRowHeader() {
+  return (
+    <div aria-hidden="true" className="mono-caption hidden gap-8 pb-3 sm:grid sm:grid-cols-12">
+      <span className="sm:col-span-3">Venue</span>
+      <span className="sm:col-span-6">Title</span>
+      <span className="flex items-center gap-1.5 sm:col-span-3">
+        <CaiaLogo />
+        CAIA coauthors
+      </span>
+    </div>
+  );
+}
+
+/** One line of a hairline list: venue, title, CAIA coauthors. The whole row links to the work. */
+function ResearchRow({ paper, className }: { paper: ResearchPaperDetail; className?: string }) {
+  const members = paper.authors.filter((author) => author.isCaiaMember);
+  const venue = paper.shortTag ?? paper.tags[0];
+  return (
+    <article className={cn("group relative grid gap-2 border-b border-slate-200 py-6 sm:grid-cols-12 sm:gap-8 sm:py-7", className)}>
+      <p className="mono-label text-slate-500 sm:col-span-3 sm:pt-2">{venue}</p>
+      <h3 className="font-display text-[1.25rem] leading-[1.3] sm:col-span-6 sm:text-[1.5rem]">
         <a
           href={paper.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-slate-300 decoration-1 underline-offset-4 transition-colors after:absolute after:inset-0 after:content-[''] group-hover/card:decoration-slate-500"
+          className="focus-ring after:absolute after:inset-0 after:content-[''] group-hover:underline group-hover:decoration-slate-400 group-hover:decoration-1 group-hover:underline-offset-4"
         >
           {paper.title}
         </a>
       </h3>
-
-      {compact ? (
-        members.length > 0 && (
-          <p className="mt-3 flex items-start gap-1.5 text-sm leading-6 text-slate-700">
-            <span className="mt-[0.3rem]">
-              <CaiaLogo />
-            </span>
-            <span className="font-medium">{members.map((member) => member.name).join(", ")}</span>
-          </p>
-        )
-      ) : (
-        <>
-          {tags && <div className="mt-4">{tags}</div>}
-          <p className="mt-4 text-base leading-7 text-slate-700">{paper.summary}</p>
-          <p className="mt-auto pt-5 text-sm leading-6 text-slate-600">
-            {paper.authors.map((author, index) => (
-              <Fragment key={`${author.name}-${index}`}>
-                {index > 0 ? ", " : ""}
-                <span className="inline-flex items-center gap-1 align-middle">
-                  {author.isCaiaMember && <CaiaLogo />}
-                  <span className={author.isCaiaMember ? "font-semibold text-slate-900" : ""}>{author.name}</span>
-                </span>
-              </Fragment>
-            ))}
-          </p>
-        </>
-      )}
-
-      {compact && tags}
+      <p className="flex items-start justify-between gap-4 text-[0.9375rem] leading-6 text-slate-600 sm:col-span-3 sm:pt-1">
+        <span>
+          <span className="sr-only">CAIA coauthors: </span>
+          {members.map((member, index) => (
+            <Fragment key={member.name}>
+              {index > 0 ? ", " : ""}
+              <span className="inline-flex items-center gap-1 align-middle">
+                {/* Phones have no column header, so each name carries the CAIA mark there. */}
+                <span className="sm:hidden"><CaiaLogo /></span>
+                {member.name}
+              </span>
+            </Fragment>
+          ))}
+        </span>
+        <span aria-hidden="true" className="hidden text-slate-400 transition-colors group-hover:text-ink sm:inline">↗</span>
+      </p>
     </article>
   );
 }

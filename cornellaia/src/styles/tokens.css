@@ -1,30 +1,52 @@
+/*
+ * CAIA design tokens, shared with the CAIA Slides design system.
+ * Paper white carries the content, warm greys carry text and hairlines,
+ * sky marks section bands, blue is the halftone colour, red is the logo accent.
+ */
 :root {
-  --color-paper-50: #f8faff;
-  --color-paper-100: #eef3ff;
-  --color-paper-200: #dce6ff;
-  --color-ink-900: #0f172a;
-  --color-ink-700: #334155;
-  --color-ink-500: #64748b;
-  --color-brand-red: #b31b1b;
+  /* Design system palette */
+  --paper: #ffffff;
+  --grid: #ececee;
+  --sky: #cdedf9;
+  --panel: #f6f5f3;
+  --rule: #d9d6d2;
+  --ink: #141313;
+  --ink-2: #534e49;
+  --muted: #6b6661;
+  --red: #b31b1b;
+  --red-signal: #e32c2d;
+  --blue: #0c4da2;
+  --cyan: #20bcee;
+  --highlight: #f7f16d;
+
+  /* Legacy names, mapped onto the palette so older modules keep working */
+  --color-paper-50: var(--paper);
+  --color-paper-100: var(--panel);
+  --color-paper-200: var(--rule);
+  --color-ink-900: var(--ink);
+  --color-ink-700: var(--ink-2);
+  --color-ink-500: var(--muted);
+  --color-brand-red: var(--red);
   --color-brand-red-strong: #8f1212;
-  --color-brand-cyan: #0ea5a3;
-  --color-brand-navy: #1e293b;
+  --color-brand-cyan: var(--blue);
+  --color-brand-navy: var(--ink);
   --color-accent-gold: #b38744;
 
-  --bg-app: #ffffff;
-  --bg-hero: #ffffff;
+  --bg-app: var(--paper);
+  --bg-hero: var(--paper);
 
   --shadow-soft: none;
   --shadow-lift: none;
 
-  --radius-sm: 0.6rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.4rem;
-  --radius-xl: 2rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
 
-  --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
-  --font-display: "Young Serif", "Times New Roman", serif;
+  --font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "DM Mono", "SFMono-Regular", Menlo, monospace;
+  --font-display: "Young Serif", Georgia, serif;
 
-  --max-page-width: 74rem;
-  --max-content-width: 56rem;
+  --max-page-width: 80rem;
+  --max-content-width: 52rem;
 }

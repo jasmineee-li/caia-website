@@ -64,6 +64,44 @@ export default function ProfileCard({
     linkedinUrl ? { href: linkedinUrl, label: "LinkedIn", icon: <LinkedInIcon /> } : null,
   ].filter(Boolean) as { href: string; label: string; icon: React.ReactNode }[];
 
+  // Team page: a square portrait with the name and role set under it, left aligned.
+  if (!teamLayout && !unframed) {
+    return (
+      <article className="min-w-0">
+        <div className="relative aspect-square overflow-hidden rounded-[4px] bg-panel">
+          <Image
+            src={imageSrc}
+            alt={altText || `${name}'s profile photo`}
+            fill
+            sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 230px"
+            loading="lazy"
+            quality={80}
+            className="object-cover"
+          />
+        </div>
+        <h3 className="mt-4 font-display text-[1.25rem] leading-[1.2]">{name}</h3>
+        {role && <p className="mono-caption mt-1.5">{role}</p>}
+        {links.length > 0 && (
+          <div className="mt-3 flex gap-3 text-slate-500">
+            {links.map((link) => (
+              <a
+                key={`${name}-${link.label}`}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${name} ${link.label}`}
+                title={link.label}
+                className="focus-ring transition-colors hover:text-ink"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        )}
+      </article>
+    );
+  }
+
   return (
     <article
       className={cn(

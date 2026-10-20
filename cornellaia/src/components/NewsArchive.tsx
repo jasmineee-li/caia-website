@@ -4,6 +4,12 @@ import { useId, useState } from "react";
 import type { NewsItem } from "@/content/news";
 import styles from "./NewsArchive.module.css";
 
+/** Every dot is the same size. Older items fade, down to 60% opacity for the oldest. */
+function dotOpacity(index: number, count: number) {
+  const t = count > 1 ? index / (count - 1) : 0;
+  return Math.round((1 - 0.4 * t) * 100) / 100;
+}
+
 export default function NewsArchive({ news }: { news: NewsItem[] }) {
   const id = useId();
   const [preview, setPreview] = useState<NewsItem | null>(null);
@@ -27,13 +33,12 @@ export default function NewsArchive({ news }: { news: NewsItem[] }) {
             <a
               href={`#${item.date}`}
               className={styles.blockLink}
-              data-tone={index % 3}
               aria-label={`${item.displayDate}: ${item.title}`}
               aria-describedby={preview === item ? id : undefined}
               onMouseEnter={() => setPreview(item)}
               onFocus={() => setPreview(item)}
               onClick={() => setPreview(null)}
-            ><span aria-hidden="true" /></a>
+            ><span aria-hidden="true" style={{ opacity: dotOpacity(index, news.length) }} /></a>
           </li>
         ))}
       </ol>
