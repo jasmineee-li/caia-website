@@ -99,7 +99,7 @@ export default function Home() {
       <Section
         id="events"
         title="Upcoming Events"
-        subtitle="Talks, reading groups, workshops and socials, open to everyone."
+        subtitle="We host talks, reading groups, workshops, and socials throughout the semester, and anyone is welcome to come."
         action={<Button href={EVENTS_CALENDAR_URL} external variant="secondary">Subscribe on Luma</Button>}
       >
         <iframe
@@ -121,7 +121,7 @@ export default function Home() {
       <Section
         id="recent-work"
         title="Recent Work"
-        subtitle="Selected papers by CAIA members."
+        subtitle="A few recent papers that CAIA members have worked on."
         action={<ArrowLink href="/research">All research</ArrowLink>}
       >
         <ResearchRowHeader />

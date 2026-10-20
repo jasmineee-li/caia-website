@@ -20,7 +20,7 @@ export default function TeamPage() {
     <main>
       <PageHeader
         title="Our Team"
-        lead={<p>Students and advisors working toward AI that aligns with human intentions and benefits everyone.</p>}
+        lead={<p>Meet the students and advisors who run CAIA, and some of our alumni.</p>}
       />
       <Section className="pt-16 sm:pt-20 lg:pt-24">
         <div className="space-y-20 sm:space-y-28">

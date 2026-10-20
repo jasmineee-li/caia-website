@@ -15,7 +15,7 @@ export default function EventsPage() {
     <main>
       <PageHeader
         title="Events"
-        lead={<p>Guest talks, workshops, reading groups and socials. Every event is open to everyone.</p>}
+        lead={<p>We host guest talks, workshops, reading groups, and socials throughout the semester. All of our events are open to everyone.</p>}
       >
         <Button href={EVENTS_CALENDAR_URL} external>Subscribe on Luma</Button>
       </PageHeader>

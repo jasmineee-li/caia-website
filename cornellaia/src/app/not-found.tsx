@@ -9,7 +9,7 @@ export default function NotFound() {
       <Container className="flex min-h-[calc(100dvh-76px)] flex-col justify-center py-24">
         <p className="mono-label text-brand-red">Error 404</p>
         <h1 className="display-title mt-5 text-[3rem] leading-[1] sm:text-[4.5rem] lg:text-[5.25rem]">Page Not Found</h1>
-        <p className="lead-copy mt-6 max-w-xl">The page you requested does not exist or has moved.</p>
+        <p className="lead-copy mt-6 max-w-xl">We couldn’t find this page. It may have moved, or the link might be out of date.</p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Button href="/">Home</Button>
           <Button href="/join" variant="secondary">Get Involved</Button>

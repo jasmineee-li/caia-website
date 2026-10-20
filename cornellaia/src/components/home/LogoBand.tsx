@@ -24,15 +24,14 @@ function logoSize(name: string, width: number, height: number) {
 }
 
 /**
- * Full-bleed warm panel band, the same palette as the footer: a red label and every logo
- * in ink, each in its own white cell, like the visuals on the program cards.
+ * Full-bleed warm panel band, the same palette as the footer: every logo in ink, each in
+ * its own white cell, like the visuals on the program cards.
  */
 export default function LogoBand() {
   return (
     <section aria-labelledby="worked-with-title" className="mt-28 bg-panel py-20 sm:mt-36 sm:py-28 lg:py-32">
       <Container>
-        <p className="mono-label text-brand-red">Members’ experience</p>
-        <h2 id="worked-with-title" className="display-title mt-4 text-[2.125rem] leading-[1.08] sm:mt-5 sm:text-5xl lg:text-[3.5rem]">
+        <h2 id="worked-with-title" className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]">
           Our members have worked with
         </h2>
         <ul className="mt-12 grid grid-cols-2 gap-2 sm:mt-16 sm:grid-cols-4 sm:gap-3">

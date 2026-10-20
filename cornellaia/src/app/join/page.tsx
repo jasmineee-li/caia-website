@@ -57,7 +57,7 @@ export default function JoinPage() {
       <Section
         id="programs"
         title="Programs"
-        subtitle="Courses, reading groups, research and events, run by students for students."
+        subtitle="You can take our course, join a weekly reading group, do research with us, or just come to an event."
       >
         {/* Phones: one sideways rail. Tablets: two columns. Desktop: the three learning
             programs in a row, then the research team across two columns beside events.
@@ -75,8 +75,8 @@ export default function JoinPage() {
             className="w-[82%] sm:w-[46%] md:w-auto"
             action={<Button href="/programs/cs1998" variant="secondary">Course &amp; Materials</Button>}
           >
-            Intro to AI Safety &amp; Alignment, for credit and open to all majors. Fall enrollment is closed, and the
-            materials are open to everyone.
+            Learn through lectures, hands-on notebooks, discussions, and a research project. Fall enrollment is
+            closed, but the course materials are open to everyone.
           </ProgramCard>
 
           <ProgramCard
@@ -88,8 +88,8 @@ export default function JoinPage() {
             className="w-[82%] sm:w-[46%] md:w-auto"
             action={<ApplyRow href={APPLICATIONS.technicalReadingGroup} label="Apply" note={ROLLING} />}
           >
-            A recent paper in technical AI safety each week, from interpretability and evaluations to scalable
-            oversight.
+            Each week, we read a recent paper in technical AI safety and talk through its methods, evidence, and
+            limitations together.
           </ProgramCard>
 
           <ProgramCard
@@ -101,8 +101,8 @@ export default function JoinPage() {
             className="w-[82%] sm:w-[46%] md:w-auto"
             action={<ApplyRow href={APPLICATIONS.policyReadingGroup} label="Apply" note={ROLLING} />}
           >
-            How advanced AI could reshape work, the economy and the balance of power, and what institutions and policy
-            can do about it.
+            Each week, we read and discuss work on how advanced AI could change work, the economy, and the balance
+            of power, and what policy can do about it.
           </ProgramCard>
 
           <ProgramCard
@@ -135,8 +135,8 @@ export default function JoinPage() {
               </div>
             }
           >
-            A semester-long AI safety project with a small team of Cornell students. Join a proposed project or bring
-            your own idea.
+            Spend the semester on an AI safety research project with a small team of Cornell students. You can join
+            one of our proposed projects or bring an idea of your own.
           </ProgramCard>
 
           <ProgramCard
@@ -151,13 +151,14 @@ export default function JoinPage() {
             className="w-[82%] sm:w-[46%] md:w-auto"
             action={<Button href={EVENTS_CALENDAR_URL} external variant="secondary">Subscribe on Luma</Button>}
           >
-            Guest talks, workshops, discussions and socials throughout the semester.
+            We host guest talks, workshops, discussions, and socials throughout the semester.
           </ProgramCard>
         </div>
 
         <p className="mt-10 text-[0.9375rem] leading-7 text-slate-600">
-          Studying on your own? See our{" "}
-          <Link href="/resources" className="text-link">courses, fellowships and library</Link>.
+          If you’d rather learn on your own, our{" "}
+          <Link href="/resources" className="text-link">resources page</Link> has courses, fellowships, and a reading
+          library.
         </p>
       </Section>
 
@@ -167,8 +168,9 @@ export default function JoinPage() {
             <h2 className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:col-span-5">Help Organize</h2>
             <div className="lg:col-span-7">
               <p className="lead-copy">
-                Help run events, support research, or contribute to outreach, design and operations. We welcome
-                technical, policy, economics and other perspectives on AI.
+                Help organize events, support research, or contribute to outreach, design, and operations. We welcome
+                technical, policy, economics, and other perspectives on AI. Reach out to a team member with an idea or
+                an area you’d like to help with.
               </p>
               <div className="mt-8">
                 <Button href="/team" variant="secondary">Reach Out to the Team</Button>

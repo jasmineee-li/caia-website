@@ -20,7 +20,7 @@ export default function NewsPage() {
     <main>
       <PageHeader
         title="News"
-        lead={<p>Research publications, program announcements, and member news.</p>}
+        lead={<p>Updates from CAIA, including new papers, program announcements, and what our members have been up to.</p>}
       />
       <Container className="pt-12 sm:pt-16 lg:pt-20">
         <div className={styles.layout}>

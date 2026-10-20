@@ -32,7 +32,7 @@ function LinkedOrganizations({ text }: { text: string }) {
 
 export default function ResourcesPage() {
   return <main>
-    <PageHeader title="Resources" lead={<p>Courses, readings, and fellowships in AI safety and governance.</p>} />
+    <PageHeader title="Resources" lead={<p>Courses, readings, and fellowships we’ve found useful for learning about AI safety and governance.</p>} />
 
     <Section id="learn" title="Get Started" className="pt-16 sm:pt-20 lg:pt-24">
       <div className="max-w-3xl space-y-5 text-[1.0625rem] leading-[1.75] text-slate-600">
@@ -52,7 +52,7 @@ export default function ResourcesPage() {
       </div>
     </Section>
 
-    <Section id="library" title="Library" subtitle="Papers, articles, videos and curricula, by topic.">
+    <Section id="library" title="Library" subtitle="Papers, articles, videos, and curricula we’ve collected, organized by topic.">
       <ResourceLibrary />
     </Section>
   </main>;

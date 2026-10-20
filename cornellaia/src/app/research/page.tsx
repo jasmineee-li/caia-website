@@ -31,7 +31,7 @@ export default function ResearchPage() {
       <PageHeader
         title="Research"
         titleContent={<ScrambleText text="Research" />}
-        lead={<p>Publications and projects by CAIA members and collaborators, and the team that produces them.</p>}
+        lead={<p>Papers and projects by CAIA members and our collaborators, plus how to join our research team.</p>}
       />
 
       {/* Research team: the slide deck's feature card, a visual beside the details. */}
@@ -51,8 +51,8 @@ export default function ResearchPage() {
               <p className="mono-label text-brand-red">Semester project · Fall 2026</p>
               <h2 className="display-title mt-4 text-[2.125rem] leading-[1.08] sm:text-5xl">Research Team</h2>
               <p className="lead-copy mt-5">
-                Spend the semester on an AI safety research project with a small team of Cornell students. Join a
-                proposed project or bring your own idea.
+                Spend the semester on an AI safety research project with a small team of Cornell students. You can
+                join one of our proposed projects or bring an idea of your own.
               </p>
               <dl className="mt-8 flex flex-wrap gap-x-8 gap-y-5 border-t border-slate-200 pt-6 lg:mt-auto">
                 {TEAM_NUMBERS.map((item) => (
