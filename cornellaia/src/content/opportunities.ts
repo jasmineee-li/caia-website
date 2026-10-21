@@ -3,12 +3,13 @@
  * "Application opens soon" placeholder in place of the Apply button.
  */
 export const APPLICATIONS: Record<
-  "researchTeam" | "technicalReadingGroup" | "policyReadingGroup",
+  "researchTeam" | "technicalReadingGroup" | "policyReadingGroup" | "organizer",
   string | null
 > = {
   researchTeam: null,
   technicalReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shrW1K1BBdGfgjDLe",
   policyReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shruuVk6rF2LarJu2",
+  organizer: "https://airtable.com/appjO4DuQKwI1MaNr/shrGbP58RXXgapgZ9",
 };
 
 /** What every research team project gets, shown on the research and Get Involved pages. */

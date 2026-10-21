@@ -11,7 +11,8 @@ export default function AiSafetyIntro() {
           <article key={slide.id} className="border-t border-blue pt-6">
             <p className="mono-label text-brand-red">{String(index + 1).padStart(2, "0")}</p>
             <h3 className="display-title mt-4 text-[1.75rem] leading-[1.15] sm:text-[2rem]">{slide.label}</h3>
-            <p className="mt-5 text-[1.0625rem] leading-[1.7] text-ink-2">{slide.body}</p>
+            {/* Quoted from the source below, so the passage sits in quotation marks. */}
+            <p className="mt-5 text-[1.0625rem] leading-[1.7] text-ink-2">“{slide.body}”</p>
             <ul className="mt-7 flex flex-wrap gap-2">
               {slide.links.map((link) => (
                 <li key={link.href}>

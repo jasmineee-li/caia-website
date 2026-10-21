@@ -3,8 +3,10 @@ import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import PageHeader from "@/components/ui/PageHeader";
 import Button from "@/components/ui/Button";
+import ApplicationButton from "@/components/ApplicationButton";
 import ProfileCard from "@/components/ProfileCard";
 import { TEAM_GROUPS } from "@/content/team";
+import { APPLICATIONS } from "@/content/opportunities";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -65,9 +67,10 @@ export default function TeamPage() {
         </div>
       </Section>
 
-      <Section title="Help Organize">
-        <p className="lead-copy max-w-3xl">We welcome people interested in research, policy, outreach, design and operations. Reach out to a team member about what you’d like to contribute.</p>
-        <div className="mt-8">
+      <Section title="Want to Contribute?">
+        <p className="lead-copy max-w-3xl">We welcome people interested in research, policy, outreach, design, and operations. You can apply to join our organizing team, or reach out to a team member about what you’d like to contribute.</p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <ApplicationButton href={APPLICATIONS.organizer} label="Apply to Be an Organizer" />
           <Button href="/join" variant="secondary">Ways to Get Involved</Button>
         </div>
       </Section>

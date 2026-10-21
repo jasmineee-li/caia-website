@@ -16,6 +16,11 @@ interface HalftoneFieldProps {
   colors?: string[];
   /** Any CSS image to paint the dots with, e.g. a gradient. Overrides colors. */
   paint?: string;
+  /**
+   * An image with one flat colour per grid cell, anchored at the bottom right like the
+   * dots, so every dot takes its cell's colour. Overrides paint and colors.
+   */
+  cellPaint?: string;
   /** Grid pitch in px. */
   pitch?: number;
   radii?: number[];
@@ -30,12 +35,13 @@ function sweep(colors: string[]) {
  * The halftone field from the slide dividers: a grid of dots that grows toward the
  * right edge. Purely decorative. Give it a position and size through className.
  */
-export default function HalftoneField({ className, color, colors, paint, pitch, radii = DEFAULT_RADII }: HalftoneFieldProps) {
+export default function HalftoneField({ className, color, colors, paint, cellPaint, pitch, radii = DEFAULT_RADII }: HalftoneFieldProps) {
   const style = {
     ...(color ? { "--dot": color } : {}),
     ...(pitch ? { "--pitch": `${pitch}px` } : {}),
   } as CSSProperties;
-  const multi = paint ?? (colors && colors.length > 1 ? sweep(colors) : null);
+  const multi = cellPaint ? `url("${cellPaint}")` : (paint ?? (colors && colors.length > 1 ? sweep(colors) : null));
+  const anchored: CSSProperties = cellPaint ? { backgroundPosition: "right bottom", backgroundRepeat: "no-repeat" } : {};
   return (
     <div aria-hidden="true" className={cn("halftone-field", multi && "halftone-field-multi", className)} style={style}>
       {radii.map((r, i) => (
@@ -45,7 +51,7 @@ export default function HalftoneField({ className, color, colors, paint, pitch, 
             {
               "--r": `${r}px`,
               "--x": `${(i * 88) / radii.length}%`,
-              ...(multi ? { backgroundImage: multi } : {}),
+              ...(multi ? { backgroundImage: multi, ...anchored } : {}),
             } as CSSProperties
           }
         />

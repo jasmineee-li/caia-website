@@ -15,18 +15,18 @@ interface PageHeaderProps {
   children?: ReactNode;
   /** Draws a different dot field in place of the halftone field on wider screens, given its classes. */
   renderField?: (className: string) => ReactNode;
-  /** A colour scattered among the dots in the phone strip. */
-  dotAccent?: string;
+  /** Colours the phone strip like the Join page's rings. */
+  dotRings?: boolean;
 }
 
 /**
  * The top of an inner page: grid paper, as on the home hero, closing on a rule, with the
  * halftone field growing in from the right, a large serif title and a short lead.
- * On phones a few even rows of dots run across the bottom instead, clear of the text.
+ * On phones a few even rows of dots run along the bottom edge instead, clear of the text.
  */
-export default function PageHeader({ title, titleContent, eyebrow, lead, children, renderField, dotAccent }: PageHeaderProps) {
+export default function PageHeader({ title, titleContent, eyebrow, lead, children, renderField, dotRings }: PageHeaderProps) {
   return (
-    <header className="grid-paper relative isolate overflow-hidden border-b border-grid [background-position:center_bottom]">
+    <header className="grid-paper relative isolate border-b border-grid [background-position:center_bottom] md:overflow-hidden">
       {renderField ? (
         renderField("absolute inset-y-0 right-0 -z-10 hidden h-full w-[42%] md:block lg:w-[46%]")
       ) : (
@@ -40,8 +40,9 @@ export default function PageHeader({ title, titleContent, eyebrow, lead, childre
           {children && <div className="mt-8 sm:mt-10">{children}</div>}
         </div>
       </Container>
-      {/* Phones: a few even rows of dots across the full width, just above the closing rule. */}
-      <DotRows color={DOT} accent={dotAccent} className="mb-3 md:hidden" />
+      {/* Phones: a few even rows of dots across the full width, sitting on the bottom edge of the
+          grid paper, with the last row running past the closing rule onto the page below. */}
+      <DotRows color={DOT} rings={dotRings} className="relative translate-y-[14px] md:hidden" />
     </header>
   );
 }

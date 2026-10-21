@@ -59,7 +59,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedinUrl: "https://www.linkedin.com/in/owen-karmel-b067a6280/",
       },
       {
-        imageSrc: "/team/TEAM_rittik_bhattacharya.jpeg",
+        imageSrc: "/team/TEAM_rittik_bhattacharya_2026.jpg",
         name: "Rittik Bhattacharya",
         role: "Co-Lead",
         websiteUrl: "https://medium.com/@rittikb",

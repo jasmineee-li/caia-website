@@ -19,7 +19,7 @@ function formatMonth(date: string) {
 /** Mono tag style, shared with the research page. */
 export const TAG_CLASS = "inline-flex items-center font-mono text-xs uppercase tracking-[0.06em]";
 
-function CaiaLogo() {
+function CaiaLogo({ className }: { className?: string }) {
   return (
     <Image
       src="/logo.svg"
@@ -27,7 +27,7 @@ function CaiaLogo() {
       aria-hidden="true"
       width={14}
       height={14}
-      className="h-3.5 w-3.5 shrink-0"
+      className={cn("h-3.5 w-3.5 shrink-0", className)}
     />
   );
 }
@@ -72,8 +72,9 @@ export default function ResearchCard({ paper, variant = "full", className }: Res
           {paper.authors.map((author, index) => (
             <Fragment key={`${author.name}-${index}`}>
               {index > 0 ? ", " : ""}
-              <span className={author.isCaiaMember ? "inline-flex items-center gap-1 align-middle font-medium text-ink" : ""}>
-                {author.isCaiaMember && <CaiaLogo />}
+              {/* Kept inline, so CAIA names sit on the same baseline as the other authors. */}
+              <span className={author.isCaiaMember ? "whitespace-nowrap font-medium text-ink" : ""}>
+                {author.isCaiaMember && <CaiaLogo className="mr-1 inline-block align-[-0.125em]" />}
                 {author.name}
               </span>
             </Fragment>
@@ -122,9 +123,9 @@ function ResearchRow({ paper, className }: { paper: ResearchPaperDetail; classNa
           {members.map((member, index) => (
             <Fragment key={member.name}>
               {index > 0 ? ", " : ""}
-              <span className="inline-flex items-center gap-1 align-middle">
+              <span className="whitespace-nowrap">
                 {/* Phones have no column header, so each name carries the CAIA mark there. */}
-                <span className="sm:hidden"><CaiaLogo /></span>
+                <CaiaLogo className="mr-1 inline-block align-[-0.125em] sm:hidden" />
                 {member.name}
               </span>
             </Fragment>

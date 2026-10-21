@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { cn } from "@/lib/cn";
+import { ringColour } from "@/components/ui/JoinDots";
 
 interface DotRowsProps {
   className?: string;
@@ -10,23 +11,22 @@ interface DotRowsProps {
   /** Dot radius in px. */
   radius?: number;
   color?: string;
-  /** An accent colour scattered among the dots, e.g. red on the Join page. */
-  accent?: string;
-  /** Share of dots drawn in the accent colour. */
-  accentShare?: number;
+  /**
+   * Colour the dots like the Join page's rings instead: red at the right edge, then coral,
+   * gold and teal, with steel blue running on to the left edge.
+   */
+  rings?: boolean;
 }
 
-/** Columns per repeating tile. Prime, so the accent dots never line up into a visible repeat. */
-const TILE_COLS = 23;
-
-function hash01(a: number, b: number) {
-  const v = Math.sin(a * 127.1 + b * 311.7 + 4 * 74.7) * 43758.5453;
-  return v - Math.floor(v);
-}
+/** Columns drawn for the rings, enough to fill the widest screen that shows the strip. */
+const RING_COLS = 56;
+/** How many columns the rings take to reach steel blue. */
+const RING_SPAN = 30;
 
 /**
  * A few even rows of dots running the full width, used under page headers on phones.
- * Drawn as a repeating SVG tile, so it fills any width without scaling the dots.
+ * Drawn as an SVG tile (repeated, or wide enough for any phone), so it fills any width
+ * without scaling the dots.
  */
 export default function DotRows({
   className,
@@ -34,16 +34,17 @@ export default function DotRows({
   pitch = 14,
   radius = 3,
   color = "#0c4da2",
-  accent,
-  accentShare = 0.1,
+  rings,
 }: DotRowsProps) {
-  const cols = accent ? TILE_COLS : 1;
+  const cols = rings ? RING_COLS : 1;
   const w = cols * pitch;
   const h = rows * pitch;
   let circles = "";
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
-      const fill = accent && hash01(col, row) < accentShare ? accent : color;
+      const fill = rings
+        ? ringColour(Math.hypot(cols - 1 - col, rows - 1 - row) / RING_SPAN)
+        : color;
       circles += `<circle cx='${col * pitch + pitch / 2}' cy='${row * pitch + pitch / 2}' r='${radius}' fill='${fill}'/>`;
     }
   }
@@ -51,7 +52,8 @@ export default function DotRows({
   const style: CSSProperties = {
     height: h,
     backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(svg)}")`,
-    backgroundRepeat: "repeat-x",
+    backgroundRepeat: rings ? "no-repeat" : "repeat-x",
+    backgroundPosition: rings ? "right bottom" : undefined,
     backgroundSize: `${w}px ${h}px`,
   };
   return <div aria-hidden="true" className={cn("pointer-events-none w-full", className)} style={style} />;

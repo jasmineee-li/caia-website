@@ -20,6 +20,16 @@ export interface NewsItem {
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    title: "AI safety student roundtable in Washington, DC",
+    summary:
+      "CAIA members attended an AI safety student roundtable in Washington, DC, organized by the Center for AI Safety. We met with AI safety organizers and student government leaders from other universities.",
+    date: "2026-10-14",
+    displayDate: "October 14, 2026",
+    category: "Event",
+    imageSrc: "/news/ai-safety-student-roundtable-dc-2026.webp",
+    imageAlt: "CAIA members with other student attendees of the AI safety roundtable in a courtyard in Washington, DC",
+  },
+  {
     title: "CAIA open house & mocktail mixer",
     summary:
       "We welcomed new and returning members for mocktails and conversation at our open house. Thank you to everyone who came to meet the community and learn about getting involved in AI safety at Cornell.",

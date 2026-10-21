@@ -3,8 +3,8 @@ import ApplicationButton from "@/components/ApplicationButton";
 import ProgramCard from "@/components/ProgramCard";
 import Arrow from "@/components/ui/Arrow";
 import Button from "@/components/ui/Button";
-import CommunityField from "@/components/ui/CommunityField";
 import Container from "@/components/ui/Container";
+import JoinDots from "@/components/ui/JoinDots";
 import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import { HOME_CTA_ITEMS } from "@/content/home";
@@ -41,8 +41,8 @@ export default function JoinPage() {
     <main>
       <PageHeader
         title="Join Us"
-        renderField={(className) => <CommunityField className={className} />}
-        dotAccent="#d9413a"
+        renderField={(className) => <JoinDots className={className} />}
+        dotRings
         lead={
           <p>
             All of our events are open to everyone. If you join our Slack, you’re considered a CAIA member. It’s where we
@@ -167,14 +167,15 @@ export default function JoinPage() {
       <section id="contribute" className="scroll-mt-24 pt-20 sm:pt-28 lg:pt-32">
         <Container>
           <div className="grid gap-6 border-t border-blue pt-8 lg:grid-cols-12 lg:gap-8">
-            <h2 className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:col-span-5">Help Organize</h2>
+            <h2 className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:col-span-5">Want to Contribute?</h2>
             <div className="lg:col-span-7">
               <p className="lead-copy">
                 Help organize events, support research, or contribute to outreach, design, and operations. We welcome
-                technical, policy, economics, and other perspectives on AI. Reach out to a team member with an idea or
-                an area you’d like to help with.
+                technical, policy, economics, and other perspectives on AI. You can apply to join our organizing team,
+                or reach out to a team member with an idea or an area you’d like to help with.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap gap-3">
+                <ApplicationButton href={APPLICATIONS.organizer} label="Apply to Be an Organizer" />
                 <Button href="/team" variant="secondary">Reach Out to the Team</Button>
               </div>
             </div>
