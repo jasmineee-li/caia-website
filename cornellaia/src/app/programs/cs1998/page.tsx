@@ -392,7 +392,7 @@ const COURSE_STAFF: CourseStaffMember[] = [
   {
     name: "Jasmine Li",
     role: "Advisor",
-    imageSrc: "/team/TEAM_jasmine_li.png",
+    imageSrc: "/team/TEAM_jasmine_li_2026.jpg",
   },
   {
     name: "Jonathn Chang",

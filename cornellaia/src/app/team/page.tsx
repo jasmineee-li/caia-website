@@ -42,6 +42,8 @@ export default function TeamPage() {
                 >
                   {[...group.members]
                     .sort((a, b) => {
+                      // Advisors keep the order they're listed in; everyone else is alphabetical.
+                      if (group.title === "Advisors") return 0;
                       if (group.title === "Leadership") {
                         if (a.role === "President") return -1;
                         if (b.role === "President") return 1;

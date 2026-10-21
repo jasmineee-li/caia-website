@@ -29,6 +29,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_arya_datla.jpeg",
         name: "Arya Datla",
         role: "Co-Lead",
+        websiteUrl: "https://aryadatla.com/",
         scholarUrl: "https://scholar.google.com/citations?user=2rAW65IAAAAJ&hl=en",
         linkedinUrl: "https://www.linkedin.com/in/arya-datla-351396258/",
       },
@@ -43,6 +44,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         name: "Jash Vira",
         role: "Co-Lead",
         websiteUrl: "https://jashvira.com/",
+        scholarUrl: "https://scholar.google.com/citations?user=FgaN_0IAAAAJ",
         linkedinUrl: "https://www.linkedin.com/in/jash-vira/",
       },
       {
@@ -118,7 +120,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
     title: "Advisors",
     members: [
       {
-        imageSrc: "/team/TEAM_jasmine_li.png",
+        imageSrc: "/team/TEAM_jasmine_li_2026.jpg",
         name: "Jasmine Li",
         role: "Founder, Advisor",
         linkedinUrl: "https://www.linkedin.com/in/jasminexli/",
@@ -126,14 +128,21 @@ export const TEAM_GROUPS: TeamGroup[] = [
         scholarUrl: "https://scholar.google.com/citations?user=LSidePQAAAAJ&hl=en",
       },
       {
-        imageSrc: "/team/TEAM_lionel_levine.jpeg",
+        imageSrc: "/team/TEAM_lionel_levine_2026.jpg",
         name: "Lionel Levine",
         role: "Faculty Advisor",
         websiteUrl: "https://lionellevine.github.io/",
         scholarUrl: "https://scholar.google.co.uk/citations?user=uaiskTYAAAAJ&hl=en",
       },
       {
-        imageSrc: "/team/TEAM_tzu.webp",
+        imageSrc: "/team/TEAM_lawrence_feng.jpg",
+        name: "Lawrence Feng",
+        role: "Advisor",
+        websiteUrl: "https://lawrencefeng17.github.io/",
+        linkedinUrl: "https://www.linkedin.com/in/lfeng26/",
+      },
+      {
+        imageSrc: "/team/TEAM_tzu_kit_chan_2026.jpg",
         name: "Tzu Kit Chan",
         role: "Affiliate Advisor",
         websiteUrl: "https://tzukitchan.com/",

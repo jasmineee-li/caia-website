@@ -21,7 +21,7 @@ export const metadata = createPageMetadata({
 const ROLLING = <span className="mono-caption">Rolling review</span>;
 
 const RESEARCH_NUMBERS = [
-  { value: "$800+", label: "funding" },
+  { value: "$800+", label: "per project" },
   { value: "1–2", label: "mentors" },
   { value: "Publication", label: "paper or report" },
 ];
