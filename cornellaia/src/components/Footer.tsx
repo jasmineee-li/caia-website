@@ -8,6 +8,7 @@ import { NAV_ITEMS } from "@/content/navigation";
 const CONNECT = [
   { label: "Slack", href: HOME_CTA_ITEMS[0].href },
   { label: "Instagram", href: "https://www.instagram.com/cornell.aia/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/cornell-ai-alignment" },
   { label: "Events on Luma", href: EVENTS_CALENDAR_URL },
 ];
 

@@ -42,6 +42,17 @@ const SOCIAL_LINKS = [
     ),
   },
   {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/cornell-ai-alignment",
+    icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="4" />
+        <path d="M8 10.5v6M11.5 16.5v-6M11.5 13.3c0-1.7 1.1-2.8 2.5-2.8s2.5 1.1 2.5 2.8v3.2" strokeLinecap="round" />
+        <circle cx="8" cy="7.4" r="1.1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
     label: "Events on Luma",
     href: EVENTS_CALENDAR_URL,
     icon: (
