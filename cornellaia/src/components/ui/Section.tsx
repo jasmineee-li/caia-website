@@ -28,9 +28,12 @@ const TONE_CLASS: Record<NonNullable<SectionProps["tone"]>, string> = {
   default: "",
   muted: "",
   hero: "",
-  sky: "on-sky bg-sky pb-20 sm:pb-28",
-  panel: "bg-panel pb-20 sm:pb-28",
+  sky: "on-sky bg-sky",
+  panel: "bg-panel",
 };
+
+/** Bands with a background close with space below them too. */
+const BANDED = new Set<NonNullable<SectionProps["tone"]>>(["sky", "panel"]);
 
 export default function Section({
   id,
@@ -54,7 +57,9 @@ export default function Section({
       id={id}
       className={cn(
         "scroll-mt-24",
-        spacing === "tight" ? "pt-14 sm:pt-16 lg:pt-20" : "pt-20 sm:pt-28 lg:pt-32",
+        // Tight bands keep the same space above and below their content.
+        spacing === "tight" ? "pt-16 sm:pt-20 lg:pt-24" : "pt-20 sm:pt-28 lg:pt-32",
+        BANDED.has(tone) && (spacing === "tight" ? "pb-16 sm:pb-20 lg:pb-24" : "pb-20 sm:pb-28"),
         TONE_CLASS[tone],
         className,
       )}
