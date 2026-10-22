@@ -17,6 +17,10 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Policy Reading Group",
+    embedUrl: "https://luma.com/embed/event/evt-RLFswzxfSGG4KON/simple",
+  },
+  {
     title: "When Do Intrinsic Rewards Lead to Exploration? | Scott Viteri (Stanford)",
     embedUrl: "https://luma.com/embed/event/evt-FxZcmdOC3dYSKMH/simple",
   },

@@ -10,13 +10,13 @@ import { cn } from "@/lib/cn";
 
 /*
  * Theory of change as one chart on grid paper. Four columns read left to right: Outreach,
- * Capacity Building, then Impact split into research and careers. On wide screens every
- * node is joined to every node in the next column by a faint curve. Like a forward pass
+ * Capacity Building, then Impact split into research and careers. Every node is joined to
+ * every node in the next column by a faint curve. Like a forward pass
  * through a network, a red path runs left to right every few seconds, a new one each time,
  * and as it reaches a node part of the label flickers into code and settles back, as the
  * Research page title does. Only nodes on the path flicker. Community runs
- * underneath the whole chart. On narrower screens the columns stack, joined by a red line
- * down the left. With reduced motion the chart holds still on one path.
+ * underneath the whole chart. On narrower screens the chart keeps the same layout and scrolls
+ * sideways, with Community fixed underneath. With reduced motion it holds still on one path.
  */
 
 interface Node {
@@ -205,6 +205,7 @@ function nextPath(prev: number[]) {
 
 export default function TheoryOfChange() {
   const wrapRef = useRef<HTMLDivElement | null>(null);
+  const chartRef = useRef<HTMLDivElement | null>(null);
   const nodeRefs = useRef<Array<Array<HTMLElement | null>>>(GROUPS.map(() => []));
   const [curves, setCurves] = useState<Record<string, string>>({});
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -215,19 +216,15 @@ export default function TheoryOfChange() {
   const [reached, setReached] = useState(GROUPS.length);
   const [scrambles, setScrambles] = useState<Record<string, Scramble>>({});
 
-  // Measure every curve between neighbouring columns, from the right edge of one pill to the left edge of the next.
+  // Measure every curve between neighbouring columns, from the right edge of one pill to the
+  // left edge of the next, relative to the chart (which scrolls sideways on narrow screens).
   useEffect(() => {
-    const wrap = wrapRef.current;
-    if (!wrap) return;
-    const wide = window.matchMedia("(min-width: 1024px)");
+    const chart = chartRef.current;
+    if (!chart) return;
 
     const measure = () => {
-      const box = wrap.getBoundingClientRect();
+      const box = chart.getBoundingClientRect();
       setSize({ w: box.width, h: box.height });
-      if (!wide.matches) {
-        setCurves({});
-        return;
-      }
       const at = nodeRefs.current.map((group) =>
         group.map((el) => {
           const r = el?.getBoundingClientRect();
@@ -250,12 +247,8 @@ export default function TheoryOfChange() {
     measure();
     document.fonts?.ready.then(measure).catch(() => {});
     const ro = new ResizeObserver(measure);
-    ro.observe(wrap);
-    wide.addEventListener("change", measure);
-    return () => {
-      ro.disconnect();
-      wide.removeEventListener("change", measure);
-    };
+    ro.observe(chart);
+    return () => ro.disconnect();
   }, []);
 
   // Forward passes, only while the chart is on screen.
@@ -313,66 +306,70 @@ export default function TheoryOfChange() {
   return (
     <Section id="theory-of-change" eyebrow="Theory of Change">
       <div ref={wrapRef} className="grid-paper relative overflow-hidden rounded-[8px] ring-1 ring-inset ring-grid">
-        <svg aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block" width={size.w} height={size.h}>
-          {Object.entries(curves).map(([key, d]) => (
-            <path key={key} d={d} fill="none" stroke={PALE} strokeWidth={1} />
-          ))}
-          {/* The red path draws itself one column at a time, starting over with each pass. */}
-          {path.slice(0, -1).map((i, g) => {
-            const d = curves[`${g}-${i}-${path[g + 1]}`];
-            if (!d) return null;
-            return (
-              <path
-                key={`${pass}-${g}`}
-                d={d}
-                fill="none"
-                stroke={RED}
-                strokeWidth={1.75}
-                pathLength={1}
-                strokeDasharray="1"
-                style={pass > 0 ? { animation: `toc-draw ${STEP}ms ease-in-out ${STEP * g}ms both` } : undefined}
-              />
-            );
-          })}
-        </svg>
+        {/* On phones and tablets the full chart scrolls sideways; Community stays put underneath. */}
+        <div className="relative">
+          <p aria-hidden="true" className="mono-caption pointer-events-none absolute bottom-3 right-5 z-10 sm:right-8 lg:hidden">
+            Scroll →
+          </p>
+          <div className="overflow-x-auto overscroll-x-contain">
+            <div ref={chartRef} className="relative min-w-[60rem] lg:min-w-0">
+              <svg aria-hidden="true" className="pointer-events-none absolute inset-0" width={size.w} height={size.h}>
+                {Object.entries(curves).map(([key, d]) => (
+                  <path key={key} d={d} fill="none" stroke={PALE} strokeWidth={1} />
+                ))}
+                {/* The red path draws itself one column at a time, starting over with each pass. */}
+                {path.slice(0, -1).map((i, g) => {
+                  const d = curves[`${g}-${i}-${path[g + 1]}`];
+                  if (!d) return null;
+                  return (
+                    <path
+                      key={`${pass}-${g}`}
+                      d={d}
+                      fill="none"
+                      stroke={RED}
+                      strokeWidth={1.75}
+                      pathLength={1}
+                      strokeDasharray="1"
+                      style={pass > 0 ? { animation: `toc-draw ${STEP}ms ease-in-out ${STEP * g}ms both` } : undefined}
+                    />
+                  );
+                })}
+              </svg>
 
-        <div className="relative grid gap-y-10 px-5 pb-10 pt-8 sm:px-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.15fr)_minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-x-12 lg:gap-y-0 lg:px-10 lg:pb-12 lg:pt-10 xl:gap-x-16">
-          {/* Phones and tablets: a red line down the left joins the stacked stages. */}
-          <span aria-hidden="true" className="absolute bottom-24 left-5 top-12 w-px bg-brand-red sm:left-8 lg:hidden" />
-
-          {GROUPS.map((group, g) => (
-            <div key={g} className={cn("relative flex flex-col pl-6 lg:pl-0", g === 3 && "-mt-6 lg:mt-0")}>
-              {/* Stage heading, or a blank of the same height under Impact's second column. */}
-              <div className={cn("lg:min-h-[4.75rem]", !group.stage && "hidden lg:block")}>
-                {group.stage && (
-                  <>
-                    <span aria-hidden="true" className="absolute -left-[3.5px] top-[5px] h-2 w-2 rounded-full bg-brand-red lg:hidden" />
-                    <p className="mono-label text-brand-red">{group.stage.n}</p>
-                    {/* On wide screens a long heading may run into the gap beside it. */}
-                    <h3 className="display-title mt-2 text-[1.625rem] leading-none sm:text-[1.875rem] lg:![text-wrap:nowrap]">
-                      {group.stage.title}
-                    </h3>
-                  </>
-                )}
-              </div>
-              <div className="mt-5 flex flex-1 flex-col lg:mt-0 lg:justify-center">
-                {group.sub && <p className="mono-caption mb-3 text-ink-2">{group.sub}</p>}
-                <ul className="flex flex-wrap gap-2 lg:flex-col lg:flex-nowrap lg:items-start lg:gap-3">
-                  {group.nodes.map((node, i) => (
-                    <li
-                      key={node.label}
-                      ref={(el) => {
-                        nodeRefs.current[g][i] = el;
-                      }}
-                      className="w-fit"
-                    >
-                      <NodePill node={node} red={lit(g, i)} scramble={scrambles[`${g}-${i}`]} />
-                    </li>
-                  ))}
-                </ul>
+              <div className="relative grid grid-cols-[minmax(0,0.8fr)_minmax(0,1.15fr)_minmax(0,0.85fr)_minmax(0,1fr)] gap-x-12 px-5 pb-10 pt-8 sm:px-8 lg:px-10 lg:pb-12 lg:pt-10 xl:gap-x-16">
+                {GROUPS.map((group, g) => (
+                  <div key={g} className="relative flex flex-col">
+                    {/* Stage heading, or a blank of the same height under Impact's second column. */}
+                    <div className="min-h-[4.75rem]">
+                      {group.stage && (
+                        <>
+                          <p className="mono-label text-brand-red">{group.stage.n}</p>
+                          {/* A long heading may run into the gap beside it. */}
+                          <h3 className="display-title mt-2 text-[1.875rem] leading-none ![text-wrap:nowrap]">{group.stage.title}</h3>
+                        </>
+                      )}
+                    </div>
+                    <div className="flex flex-1 flex-col justify-center">
+                      {group.sub && <p className="mono-caption mb-3 text-ink-2">{group.sub}</p>}
+                      <ul className="flex flex-col items-start gap-3">
+                        {group.nodes.map((node, i) => (
+                          <li
+                            key={node.label}
+                            ref={(el) => {
+                              nodeRefs.current[g][i] = el;
+                            }}
+                            className="w-fit"
+                          >
+                            <NodePill node={node} red={lit(g, i)} scramble={scrambles[`${g}-${i}`]} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Community: the ground the whole chart stands on, on the same grid paper, over a
@@ -380,10 +377,8 @@ export default function TheoryOfChange() {
         <div className="relative">
           {/* Starts at the same edge as the stage headings above. */}
           <div className="flex flex-col gap-5 px-5 pt-2 sm:flex-row sm:items-center sm:gap-6 sm:px-8 lg:px-10">
-            <div className="pl-6 lg:pl-0">
-              <h3 className="display-title text-[1.625rem] leading-none sm:text-[1.875rem]">Community</h3>
-            </div>
-            <ul className="flex flex-wrap gap-2 pl-6 sm:pl-0">
+            <h3 className="display-title text-[1.625rem] leading-none sm:text-[1.875rem]">Community</h3>
+            <ul className="flex flex-wrap gap-2">
               {COMMUNITY.map((node) => (
                 <li key={node.label}>
                   <NodePill node={node} red={false} dot={false} />
