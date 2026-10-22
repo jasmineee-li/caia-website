@@ -36,9 +36,13 @@ export default function AiSafetyIntro() {
               {slide.items.map((item) => (
                 <li
                   key={item.tag}
-                  className="flex items-center gap-3.5 rounded-[8px] bg-white p-4 sm:flex-col sm:items-stretch sm:gap-0 sm:p-5 xl:px-4"
+                  className="group flex items-center gap-3.5 rounded-[8px] bg-white p-4 transition-colors duration-300 hover:bg-[#edf2fa] motion-reduce:transition-none sm:flex-col sm:items-stretch sm:gap-0 sm:p-5 xl:px-4"
                 >
-                  <ProblemGlyph name={item.glyph} className="h-10 w-[75px] shrink-0 sm:h-16 sm:w-[120px]" />
+                  {/* On hover the tile tints blue and the picture grows from its left edge. */}
+                  <ProblemGlyph
+                    name={item.glyph}
+                    className="h-10 w-[75px] shrink-0 origin-left transition-transform duration-300 ease-out group-hover:scale-[1.18] motion-reduce:transition-none motion-reduce:group-hover:scale-100 sm:h-16 sm:w-[120px]"
+                  />
                   {/* Balanced line breaks, so a phrase never leaves one word alone on its last line. */}
                   <div className="sm:mt-6">
                     <p className="text-balance font-mono text-[0.75rem] font-medium uppercase leading-5 tracking-[0.06em] text-muted">{item.tag}</p>

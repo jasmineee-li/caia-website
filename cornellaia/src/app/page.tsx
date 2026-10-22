@@ -119,7 +119,12 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="news" title="News" action={<ArrowLink href="/news">All news</ArrowLink>}>
+      <Section
+        id="news"
+        title="News"
+        subtitle="Recent updates from CAIA, including events, papers, and announcements."
+        action={<ArrowLink href="/news">All news</ArrowLink>}
+      >
         <NewsCarousel />
       </Section>
 
