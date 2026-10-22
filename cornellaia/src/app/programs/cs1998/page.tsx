@@ -12,12 +12,16 @@ interface MaterialItem {
 interface WeekMaterials {
   slide: MaterialItem[];
   notebook?: MaterialItem[];
+  /** For the project: the guide to the proposal and final report. */
+  guide?: MaterialItem[];
   discussionReading: MaterialItem[];
   furtherReading: MaterialItem[];
 }
 
 interface CourseWeek {
   number: number;
+  /** Shown in place of "Week n", e.g. for the final project. */
+  label?: string;
   description: string;
   topics: string[];
   materials: WeekMaterials;
@@ -301,6 +305,16 @@ const COURSE_WEEKS: CourseWeek[] = [
     ],
     materials: {
       slide: [{ label: "Slides (TBD)" }],
+      notebook: [
+        {
+          label: "Week 6 notebook",
+          href: "/cs1998/Week_6_Notebook_Catching_Sabotage.ipynb",
+        },
+        {
+          label: "Week 6 notebook (no-code version)",
+          href: "/cs1998/Week_6_Notebook_Catching_Sabotage_No_Code.ipynb",
+        },
+      ],
       discussionReading: [
         {
           label:
@@ -338,7 +352,12 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Open research questions and technical, policy, and governance career paths.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 7 slides (PDF)",
+          href: "/cs1998/week_7_slides.pdf",
+        },
+      ],
       discussionReading: [
         {
           label: "AI 2040: Plan A (AI Futures Project, 2026)",
@@ -364,6 +383,28 @@ const COURSE_WEEKS: CourseWeek[] = [
           href: "https://arxiv.org/abs/2608.14611",
         },
       ],
+    },
+  },
+  {
+    number: 8,
+    label: "Project",
+    description: "Final Project",
+    topics: [
+      "Choose one question in AI safety and alignment and study it in more depth than the weekly labs allow.",
+      "Technical projects in interpretability, evaluations, alignment training, AI control, or scalable oversight, or non-technical projects in policy and governance, ethics and philosophy, or forecasting.",
+      "A short proposal, then a final report: 1 to 2 pages with figures for technical projects, or at least 1,000 words for non-technical ones.",
+      "Work alone or in a team of up to three.",
+    ],
+    materials: {
+      slide: [],
+      guide: [
+        {
+          label: "Final project guide (PDF)",
+          href: "/cs1998/final_project_guide.pdf",
+        },
+      ],
+      discussionReading: [],
+      furtherReading: [],
     },
   },
 ];
@@ -488,28 +529,40 @@ function MaterialList({ items }: { items: MaterialItem[] }) {
 function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
   return (
     <div className="space-y-3">
-      <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">Slides</p>
-        <MaterialList items={materials.slide} />
-      </div>
+      {materials.guide && materials.guide.length > 0 && (
+        <div>
+          <p className="mb-1 text-sm font-bold text-slate-900">Guide</p>
+          <MaterialList items={materials.guide} />
+        </div>
+      )}
+      {materials.slide.length > 0 && (
+        <div>
+          <p className="mb-1 text-sm font-bold text-slate-900">Slides</p>
+          <MaterialList items={materials.slide} />
+        </div>
+      )}
       {materials.notebook && materials.notebook.length > 0 && (
         <div>
           <p className="mb-1 text-sm font-bold text-slate-900">Notebook</p>
           <MaterialList items={materials.notebook} />
         </div>
       )}
-      <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">
-          Discussion Readings
-        </p>
-        <MaterialList items={materials.discussionReading} />
-      </div>
-      <div>
-        <p className="mb-1 text-sm font-bold text-slate-900">
-          Further Reading
-        </p>
-        <MaterialList items={materials.furtherReading} />
-      </div>
+      {materials.discussionReading.length > 0 && (
+        <div>
+          <p className="mb-1 text-sm font-bold text-slate-900">
+            Discussion Readings
+          </p>
+          <MaterialList items={materials.discussionReading} />
+        </div>
+      )}
+      {materials.furtherReading.length > 0 && (
+        <div>
+          <p className="mb-1 text-sm font-bold text-slate-900">
+            Further Reading
+          </p>
+          <MaterialList items={materials.furtherReading} />
+        </div>
+      )}
     </div>
   );
 }
@@ -793,7 +846,7 @@ export default function CS1998Page() {
                     <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-3 py-5">
                       <div className="min-w-0">
                         <p className="mono-label text-slate-500">
-                          Week {week.number}
+                          {week.label ?? `Week ${week.number}`}
                         </p>
                         <p className="mt-2 font-display text-[1.25rem] leading-[1.25] text-slate-900">
                           {week.description}
@@ -851,7 +904,7 @@ export default function CS1998Page() {
                         }
                       >
                         <td className="px-4 py-4 align-top text-sm font-semibold text-slate-700">
-                          {week.number}
+                          {week.label ?? week.number}
                         </td>
                         <td className="px-4 py-4 text-sm font-semibold text-slate-900">
                           {week.description}
