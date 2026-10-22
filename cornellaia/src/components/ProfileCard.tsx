@@ -10,6 +10,8 @@ interface ProfileCardProps {
   linkedinUrl?: string;
   scholarUrl?: string;
   websiteUrl?: string;
+  /** Cornell email, shown as a mail icon. */
+  email?: string;
   /** Small tags shown after the role, e.g. the areas a co-lead works in. */
   tags?: string[];
   unframed?: boolean;
@@ -38,6 +40,17 @@ function ScholarIcon() {
   );
 }
 
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M4 4H20A2 2 0 0 1 22 6V18A2 2 0 0 1 20 20H4A2 2 0 0 1 2 18V6A2 2 0 0 1 4 4ZM20 8.24L12.53 13.1A1 1 0 0 1 11.47 13.1L4 8.24V18H20V8.24ZM19.34 6H4.66L12 10.78L19.34 6Z"
+      />
+    </svg>
+  );
+}
+
 function WebsiteIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
@@ -57,6 +70,7 @@ export default function ProfileCard({
   linkedinUrl,
   scholarUrl,
   websiteUrl,
+  email,
   tags,
   unframed = false,
   teamLayout = false,
@@ -65,7 +79,10 @@ export default function ProfileCard({
     websiteUrl ? { href: websiteUrl, label: "Personal Website", icon: <WebsiteIcon /> } : null,
     scholarUrl ? { href: scholarUrl, label: "Google Scholar", icon: <ScholarIcon /> } : null,
     linkedinUrl ? { href: linkedinUrl, label: "LinkedIn", icon: <LinkedInIcon /> } : null,
+    email ? { href: `mailto:${email}`, label: `Email (${email})`, icon: <MailIcon /> } : null,
   ].filter(Boolean) as { href: string; label: string; icon: React.ReactNode }[];
+  // Email opens the mail app in place; everything else opens in a new tab.
+  const newTab = (href: string) => (href.startsWith("mailto:") ? {} : { target: "_blank", rel: "noopener noreferrer" });
 
   // Team page: a square portrait with the name and role set under it, left aligned.
   if (!teamLayout && !unframed) {
@@ -102,8 +119,7 @@ export default function ProfileCard({
               <a
                 key={`${name}-${link.label}`}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...newTab(link.href)}
                 aria-label={`${name} ${link.label}`}
                 title={link.label}
                 className="focus-ring transition-colors hover:text-ink"
@@ -140,7 +156,7 @@ export default function ProfileCard({
       {teamLayout && (
         <div className={styles.linkRow}>
           {links.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`${name} ${link.label}`} title={link.label} className={styles.profileLink}>
+            <a key={link.label} href={link.href} {...newTab(link.href)} aria-label={`${name} ${link.label}`} title={link.label} className={styles.profileLink}>
               <span className={styles.iconButton}>{link.icon}</span>
             </a>
           ))}
@@ -156,8 +172,7 @@ export default function ProfileCard({
             <a
               key={`${name}-${link.label}`}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...newTab(link.href)}
               aria-label={`${name} ${link.label}`}
               title={link.label}
               className="focus-ring inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-100 p-2 text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900"
