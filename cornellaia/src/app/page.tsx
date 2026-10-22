@@ -10,6 +10,7 @@ import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import AiSafetyIntro from "@/components/home/AiSafetyIntro";
+import TheoryOfChange from "@/components/home/TheoryOfChange";
 import HighlightStatement from "@/components/home/HighlightStatement";
 import LogoBand from "@/components/home/LogoBand";
 import { HOME_CTA_ITEMS, HOME_HERO } from "@/content/home";
@@ -83,8 +84,9 @@ export default function Home() {
               <HighlightStatement
                 ruled
                 className="display-title text-[1.875rem] leading-[1.32] sm:text-[2.5rem] lg:text-[3rem]"
-                before="We believe that AI could bring immense benefits to the world, provided that it’s "
-                marked="developed safely and governed responsibly."
+                before=""
+                marked="Managing risks from advanced AI"
+                after=" is one of the most important challenges of our time."
               />
               <p className="lead-copy mt-8 max-w-2xl sm:mt-10">
                 We bring together technical AI safety, policy, governance, and broader conversations about AI to ensure
@@ -96,6 +98,8 @@ export default function Home() {
       </section>
 
       <AiSafetyIntro />
+
+      <TheoryOfChange />
 
       <Section
         id="events"
@@ -115,7 +119,12 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="news" title="News" action={<ArrowLink href="/news">All news</ArrowLink>}>
+      <Section
+        id="news"
+        title="News"
+        subtitle="Recent updates from CAIA, including events, papers, and announcements."
+        action={<ArrowLink href="/news">All news</ArrowLink>}
+      >
         <NewsCarousel />
       </Section>
 

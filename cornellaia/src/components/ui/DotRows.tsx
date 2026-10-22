@@ -16,6 +16,16 @@ interface DotRowsProps {
    * gold and teal, with steel blue running on to the left edge.
    */
   rings?: boolean;
+  /** Colour each dot from this palette instead, mixed evenly along the strip, like a crowd. */
+  palette?: string[];
+}
+
+/** Columns per repeating tile for a palette. Prime, so the mix never lines up into a visible repeat. */
+const MIX_COLS = 29;
+
+function hash01(a: number, b: number) {
+  const v = Math.sin(a * 127.1 + b * 311.7 + 4 * 74.7) * 43758.5453;
+  return v - Math.floor(v);
 }
 
 /** Columns drawn for the rings, enough to fill the widest screen that shows the strip. */
@@ -35,8 +45,9 @@ export default function DotRows({
   radius = 3,
   color = "#0c4da2",
   rings,
+  palette,
 }: DotRowsProps) {
-  const cols = rings ? RING_COLS : 1;
+  const cols = rings ? RING_COLS : palette ? MIX_COLS : 1;
   const w = cols * pitch;
   const h = rows * pitch;
   let circles = "";
@@ -44,7 +55,9 @@ export default function DotRows({
     for (let col = 0; col < cols; col++) {
       const fill = rings
         ? ringColour(Math.hypot(cols - 1 - col, rows - 1 - row) / RING_SPAN)
-        : color;
+        : palette
+          ? palette[Math.floor(hash01(col, row) * palette.length)]
+          : color;
       circles += `<circle cx='${col * pitch + pitch / 2}' cy='${row * pitch + pitch / 2}' r='${radius}' fill='${fill}'/>`;
     }
   }

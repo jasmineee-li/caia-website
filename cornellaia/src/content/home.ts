@@ -1,3 +1,5 @@
+import type { GlyphKey } from "@/components/home/ProblemGlyph";
+
 export interface CTAItem {
   label: string;
   href: string;
@@ -47,37 +49,50 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Gray Swan", src: "/orgs/gray_swan.png", href: "https://www.grayswan.ai/", mono: { src: "/orgs/mono/gray_swan.png", width: 482, height: 240 } },
 ];
 
-export interface AiSafetySlide {
-  id: string;
-  /** Short name shown in the slide's label and the progress nav. */
-  label: string;
-  body: string;
-  links: { label: string; href: string }[];
+export interface AiSafetyProblem {
+  /** The field's name for the problem, shown as a small mono label. */
+  tag: string;
+  text: string;
+  glyph: GlyphKey;
 }
 
-/** Where the slide text comes from, credited under the deck. */
-export const AI_SAFETY_SOURCE = {
-  label: "Core views on AI safety: When, why, what, and how (Anthropic, 2023)",
-  href: "https://www.anthropic.com/news/core-views-on-ai-safety",
-};
+export interface AiSafetySlide {
+  id: string;
+  label: string;
+  /** What the field works on in this area. */
+  items: AiSafetyProblem[];
+  links: { label: string; href: string }[];
+}
 
 export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
   {
     id: "technical-alignment",
-    label: "Technical alignment",
-    body:
-      "First, it may be tricky to build safe, reliable, and steerable systems when those systems are starting to become as intelligent and as aware of their surroundings as their designers. To use an analogy, it is easy for a chess grandmaster to detect bad moves in a novice but very hard for a novice to detect bad moves in a grandmaster. If we build an AI system that’s significantly more competent than human experts but it pursues goals that conflict with our best interests, the consequences could be dire. This is the technical alignment problem.",
+    label: "Technical Alignment",
+    items: [
+      { tag: "Value alignment", text: "Aligning models with human values and intent", glyph: "values" },
+      { tag: "Generalization", text: "Ensuring goals generalize as intended", glyph: "generalization" },
+      { tag: "Interpretability", text: "Interpreting what happens inside models", glyph: "interpretability" },
+      { tag: "Scalable oversight", text: "Supervising systems smarter than us", glyph: "oversight" },
+      { tag: "Evaluations", text: "Evaluating dangerous capabilities", glyph: "evaluations" },
+      { tag: "AI control", text: "Controlling models that may be misaligned", glyph: "control" },
+    ],
     links: [
       { label: "Technical research", href: "/research" },
-      { label: "Technical reading group", href: "/join#technical-reading-group" },
       { label: "CS 1998", href: "/programs/cs1998" },
+      { label: "Technical reading group", href: "/join#technical-reading-group" },
     ],
   },
   {
     id: "societal-disruption",
-    label: "Policy, governance, and societal impacts",
-    body:
-      "Second, rapid AI progress would be very disruptive, changing employment, macroeconomics, and power structures both within and between nations. These disruptions could be catastrophic in their own right, and they could also make it more difficult to build AI systems in careful, thoughtful ways, leading to further chaos and even more problems with AI.",
+    label: "Policy, Governance, & Societal Impacts",
+    items: [
+      { tag: "Regulation", text: "Designing regulation and safety standards", glyph: "regulation" },
+      { tag: "Compute governance", text: "Governing compute and frontier development", glyph: "compute" },
+      { tag: "International coordination", text: "Coordinating on AI across nations", glyph: "coordination" },
+      { tag: "Economic impacts", text: "Anticipating effects on work and the economy", glyph: "economy" },
+      { tag: "Power concentration", text: "Preventing extreme concentrations of power", glyph: "power" },
+      { tag: "Epistemics", text: "Protecting human agency and public discourse", glyph: "epistemics" },
+    ],
     links: [
       { label: "Policy research", href: "/research#our-work" },
       { label: "Policy reading group", href: "/join#policy-reading-group" },

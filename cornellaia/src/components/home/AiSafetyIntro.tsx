@@ -1,39 +1,59 @@
 import Link from "next/link";
+import ProblemGlyph from "@/components/home/ProblemGlyph";
 import Section from "@/components/ui/Section";
-import { AI_SAFETY_SLIDES, AI_SAFETY_SOURCE } from "@/content/home";
+import { AI_SAFETY_SLIDES } from "@/content/home";
 
-/** "What is AI safety" on a warm panel band: red labels, two columns under blue rules, white pill links, and the source as a mono caption. */
+/**
+ * AI safety at a glance, on a warm panel band. Each of the field's two areas is a row
+ * under a blue rule: the number, title and links to our programs on the left, and the
+ * problems the field works on as white tiles on the right, each with a small dot picture,
+ * the field's name for it, and a plain description.
+ */
 export default function AiSafetyIntro() {
   return (
-    <Section id="ai-safety" eyebrow="Why it matters" title="AI Safety" tone="panel">
-      <div className="grid gap-14 md:grid-cols-2 md:gap-12 lg:gap-20">
+    <Section id="ai-safety" eyebrow="AI Safety" tone="panel" spacing="tight">
+      <div className="space-y-16 sm:space-y-20">
         {AI_SAFETY_SLIDES.map((slide, index) => (
-          <article key={slide.id} className="border-t border-blue pt-6">
-            <p className="mono-label text-brand-red">{String(index + 1).padStart(2, "0")}</p>
-            <h3 className="display-title mt-4 text-[1.75rem] leading-[1.15] sm:text-[2rem]">{slide.label}</h3>
-            {/* Quoted from the source below, so the passage sits in quotation marks. */}
-            <p className="mt-5 text-[1.0625rem] leading-[1.7] text-ink-2">“{slide.body}”</p>
-            <ul className="mt-7 flex flex-wrap gap-2">
-              {slide.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="focus-ring inline-flex min-h-10 items-center rounded-full bg-white px-4 text-[0.9375rem] font-medium text-ink ring-1 ring-inset ring-transparent transition-[box-shadow,color] hover:text-blue hover:ring-blue"
-                  >
-                    {link.label}
-                  </Link>
+          <article key={slide.id} className="grid gap-8 border-t border-blue pt-6 lg:grid-cols-12 lg:gap-12 xl:gap-10">
+            <div className="flex flex-col lg:col-span-4">
+              <p className="mono-label text-brand-red">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="display-title mt-4 max-w-[22rem] text-balance text-[1.75rem] leading-[1.15] sm:text-[2rem]">{slide.label}</h3>
+              <ul className="mt-6 flex flex-wrap gap-2 lg:mt-8">
+                {slide.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="focus-ring inline-flex min-h-10 items-center rounded-full bg-white px-4 text-[0.9375rem] font-medium text-ink ring-1 ring-inset ring-transparent transition-[box-shadow,color] hover:text-blue hover:ring-blue"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <ul className="grid gap-2.5 sm:grid-cols-2 sm:gap-3 lg:col-span-8 xl:grid-cols-3 xl:gap-2.5">
+              {slide.items.map((item) => (
+                <li
+                  key={item.tag}
+                  className="group flex items-center gap-3.5 rounded-[8px] bg-white p-4 transition-colors duration-300 hover:bg-[#edf2fa] motion-reduce:transition-none sm:flex-col sm:items-stretch sm:gap-0 sm:p-5 xl:px-4"
+                >
+                  {/* On hover the tile tints blue and the picture grows from its left edge. */}
+                  <ProblemGlyph
+                    name={item.glyph}
+                    className="h-10 w-[75px] shrink-0 origin-left transition-transform duration-300 ease-out group-hover:scale-[1.18] motion-reduce:transition-none motion-reduce:group-hover:scale-100 sm:h-16 sm:w-[120px]"
+                  />
+                  {/* Balanced line breaks, so a phrase never leaves one word alone on its last line. */}
+                  <div className="sm:mt-6">
+                    <p className="text-balance font-mono text-[0.75rem] font-medium uppercase leading-5 tracking-[0.06em] text-muted">{item.tag}</p>
+                    <p className="mt-1.5 text-balance font-display text-[1rem] leading-[1.3] text-ink sm:mt-2 sm:text-[1.1875rem] xl:text-[1.0625rem]">{item.text}</p>
+                  </div>
                 </li>
               ))}
             </ul>
           </article>
         ))}
       </div>
-      <p className="mono-caption mt-12">
-        Source:{" "}
-        <a href={AI_SAFETY_SOURCE.href} target="_blank" rel="noopener noreferrer" className="underline decoration-slate-400 underline-offset-4 hover:text-ink">
-          {AI_SAFETY_SOURCE.label}
-        </a>
-      </p>
     </Section>
   );
 }
