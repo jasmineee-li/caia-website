@@ -1,3 +1,5 @@
+import type { GlyphKey } from "@/components/home/ProblemGlyph";
+
 export interface CTAItem {
   label: string;
   href: string;
@@ -47,11 +49,18 @@ export const HOME_SPONSORS: SponsorItem[] = [
   { name: "Gray Swan", src: "/orgs/gray_swan.png", href: "https://www.grayswan.ai/", mono: { src: "/orgs/mono/gray_swan.png", width: 482, height: 240 } },
 ];
 
+export interface AiSafetyProblem {
+  /** The field's name for the problem, shown as a small mono label. */
+  tag: string;
+  text: string;
+  glyph: GlyphKey;
+}
+
 export interface AiSafetySlide {
   id: string;
   label: string;
-  /** What the field works on in this area, as short phrases. */
-  items: string[];
+  /** What the field works on in this area. */
+  items: AiSafetyProblem[];
   links: { label: string; href: string }[];
 }
 
@@ -60,12 +69,12 @@ export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
     id: "technical-alignment",
     label: "Technical Alignment",
     items: [
-      "Aligning models with human values and intent",
-      "Ensuring goals generalize as intended",
-      "Interpreting what happens inside models",
-      "Supervising systems smarter than us",
-      "Evaluating dangerous capabilities",
-      "Controlling models that may be misaligned",
+      { tag: "Value alignment", text: "Aligning models with human values and intent", glyph: "values" },
+      { tag: "Generalization", text: "Ensuring goals generalize as intended", glyph: "generalization" },
+      { tag: "Interpretability", text: "Interpreting what happens inside models", glyph: "interpretability" },
+      { tag: "Scalable oversight", text: "Supervising systems smarter than us", glyph: "oversight" },
+      { tag: "Evaluations", text: "Evaluating dangerous capabilities", glyph: "evaluations" },
+      { tag: "AI control", text: "Controlling models that may be misaligned", glyph: "control" },
     ],
     links: [
       { label: "Technical research", href: "/research" },
@@ -77,12 +86,12 @@ export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
     id: "societal-disruption",
     label: "Policy, Governance, & Societal Impacts",
     items: [
-      "Designing regulation and safety standards",
-      "Governing compute and frontier development",
-      "Coordinating on AI across nations",
-      "Anticipating effects on work and the economy",
-      "Preventing extreme concentrations of power",
-      "Protecting human agency and public discourse",
+      { tag: "Regulation", text: "Designing regulation and safety standards", glyph: "regulation" },
+      { tag: "Compute governance", text: "Governing compute and frontier development", glyph: "compute" },
+      { tag: "International coordination", text: "Coordinating on AI across nations", glyph: "coordination" },
+      { tag: "Economic impacts", text: "Anticipating effects on work and the economy", glyph: "economy" },
+      { tag: "Power concentration", text: "Preventing extreme concentrations of power", glyph: "power" },
+      { tag: "Epistemics", text: "Protecting human agency and public discourse", glyph: "epistemics" },
     ],
     links: [
       { label: "Policy research", href: "/research#our-work" },
