@@ -84,8 +84,9 @@ export default function Home() {
               <HighlightStatement
                 ruled
                 className="display-title text-[1.875rem] leading-[1.32] sm:text-[2.5rem] lg:text-[3rem]"
-                before="We believe that AI could bring immense benefits to the world, provided that it’s "
-                marked="developed safely and governed responsibly."
+                before="Managing risks from advanced AI is one of the "
+                marked="most important challenges"
+                after=" of our time."
               />
               <p className="lead-copy mt-8 max-w-2xl sm:mt-10">
                 We bring together technical AI safety, policy, governance, and broader conversations about AI to ensure

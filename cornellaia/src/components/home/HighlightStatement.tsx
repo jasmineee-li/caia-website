@@ -15,6 +15,8 @@ interface HighlightStatementProps {
   before: string;
   /** The phrase that gets the yellow highlight. */
   marked: string;
+  /** Text after the highlighted phrase. */
+  after?: string;
   /** Draw a writing line under every line of text, as on ruled notebook paper. */
   ruled?: boolean;
   className?: string;
@@ -62,7 +64,7 @@ function baselineRatio(el: HTMLElement) {
  * next, once the statement scrolls into view. With `ruled`, every line of the statement
  * also sits on a pale writing line.
  */
-export default function HighlightStatement({ before, marked, ruled = false, className }: HighlightStatementProps) {
+export default function HighlightStatement({ before, marked, after, ruled = false, className }: HighlightStatementProps) {
   const rootRef = useRef<HTMLParagraphElement | null>(null);
   const textRef = useRef<HTMLSpanElement | null>(null);
   const markRef = useRef<HTMLSpanElement | null>(null);
@@ -153,6 +155,7 @@ export default function HighlightStatement({ before, marked, ruled = false, clas
       <span ref={textRef}>
         {before}
         <span ref={markRef}>{marked}</span>
+        {after}
       </span>
     </p>
   );
