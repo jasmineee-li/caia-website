@@ -10,13 +10,16 @@ export default function AiSafetyIntro() {
       title={
         <>
           Managing risks from advanced AI is one of the{" "}
-          <span className="underline decoration-brand-red decoration-wavy [text-decoration-thickness:0.045em] [text-underline-offset:0.2em]">
+          {/* One unbroken wave. Underlines are painted under the glyphs, so descenders cover it where they cross. */}
+          <span className="underline decoration-brand-red decoration-wavy [-webkit-text-decoration-skip:none] [text-decoration-skip-ink:none] [text-decoration-thickness:0.045em] [text-underline-offset:0.2em]">
             most important challenges
           </span>{" "}
           of our time.
         </>
       }
       headerClassName="lg:max-w-[60rem]"
+      // The same size as the mission statement above.
+      titleClassName="text-[1.875rem] leading-[1.2] sm:text-[2.5rem] lg:text-[3rem]"
       tone="panel"
     >
       <div className="grid gap-14 md:grid-cols-2 md:gap-12 lg:gap-20">

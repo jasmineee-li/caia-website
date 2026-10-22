@@ -9,6 +9,8 @@ interface SectionProps {
   title?: ReactNode;
   /** Classes for the block holding the eyebrow, title and subtitle, e.g. to widen a long title. */
   headerClassName?: string;
+  /** Size and leading for the title, in place of the default section title size. */
+  titleClassName?: string;
   /** Shown after the title in grey, e.g. a count like "(18)". */
   titleNote?: ReactNode;
   subtitle?: string;
@@ -33,6 +35,7 @@ export default function Section({
   eyebrow,
   title,
   headerClassName,
+  titleClassName,
   titleNote,
   subtitle,
   action,
@@ -50,7 +53,7 @@ export default function Section({
               <div className={cn("max-w-3xl", headerClassName)}>
                 {eyebrow && <p className="mono-label mb-4 text-brand-red sm:mb-5">{eyebrow}</p>}
                 {title && (
-                  <h2 className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]">
+                  <h2 className={cn("display-title", titleClassName ?? "text-[2.125rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]")}>
                     {title}
                     {titleNote != null && <span className="text-slate-400"> {titleNote}</span>}
                   </h2>
