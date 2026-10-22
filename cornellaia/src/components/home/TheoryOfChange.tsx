@@ -164,13 +164,15 @@ function ScrambledLabel({ label, scramble }: { label: string; scramble?: Scrambl
   );
 }
 
-function NodePill({ node, red, scramble }: { node: Node; red: boolean; scramble?: Scramble }) {
+function NodePill({ node, red, scramble, dot = true }: { node: Node; red: boolean; scramble?: Scramble; dot?: boolean }) {
   const inner = (
     <>
-      <span
-        aria-hidden="true"
-        className={cn("h-[7px] w-[7px] shrink-0 rounded-full transition-colors duration-200", red ? "bg-brand-red" : "bg-blue")}
-      />
+      {dot && (
+        <span
+          aria-hidden="true"
+          className={cn("h-[7px] w-[7px] shrink-0 rounded-full transition-colors duration-200", red ? "bg-brand-red" : "bg-blue")}
+        />
+      )}
       <span className="sr-only">{node.label}</span>
       <span aria-hidden="true">
         <ScrambledLabel label={node.label} scramble={scramble} />
@@ -385,15 +387,16 @@ export default function TheoryOfChange() {
         {/* Community: the ground the whole chart stands on, on the same grid paper, over a
             strip of dots in the Join page's colours, mixed like a crowd. */}
         <div className="relative">
-          <div className="flex flex-col gap-4 px-5 pt-6 sm:flex-row sm:items-center sm:gap-6 sm:px-8 lg:px-10">
-            <div className="flex items-center gap-4">
+          {/* Set like the stage headings above, with the number over the title, starting at the same edge as 01. */}
+          <div className="flex flex-col gap-5 px-5 pt-2 sm:flex-row sm:items-end sm:gap-6 sm:px-8 lg:px-10">
+            <div className="pl-6 lg:pl-0">
               <p className="mono-label text-brand-red">04</p>
-              <h3 className="display-title text-[1.625rem] leading-none sm:text-[1.875rem]">Community</h3>
+              <h3 className="display-title mt-2 text-[1.625rem] leading-none sm:text-[1.875rem]">Community</h3>
             </div>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-2 pl-6 sm:-mb-1.5 sm:pl-0">
               {COMMUNITY.map((node) => (
                 <li key={node.label}>
-                  <NodePill node={node} red={false} />
+                  <NodePill node={node} red={false} dot={false} />
                 </li>
               ))}
             </ul>
