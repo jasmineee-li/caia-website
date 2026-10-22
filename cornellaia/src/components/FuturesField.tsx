@@ -80,7 +80,7 @@ const DROP = {
   sweep: 2.2, // for the start of the fall to travel across the cloud
   jitter: 0.35, // random extra delay per dot, so columns don't fall as a wall
   fall: 0.75, // one dot's fall
-  height: 16, // average drop distance
+  height: 8, // average drop distance
 };
 const INTRO_END = DROP.delay + DROP.sweep + DROP.jitter + DROP.fall;
 

@@ -56,11 +56,7 @@ export default function JoinPage() {
         </div>
       </PageHeader>
 
-      <Section
-        id="programs"
-        title="Programs"
-        subtitle="You can take our course, join a weekly reading group, do research with us, or just come to an event."
-      >
+      <Section id="programs" title="Programs">
         {/* Phones: one sideways rail. Tablets: two columns. Desktop: the three learning
             programs in a row, then the research team across two columns beside events.
             Visual backgrounds: white for the course, the technical group and events, warm

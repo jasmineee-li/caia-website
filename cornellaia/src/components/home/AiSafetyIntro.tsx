@@ -2,10 +2,15 @@ import Link from "next/link";
 import Section from "@/components/ui/Section";
 import { AI_SAFETY_SLIDES, AI_SAFETY_SOURCE } from "@/content/home";
 
-/** "What is AI safety" on a warm panel band: red labels, two columns under blue rules, white pill links, and the source as a mono caption. */
+/** Why AI safety matters, on a warm panel band: red labels, two columns under blue rules, white pill links, and the source as a mono caption. */
 export default function AiSafetyIntro() {
   return (
-    <Section id="ai-safety" eyebrow="Why it matters" title="AI Safety" tone="panel">
+    <Section
+      id="ai-safety"
+      title="Managing risks from advanced AI is one of the most important challenges of our time."
+      headerClassName="lg:max-w-[60rem]"
+      tone="panel"
+    >
       <div className="grid gap-14 md:grid-cols-2 md:gap-12 lg:gap-20">
         {AI_SAFETY_SLIDES.map((slide, index) => (
           <article key={slide.id} className="border-t border-blue pt-6">

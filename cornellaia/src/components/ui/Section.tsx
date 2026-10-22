@@ -7,6 +7,8 @@ interface SectionProps {
   /** Small mono label above the title, e.g. "News" or "01 · Programs". */
   eyebrow?: string;
   title?: string;
+  /** Classes for the block holding the eyebrow, title and subtitle, e.g. to widen a long title. */
+  headerClassName?: string;
   /** Shown after the title in grey, e.g. a count like "(18)". */
   titleNote?: ReactNode;
   subtitle?: string;
@@ -30,6 +32,7 @@ export default function Section({
   id,
   eyebrow,
   title,
+  headerClassName,
   titleNote,
   subtitle,
   action,
@@ -44,7 +47,7 @@ export default function Section({
         <div className={contentClassName}>
           {(title || subtitle || eyebrow) && (
             <header className="mb-10 flex flex-wrap items-end justify-between gap-x-10 gap-y-5 sm:mb-14">
-              <div className="max-w-3xl">
+              <div className={cn("max-w-3xl", headerClassName)}>
                 {eyebrow && <p className="mono-label mb-4 text-brand-red sm:mb-5">{eyebrow}</p>}
                 {title && (
                   <h2 className="display-title text-[2.125rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]">

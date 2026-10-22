@@ -10,6 +10,7 @@ import Container from "@/components/ui/Container";
 import MotionReveal from "@/components/ui/MotionReveal";
 import Section from "@/components/ui/Section";
 import AiSafetyIntro from "@/components/home/AiSafetyIntro";
+import TheoryOfChange from "@/components/home/TheoryOfChange";
 import HighlightStatement from "@/components/home/HighlightStatement";
 import LogoBand from "@/components/home/LogoBand";
 import { HOME_CTA_ITEMS, HOME_HERO } from "@/content/home";
@@ -96,6 +97,8 @@ export default function Home() {
       </section>
 
       <AiSafetyIntro />
+
+      <TheoryOfChange />
 
       <Section
         id="events"
