@@ -60,12 +60,12 @@ export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
     id: "technical-alignment",
     label: "Technical Alignment",
     items: [
-      "Interpreting language models",
-      "Studying value generalization",
-      "Studying emergent misalignment",
-      "Scaling human oversight",
-      "Monitoring and controlling AI agents",
+      "Aligning models with human values and intent",
+      "Ensuring goals generalize as intended",
+      "Interpreting what happens inside models",
+      "Supervising systems smarter than us",
       "Evaluating dangerous capabilities",
+      "Controlling models that may be misaligned",
     ],
     links: [
       { label: "Technical research", href: "/research" },

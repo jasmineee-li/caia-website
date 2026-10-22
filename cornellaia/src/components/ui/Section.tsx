@@ -20,6 +20,8 @@ interface SectionProps {
   className?: string;
   contentClassName?: string;
   tone?: "default" | "muted" | "hero" | "sky" | "panel";
+  /** "tight" trims the space above the section, e.g. for a band that opens with a small label. */
+  spacing?: "default" | "tight";
 }
 
 const TONE_CLASS: Record<NonNullable<SectionProps["tone"]>, string> = {
@@ -43,15 +45,31 @@ export default function Section({
   className,
   contentClassName,
   tone = "default",
+  spacing = "default",
 }: SectionProps) {
+  // A header that is only a small label sits closer to what it labels.
+  const labelOnly = eyebrow && !title && !subtitle && !action;
   return (
-    <section id={id} className={cn("scroll-mt-24 pt-20 sm:pt-28 lg:pt-32", TONE_CLASS[tone], className)}>
+    <section
+      id={id}
+      className={cn(
+        "scroll-mt-24",
+        spacing === "tight" ? "pt-14 sm:pt-16 lg:pt-20" : "pt-20 sm:pt-28 lg:pt-32",
+        TONE_CLASS[tone],
+        className,
+      )}
+    >
       <Container>
         <div className={contentClassName}>
           {(title || subtitle || eyebrow) && (
-            <header className="mb-10 flex flex-wrap items-end justify-between gap-x-10 gap-y-5 sm:mb-14">
+            <header
+              className={cn(
+                "flex flex-wrap items-end justify-between gap-x-10 gap-y-5",
+                labelOnly ? "mb-6 sm:mb-8" : "mb-10 sm:mb-14",
+              )}
+            >
               <div className={cn("max-w-3xl", headerClassName)}>
-                {eyebrow && <p className="mono-label mb-4 text-brand-red sm:mb-5">{eyebrow}</p>}
+                {eyebrow && <p className={cn("mono-label text-brand-red", !labelOnly && "mb-4 sm:mb-5")}>{eyebrow}</p>}
                 {title && (
                   <h2 className={cn("display-title", titleClassName ?? "text-[2.125rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]")}>
                     {title}

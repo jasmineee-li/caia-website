@@ -9,7 +9,7 @@ import { AI_SAFETY_SLIDES } from "@/content/home";
  */
 export default function AiSafetyIntro() {
   return (
-    <Section id="ai-safety" eyebrow="AI Safety" tone="panel">
+    <Section id="ai-safety" eyebrow="AI Safety" tone="panel" spacing="tight">
       {/* From tablets up, the two columns share rows (number, title, list, links), so both
           lists start level even when one title runs to two lines. */}
       <div className="grid gap-14 md:grid-cols-2 md:gap-x-12 md:gap-y-0 lg:gap-x-20">
