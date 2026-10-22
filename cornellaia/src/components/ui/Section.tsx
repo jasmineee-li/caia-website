@@ -6,7 +6,7 @@ interface SectionProps {
   id?: string;
   /** Small mono label above the title, e.g. "News" or "01 · Programs". */
   eyebrow?: string;
-  title?: string;
+  title?: ReactNode;
   /** Classes for the block holding the eyebrow, title and subtitle, e.g. to widen a long title. */
   headerClassName?: string;
   /** Shown after the title in grey, e.g. a count like "(18)". */

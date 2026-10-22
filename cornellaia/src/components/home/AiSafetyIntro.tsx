@@ -7,7 +7,15 @@ export default function AiSafetyIntro() {
   return (
     <Section
       id="ai-safety"
-      title="Managing risks from advanced AI is one of the most important challenges of our time."
+      title={
+        <>
+          Managing risks from advanced AI is one of the{" "}
+          <span className="underline decoration-brand-red decoration-wavy [text-decoration-thickness:0.045em] [text-underline-offset:0.2em]">
+            most important challenges
+          </span>{" "}
+          of our time.
+        </>
+      }
       headerClassName="lg:max-w-[60rem]"
       tone="panel"
     >
