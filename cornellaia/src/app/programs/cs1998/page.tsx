@@ -304,7 +304,12 @@ const COURSE_WEEKS: CourseWeek[] = [
       "Safety-usefulness tradeoffs and evidence for an AI control safety case.",
     ],
     materials: {
-      slide: [{ label: "Slides (TBD)" }],
+      slide: [
+        {
+          label: "Week 6 slides (PDF)",
+          href: "/cs1998/week_6_slides.pdf",
+        },
+      ],
       notebook: [
         {
           label: "Week 6 notebook",
