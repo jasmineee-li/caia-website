@@ -78,8 +78,8 @@ export const AI_SAFETY_SLIDES: AiSafetySlide[] = [
     ],
     links: [
       { label: "Technical research", href: "/research" },
-      { label: "Technical reading group", href: "/join#technical-reading-group" },
       { label: "CS 1998", href: "/programs/cs1998" },
+      { label: "Technical reading group", href: "/join#technical-reading-group" },
     ],
   },
   {
