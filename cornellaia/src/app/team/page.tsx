@@ -60,6 +60,7 @@ export default function TeamPage() {
                         websiteUrl={member.websiteUrl}
                         scholarUrl={member.scholarUrl}
                         linkedinUrl={member.linkedinUrl}
+                        tags={member.tags}
                       />
                     ))}
                 </div>

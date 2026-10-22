@@ -41,7 +41,7 @@ export default function AiSafetyIntro() {
                   <ProblemGlyph name={item.glyph} className="h-10 w-[75px] shrink-0 sm:h-16 sm:w-[120px]" />
                   {/* Balanced line breaks, so a phrase never leaves one word alone on its last line. */}
                   <div className="sm:mt-6">
-                    <p className="mono-caption text-balance">{item.tag}</p>
+                    <p className="text-balance text-[0.8125rem] font-medium leading-5 text-muted">{item.tag}</p>
                     <p className="mt-1.5 text-balance font-display text-[1rem] leading-[1.3] text-ink sm:mt-2 sm:text-[1.1875rem] xl:text-[1.0625rem]">{item.text}</p>
                   </div>
                 </li>

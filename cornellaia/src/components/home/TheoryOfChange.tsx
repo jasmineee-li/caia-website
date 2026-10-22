@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import DotRows from "@/components/ui/DotRows";
+import { RINGS } from "@/components/ui/JoinDots";
 import Section from "@/components/ui/Section";
 import { HOME_CTA_ITEMS } from "@/content/home";
 import { cn } from "@/lib/cn";
@@ -72,19 +73,20 @@ const GROUPS: Group[] = [
 const COMMUNITY: Node[] = [
   { label: "Socials", href: "/events#events" },
   { label: "Slack", href: HOME_CTA_ITEMS[0].href },
+  { label: "Instagram", href: "https://www.instagram.com/cornell.aia/" },
 ];
 
 /** The path shown first, and the only one with reduced motion: one node per column, by index. */
 const FIRST_PATH = [2, 1, 0, 2];
 
 // Timing in ms: the path takes STEP to cross from one column to the next, then holds.
-const STEP = 520;
-const HOLD = 2300;
+const STEP = 850;
+const HOLD = 3400;
 const CYCLE = STEP * (GROUPS.length - 1) + HOLD;
 // A scrambled stretch of text: how long it stays as code, then how far apart its letters settle.
-const SCRAMBLE_HOLD = 260;
-const SCRAMBLE_STEP = 70;
-const FLICKER = 55;
+const SCRAMBLE_HOLD = 450;
+const SCRAMBLE_STEP = 110;
+const FLICKER = 85;
 const GLYPHS = "{}[]<>/\\|=+*#%$&@01xX_~^?";
 
 const PALE = "#c3cfe2";
@@ -380,8 +382,9 @@ export default function TheoryOfChange() {
           ))}
         </div>
 
-        {/* Community: the ground the whole chart stands on. */}
-        <div className="relative border-t border-grid bg-white/80">
+        {/* Community: the ground the whole chart stands on, on the same grid paper, over a
+            strip of dots in the Join page's colours, mixed like a crowd. */}
+        <div className="relative">
           <div className="flex flex-col gap-4 px-5 pt-6 sm:flex-row sm:items-center sm:gap-6 sm:px-8 lg:px-10">
             <div className="flex items-center gap-4">
               <p className="mono-label text-brand-red">04</p>
@@ -395,7 +398,7 @@ export default function TheoryOfChange() {
               ))}
             </ul>
           </div>
-          <DotRows rows={3} className="mt-5" />
+          <DotRows rows={3} palette={RINGS.map(([, colour]) => colour)} className="mt-5" />
         </div>
       </div>
     </Section>

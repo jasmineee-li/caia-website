@@ -10,6 +10,8 @@ interface ProfileCardProps {
   linkedinUrl?: string;
   scholarUrl?: string;
   websiteUrl?: string;
+  /** Small tags shown after the role, e.g. the areas a co-lead works in. */
+  tags?: string[];
   unframed?: boolean;
   teamLayout?: boolean;
 }
@@ -55,6 +57,7 @@ export default function ProfileCard({
   linkedinUrl,
   scholarUrl,
   websiteUrl,
+  tags,
   unframed = false,
   teamLayout = false,
 }: ProfileCardProps) {
@@ -80,7 +83,19 @@ export default function ProfileCard({
           />
         </div>
         <h3 className="mt-4 font-display text-[1.25rem] leading-[1.2]">{name}</h3>
-        {role && <p className="mono-caption mt-1.5">{role}</p>}
+        {(role || tags?.length) && (
+          <div className="mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-1.5">
+            {role && <p className="mono-caption">{role}</p>}
+            {tags?.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-[3px] bg-slate-100 px-1 py-px font-mono text-[0.6875rem] uppercase leading-[1.5] tracking-[0.04em] text-ink-2"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         {links.length > 0 && (
           <div className="mt-3 flex gap-3 text-slate-500">
             {links.map((link) => (

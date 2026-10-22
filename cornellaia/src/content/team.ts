@@ -6,6 +6,8 @@ export interface TeamMember {
   linkedinUrl?: string;
   scholarUrl?: string;
   websiteUrl?: string;
+  /** Areas the person leads in, shown as small tags after the role. */
+  tags?: string[];
 }
 
 export interface TeamGroup {
@@ -29,6 +31,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_arya_datla.jpeg",
         name: "Arya Datla",
         role: "Co-Lead",
+        tags: ["Technical"],
         websiteUrl: "https://aryadatla.com/",
         scholarUrl: "https://scholar.google.com/citations?user=2rAW65IAAAAJ&hl=en",
         linkedinUrl: "https://www.linkedin.com/in/arya-datla-351396258/",
@@ -37,12 +40,14 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_daniel_lee.jpeg",
         name: "Daniel Lee",
         role: "Co-Lead",
+        tags: ["Technical"],
         linkedinUrl: "https://www.linkedin.com/in/daniel-lee-55688730a/",
       },
       {
         imageSrc: "/team/TEAM_jash_vira.jpeg",
         name: "Jash Vira",
         role: "Co-Lead",
+        tags: ["Technical"],
         websiteUrl: "https://jashvira.com/",
         scholarUrl: "https://scholar.google.com/citations?user=FgaN_0IAAAAJ",
         linkedinUrl: "https://www.linkedin.com/in/jash-vira/",
@@ -51,12 +56,14 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_niranjan_nair.jpeg",
         name: "Niranjan Nair",
         role: "Co-Lead",
+        tags: ["Technical"],
         linkedinUrl: "https://www.linkedin.com/in/niranjan-nair-309639268/",
       },
       {
         imageSrc: "/team/TEAM_owen_karmel.jpeg",
         name: "Owen Karmel",
         role: "Co-Lead",
+        tags: ["Technical", "Research"],
         websiteUrl: "https://owenkarmel.com/",
         linkedinUrl: "https://www.linkedin.com/in/owen-karmel-b067a6280/",
       },
@@ -64,6 +71,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_rittik_bhattacharya_2026.jpg",
         name: "Rittik Bhattacharya",
         role: "Co-Lead",
+        tags: ["Policy"],
         websiteUrl: "https://medium.com/@rittikb",
         linkedinUrl: "https://www.linkedin.com/in/rittik-bh/",
       },
@@ -71,12 +79,14 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_ekadh_singh.png",
         name: "Ekadh Singh",
         role: "Co-Lead",
+        tags: ["Technical"],
         linkedinUrl: "https://www.linkedin.com/in/singhekadh/",
       },
       {
         imageSrc: "/team/TEAM_elle_kim.png",
         name: "Elle Kim",
-        role: "Policy Lead",
+        role: "Co-Lead",
+        tags: ["Policy"],
         websiteUrl: "https://elledkim.com/",
         linkedinUrl: "https://www.linkedin.com/in/elledanikim/",
       },
@@ -84,12 +94,14 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_uday.jpeg",
         name: "Uday Tyagi",
         role: "Co-Lead",
+        tags: ["Technical"],
         linkedinUrl: "https://www.linkedin.com/in/heyuday/",
       },
       {
         imageSrc: "/team/TEAM_suvadip_sana.jpg",
         name: "Suvadip Sana",
         role: "Co-Lead",
+        tags: ["Technical", "Research"],
         scholarUrl: "https://scholar.google.com/citations?user=sbXiEbUAAAAJ&hl=en&oi=sra",
         websiteUrl: "https://suvadip2776.github.io/Suvadip_Website/index.html",
         linkedinUrl: "https://www.linkedin.com/in/suvadip-sana-58779913a/",
@@ -98,6 +110,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_ashton_chew.jpeg",
         name: "Ashton Chew",
         role: "Co-Lead",
+        tags: ["Technical"],
         websiteUrl: "https://ashtonchew.com/",
         linkedinUrl: "https://www.linkedin.com/in/ashton-chew/",
       },
@@ -105,13 +118,15 @@ export const TEAM_GROUPS: TeamGroup[] = [
         imageSrc: "/team/TEAM_arjun.png",
         name: "Arjun Mulchandani",
         role: "Co-Lead",
+        tags: ["Technical"],
         websiteUrl: "https://www.arjunmulchandani.com/",
         linkedinUrl: "https://www.linkedin.com/in/arjunbmulchandani/",
       },
       {
         imageSrc: "/team/TEAM_lydia_huang.jpeg",
         name: "Lydia Huang",
-        role: "Outreach Lead",
+        role: "Co-Lead",
+        tags: ["Technical", "Outreach"],
         linkedinUrl: "https://www.linkedin.com/in/lh729/",
       },
     ],
