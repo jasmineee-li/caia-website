@@ -74,7 +74,11 @@ export default function ResearchPage() {
       </section>
 
       <Section id="projects" eyebrow="This semester" title="Fall 2026 Projects">
-        <ProjectCards projects={FALL_2026_PROJECTS} applyHref={APPLICATIONS.researchTeam} />
+        <ProjectCards
+          projects={FALL_2026_PROJECTS}
+          applyHref={APPLICATIONS.researchTeam}
+          proposeHref={APPLICATIONS.projectProposal}
+        />
       </Section>
 
       <Section id="our-work" eyebrow="Publications" title="Our Work" titleNote={`(${RESEARCH_PAPERS.length})`}>

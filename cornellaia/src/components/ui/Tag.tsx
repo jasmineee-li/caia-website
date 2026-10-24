@@ -22,6 +22,8 @@ const TOPIC_COLORS: Record<string, TagColor> = {
   theory: "yellow",
   "training gaming": "yellow",
   "mechanism design": "yellow",
+  "reward seeking": "yellow",
+  "situational awareness": "yellow",
   evaluation: "sky",
   interpretability: "sky",
   "model steering": "sky",
@@ -32,6 +34,7 @@ const TOPIC_COLORS: Record<string, TagColor> = {
   governance: "gray",
   "societal impact": "gray",
   "public sector": "gray",
+  biosecurity: "gray",
 };
 
 const ORDER = Object.keys(TAG_FILLS) as TagColor[];
