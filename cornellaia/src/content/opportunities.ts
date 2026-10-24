@@ -65,7 +65,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       },
     ],
     summary:
-      "Models learn how they are trained from text about AI training. This project fine-tunes models on synthetic documents that describe different training targets and tests whether that knowledge alone leads them to reason about, and act toward, what their evaluators reward.",
+      "Does learning how they are trained lead models to reason about what their evaluators reward? We test this with synthetic document fine-tuning.",
     details: [
       "Frontier models increasingly recognize when they are being trained or evaluated, and some reason explicitly about what a grader will reward. Much of what models know about their own training may come from pretraining text about RLHF, reward models and evaluations. This project asks whether that kind of knowledge, absorbed the way a model would absorb it in pretraining, is enough to make a model reason about its evaluators and shift its behavior toward what it believes is rewarded.",
       "Using synthetic document fine-tuning, the team will train open-weight models on realistic documents about AI training, such as papers, explainers, model cards, news articles and forum threads. Every condition shares a common pool on how RLHF and reward models work. The conditions differ only in the training target the documents describe for the model: a standard helpful, harmless and honest assistant, a defense deployment that treats refusals as failures, or a commercial deployment that rewards promoting one company’s products. A control sees only the shared pool, and we vary how much of the training mix describes the target.",
@@ -86,7 +86,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       },
     ],
     summary:
-      "Living organisms keep themselves within viable bounds. This project tests a substrate-neutral idea of embodiment by asking whether language models actively maintain parts of their own internal state.",
+      "Do language models actively maintain parts of their own internal state, as living things do? We perturb their activations and look for signs of regulation.",
     details: [
       "Debates about AI embodiment often assume that a body is required. A different view, drawn from work on life and consciousness, treats embodiment as self-maintenance: a system is embodied to the degree that it actively keeps some of its own variables within bounds. That view does not depend on the substrate, and it makes predictions that can be tested inside a language model.",
       "The team will perturb a model’s activations, release the perturbation, and look for signatures of active regulation, such as overshoot, error that shrinks over time, and correction carried by more than one pathway, as opposed to a passive drift back to the mean. The tools are linear probes, sparse autoencoders and activation steering on open models such as Gemma and Qwen, and we may also search for the internal directions a model restores after random noise.",
@@ -98,7 +98,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     title: "Bioterrorism Bottlenecks and AI Biosecurity",
     mentors: [organizer("Owen Karmel", "Co-Lead of Cornell AI Alignment, with extensive hands-on wet-lab experience")],
     summary:
-      "What has actually held would-be bioterrorists back: knowledge, physical labor, or institutional expertise? This project studies past attempts to judge which bottlenecks current AI and robotic foundation models could remove.",
+      "What held past bioterrorists back: knowledge, labor or expertise? The answer suggests which AI capabilities matter most for biosecurity.",
     details: [
       "As AI systems and robotic foundation models become more capable in biology, it matters which parts of a biological attack they could make easier. This project surveys historical bioterrorism attempts to ask what limited the attackers. One possibility is ideas and general knowledge, which language models could supply. Others are the physical labor of experiments and logistics, or the institutional expertise that biotech teams build up over years in people’s heads, notebooks and hands.",
       "The project separates discriminate weapons, which mainly harm a targeted party, from indiscriminate ones that can spread on their own, since the two carry very different risks. It starts with Aum Shinrikyo, the Japanese cult that tried to build chemical and biological weapons in the 1990s, and tests the account of biological risk in Toby Ord’s The Precipice against the historical record. The method is historical: primary sources and historiography, with search tools used to find sources while the reading and writing stay human.",
@@ -113,7 +113,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       organizer("Rittik Bhattacharya", "Co-Lead of Cornell AI Alignment and co-leader of the policy reading group"),
     ],
     summary:
-      "A policy research project on how governments and institutions can govern increasingly capable AI. The team will pick a focused question, such as regulation, compute governance, or the economic effects of AI, and write a policy report for decision-makers.",
+      "The team picks a focused question in AI governance, such as regulation or compute, and writes a policy report for decision-makers.",
     details: [
       "A policy research project on how governments and institutions can govern increasingly capable AI, ending in a policy report written for decision-makers.",
       "The team will choose a focused question together early in the semester. Possible directions include how governments could regulate frontier models, how compute governance and export controls work in practice, and how advanced AI could change work, the economy and the balance of power. From there the team will review the relevant research and policy documents and develop concrete recommendations.",
