@@ -17,6 +17,10 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA x DTI Dev Talk",
+    embedUrl: "https://luma.com/embed/event/evt-6rcs1PgBl9WiF7I/simple",
+  },
+  {
     title: "CAIA Policy Reading Group",
     embedUrl: "https://luma.com/embed/event/evt-RLFswzxfSGG4KON/simple",
   },
