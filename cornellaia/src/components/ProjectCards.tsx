@@ -64,7 +64,7 @@ export default function ProjectCards({ projects, applyHref }: ProjectCardsProps)
             </h3>
             <p className="mt-4 line-clamp-3 text-[0.9375rem] leading-[1.65] text-slate-600">{project.summary}</p>
             <p className="mono-caption mt-auto pt-6">
-              {project.mentors.length > 1 ? "Mentors" : "Mentor"} · {project.mentors.map((mentor) => mentor.name).join(", ")}
+              {project.mentors.length > 1 ? "Mentors" : "Mentor"}: {project.mentors.map((mentor) => mentor.name).join(", ")}
             </p>
           </article>
         ))}

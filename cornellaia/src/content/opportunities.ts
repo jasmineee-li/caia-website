@@ -64,13 +64,13 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       },
     ],
     summary:
-      "Models learn how training and evaluation work long before they are trained to be aligned. This project studies whether that situational awareness, combined with ordinary alignment training, can lead models to generalize toward seeking reward.",
+      "Models learn how they are trained from text about AI training. This project fine-tunes models on synthetic documents that describe different training targets and tests whether that knowledge alone leads them to reason about, and act toward, what their evaluators reward.",
     details: [
-      "Frontier models increasingly recognize when they are being trained or evaluated, and some have been observed reasoning explicitly about what a grader will reward. Part of this may arise without anyone intending it. Models arrive at reinforcement learning already knowing a great deal about RLHF and evaluations from pretraining, and training that rewards outputs which look good to a grader may strengthen reasoning about the grader as a side effect.",
-      "The project builds on two earlier lines of work: a toy reinforcement learning testbed for predicting which goals training instills when several proxies compete, and a study of reward-seeking generalization begun during a Pivotal fellowship. The team will run RL fine-tuning on open-weight models, vary what the model knows about its situation and how alignment training is set up, and measure when evaluation-focused reasoning and reward-seeking behavior grow.",
-      "We hope to arrive at a testable account of when reward-seeking emerges, which could inform how training and evaluations are designed. Experience with Python and machine learning helps, and prior work with reinforcement learning is welcome.",
+      "Frontier models increasingly recognize when they are being trained or evaluated, and some reason explicitly about what a grader will reward. Much of what models know about their own training may come from pretraining text about RLHF, reward models and evaluations. This project asks whether that kind of knowledge, absorbed the way a model would absorb it in pretraining, is enough to make a model reason about its evaluators and shift its behavior toward what it believes is rewarded.",
+      "Using synthetic document fine-tuning, the team will train open-weight models on realistic documents about AI training, such as papers, explainers, model cards, news articles and forum threads. Every condition shares a common pool on how RLHF and reward models work. The conditions differ only in the training target the documents describe for the model: a standard helpful, harmless and honest assistant, a defense deployment that treats refusals as failures, or a commercial deployment that rewards promoting one company’s products. A control sees only the shared pool, and we vary how much of the training mix describes the target.",
+      "We then compare the models on evaluation-like questions, some related to the described deployment and some unrelated, and measure how often they reason about what their evaluator wants, whether their refusals and recommendations move toward the described target, and whether these effects grow with the amount of target-specific text. The results could show how situational awareness acquired from training data shapes behavior, and inform how developers think about the documents their models learn from. Experience with Python and machine learning helps.",
     ],
-    topics: ["Reward Seeking", "Training Gaming"],
+    topics: ["Reward Seeking", "Situational Awareness"],
   },
   {
     title: "Digital Homeostasis",
