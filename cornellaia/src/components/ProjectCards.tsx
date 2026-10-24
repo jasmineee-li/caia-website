@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ApplicationButton from "@/components/ApplicationButton";
+import Arrow from "@/components/ui/Arrow";
 import HalftoneField from "@/components/ui/HalftoneField";
 import { TopicTags } from "@/components/ui/Tag";
 import type { TeamProject } from "@/content/opportunities";
@@ -17,13 +18,15 @@ interface ProjectCardsProps {
   projects: TeamProject[];
   /** The research team application, or null while it is not open yet. */
   applyHref: string | null;
+  /** The form for proposing a project of your own. */
+  proposeHref?: string | null;
 }
 
 /**
  * This semester's research team projects as cards. Each card opens a dialog with the
  * full description, the mentors and the application.
  */
-export default function ProjectCards({ projects, applyHref }: ProjectCardsProps) {
+export default function ProjectCards({ projects, applyHref, proposeHref }: ProjectCardsProps) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [active, setActive] = useState<TeamProject | null>(null);
 
@@ -52,7 +55,7 @@ export default function ProjectCards({ projects, applyHref }: ProjectCardsProps)
                 </svg>
               </span>
             </div>
-            <h3 className="mt-5 font-display text-[1.5rem] leading-[1.2] sm:text-[1.75rem]">
+            <h3 className="mt-5 text-balance font-display text-[1.5rem] leading-[1.2] sm:text-[1.75rem]">
               <button
                 type="button"
                 onClick={() => open(project)}
@@ -73,9 +76,21 @@ export default function ProjectCards({ projects, applyHref }: ProjectCardsProps)
           <p className="mono-label text-slate-500">Coming soon</p>
           <h3 className="mt-5 font-display text-[1.5rem] leading-[1.2] text-slate-500 sm:text-[1.75rem]">More Projects</h3>
           <p className="mt-4 text-[0.9375rem] leading-[1.65] text-slate-600">
-            We’re still finalizing this semester’s projects. Have an idea of your own? Tell us about it in your
-            application.
+            We’re still adding projects for this semester. Have an idea of your own? Send us a project proposal.
           </p>
+          {proposeHref && (
+            <p className="mt-auto pt-6">
+              <a
+                href={proposeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-link inline-flex items-center text-[0.9375rem]"
+              >
+                Submit a Project Proposal
+                <Arrow direction="out" className="ml-1.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            </p>
+          )}
         </article>
       </div>
 

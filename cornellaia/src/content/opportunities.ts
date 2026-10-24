@@ -5,10 +5,11 @@ import { TEAM_GROUPS } from "@/content/team";
  * "Application opens soon" placeholder in place of the Apply button.
  */
 export const APPLICATIONS: Record<
-  "researchTeam" | "technicalReadingGroup" | "policyReadingGroup" | "organizer",
+  "researchTeam" | "projectProposal" | "technicalReadingGroup" | "policyReadingGroup" | "organizer",
   string | null
 > = {
   researchTeam: null,
+  projectProposal: "https://airtable.com/appjO4DuQKwI1MaNr/shrgG7c0VEMWpGpFG",
   technicalReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shrW1K1BBdGfgjDLe",
   policyReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shruuVk6rF2LarJu2",
   organizer: "https://airtable.com/appjO4DuQKwI1MaNr/shrGbP58RXXgapgZ9",
@@ -54,7 +55,7 @@ const JINZHOU = organizer(
 
 export const FALL_2026_PROJECTS: TeamProject[] = [
   {
-    title: "Natural Generalization into Reward-Seeking from Situational Awareness and Alignment Training",
+    title: "Reward-Seeking from Situational Awareness",
     mentors: [
       JINZHOU,
       {
@@ -73,7 +74,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     topics: ["Reward Seeking", "Situational Awareness"],
   },
   {
-    title: "Digital Homeostasis",
+    title: "Digital Homeostasis and AI Embodiment",
     mentors: [
       JINZHOU,
       {
@@ -94,7 +95,7 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     topics: ["Interpretability", "Cognitive Science"],
   },
   {
-    title: "A Historical Analysis of Bioterrorism for AI Biosecurity",
+    title: "Bioterrorism Bottlenecks and AI Biosecurity",
     mentors: [organizer("Owen Karmel", "Co-Lead of Cornell AI Alignment, with extensive hands-on wet-lab experience")],
     summary:
       "What has actually held would-be bioterrorists back: knowledge, physical labor, or institutional expertise? This project studies past attempts to judge which bottlenecks current AI and robotic foundation models could remove.",
@@ -119,14 +120,5 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       "No technical background is required. The project suits students interested in law, economics, government or public policy as well as computer science.",
     ],
     topics: ["Policy", "Governance"],
-  },
-  {
-    title: "To Be Announced",
-    mentors: [organizer("Jash Vira", "Co-Lead of Cornell AI Alignment")],
-    summary: "Jash Vira is finalizing this project, and we’ll post the details here soon.",
-    details: [
-      "Jash Vira is finalizing this project, and we’ll post the details here soon. If you’d like to work with Jash, mention it in your application.",
-    ],
-    topics: [],
   },
 ];
