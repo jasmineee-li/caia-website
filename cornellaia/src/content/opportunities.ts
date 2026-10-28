@@ -38,6 +38,8 @@ export interface TeamProject {
   summary: string;
   /** The fuller description in the project dialog, one paragraph per entry. */
   details?: string[];
+  /** What mentees would work on, listed in the project dialog. */
+  expectations?: string[];
   /** Empty while a project's topic is still being decided. */
   topics: string[];
 }
@@ -62,7 +64,13 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     details: [
       "Reinforcement learning changes how a model behaves, and sometimes the change is unwelcome: the model learns to hack its reward, or becomes misaligned in broader ways. What makes this hard to study is that the same model often looks fine in one context and not in another, so a single evaluation can miss the behavior entirely. This project asks how that context dependence arises during training and what it reveals about a model’s character.",
       "The team will work with open models and empirical evaluations, comparing how a model responds across settings that differ in framing, stakes or apparent oversight. Depending on what the early results show, the work may go on to look at model internals and to test interventions that reduce the unwanted behavior. The specific models and methods are deliberately left open, so the direction can follow the findings rather than a plan fixed in advance.",
-      "Mentees will read and discuss research on reinforcement learning, reward hacking and alignment training, help design and run the experiments, and analyze the results, including the unexpected and negative ones. The project suits students comfortable with Python, Git and basic ML tooling who care about careful controls and clear writing.",
+      "The project suits students comfortable with Python, Git and basic ML tooling, who are careful with controls and negative results and who care about clear writing and data visualization. Mentees are expected to bring independent ideas and a particular area of strength, and to take ownership of what they produce.",
+    ],
+    expectations: [
+      "Read and discuss research on model behavior, reinforcement learning and alignment",
+      "Help design and run experiments and evaluations on open models",
+      "Analyze model responses and results, including unexpected and negative findings",
+      "Develop research questions and communicate findings through clear writing and visualization",
     ],
     topics: ["Reward Hacking", "Alignment Training"],
   },
@@ -88,16 +96,22 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     topics: ["Interpretability", "Cognitive Science"],
   },
   {
-    title: "Tacit Knowledge and AI Biosecurity",
+    title: "Physical AI Safety",
     mentors: [organizer("Owen Karmel", "Co-Lead of Cornell AI Alignment, with extensive hands-on wet-lab experience")],
     summary:
-      "Published benchmarks show AI agents writing working code for standard lab robots. We ask whether that carries over to improvised open-source hardware, where tacit knowledge matters most.",
+      "Benchmarks show AI agents writing working code for standard lab robots. We build open-source platforms to test what models can do on hardware nobody wrote documentation for.",
     details: [
-      "Even well-resourced attempts to build biological weapons have failed. Aum Shinrikyo, the Japanese cult of the 1990s, had millions of dollars and staff with science degrees and still did not succeed. One explanation is that scientific skill is tacit and context-dependent, travelling poorly between labs and usually acquired through years of apprenticeship. The project opens with a literature review of that debate, in collaboration with Kathleen Vogel at Arizona State University, covering the historical record and the current argument over whether AI meaningfully lowers the skill barrier.",
-      "Recent benchmarks report that language model agents can write usable code for a widely documented commercial liquid-handling robot. The team will ask whether the same holds on an open-source platform assembled from parts, driven by an open-weight model. Generalizing from a well documented machine to an improvised one is the step tacit knowledge is supposed to block, and open platforms sit outside the oversight that manufacturers of commercial instruments can apply. The fall and winter cover the reading, feedback from researchers in the field, and building the platform, with the evaluation following in the spring. Benign stand-ins such as food dye are the default for any physical test.",
-      "Results will be read against the policy debate on de-skilling and on how biosecurity rules should treat open hardware, in conversation with people working on biosecurity and physical AI safety. The project suits students interested in biosecurity policy, robotics or evaluations, and some hands-on building is involved.",
+      "Even well-resourced attempts to build biological weapons have failed. Aum Shinrikyo, the Japanese cult of the 1990s, had millions of dollars and staff with science degrees and still did not succeed. One explanation is that scientific skill is tacit and context-dependent, traveling poorly between labs and usually acquired through years of apprenticeship. The project opens with a literature review of that debate, in collaboration with Kathleen Vogel at Arizona State University, covering the historical record and the current argument over whether AI meaningfully lowers the skill barrier.",
+      "Recent benchmarks report that language model agents can write usable code for a widely documented commercial lab robot. The team will ask whether the same holds on open-source platforms assembled from parts, where the generalization that tacit knowledge is supposed to block is exactly what is being tested, and where none of the oversight available to the manufacturers of commercial instruments applies. Alongside the evaluations, the team builds and runs the hardware itself and works out which benchmarks the field is still missing.",
+      "The project is ongoing rather than bounded by one semester, and it runs on real equipment, so a good deal of the work is hands-on. Mentees are asked to treat the research as a part-time job: come to the weekly meeting, and bring a slide or two on what you did. Research expectations are set at the first meeting. The work suits students interested in robotics, evaluations or biosecurity policy, and no single background covers all of it.",
     ],
-    topics: ["Biosecurity", "Evaluation"],
+    expectations: [
+      "Assemble robots, including from open-source hardware",
+      "3D print components",
+      "Run vision-language-action models and world models in simulation and on hardware",
+      "Research the benchmarks the field needs, including outreach to scientists",
+    ],
+    topics: ["Biosecurity", "Robotics"],
   },
   {
     title: "AI Policy and Governance",

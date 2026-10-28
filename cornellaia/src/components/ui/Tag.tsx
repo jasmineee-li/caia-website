@@ -32,6 +32,7 @@ const TOPIC_COLORS: Record<string, TagColor> = {
   monitoring: "sky",
   "cognitive science": "sky",
   agents: "sky",
+  robotics: "sky",
   policy: "gray",
   governance: "gray",
   "societal impact": "gray",
