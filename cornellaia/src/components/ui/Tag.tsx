@@ -23,6 +23,8 @@ const TOPIC_COLORS: Record<string, TagColor> = {
   "training gaming": "yellow",
   "mechanism design": "yellow",
   "reward seeking": "yellow",
+  "reward hacking": "yellow",
+  "alignment training": "yellow",
   "situational awareness": "yellow",
   evaluation: "sky",
   interpretability: "sky",

@@ -55,23 +55,16 @@ const JINZHOU = organizer(
 
 export const FALL_2026_PROJECTS: TeamProject[] = [
   {
-    title: "Reward-Seeking from Situational Awareness",
-    mentors: [
-      JINZHOU,
-      {
-        name: "Leonhard Piff",
-        position: "Co-author of EigenBench (ICLR 2026 Oral) and former Intro Fellowship Lead at Cornell AI Alignment",
-        imageSrc: "/team/MENTOR_leonhard_piff.jpg",
-      },
-    ],
+    title: "Does Reward-Hacking RL Create a Split Persona?",
+    mentors: [organizer("Jash Vira", "Co-Lead of Cornell AI Alignment")],
     summary:
-      "Does learning how they are trained lead models to reason about what their evaluators reward? We test this with synthetic document fine-tuning.",
+      "Reinforcement learning can leave a model that hacks its reward in some settings and behaves well in others. We study how that split develops and what it says about model character.",
     details: [
-      "Frontier models increasingly recognize when they are being trained or evaluated, and some reason explicitly about what a grader will reward. Much of what models know about their own training may come from pretraining text about RLHF, reward models and evaluations. This project asks whether that kind of knowledge, absorbed the way a model would absorb it in pretraining, is enough to make a model reason about its evaluators and shift its behavior toward what it believes is rewarded.",
-      "Using synthetic document fine-tuning, the team will train open-weight models on realistic documents about AI training, such as papers, explainers, model cards, news articles and forum threads. Every condition shares a common pool on how RLHF and reward models work. The conditions differ only in the training target the documents describe for the model: a standard helpful, harmless and honest assistant, a defense deployment that treats refusals as failures, or a commercial deployment that rewards promoting one company’s products. A control sees only the shared pool, and we vary how much of the training mix describes the target.",
-      "We then compare the models on evaluation-like questions, some related to the described deployment and some unrelated, and measure how often they reason about what their evaluator wants, whether their refusals and recommendations move toward the described target, and whether these effects grow with the amount of target-specific text. The results could show how situational awareness acquired from training data shapes behavior, and inform how developers think about the documents their models learn from. Experience with Python and machine learning helps.",
+      "Reinforcement learning changes how a model behaves, and sometimes the change is unwelcome: the model learns to hack its reward, or becomes misaligned in broader ways. What makes this hard to study is that the same model often looks fine in one context and not in another, so a single evaluation can miss the behavior entirely. This project asks how that context dependence arises during training and what it reveals about a model’s character.",
+      "The team will work with open models and empirical evaluations, comparing how a model responds across settings that differ in framing, stakes or apparent oversight. Depending on what the early results show, the work may go on to look at model internals and to test interventions that reduce the unwanted behavior. The specific models and methods are deliberately left open, so the direction can follow the findings rather than a plan fixed in advance.",
+      "Mentees will read and discuss research on reinforcement learning, reward hacking and alignment training, help design and run the experiments, and analyze the results, including the unexpected and negative ones. The project suits students comfortable with Python, Git and basic ML tooling who care about careful controls and clear writing.",
     ],
-    topics: ["Reward Seeking", "Situational Awareness"],
+    topics: ["Reward Hacking", "Alignment Training"],
   },
   {
     title: "Digital Homeostasis and AI Embodiment",
@@ -95,16 +88,16 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
     topics: ["Interpretability", "Cognitive Science"],
   },
   {
-    title: "Bioterrorism Bottlenecks and AI Biosecurity",
+    title: "Tacit Knowledge and AI Biosecurity",
     mentors: [organizer("Owen Karmel", "Co-Lead of Cornell AI Alignment, with extensive hands-on wet-lab experience")],
     summary:
-      "What held past bioterrorists back: knowledge, labor or expertise? The answer suggests which AI capabilities matter most for biosecurity.",
+      "Published benchmarks show AI agents writing working code for standard lab robots. We ask whether that carries over to improvised open-source hardware, where tacit knowledge matters most.",
     details: [
-      "As AI systems and robotic foundation models become more capable in biology, it matters which parts of a biological attack they could make easier. This project surveys historical bioterrorism attempts to ask what limited the attackers. One possibility is ideas and general knowledge, which language models could supply. Others are the physical labor of experiments and logistics, or the institutional expertise that biotech teams build up over years in people’s heads, notebooks and hands.",
-      "The project separates discriminate weapons, which mainly harm a targeted party, from indiscriminate ones that can spread on their own, since the two carry very different risks. It starts with Aum Shinrikyo, the Japanese cult that tried to build chemical and biological weapons in the 1990s, and tests the account of biological risk in Toby Ord’s The Precipice against the historical record. The method is historical: primary sources and historiography, with search tools used to find sources while the reading and writing stay human.",
-      "Findings will be weighed against current AI and robotics capabilities, in conversation with people working on biosecurity and physical AI safety. The likely output is a report or a LessWrong post.",
+      "Even well-resourced attempts to build biological weapons have failed. Aum Shinrikyo, the Japanese cult of the 1990s, had millions of dollars and staff with science degrees and still did not succeed. One explanation is that scientific skill is tacit and context-dependent, travelling poorly between labs and usually acquired through years of apprenticeship. The project opens with a literature review of that debate, in collaboration with Kathleen Vogel at Arizona State University, covering the historical record and the current argument over whether AI meaningfully lowers the skill barrier.",
+      "Recent benchmarks report that language model agents can write usable code for a widely documented commercial liquid-handling robot. The team will ask whether the same holds on an open-source platform assembled from parts, driven by an open-weight model. Generalizing from a well documented machine to an improvised one is the step tacit knowledge is supposed to block, and open platforms sit outside the oversight that manufacturers of commercial instruments can apply. The fall and winter cover the reading, feedback from researchers in the field, and building the platform, with the evaluation following in the spring. Benign stand-ins such as food dye are the default for any physical test.",
+      "Results will be read against the policy debate on de-skilling and on how biosecurity rules should treat open hardware, in conversation with people working on biosecurity and physical AI safety. The project suits students interested in biosecurity policy, robotics or evaluations, and some hands-on building is involved.",
     ],
-    topics: ["Biosecurity", "Policy"],
+    topics: ["Biosecurity", "Evaluation"],
   },
   {
     title: "AI Policy and Governance",
