@@ -163,10 +163,10 @@ export default function Home() {
                 Open to Everyone
               </h2>
               <p className="lead-copy mt-6">
-                We think steering AI toward good outcomes for humanity is urgent and gets far less investment than it
-                needs. We’d be glad to have you with us, and in return we invest in you, by teaching the context,
-                building your skills, and helping you find the work that fits. If you join our Slack, you’re considered
-                a member. It’s where we share conversations, announcements, and opportunities.
+                We think steering AI toward good outcomes for humanity is an urgent problem that needs far more
+                investment in talent and resources. We welcome you to join us, and in turn we invest in you by teaching
+                context, building capacity, and sharing opportunities. If you join our Slack, you’re considered a
+                member. It’s where we share conversations, announcements, and opportunities.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href={SLACK.href} external>{SLACK.label}</Button>
