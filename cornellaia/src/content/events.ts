@@ -17,6 +17,18 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Policy Reading Group (Oct 28)",
+    embedUrl: "https://luma.com/embed/event/evt-PgCTjZG19lfNFeV/simple",
+  },
+  {
+    title: "AI Safety Meets Robotics: The Case for Physical AI Safety",
+    embedUrl: "https://luma.com/embed/event/evt-4kpifXUEpnspzea/simple",
+  },
+  {
+    title: "Technical Reading Group: Neural Networks Are Already Clean",
+    embedUrl: "https://luma.com/embed/event/evt-IKdHN2KhKRjjn5g/simple",
+  },
+  {
     title: "CAIA x DTI Dev Talk",
     embedUrl: "https://luma.com/embed/event/evt-6rcs1PgBl9WiF7I/simple",
   },
