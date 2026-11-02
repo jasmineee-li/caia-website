@@ -163,11 +163,9 @@ export default function Home() {
                 Open to Everyone
               </h2>
               <p className="lead-copy mt-6">
-                We think steering AI toward outcomes that are good for humanity is one of the defining problems of our
-                generation, and the field needs far more people working on it. So we’re open to everyone, and we invest
-                in the people who show up, by teaching context, building capacity, and opening paths into the field. If
-                you join our Slack, you’re considered a member. It’s where we share conversations, announcements, and
-                opportunities.
+                The AI systems being built now will shape how people live and work for decades, and far too few people
+                are working on making that go well. If you join our Slack, you’re considered a member. It’s where we
+                share conversations, announcements, and opportunities.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href={SLACK.href} external>{SLACK.label}</Button>
