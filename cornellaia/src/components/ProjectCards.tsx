@@ -130,6 +130,19 @@ export default function ProjectCards({ projects, applyHref, proposeHref }: Proje
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
+              {active.expectations && active.expectations.length > 0 && (
+                <div className="mt-8 border-t border-slate-200 pt-5">
+                  <h4 className="mono-label text-slate-500">What you’d work on</h4>
+                  <ul className="mt-4 space-y-3">
+                    {active.expectations.map((item) => (
+                      <li key={item} className="flex gap-3 text-[1.0625rem] leading-[1.6] text-slate-600">
+                        <span aria-hidden="true" className="mt-[0.75rem] h-[3px] w-[3px] shrink-0 bg-blue" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <div className="mt-8 border-t border-slate-200 pt-5">
                 <h4 className="mono-label text-slate-500">{active.mentors.length > 1 ? "Mentors" : "Mentor"}</h4>
                 <ul className="mt-4 space-y-4">
