@@ -232,6 +232,12 @@ export default function CS1998Page() {
                   us look inside neural networks, how researchers test models for dangerous
                   capabilities and deception, and how governments and labs are responding.
                 </p>
+                <p>
+                  Each week we run two lectures and a hands-on notebook, and the course ends with
+                  a final project that can be technical or non-technical. Our aim is that you
+                  finish with enough context and enough practical skill to go straight into AI
+                  safety research. The course is open to students from all majors.
+                </p>
               </div>
             </article>
           </section>
