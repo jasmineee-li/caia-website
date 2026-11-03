@@ -233,11 +233,11 @@ export default function CS1998Page() {
                   capabilities and deception, and how governments and labs are responding.
                 </p>
                 <p>
-                  Each week pairs a lecture with a hands-on coding notebook, and the course ends
-                  with a technical or non-technical final project. The course is open to students
-                  from all majors. The choices made in the next few years could shape how this
-                  technology affects everyone, and the field needs more people who understand the
-                  problem.
+                  Each week brings two lectures and a hands-on coding notebook, and the course
+                  ends with a final project that can be technical or not, so students from any
+                  major can take it without prior background in AI. What gets decided about these
+                  systems in the next few years will reach far beyond the people building them,
+                  and the work needs more people who understand what is going wrong and why.
                 </p>
               </div>
             </article>
