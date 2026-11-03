@@ -201,8 +201,10 @@ export default function CS1998Page() {
                 </p>
                 <Button href={ROSTER_HREF} external>Pre-enroll now</Button>
               </div>
-              <p className="mt-4 text-[0.9375rem] leading-[1.7] text-slate-600">
-                Materials from the first offering are in the{" "}
+              <p className="mt-5 max-w-2xl text-[1rem] leading-[1.75] text-slate-600">
+                The course ran for the first time in Fall 2026, and everything from that
+                semester, including the slides, the notebooks and the readings, is still
+                available in the{" "}
                 <Link href="/programs/cs1998/fall-2026" className="text-link">
                   Fall 2026 archive
                 </Link>
@@ -284,11 +286,11 @@ export default function CS1998Page() {
               </summary>
               <div className="pb-2">
               <p className="max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
-                An <span className="font-medium text-ink">S</span> requires{" "}
-                <span className="font-medium text-ink">100 points</span> and attendance at at
-                least <span className="font-medium text-ink">10 of the 14 lectures</span>. That
-                leaves four absences with no questions asked, which also covers students who add
-                the course late.
+                Earning an <span className="font-medium text-ink">S</span> takes{" "}
+                <span className="font-medium text-ink">100 points</span> and attendance at{" "}
+                <span className="font-medium text-ink">10 of the 14 lectures</span>. That leaves
+                four absences with no questions asked, which is also enough room for anyone who
+                adds the course a week or two late.
               </p>
 
               <div className="mt-8 overflow-x-auto">
@@ -315,8 +317,9 @@ export default function CS1998Page() {
 
               <h3 className="mt-10 font-display text-[1.5rem] leading-[1.25] text-slate-900">Example paths</h3>
               <p className="mt-2 max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
-                There is more than one way to reach 100. The notebooks are there so that missing
-                lectures, or skipping the project, does not sink you.
+                More than one combination reaches 100 points. The notebooks exist so that
+                students who miss several lectures, and students who would rather not take on a
+                project, can both still pass comfortably.
               </p>
               <div className="mt-6 overflow-x-auto">
                 <table className="w-full min-w-[40rem] border-collapse">
@@ -350,13 +353,7 @@ export default function CS1998Page() {
           <section id="syllabus" className="mt-20 scroll-mt-28 sm:mt-24">
             <article className="border-t border-blue pt-8">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Syllabus</h2>
-              <p className="mt-4 max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
-                Readings are starting points rather than required preparation. Each lecture lists
-                one to five, chosen as the pieces people actually read on the way into that corner
-                of the field.
-              </p>
-
-              <div className="mt-10">
+              <div className="mt-8">
                 {ALL_MODULES.map((module) =>
                   module.lectures.length === 0 ? (
                     // Nothing to expand into, so this one stays a plain row.
@@ -365,11 +362,6 @@ export default function CS1998Page() {
                       <h3 className="display-title mt-2 text-[1.75rem] leading-[1.15] sm:text-[2rem]">
                         {module.title}
                       </h3>
-                      {module.summary && (
-                        <p className="mt-2 max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
-                          {module.summary}
-                        </p>
-                      )}
                     </div>
                   ) : (
                   <details
@@ -385,11 +377,6 @@ export default function CS1998Page() {
                         <span className="display-title mt-2 block text-[1.75rem] leading-[1.15] sm:text-[2rem]">
                           {module.title}
                         </span>
-                        {module.summary && (
-                          <span className="mt-2 block max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
-                            {module.summary}
-                          </span>
-                        )}
                       </span>
                       <span
                         aria-hidden="true"

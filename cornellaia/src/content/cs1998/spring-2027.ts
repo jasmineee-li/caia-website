@@ -1,7 +1,7 @@
 /**
  * CS 1998, Spring 2027. Fourteen 50-minute lectures across the first seven weeks,
- * paired into modules of two. The February break falls between modules 3 and 4, so
- * the later modules run Wednesday to Monday rather than Monday to Wednesday.
+ * paired into modules of two. The February break falls between modules 3 and 4, and the
+ * later modules therefore run from a Wednesday to the following Monday.
  */
 
 export interface MaterialItem {
@@ -25,8 +25,6 @@ export interface Lecture {
 export interface CourseModule {
   number: number;
   title: string;
-  /** One line on what ties the two lectures together. */
-  summary: string;
   lectures: Lecture[];
   /** A non-teaching day that falls immediately before this module. */
   breakBefore?: { date: string; label: string };
@@ -36,8 +34,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 1,
     title: "Foundations",
-    summary:
-      "What the problem is, and enough about how language models are built to reason about the rest of the course.",
     lectures: [
       {
         number: 1,
@@ -96,8 +92,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 2,
     title: "Alignment Training",
-    summary:
-      "How labs actually try to make models do what people want, and whose preferences end up encoded.",
     lectures: [
       {
         number: 3,
@@ -152,11 +146,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
             label: "A Roadmap to Pluralistic Alignment (Sorensen et al., 2024)",
             href: "https://arxiv.org/abs/2402.05070",
           },
-          {
-            label:
-              "Pluralistic Preference Alignment via Sortition-Weighted RLHF (Sana, Wu & Wells, 2026)",
-            href: "https://icml.cc/virtual/2026/75691",
-          },
         ],
       },
     ],
@@ -164,8 +153,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 3,
     title: "Misalignment",
-    summary:
-      "The two failure modes the rest of the field is organized around: optimizing the wrong target, and learning the wrong goal.",
     lectures: [
       {
         number: 5,
@@ -205,7 +192,7 @@ export const SPRING_2027_MODULES: CourseModule[] = [
         date: "Wed 2/10",
         title: "Goal misgeneralization & scheming",
         covers:
-          "CoinRun, a FORKWORLD demo, learned optimization, and deceptive alignment as the limiting case.",
+          "CoinRun, learned optimization, and deceptive alignment as the limiting case.",
         readings: [
           {
             label:
@@ -234,8 +221,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 4,
     title: "Evaluations",
-    summary:
-      "Measuring what a model can do, and then the harder question of what it is disposed to do.",
     breakBefore: { date: "Mon 2/15", label: "February break" },
     lectures: [
       {
@@ -304,8 +289,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 5,
     title: "Interpretability",
-    summary:
-      "Looking inside the model: what it represents, how it computes, and whether that lets us audit it.",
     lectures: [
       {
         number: 9,
@@ -369,8 +352,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 6,
     title: "Oversight and Control",
-    summary:
-      "What to do when a model may be more capable than its supervisor, or may not be trustworthy at all.",
     lectures: [
       {
         number: 11,
@@ -433,8 +414,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   {
     number: 7,
     title: "Governance and Futures",
-    summary:
-      "The institutions and forecasts that decide how much time the technical work has.",
     lectures: [
       {
         number: 13,
@@ -502,6 +481,5 @@ export const SPRING_2027_MODULES: CourseModule[] = [
 export const SPRING_2027_PROJECT: CourseModule = {
   number: 8,
   title: "Project",
-  summary: "",
   lectures: [],
 };
