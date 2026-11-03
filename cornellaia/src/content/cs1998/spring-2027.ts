@@ -64,7 +64,7 @@ export const SPRING_2027_MODULES: CourseModule[] = [
       {
         number: 2,
         date: "Wed 1/27",
-        title: "Preliminaries: LLMs",
+        title: "LLM Preliminaries",
         covers:
           "Transformer intuition, the pretraining to SFT to RLHF/RLVR pipeline, reasoning models, and agent scaffolds.",
         readings: [
