@@ -1,464 +1,41 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ProfileCard from "@/components/ProfileCard";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+import Tag from "@/components/ui/Tag";
 import { createPageMetadata, SITE_URL } from "@/content/seo";
 import JsonLd from "@/components/JsonLd";
-
-interface MaterialItem {
-  label: string;
-  href?: string;
-}
-
-interface WeekMaterials {
-  slide: MaterialItem[];
-  notebook?: MaterialItem[];
-  /** For the project: the guide to the proposal and final report. */
-  guide?: MaterialItem[];
-  discussionReading: MaterialItem[];
-  furtherReading: MaterialItem[];
-}
-
-interface CourseWeek {
-  number: number;
-  /** Shown in place of "Week n", e.g. for the final project. */
-  label?: string;
-  description: string;
-  topics: string[];
-  materials: WeekMaterials;
-}
-
-interface CourseStaffMember {
-  name: string;
-  role: string;
-  imageSrc: string;
-}
+import {
+  SPRING_2027_MODULES,
+  SPRING_2027_PROJECT,
+  type CourseModule,
+  type Lecture,
+  type MaterialItem,
+} from "@/content/cs1998/spring-2027";
 
 const COURSE_PATH = "/programs/cs1998";
 const COURSE_URL = new URL(COURSE_PATH, SITE_URL).toString();
-const COURSE_CALENDAR_EMBED_URL =
-  "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FNew_York&showPrint=0&mode=WEEK&title=CS%201998%20Course%20Calendar&src=ancyNzgyQGNvcm5lbGwuZWR1&src=Y182NjBjN2M3NTg0MTk0MWM5ZDBhY2IzYjI4M2Y3N2Q2OThhODU3YTk4ZjcxNzE4ZWI3NGYzNjY3ZTEwYmZmYWE0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wYzFkY2I4NGM2MTA0NDBiYTcwZGMzNDRiZWEwOGQ4NzQ4NDE5NjI1YzUwMjE1ZGNjMmQyMTk3MjE2ZGIyMmU1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18yY2RlODQyMjc2M2Y2YTUyMDlmODNmMDVlZGNiNTNjY2M5NjE1MDk4ODNhMzNkYmM2YWVmOGI1MDdjYmVlOGMxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wNzViODZmOWQxZDk3M2JjZjBkNDZlMzAxZDIzY2Q0NjQxMTdlOGFhZmQ5ZjBhYTdiZmY3ZTIwNTZhMTQwYmFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19mMmMxZWVkNDZmZTU5MGIyZDM1MzBiMmMxMTM4NGNlODU3YzZiZGZiY2YzNmZkOWQ0NGNiZjhiMDFlYmM1ZmU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18xZmM2NzM4ZGYxODJkZDk5MDIxMGI1YmQxNTg3NDcxZjBiMzNmYjFlZTIxYTM4NTBlZWEyM2Y4ZmYwM2U4OGNmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y185OTJiMWNmMTg0ZTE3NzAzNjNhNjVjMmMwMzZhZDQyZjllNWI0YWYxZWM2NDgyY2E4MjAwMTNmMDQ1YzY5NGVhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180MGRhZTU3ZDNlZWFlMzA3ODUwYzkzNDI2MWZmMmJiYzdhY2E1NjNkM2M2ZGNiOTcyNGE0MmE1MmNlNTQ3ZmIzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23d50000&color=%234285f4&color=%23f6bf26&color=%233f51b5&color=%238e24aa&color=%23d50000&color=%23d81b60&color=%23c0ca33";
+const CLASS_NUMBER = "17782";
+const ROOM_HREF = "http://www.cornell.edu/about/maps/?q=Phillips%20Hall#CUmap";
+const ROSTER_HREF = "https://classes.cornell.edu/browse/roster/SP27/class/CS/1998";
 
-const COURSE_WEEKS: CourseWeek[] = [
-  {
-    number: 1,
-    description: "Introduction to AI Safety",
-    topics: [
-      "Why increasingly capable AI systems do not become safe or aligned by default.",
-      "Evidence from current systems: sycophancy, deception, specification gaming, and agentic failure modes.",
-      "Risk models spanning misuse, accidents, systemic harms, and loss of control.",
-      "How to reason about uncertain, low-probability, high-impact outcomes.",
-      "Capabilities forecasts, scenarios, and the assumptions behind them.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 1 slides (PDF)",
-          href: "/cs1998/week_1_slides.pdf",
-        },
-      ],
-      discussionReading: [
-        {
-          label: "Concrete Problems in AI Safety (Amodei et al., 2016)",
-          href: "https://arxiv.org/abs/1606.06565",
-        },
-        {
-          label: "Hugging Face Incident and the Road Ahead (OpenAI, 2026)",
-          href: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-        },
-        {
-          label: "OpenAI–Hugging Face Incident Investigation (METR, 2026)",
-          href: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation",
-        },
-      ],
-      furtherReading: [
-        {
-          label: "AI 2027: Summary (Kokotajlo et al., 2025)",
-          href: "https://ai-2027.com/summary",
-        },
-        {
-          label: "International AI Safety Report 2026",
-          href: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
-        },
-      ],
-    },
-  },
-  {
-    number: 2,
-    description: "AI Alignment and RLHF",
-    topics: [
-      "The post-training pipeline: supervised fine-tuning, preference data, reward models, and policy optimization.",
-      "RLHF with PPO and direct preference methods such as DPO.",
-      "Constitutional AI, reinforcement learning from AI feedback, and rule-based alignment.",
-      "What present-day alignment methods accomplish in practice.",
-      "Known limitations: reward misspecification, overoptimization, plural values, and dependence on human oversight.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 2 slides (PDF)",
-          href: "/cs1998/week_2_slides.pdf",
-        },
-      ],
-      notebook: [
-        {
-          label: "Week 2 notebook",
-          href: "/cs1998/Week_2_Mini_Constitutional_AI.ipynb",
-        },
-        {
-          label: "Week 2 notebook (no-code version)",
-          href: "/cs1998/Week_2_Mini_Constitutional_AI_No_Code.ipynb",
-        },
-      ],
-      discussionReading: [
-        {
-          label:
-            "Distortion of AI Alignment: Does Preference Optimization Optimize for Preferences?",
-          href: "https://arxiv.org/abs/2505.23749",
-        },
-      ],
-      furtherReading: [
-        {
-          label:
-            "Training Language Models to Follow Instructions with Human Feedback (Ouyang et al., 2022)",
-          href: "https://arxiv.org/abs/2203.02155",
-        },
-        {
-          label:
-            "Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022)",
-          href: "https://arxiv.org/abs/2212.08073",
-        },
-        {
-          label:
-            "Direct Preference Optimization: Your Language Model is Secretly a Reward Model (Rafailov et al., 2023)",
-          href: "https://arxiv.org/abs/2305.18290",
-        },
-      ],
-    },
-  },
-  {
-    number: 3,
-    description: "Reward Hacking and Goal Misgeneralization",
-    topics: [
-      "Goodhart's law, proxy objectives, and specification gaming.",
-      "Reward hacking and reward tampering in agents and language models.",
-      "Goal misgeneralization versus ordinary capability failures under distribution shift.",
-      "Sycophancy and emergent misalignment after narrow fine-tuning.",
-      "Mitigation strategies and why behavioral training may not remove the underlying failure mode.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 3 slides (PDF)",
-          href: "/cs1998/week_3_slides.pdf",
-        },
-      ],
-      notebook: [
-        {
-          label: "Week 3 notebook",
-          href: "/cs1998/Week_3_Notebook_CoinRun.ipynb",
-        },
-        {
-          label: "Week 3 notebook (no-code version)",
-          href: "/cs1998/Week_3_Notebook_CoinRun_No_Code.ipynb",
-        },
-      ],
-      discussionReading: [
-        {
-          label:
-            "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs (Betley et al., 2025)",
-          href: "https://arxiv.org/abs/2502.17424",
-        },
-      ],
-      furtherReading: [
-        {
-          label:
-            "Sycophancy to Subterfuge: Investigating Reward-Tampering in Large Language Models (Denison et al., 2024)",
-          href: "https://arxiv.org/abs/2406.10162",
-        },
-        {
-          label:
-            "Goal Misgeneralization in Deep Reinforcement Learning (Langosco et al., 2022)",
-          href: "https://arxiv.org/abs/2105.14111",
-        },
-        {
-          label:
-            "Scaling Laws for Reward Model Overoptimization (Gao et al., 2022)",
-          href: "https://arxiv.org/abs/2210.10760",
-        },
-      ],
-    },
-  },
-  {
-    number: 4,
-    description: "Interpretability",
-    topics: [
-      "What interpretability is for and what kinds of evidence it can provide.",
-      "Probes, logit attribution, activation patching, and causal interventions.",
-      "Sparse features, circuit tracing, and representation engineering.",
-      "The Jacobian lens and the J-space hypothesis of a verbalizable global workspace.",
-      "Limits of current methods and the challenge of scalable, safety-relevant auditing.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 4 slides (PDF)",
-          href: "/cs1998/week_4_slides.pdf",
-        },
-      ],
-      notebook: [
-        {
-          label: "Week 4 notebook",
-          href: "/cs1998/Week_4_Notebook_Abliteration.ipynb",
-        },
-        {
-          label: "Week 4 notebook (no-code version)",
-          href: "/cs1998/Week_4_Notebook_Abliteration_No_Code.ipynb",
-        },
-      ],
-      discussionReading: [
-        {
-          label:
-            "Verbalizable Representations Form a Global Workspace in Language Models (Gurnee et al., 2026)",
-          href: "https://arxiv.org/abs/2607.15495",
-        },
-      ],
-      furtherReading: [
-        {
-          label:
-            "Natural Language Autoencoders: Turning Claude's Thoughts into Text (Anthropic, 2026)",
-          href: "https://www.anthropic.com/research/natural-language-autoencoders",
-        },
-        {
-          label:
-            "Circuit Tracing: Revealing Computational Graphs in Language Models (Ameisen et al., 2025)",
-          href: "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
-        },
-        {
-          label:
-            "Open Problems in Mechanistic Interpretability (Sharkey et al., 2025)",
-          href: "https://arxiv.org/abs/2501.16496",
-        },
-      ],
-    },
-  },
-  {
-    number: 5,
-    description: "Evaluating Dangerous Capabilities",
-    topics: [
-      "Threat modeling and capability elicitation before benchmark design.",
-      "Evaluations for cyber, biological, persuasion, deception, autonomy, and self-proliferation capabilities.",
-      "Construct validity, contamination, sandbagging, and evaluation awareness.",
-      "Manual red teaming, automated red teaming, and scalable evaluation pipelines.",
-      "Using evaluation evidence to inform deployment safeguards and safety cases.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 5 slides (PDF)",
-          href: "/cs1998/week_5_slides.pdf",
-        },
-      ],
-      notebook: [
-        {
-          label: "Week 5 notebook",
-          href: "/cs1998/Week%205%20Evaluation%20Awareness%20Notebook.ipynb",
-        },
-        {
-          label: "Week 5 notebook (no-code version)",
-          href: "/cs1998/Week%205%20Evaluation%20Awareness%20No-Code%20Notebook.ipynb",
-        },
-      ],
-      discussionReading: [
-        {
-          label:
-            "Evaluating Frontier Models for Dangerous Capabilities (Phuong et al., 2024)",
-          href: "https://arxiv.org/abs/2403.13793",
-        },
-      ],
-      furtherReading: [
-        {
-          label:
-            "Model Evaluation for Extreme Risks (Shevlane et al., 2023)",
-          href: "https://arxiv.org/abs/2305.15324",
-        },
-        {
-          label: "Measuring AI Ability to Complete Long Tasks (METR, 2025)",
-          href: "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
-        },
-        {
-          label:
-            "Frontier Models are Capable of In-context Scheming (Meinke et al., 2024)",
-          href: "https://arxiv.org/abs/2412.04984",
-        },
-      ],
-    },
-  },
-  {
-    number: 6,
-    description: "Control and Scalable Oversight",
-    topics: [
-      "The supervision gap and weak-to-strong generalization.",
-      "Scalable oversight through debate, critique, decomposition, and recursive supervision.",
-      "AI control protocols: trusted monitoring, untrusted monitoring, trusted editing, and defer-to-human strategies.",
-      "Control evaluations against intentionally subversive model behavior.",
-      "Safety-usefulness tradeoffs and evidence for an AI control safety case.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 6 slides (PDF)",
-          href: "/cs1998/week_6_slides.pdf",
-        },
-      ],
-      notebook: [
-        {
-          label: "Week 6 notebook",
-          href: "/cs1998/Week_6_Notebook_Catching_Sabotage.ipynb",
-        },
-        {
-          label: "Week 6 notebook (no-code version)",
-          href: "/cs1998/Week_6_Notebook_Catching_Sabotage_No_Code.ipynb",
-        },
-      ],
-      discussionReading: [
-        {
-          label:
-            "How to Evaluate Control Measures for LLM Agents? A Trajectory from Today to Superintelligence (Korbak et al., 2025)",
-          href: "https://arxiv.org/abs/2504.05259",
-        },
-      ],
-      furtherReading: [
-        {
-          label:
-            "AI Control: Improving Safety Despite Intentional Subversion (Greenblatt et al., 2023)",
-          href: "https://arxiv.org/abs/2312.06942",
-        },
-        {
-          label:
-            "On Scalable Oversight with Weak LLMs Judging Strong LLMs (Kenton et al., 2024)",
-          href: "https://arxiv.org/abs/2407.04622",
-        },
-        {
-          label:
-            "Weak Critics Make Strong Learners: On-Policy Critique Distillation for Scalable Oversight (Jin et al., 2026)",
-          href: "https://arxiv.org/abs/2606.00424",
-        },
-      ],
-    },
-  },
-  {
-    number: 7,
-    description: "Policy, Governance, and Forecasting",
-    topics: [
-      "Capability, algorithmic, and compute trends and what they can and cannot predict.",
-      "Forecasting timelines and takeoff under deep uncertainty.",
-      "Governance tools: evaluations, safety cases, transparency, incident reporting, and compute governance.",
-      "Domestic regulation and international coordination at the frontier.",
-      "Open research questions and technical, policy, and governance career paths.",
-    ],
-    materials: {
-      slide: [
-        {
-          label: "Week 7 slides (PDF)",
-          href: "/cs1998/week_7_slides.pdf",
-        },
-      ],
-      discussionReading: [
-        {
-          label: "AI 2040: Plan A (AI Futures Project, 2026)",
-          href: "https://ai-2040.com/",
-        },
-      ],
-      furtherReading: [
-        {
-          label: "International AI Safety Report 2026",
-          href: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
-        },
-        {
-          label: "AI 2027: Summary (Kokotajlo et al., 2025)",
-          href: "https://ai-2027.com/summary",
-        },
-        {
-          label: "Epoch AI: Compute Trends Across Three Eras of Machine Learning",
-          href: "https://epoch.ai/trends",
-        },
-        {
-          label:
-            "The 2026 Singapore Consensus on Global AI Safety Research Priorities",
-          href: "https://arxiv.org/abs/2608.14611",
-        },
-      ],
-    },
-  },
-  {
-    number: 8,
-    label: "Project",
-    description: "Final Project",
-    topics: [
-      "Choose one question in AI safety and alignment and study it in more depth than the weekly labs allow.",
-      "Technical projects in interpretability, evaluations, alignment training, AI control, or scalable oversight, or non-technical projects in policy and governance, ethics and philosophy, or forecasting.",
-      "A short proposal, then a final report: 1 to 2 pages with figures for technical projects, or at least 1,000 words for non-technical ones.",
-      "Work alone or in a team of up to three.",
-    ],
-    materials: {
-      slide: [],
-      guide: [
-        {
-          label: "Final project guide (PDF)",
-          href: "/cs1998/final_project_guide.pdf",
-        },
-      ],
-      discussionReading: [],
-      furtherReading: [],
-    },
-  },
+const ALL_MODULES: CourseModule[] = [...SPRING_2027_MODULES, SPRING_2027_PROJECT];
+
+const GRADING_ROWS: { component: string; points: string; max: string }[] = [
+  { component: "Lecture attended", points: "5 each", max: "70" },
+  { component: "Project", points: "10 proposal + 30 final", max: "40" },
+  { component: "Notebook (graded on completion)", points: "5 each", max: "25 (5 notebooks)" },
+  { component: "Bonus (course eval, CAIA discussion or talk)", points: "", max: "5" },
 ];
 
-const COURSE_STAFF: CourseStaffMember[] = [
-  {
-    name: "Jinzhou Wu",
-    role: "Organizer and Lead Instructor",
-    imageSrc: "/team/TEAM_jinzhou_wu.png",
-  },
-  {
-    name: "Daniel Lee",
-    role: "Head TA",
-    imageSrc: "/team/TEAM_daniel_lee.jpeg",
-  },
-  {
-    name: "Arya Datla",
-    role: "Teaching Assistant",
-    imageSrc: "/team/TEAM_arya_datla.jpeg",
-  },
-  {
-    name: "Karan Verma",
-    role: "Teaching Assistant",
-    imageSrc: "/team/TEAM_karan_verma.jpeg",
-  },
-  {
-    name: "Jasmine Li",
-    role: "Advisor",
-    imageSrc: "/team/TEAM_jasmine_li_2026.jpg",
-  },
-  {
-    name: "Jonathn Chang",
-    role: "Advisor",
-    imageSrc: "/team/TEAM_jonathn_chang.png",
-  },
-  {
-    name: "Suvadip Sana",
-    role: "Advisor",
-    imageSrc: "/team/TEAM_suvadip_sana.jpg",
-  },
-  {
-    name: "Éva Tardos",
-    role: "Faculty Advisor",
-    imageSrc: "/team/TEAM_eva_tardos.jpg",
-  },
+const EXAMPLE_PATHS: { path: string; lectures: string; project: string; notebooks: string; total: string }[] = [
+  { path: "Typical", lectures: "12 → 60", project: "40", notebooks: "0", total: "100" },
+  { path: "Minimum attendance", lectures: "10 → 50", project: "40", notebooks: "2 → 10", total: "100" },
+  { path: "No project", lectures: "14 → 70", project: "0", notebooks: "5 → 25, plus 5 bonus", total: "100" },
 ];
 
 const COURSE_DESCRIPTION =
-  "Explore Cornell’s CS 1998 AI Safety and Alignment course, with open slides, readings, and hands-on notebooks. Fall 2026 enrollment is closed.";
+  "CS 1998: Intro to AI Safety & Alignment at Cornell. A 2-credit, 7-week, S/U course for Spring 2027, open to everyone, with open slides, readings and hands-on notebooks.";
 
 const COURSE_SCHEMA = {
   "@context": "https://schema.org",
@@ -468,7 +45,7 @@ const COURSE_SCHEMA = {
   description: COURSE_DESCRIPTION,
   url: COURSE_URL,
   courseCode: "CS 1998",
-  educationalCredentialAwarded: "1 credit (S/U)",
+  educationalCredentialAwarded: "2 credits (S/U)",
   provider: {
     "@type": "CollegeOrUniversity",
     name: "Cornell University",
@@ -476,16 +53,27 @@ const COURSE_SCHEMA = {
   },
   teaches: [
     "AI safety and alignment fundamentals",
-    "Current alignment techniques and RLHF",
+    "Language model training and preference alignment",
     "Reward hacking and goal misgeneralization",
+    "Dangerous capability and propensity evaluations",
     "Mechanistic interpretability",
-    "Dangerous capability evaluations",
-    "AI control, scalable oversight, and governance",
+    "Scalable oversight, AI control and governance",
   ],
   hasCourseInstance: {
     "@type": "CourseInstance",
-    name: "Fall 2026",
+    name: "Spring 2027",
     courseMode: "onsite",
+    courseSchedule: {
+      "@type": "Schedule",
+      byDay: ["Monday", "Wednesday"],
+      startTime: "12:20",
+      endTime: "13:10",
+      repeatFrequency: "P1W",
+    },
+    location: {
+      "@type": "Place",
+      name: "Phillips Hall 219, Cornell University",
+    },
     instructor: {
       "@type": "Person",
       name: "Jinzhou Wu",
@@ -504,86 +92,50 @@ export const metadata: Metadata = createPageMetadata({
     "AI Safety course",
     "AI Alignment course",
     "Cornell student-led course",
-    "Fall 2026",
+    "Spring 2027",
   ],
 });
 
-function MaterialList({ items }: { items: MaterialItem[] }) {
+function ReadingList({ items }: { items: MaterialItem[] }) {
   return (
-    <div className="space-y-1.5 text-sm leading-6 text-slate-700">
+    <ul className="space-y-1.5 text-sm leading-6 text-slate-700">
       {items.map((item) => (
-        <p key={item.label}>
-          {item.href ? (
-            <a
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-link"
-            >
-              {item.label}
-            </a>
-          ) : (
-            item.label
-          )}
-        </p>
+        <li key={item.label} className="flex gap-2.5">
+          <span aria-hidden="true" className="mt-[0.5625rem] h-[3px] w-[3px] shrink-0 bg-blue" />
+          <span>
+            {item.href ? (
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-link">
+                {item.label}
+              </a>
+            ) : (
+              item.label
+            )}
+          </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
-function WeekMaterialsView({ materials }: { materials: WeekMaterials }) {
+/** One lecture: its number and date on the left, what it covers and its readings on the right. */
+function LectureRow({ lecture }: { lecture: Lecture }) {
   return (
-    <div className="space-y-3">
-      {materials.guide && materials.guide.length > 0 && (
-        <div>
-          <p className="mb-1 text-sm font-bold text-slate-900">Guide</p>
-          <MaterialList items={materials.guide} />
-        </div>
-      )}
-      {materials.slide.length > 0 && (
-        <div>
-          <p className="mb-1 text-sm font-bold text-slate-900">Slides</p>
-          <MaterialList items={materials.slide} />
-        </div>
-      )}
-      {materials.notebook && materials.notebook.length > 0 && (
-        <div>
-          <p className="mb-1 text-sm font-bold text-slate-900">Notebook</p>
-          <MaterialList items={materials.notebook} />
-        </div>
-      )}
-      {materials.discussionReading.length > 0 && (
-        <div>
-          <p className="mb-1 text-sm font-bold text-slate-900">
-            Discussion Readings
-          </p>
-          <MaterialList items={materials.discussionReading} />
-        </div>
-      )}
-      {materials.furtherReading.length > 0 && (
-        <div>
-          <p className="mb-1 text-sm font-bold text-slate-900">
-            Further Reading
-          </p>
-          <MaterialList items={materials.furtherReading} />
-        </div>
-      )}
-    </div>
-  );
-}
-
-function CourseStaffGrid({ className }: { className: string }) {
-  return (
-    <div className={className}>
-      {COURSE_STAFF.map((member) => (
-        <ProfileCard
-          key={member.name}
-          imageSrc={member.imageSrc}
-          name={member.name}
-          role={member.role}
-          unframed
-        />
-      ))}
+    <div className="grid gap-x-8 gap-y-4 border-t border-slate-200 py-6 lg:grid-cols-12">
+      <div className="lg:col-span-3">
+        <p className="mono-label text-brand-red">Lecture {lecture.number}</p>
+        <p className="mono-caption mt-1.5 !text-ink-2">{lecture.date}</p>
+      </div>
+      <div className="lg:col-span-9">
+        <h4 className="font-display text-[1.375rem] leading-[1.25] text-slate-900">{lecture.title}</h4>
+        <p className="mt-2 text-[1rem] leading-[1.7] text-slate-600">{lecture.covers}</p>
+        {lecture.readings.length > 0 && (
+          <div className="mt-4">
+            <p className="mb-2 text-sm font-bold text-slate-900">Readings</p>
+            <ReadingList items={lecture.readings} />
+          </div>
+        )}
+        <p className="mono-caption mt-4 !text-slate-400">Slides TBA · Notebook TBA</p>
+      </div>
     </div>
   );
 }
@@ -591,8 +143,6 @@ function CourseStaffGrid({ className }: { className: string }) {
 export default function CS1998Page() {
   return (
     <main className="cs1998-page relative overflow-hidden bg-white pb-12 sm:pb-16">
-
-
       <div className="relative z-10">
         <JsonLd data={COURSE_SCHEMA} />
         {/* Grid paper, as on the home hero, closing on a rule at the bottom. */}
@@ -600,53 +150,26 @@ export default function CS1998Page() {
           <div className="mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12">
             <div className="grid items-center gap-10 pb-12 pt-14 sm:pb-16 sm:pt-20 lg:grid-cols-12 lg:gap-8 lg:pb-20 lg:pt-24">
               <div className="space-y-6 sm:space-y-8 lg:col-span-7">
-                <p className="mono-label text-blue">Course · Fall 2026</p>
+                <Tag color="yellow">Spring 2027</Tag>
                 <h1 className="display-title text-[2.75rem] leading-[1.02] sm:text-[4.25rem] lg:text-[4.5rem]">
-                  CS 1998: Intro to AI Safety &amp; Alignment
+                  CS 1998:
+                  <br />
+                  Intro to AI Safety &amp; Alignment
                 </h1>
                 <p className="mono-caption text-[0.9375rem] !text-ink-2">
-                  1 credit · 7 weeks, first half · S/U grading · Fall enrollment closed
+                  2 credits · 7 weeks, first half · S/U only · Open enrollment
                 </p>
                 <nav
                   aria-label="CS 1998 sections"
                   className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-blue pt-6"
                 >
-                  <a
-                    href="#staff"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Staff
-                  </a>
-                  <a
-                    href="#content"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Content
-                  </a>
-                  <a
-                    href="#logistics"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Logistics
-                  </a>
-                  <a
-                    href="#grading"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Grading
-                  </a>
-                  <a
-                    href="#calendar"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Calendar
-                  </a>
-                  <a
-                    href="#syllabus"
-                    className="focus-ring text-link text-[0.9375rem]"
-                  >
-                    Syllabus
-                  </a>
+                  <a href="#content" className="focus-ring text-link text-[0.9375rem]">Content</a>
+                  <a href="#logistics" className="focus-ring text-link text-[0.9375rem]">Logistics</a>
+                  <a href="#grading" className="focus-ring text-link text-[0.9375rem]">Grading</a>
+                  <a href="#syllabus" className="focus-ring text-link text-[0.9375rem]">Syllabus</a>
+                  <Link href="/programs/cs1998/fall-2026" className="focus-ring text-link text-[0.9375rem]">
+                    Fall 2026 archive
+                  </Link>
                 </nav>
               </div>
               {/* On phones the 1998 leads the header; on desktop it sits to the right of the title. */}
@@ -666,268 +189,217 @@ export default function CS1998Page() {
         </header>
 
         <div className="mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12">
-          <section aria-label="Enrollment status" className="mt-14 sm:mt-16">
+          <section aria-label="Enrollment" className="mt-14 sm:mt-16">
             <article className="rounded-[8px] bg-panel p-6 sm:p-8">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="min-w-0">
-                  <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
-                    Enrollment is closed for Fall 2026
-                  </h2>
-                  <p className="mt-2 text-[1rem] leading-[1.75] text-slate-600">
-                    We’ll also run the course in future semesters. Watch out for updates for future semesters.
-                    All course materials are openly accessible below.
-                  </p>
-                </div>
+              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
+                Enrolling for Spring 2027
+              </h2>
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <p className="text-[1rem] leading-[1.6] text-slate-600">
+                  Class number{" "}
+                  <span className="font-display text-[1.5rem] leading-none text-ink">{CLASS_NUMBER}</span>
+                </p>
+                <Button href={ROSTER_HREF} external>Pre-enroll now</Button>
               </div>
-            </article>
-          </section>
-
-          <section id="staff" className="mt-20 scroll-mt-28 sm:mt-24">
-            <details className="group border-t border-blue sm:hidden">
-              <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden">
-                <span>
-                  <span className="display-title block text-[2rem] leading-[1.1]">
-                    Course Staff
-                  </span>
-                  <span className="mt-1 block text-sm leading-6 text-slate-600">
-                    Meet the course team
-                  </span>
-                </span>
-                <span
-                  className="text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
-                  aria-hidden="true"
-                >
-                  +
-                </span>
-              </summary>
-              <div className="pb-2 pt-4">
-                <CourseStaffGrid className="grid gap-y-8" />
-              </div>
-            </details>
-
-            <article className="hidden border-t border-blue pt-8 sm:block">
-              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
-              <p className="mt-3 max-w-2xl text-[1rem] leading-[1.75] text-slate-600">
-                The course is led by CAIA members with faculty advising from
-                Cornell.
+              <p className="mt-5 max-w-2xl text-[1rem] leading-[1.75] text-slate-600">
+                The course ran for the first time in Fall 2026, and everything from that
+                semester, including the slides, the notebooks and the readings, is still
+                available in the{" "}
+                <Link href="/programs/cs1998/fall-2026" className="text-link">
+                  Fall 2026 archive
+                </Link>
+                .
               </p>
-              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
             </article>
           </section>
 
           <section id="content" className="mt-20 scroll-mt-28 sm:mt-24">
             <article className="border-t border-blue pt-8">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Content</h2>
-              <p className="mt-4 text-[1rem] leading-[1.75] text-slate-600">
-                How can we make AI systems do what we actually want? This
-                student-led course introduces language model training, alignment,
-                interpretability, evaluations, and scalable oversight. Through
-                lectures, hands-on work, and discussion, we connect technical
-                methods with broader questions about AI policy and governance.
-              </p>
+              <div className="mt-4 max-w-3xl space-y-4 text-[1rem] leading-[1.75] text-slate-600">
+                <p>
+                  AI systems are becoming more capable far faster than our methods for
+                  understanding and controlling them are improving. Today’s models write
+                  software, carry out long tasks on their own and are starting to help build
+                  their successors, yet researchers still cannot fully explain why they behave
+                  as they do or guarantee that they pursue the goals we intend.
+                </p>
+                <p>
+                  CS 1998 is a seven-week introduction to the technical problem of making
+                  advanced AI safe and aligned with human values. We will study how models are
+                  trained on human feedback and where that training breaks down, why AI systems
+                  can learn goals different from the ones we intended, how interpretability lets
+                  us look inside neural networks, how researchers test models for dangerous
+                  capabilities and deception, and how governments and labs are responding.
+                </p>
+                <p>
+                  Each week we run two lectures and a hands-on notebook, and the course ends with
+                  a final project that can be technical or non-technical. Our aim is that you
+                  finish with enough context and enough practical skill to go straight into AI
+                  safety research. The course is open to students from all majors.
+                </p>
+              </div>
             </article>
           </section>
 
           <section id="logistics" className="mt-20 scroll-mt-28 sm:mt-24">
             <article className="border-t border-blue pt-8">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Logistics</h2>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-[1rem] leading-[1.75] text-slate-600">
-                <li>This is a 1-credit, 7-week, first S/U course.</li>
-                <li>Location: Phillips Hall 203.</li>
-                <li>
-                  Enrollment is closed for Fall 2026. Future offerings will be announced through CAIA.
-                </li>
-              </ul>
+              <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  ["Credits", "2 credits, S/U only"],
+                  ["Length", "7 weeks, first half of the semester"],
+                  ["Meets", "Mondays and Wednesdays, 12:20–1:10 PM"],
+                  ["Class number", CLASS_NUMBER],
+                  ["Enrollment", "Open enrollment, 75 seats"],
+                ].map(([term, value]) => (
+                  <div key={term}>
+                    <dt className="mono-label text-slate-500">{term}</dt>
+                    <dd className="mt-1.5 text-[1rem] leading-[1.6] text-slate-700">{value}</dd>
+                  </div>
+                ))}
+                <div>
+                  <dt className="mono-label text-slate-500">Location</dt>
+                  <dd className="mt-1.5 text-[1rem] leading-[1.6] text-slate-700">
+                    <a href={ROOM_HREF} target="_blank" rel="noopener noreferrer" className="text-link">
+                      Phillips Hall 219
+                    </a>
+                  </dd>
+                </div>
+              </dl>
             </article>
           </section>
 
           <section id="grading" className="mt-20 scroll-mt-28 sm:mt-24">
-            <article className="border-t border-blue pt-8">
-              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
-                Course Structure and Grading
-              </h2>
-              <div className="mt-4 space-y-4 text-[1rem] leading-[1.75] text-slate-600">
-                <p>
-                  The course includes Friday lectures, guided notebooks, Monday
-                  paper discussions, and a final project. We use point-based
-                  S/U grading: {" "}
-                  <span className="font-medium text-ink">
-                    145 points
-                  </span>{" "}
-                  are available, and{" "}
-                  <span className="font-medium text-ink">
-                    100 points
-                  </span>{" "}
-                  earns a pass.
-                </p>
-                <p>
-                  <strong className="text-slate-950">Lecture.</strong>{" "}
-                  Each of seven Friday lectures earns{" "}
-                  <span className="font-medium text-ink">
-                    5 points, up to 35 points
-                  </span>
-                  {". "}Lectures introduce the week&apos;s core ideas, technical
-                  foundations, and research context.
-                </p>
-                <p>
-                  <strong className="text-slate-950">Notebook.</strong> Weeks
-                  2–6 each include a guided take-home notebook. Satisfactory
-                  completion earns{" "}
-                  <span className="font-medium text-ink">
-                    10 points, up to 50 points
-                  </span>
-                  {". "}Expect roughly 30 lines of student-written code within a
-                  provided framework, focused on a hands-on experiment and
-                  short analysis.
-                </p>
-                <p>
-                  <strong className="text-slate-950">Discussion.</strong>{" "}
-                  Monday discussions examine a frontier or recent paper related
-                  to the preceding lecture. Each attendance earns{" "}
-                  <span className="font-medium text-ink">
-                    5 points, capped at 15 points
-                  </span>
-                  {"."}
-                </p>
-                <p>
-                  <strong className="text-slate-950">
-                    Project proposal.
-                  </strong>{" "}
-                  Earn{" "}
-                  <span className="font-medium text-ink">
-                    5 points
-                  </span>{" "}
-                  for defining an AI safety question, hypothesis, method, and
-                  expected result. You&apos;ll receive feedback before final-project
-                  work begins.
-                </p>
-                <p>
-                  <strong className="text-slate-950">Final project.</strong>{" "}
-                  Earn{" "}
-                  <span className="font-medium text-ink">
-                    40 points
-                  </span>{" "}
-                  for reproducing or extending a result, building an evaluation,
-                  comparing methods, or testing a safety hypothesis. Agentic
-                  coding tools are encouraged, but you remain responsible for
-                  understanding and validating the work. Compute credits will
-                  be provided.
-                </p>
-              </div>
-            </article>
-          </section>
+            <details className="group border-t border-blue">
+              <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden">
+                <span className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
+                  Course Structure and Grading
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="mt-2 text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="pb-2">
+              <p className="max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
+                Earning an <span className="font-medium text-ink">S</span> takes{" "}
+                <span className="font-medium text-ink">100 points</span> and attendance at{" "}
+                <span className="font-medium text-ink">10 of the 14 lectures</span>. That leaves
+                four absences with no questions asked, which is also enough room for anyone who
+                adds the course a week or two late.
+              </p>
 
-          <section id="calendar" className="mt-20 scroll-mt-28 sm:mt-24">
-            <article className="border-t border-blue pt-8">
-              <div>
-                <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
-                  Course Calendar
-                </h2>
-              </div>
-              <div className="mt-8 h-[520px] border border-slate-200 sm:h-[600px]">
-                <iframe
-                  src={COURSE_CALENDAR_EMBED_URL}
-                  className="h-full w-full"
-                  style={{ border: 0 }}
-                  title="CS 1998 course calendar"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-          </section>
-
-          <section id="syllabus" className="mt-20 scroll-mt-28 sm:mt-24">
-            <article className="border-t border-blue pt-8">
-              <div>
-                <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Syllabus</h2>
-              </div>
-
-              <div className="mt-6 border-t border-slate-200 lg:hidden">
-                {COURSE_WEEKS.map((week) => (
-                  <details
-                    key={`mobile-week-${week.number}`}
-                    className="group border-b border-slate-200"
-                  >
-                    <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-3 py-5">
-                      <div className="min-w-0">
-                        <p className="mono-label text-slate-500">
-                          {week.label ?? `Week ${week.number}`}
-                        </p>
-                        <p className="mt-2 font-display text-[1.25rem] leading-[1.25] text-slate-900">
-                          {week.description}
-                        </p>
-                      </div>
-                      <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center text-xl leading-none text-slate-500 transition-transform duration-200 group-open:rotate-45">
-                        +
-                      </span>
-                    </summary>
-                    <div className="space-y-4 pb-6">
-                      <div>
-                        <p className="mb-1 text-sm font-bold text-slate-900">
-                          Topics
-                        </p>
-                        <ul className="list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-700">
-                          {week.topics.map((topic) => (
-                            <li key={`mobile-topic-${week.number}-${topic}`}>
-                              {topic}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <WeekMaterialsView materials={week.materials} />
-                    </div>
-                  </details>
-                ))}
-              </div>
-
-              <div className="mt-8 hidden overflow-x-auto lg:block">
-                <table className="min-w-[1120px] w-full border-collapse">
+              <div className="mt-8 overflow-x-auto">
+                <table className="w-full min-w-[34rem] border-collapse">
+                  <caption className="sr-only">Points by component</caption>
                   <thead>
                     <tr className="border-y border-slate-200 bg-slate-50 text-left">
-                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
-                        Week
-                      </th>
-                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
-                        Description
-                      </th>
-                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
-                        Topics
-                      </th>
-                      <th className="px-4 py-3 text-sm font-semibold text-slate-900">
-                        Materials
-                      </th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Component</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Points</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Max</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {COURSE_WEEKS.map((week, index) => (
-                      <tr
-                        key={week.number}
-                        className={
-                          index % 2 === 0
-                            ? "align-top border-b border-slate-200 bg-white"
-                            : "align-top border-b border-slate-200 bg-white"
-                        }
-                      >
-                        <td className="px-4 py-4 align-top text-sm font-semibold text-slate-700">
-                          {week.label ?? week.number}
-                        </td>
-                        <td className="px-4 py-4 text-sm font-semibold text-slate-900">
-                          {week.description}
-                        </td>
-                        <td className="px-4 py-4">
-                          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-700">
-                            {week.topics.map((topic) => (
-                              <li key={`${week.number}-${topic}`}>{topic}</li>
-                            ))}
-                          </ul>
-                        </td>
-                        <td className="px-4 py-4">
-                          <WeekMaterialsView materials={week.materials} />
-                        </td>
+                    {GRADING_ROWS.map((row) => (
+                      <tr key={row.component} className="border-b border-slate-200">
+                        <td className="px-4 py-3.5 text-sm leading-6 text-slate-700">{row.component}</td>
+                        <td className="px-4 py-3.5 text-sm leading-6 text-slate-700">{row.points || "—"}</td>
+                        <td className="px-4 py-3.5 text-sm font-medium leading-6 text-slate-900">{row.max}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
+              </div>
+
+              <h3 className="mt-10 font-display text-[1.5rem] leading-[1.25] text-slate-900">Example paths</h3>
+              <p className="mt-2 max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
+                More than one combination reaches 100 points. The notebooks exist so that
+                students who miss several lectures, and students who would rather not take on a
+                project, can both still pass comfortably.
+              </p>
+              <div className="mt-6 overflow-x-auto">
+                <table className="w-full min-w-[40rem] border-collapse">
+                  <caption className="sr-only">Three ways to reach a passing total</caption>
+                  <thead>
+                    <tr className="border-y border-slate-200 bg-slate-50 text-left">
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Path</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Lectures</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Project</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Notebooks</th>
+                      <th scope="col" className="px-4 py-3 text-sm font-semibold text-slate-900">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {EXAMPLE_PATHS.map((row) => (
+                      <tr key={row.path} className="border-b border-slate-200">
+                        <td className="px-4 py-3.5 text-sm font-medium leading-6 text-slate-900">{row.path}</td>
+                        <td className="px-4 py-3.5 text-sm leading-6 text-slate-700">{row.lectures}</td>
+                        <td className="px-4 py-3.5 text-sm leading-6 text-slate-700">{row.project}</td>
+                        <td className="px-4 py-3.5 text-sm leading-6 text-slate-700">{row.notebooks}</td>
+                        <td className="px-4 py-3.5 text-sm font-medium leading-6 text-slate-900">{row.total}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </details>
+          </section>
+
+          <section id="syllabus" className="mt-20 scroll-mt-28 sm:mt-24">
+            <article className="border-t border-blue pt-8">
+              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Syllabus</h2>
+              <div className="mt-8">
+                {ALL_MODULES.map((module) =>
+                  module.lectures.length === 0 ? (
+                    // Nothing to expand into, so this one stays a plain row.
+                    <div key={module.number} className="border-t-2 border-blue py-5">
+                      <p className="mono-label text-blue">Final module</p>
+                      <h3 className="display-title mt-2 text-[1.75rem] leading-[1.15] sm:text-[2rem]">
+                        {module.title}
+                      </h3>
+                    </div>
+                  ) : (
+                  <details
+                    key={module.number}
+                    className="group border-t-2 border-blue"
+                    aria-label={`Module ${module.number}: ${module.title}`}
+                  >
+                    <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-4 py-5 [&::-webkit-details-marker]:hidden">
+                      <span className="min-w-0">
+                        <span className="mono-label block text-blue">
+                          {module.lectures.length > 0 ? `Module ${module.number}` : "Final module"}
+                        </span>
+                        <span className="display-title mt-2 block text-[1.75rem] leading-[1.15] sm:text-[2rem]">
+                          {module.title}
+                        </span>
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="mt-1 shrink-0 text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                      >
+                        +
+                      </span>
+                    </summary>
+                    {module.breakBefore && (
+                      <p className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 border border-dashed border-slate-300 px-4 py-3">
+                        <span className="mono-label text-slate-400">{module.breakBefore.date}</span>
+                        <span className="text-[0.9375rem] leading-[1.6] text-slate-500">
+                          {module.breakBefore.label}, no lecture
+                        </span>
+                      </p>
+                    )}
+                    <div className="mt-5 pb-2">
+                      {module.lectures.map((lecture) => (
+                        <LectureRow key={`${module.number}-${lecture.date}`} lecture={lecture} />
+                      ))}
+                    </div>
+                  </details>
+                  ),
+                )}
               </div>
             </article>
           </section>

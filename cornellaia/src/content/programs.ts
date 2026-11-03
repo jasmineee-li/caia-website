@@ -45,7 +45,7 @@ export const PROGRAM_ITEMS: ProgramItem[] = [
     title: "Introduction to AI Alignment Fellowship",
     description: [
       "In previous semesters, CAIA ran an 8-week introductory fellowship covering technical and policy topics in AI safety.",
-      "For Fall 2026, we are running CS 1998: Intro to AI Safety & Alignment in place of the fellowship. The course develops the same foundations through lectures, technical notebooks, paper discussions, and a final project.",
+      "We now run CS 1998: Intro to AI Safety & Alignment in place of the fellowship. The course develops the same foundations through lectures, technical notebooks, and a final project, and runs again in Spring 2027.",
     ],
     ctaLabel: "View CS 1998 course page",
     ctaHref: "/programs/cs1998",

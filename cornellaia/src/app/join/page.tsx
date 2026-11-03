@@ -68,13 +68,13 @@ export default function JoinPage() {
             visualClassName="grid-paper [background-position:center] [background-size:24px_24px]"
             imageClassName="!object-contain px-[10%]"
             visualAlt="The number 1998 drawn in blue halftone dots"
-            meta="Course · Fall 2026"
+            meta="Course · Spring 2027"
             title="CS 1998"
             className="w-[82%] sm:w-[46%] md:w-auto"
-            action={<Button href="/programs/cs1998" variant="secondary">Course &amp; Materials</Button>}
+            action={<Button href="/programs/cs1998" variant="secondary">Course &amp; Syllabus</Button>}
           >
-            Learn through lectures, hands-on notebooks, discussions, and a research project. Fall enrollment is
-            closed, but the course materials are open to everyone.
+            Learn through lectures, hands-on notebooks, and a research project. A 2-credit S/U course over the
+            first seven weeks, open to everyone with no application.
           </ProgramCard>
 
           <ProgramCard
