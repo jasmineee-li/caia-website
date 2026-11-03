@@ -216,8 +216,7 @@ export default function CS1998Page() {
           <section id="content" className="mt-20 scroll-mt-28 sm:mt-24">
             <article className="border-t border-blue pt-8">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Content</h2>
-              <div className="mt-6 grid gap-8 lg:grid-cols-12 lg:gap-12">
-              <div className="space-y-4 text-[1rem] leading-[1.75] text-slate-600 lg:col-span-7">
+              <div className="mt-4 max-w-3xl space-y-4 text-[1rem] leading-[1.75] text-slate-600">
                 <p>
                   AI systems are becoming more capable far faster than our methods for
                   understanding and controlling them are improving. Today’s models write
@@ -239,19 +238,6 @@ export default function CS1998Page() {
                   finish with enough context and enough practical skill to go straight into AI
                   safety research. The course is open to students from all majors.
                 </p>
-              </div>
-              {/* The course's premise in one picture: what models can do pulls away from
-                  what we understand about them. Desktop only. */}
-              <div className="hidden lg:col-span-5 lg:block">
-                <Image
-                  src="/graphics/capability-gap.svg"
-                  alt="Two curves rising from a common origin. One accelerates steeply upward while the other rises slowly, and the widening area between them is shaded red."
-                  width={660}
-                  height={428}
-                  sizes="(min-width: 1024px) 460px, 0px"
-                  className="h-auto w-full"
-                />
-              </div>
               </div>
             </article>
           </section>
