@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import Tag from "@/components/ui/Tag";
 import { createPageMetadata, SITE_URL } from "@/content/seo";
 import JsonLd from "@/components/JsonLd";
 import {
@@ -149,7 +150,7 @@ export default function CS1998Page() {
           <div className="mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12">
             <div className="grid items-center gap-10 pb-12 pt-14 sm:pb-16 sm:pt-20 lg:grid-cols-12 lg:gap-8 lg:pb-20 lg:pt-24">
               <div className="space-y-6 sm:space-y-8 lg:col-span-7">
-                <p className="mono-label text-blue">Course · Spring 2027</p>
+                <Tag color="yellow">Spring 2027</Tag>
                 <h1 className="display-title text-[2.75rem] leading-[1.02] sm:text-[4.25rem] lg:text-[4.5rem]">
                   CS 1998: Intro to AI Safety &amp; Alignment
                 </h1>
@@ -191,9 +192,6 @@ export default function CS1998Page() {
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
                 Enrolling for Spring 2027
               </h2>
-              <p className="mt-2 max-w-2xl text-[1rem] leading-[1.75] text-slate-600">
-                Open enrollment, so no application and no prerequisites. The room seats 75.
-              </p>
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
                 <p className="text-[1rem] leading-[1.6] text-slate-600">
                   Class number{" "}
@@ -214,16 +212,30 @@ export default function CS1998Page() {
           <section id="content" className="mt-20 scroll-mt-28 sm:mt-24">
             <article className="border-t border-blue pt-8">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Content</h2>
-              <p className="mt-4 max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
-                How can we make AI systems do what we actually want? This student-led course
-                introduces language model training, alignment, interpretability, evaluations,
-                scalable oversight and control. Through lectures, hands-on notebooks and a
-                final project, we connect technical methods with broader questions about AI
-                policy and governance. No prior background in AI safety is assumed.
-              </p>
-              <p className="mt-4 max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
-                The fourteen lectures are grouped into modules of two, one module a week.
-              </p>
+              <div className="mt-4 max-w-3xl space-y-4 text-[1rem] leading-[1.75] text-slate-600">
+                <p>
+                  AI systems are becoming more capable far faster than our methods for
+                  understanding and controlling them are improving. Today’s models write
+                  software, carry out long tasks on their own and are starting to help build
+                  their successors, yet researchers still cannot fully explain why they behave
+                  as they do or guarantee that they pursue the goals we intend.
+                </p>
+                <p>
+                  CS 1998 is a seven-week introduction to the technical problem of making
+                  advanced AI safe and aligned with human values. We will study how models are
+                  trained on human feedback and where that training breaks down, why AI systems
+                  can learn goals different from the ones we intended, how interpretability lets
+                  us look inside neural networks, how researchers test models for dangerous
+                  capabilities and deception, and how governments and labs are responding.
+                </p>
+                <p>
+                  Each week pairs a lecture with a hands-on coding notebook, and the course ends
+                  with a technical or non-technical final project. The course is open to students
+                  from all majors. The choices made in the next few years could shape how this
+                  technology affects everyone, and the field needs more people who understand the
+                  problem.
+                </p>
+              </div>
             </article>
           </section>
 
@@ -256,11 +268,20 @@ export default function CS1998Page() {
           </section>
 
           <section id="grading" className="mt-20 scroll-mt-28 sm:mt-24">
-            <article className="border-t border-blue pt-8">
-              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
-                Course Structure and Grading
-              </h2>
-              <p className="mt-4 max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
+            <details className="group border-t border-blue">
+              <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden">
+                <span className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">
+                  Course Structure and Grading
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="mt-2 text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="pb-2">
+              <p className="max-w-3xl text-[1rem] leading-[1.75] text-slate-600">
                 An <span className="font-medium text-ink">S</span> requires{" "}
                 <span className="font-medium text-ink">100 points</span> and attendance at at
                 least <span className="font-medium text-ink">10 of the 14 lectures</span>. That
@@ -320,7 +341,8 @@ export default function CS1998Page() {
                   </tbody>
                 </table>
               </div>
-            </article>
+              </div>
+            </details>
           </section>
 
           <section id="syllabus" className="mt-20 scroll-mt-28 sm:mt-24">
@@ -332,20 +354,48 @@ export default function CS1998Page() {
                 of the field.
               </p>
 
-              <div className="mt-10 space-y-14">
-                {ALL_MODULES.map((module) => (
-                  <section key={module.number} aria-label={`Module ${module.number}: ${module.title}`}>
-                    <div className="border-t-2 border-blue pt-5">
-                      <p className="mono-label text-blue">
-                        {module.lectures.length > 0 ? `Module ${module.number}` : "Final module"}
-                      </p>
-                      <h3 className="mt-2 display-title text-[1.75rem] leading-[1.15] sm:text-[2rem]">
+              <div className="mt-10">
+                {ALL_MODULES.map((module) =>
+                  module.lectures.length === 0 ? (
+                    // Nothing to expand into, so this one stays a plain row.
+                    <div key={module.number} className="border-t-2 border-blue py-5">
+                      <p className="mono-label text-blue">Final module</p>
+                      <h3 className="display-title mt-2 text-[1.75rem] leading-[1.15] sm:text-[2rem]">
                         {module.title}
                       </h3>
-                      <p className="mt-2 max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
-                        {module.summary}
-                      </p>
+                      {module.summary && (
+                        <p className="mt-2 max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
+                          {module.summary}
+                        </p>
+                      )}
                     </div>
+                  ) : (
+                  <details
+                    key={module.number}
+                    className="group border-t-2 border-blue"
+                    aria-label={`Module ${module.number}: ${module.title}`}
+                  >
+                    <summary className="focus-ring flex cursor-pointer list-none items-start justify-between gap-4 py-5 [&::-webkit-details-marker]:hidden">
+                      <span className="min-w-0">
+                        <span className="mono-label block text-blue">
+                          {module.lectures.length > 0 ? `Module ${module.number}` : "Final module"}
+                        </span>
+                        <span className="display-title mt-2 block text-[1.75rem] leading-[1.15] sm:text-[2rem]">
+                          {module.title}
+                        </span>
+                        {module.summary && (
+                          <span className="mt-2 block max-w-3xl text-[1rem] leading-[1.7] text-slate-600">
+                            {module.summary}
+                          </span>
+                        )}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="mt-1 shrink-0 text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                      >
+                        +
+                      </span>
+                    </summary>
                     {module.breakBefore && (
                       <p className="mt-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 border border-dashed border-slate-300 px-4 py-3">
                         <span className="mono-label text-slate-400">{module.breakBefore.date}</span>
@@ -354,13 +404,14 @@ export default function CS1998Page() {
                         </span>
                       </p>
                     )}
-                    <div className="mt-5">
+                    <div className="mt-5 pb-2">
                       {module.lectures.map((lecture) => (
                         <LectureRow key={`${module.number}-${lecture.date}`} lecture={lecture} />
                       ))}
                     </div>
-                  </section>
-                ))}
+                  </details>
+                  ),
+                )}
               </div>
             </article>
           </section>

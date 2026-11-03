@@ -502,7 +502,6 @@ export const SPRING_2027_MODULES: CourseModule[] = [
 export const SPRING_2027_PROJECT: CourseModule = {
   number: 8,
   title: "Project",
-  summary:
-    "A proposal partway through and a final report at the end, together worth 40 of the 100 points needed to pass.",
+  summary: "",
   lectures: [],
 };
