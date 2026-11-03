@@ -3,7 +3,7 @@ import styles from "./poster.module.css";
 
 const COURSE_URL = "https://www.cornell-aia.org/programs/cs1998";
 const ROSTER_URL =
-  "https://classes.cornell.edu/browse/roster/FA26/class/CS/1998";
+  "https://classes.cornell.edu/browse/roster/SP27/class/CS/1998";
 const QR_URL = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(
   COURSE_URL,
 )}`;
@@ -38,7 +38,7 @@ export default function CS1998PosterPage() {
             />
             <div className={styles.badge}>
               <span className={styles.badgeDot} aria-hidden="true" />
-              Fall 2026, Open Enrollment
+              Spring 2027, Open Enrollment
             </div>
           </div>
 
@@ -63,11 +63,11 @@ export default function CS1998PosterPage() {
             </div>
             <div className={styles.stat}>
               <p className={styles.label}>Class #</p>
-              <p className={styles.value}>18589</p>
+              <p className={styles.value}>17782</p>
             </div>
             <div className={styles.stat}>
               <p className={styles.label}>Credits</p>
-              <p className={styles.value}>1 credit, S/U</p>
+              <p className={styles.value}>2 credits, S/U</p>
             </div>
             <div className={styles.stat}>
               <p className={styles.label}>Duration</p>
@@ -82,15 +82,15 @@ export default function CS1998PosterPage() {
                 <div className={styles.formatList}>
                   <p className={styles.formatItem}>
                     <span className={styles.formatDot} aria-hidden="true" />
-                    Fridays, 2:55-4:10pm
+                    Mon & Wed, 12:20-1:10pm
                   </p>
                   <p className={styles.formatItem}>
                     <span className={styles.formatDot} aria-hidden="true" />
-                    Phillips Hall 203
+                    Phillips Hall 219
                   </p>
                   <p className={styles.formatItem}>
                     <span className={styles.formatDot} aria-hidden="true" />
-                    August 24-October 9
+                    January 25-March 15
                   </p>
                 </div>
               </article>
