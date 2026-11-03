@@ -152,7 +152,9 @@ export default function CS1998Page() {
               <div className="space-y-6 sm:space-y-8 lg:col-span-7">
                 <Tag color="yellow">Spring 2027</Tag>
                 <h1 className="display-title text-[2.75rem] leading-[1.02] sm:text-[4.25rem] lg:text-[4.5rem]">
-                  CS 1998: Intro to AI Safety &amp; Alignment
+                  CS 1998:
+                  <br />
+                  Intro to AI Safety &amp; Alignment
                 </h1>
                 <p className="mono-caption text-[0.9375rem] !text-ink-2">
                   2 credits · 7 weeks, first half · S/U only · Open enrollment

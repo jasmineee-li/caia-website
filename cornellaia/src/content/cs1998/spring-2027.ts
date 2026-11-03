@@ -163,7 +163,7 @@ export const SPRING_2027_MODULES: CourseModule[] = [
   },
   {
     number: 3,
-    title: "How Alignment Fails",
+    title: "Misalignment",
     summary:
       "The two failure modes the rest of the field is organized around: optimizing the wrong target, and learning the wrong goal.",
     lectures: [
