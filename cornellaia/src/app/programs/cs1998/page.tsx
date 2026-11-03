@@ -24,14 +24,14 @@ const ALL_MODULES: CourseModule[] = [...SPRING_2027_MODULES, SPRING_2027_PROJECT
 const GRADING_ROWS: { component: string; points: string; max: string }[] = [
   { component: "Lecture attended", points: "5 each", max: "70" },
   { component: "Project", points: "10 proposal + 30 final", max: "40" },
-  { component: "Notebook (graded on completion)", points: "4 each", max: "28 (7 notebooks)" },
+  { component: "Notebook (graded on completion)", points: "5 each", max: "25 (5 notebooks)" },
   { component: "Bonus (course eval, CAIA discussion or talk)", points: "", max: "5" },
 ];
 
 const EXAMPLE_PATHS: { path: string; lectures: string; project: string; notebooks: string; total: string }[] = [
   { path: "Typical", lectures: "12 → 60", project: "40", notebooks: "0", total: "100" },
-  { path: "Minimum attendance", lectures: "10 → 50", project: "40", notebooks: "3 → 12", total: "102" },
-  { path: "No project", lectures: "14 → 70", project: "0", notebooks: "7 → 28, plus 5 bonus", total: "103" },
+  { path: "Minimum attendance", lectures: "10 → 50", project: "40", notebooks: "2 → 10", total: "100" },
+  { path: "No project", lectures: "14 → 70", project: "0", notebooks: "5 → 25, plus 5 bonus", total: "100" },
 ];
 
 const COURSE_DESCRIPTION =
@@ -240,19 +240,17 @@ export default function CS1998Page() {
                   safety research. The course is open to students from all majors.
                 </p>
               </div>
-              {/* The terms the course covers, in the house style. Desktop only: at phone
-                  width it would crop to a handful of words and read as noise. */}
+              {/* The course's premise in one picture: what models can do pulls away from
+                  what we understand about them. Desktop only. */}
               <div className="hidden lg:col-span-5 lg:block">
-                <div className="overflow-hidden rounded-[4px] border border-slate-200">
-                  <Image
-                    src="/graphics/halftone/cs1998-terms.webp"
-                    alt=""
-                    width={1518}
-                    height={1140}
-                    sizes="(min-width: 1024px) 460px, 0px"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+                <Image
+                  src="/graphics/capability-gap.svg"
+                  alt="Two curves rising from a common origin. One accelerates steeply upward while the other rises slowly, and the widening area between them is shaded red."
+                  width={660}
+                  height={428}
+                  sizes="(min-width: 1024px) 460px, 0px"
+                  className="h-auto w-full"
+                />
               </div>
               </div>
             </article>
