@@ -17,6 +17,8 @@ export const metadata: Metadata = createPageMetadata({
     "Explore AI safety and alignment publications and projects by Cornell AI Alignment members and collaborators, with authors and links to their work.",
   path: "/research",
   keywords: ["AI alignment research", "CAIA papers", "Cornell AI safety research"],
+  image: "/og/og-research.png",
+  imageAlt: "A halftone neural network with one path traced through it",
 });
 
 const TEAM_NUMBERS = [

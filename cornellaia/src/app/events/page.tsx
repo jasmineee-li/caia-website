@@ -8,6 +8,8 @@ export const metadata = createPageMetadata({
   title: "Events",
   path: "/events",
   description: "Find upcoming AI safety talks, workshops, discussions, and socials at Cornell. Browse past events and subscribe to the Cornell AI Alignment calendar.",
+  image: "/og/og-events.png",
+  imageAlt: "A halftone calendar with event days marked",
 });
 
 export default function EventsPage() {

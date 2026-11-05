@@ -96,6 +96,8 @@ export const metadata: Metadata = createPageMetadata({
     "Cornell student-led course",
     "Spring 2027",
   ],
+  image: "/og/og-cs1998.png",
+  imageAlt: "CS 1998, drawn in blue halftone dots",
 });
 
 function ReadingList({ items }: { items: MaterialItem[] }) {
@@ -174,9 +176,16 @@ export default function CS1998Page() {
                   <br />
                   Intro to AI Safety &amp; Alignment
                 </h1>
-                <p className="mono-caption text-[0.9375rem] !text-ink-2">
-                  2 credits · 7 weeks, first half · S/U only · Open enrollment
-                </p>
+                <ul className="flex flex-wrap gap-2" aria-label="Course facts">
+                  {["2 credits", "7 weeks, first half", "S/U only", "Open enrollment"].map((fact) => (
+                    <li
+                      key={fact}
+                      className="inline-flex items-center border border-rule bg-white px-2.5 py-[5px] font-mono text-[0.75rem] font-medium uppercase leading-[1.3] tracking-[0.08em] text-ink-2"
+                    >
+                      {fact}
+                    </li>
+                  ))}
+                </ul>
                 <nav
                   aria-label="CS 1998 sections"
                   className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-blue pt-6"
