@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ProfileCard from "@/components/ProfileCard";
 import Button from "@/components/ui/Button";
 import Tag from "@/components/ui/Tag";
 import { createPageMetadata, SITE_URL } from "@/content/seo";
@@ -8,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import {
   SPRING_2027_MODULES,
   SPRING_2027_PROJECT,
+  SPRING_2027_STAFF,
   type CourseModule,
   type Lecture,
   type MaterialItem,
@@ -94,6 +96,8 @@ export const metadata: Metadata = createPageMetadata({
     "Cornell student-led course",
     "Spring 2027",
   ],
+  image: "/og/og-cs1998.png",
+  imageAlt: "CS 1998, drawn in blue halftone dots",
 });
 
 function ReadingList({ items }: { items: MaterialItem[] }) {
@@ -114,6 +118,22 @@ function ReadingList({ items }: { items: MaterialItem[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function CourseStaffGrid({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      {SPRING_2027_STAFF.map((member) => (
+        <ProfileCard
+          key={member.name}
+          imageSrc={member.imageSrc}
+          name={member.name}
+          role={member.role}
+          unframed
+        />
+      ))}
+    </div>
   );
 }
 
@@ -156,13 +176,21 @@ export default function CS1998Page() {
                   <br />
                   Intro to AI Safety &amp; Alignment
                 </h1>
-                <p className="mono-caption text-[0.9375rem] !text-ink-2">
-                  2 credits · 7 weeks, first half · S/U only · Open enrollment
-                </p>
+                <ul className="flex flex-wrap gap-2" aria-label="Course facts">
+                  {["2 credits", "7 weeks, first half", "S/U", "Open enrollment"].map((fact) => (
+                    <li
+                      key={fact}
+                      className="inline-flex items-center border border-rule bg-white px-2.5 py-[5px] font-mono text-[0.75rem] font-medium uppercase leading-[1.3] tracking-[0.08em] text-ink-2"
+                    >
+                      {fact}
+                    </li>
+                  ))}
+                </ul>
                 <nav
                   aria-label="CS 1998 sections"
                   className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-blue pt-6"
                 >
+                  <a href="#staff" className="focus-ring text-link text-[0.9375rem]">Staff</a>
                   <a href="#content" className="focus-ring text-link text-[0.9375rem]">Content</a>
                   <a href="#logistics" className="focus-ring text-link text-[0.9375rem]">Logistics</a>
                   <a href="#grading" className="focus-ring text-link text-[0.9375rem]">Grading</a>
@@ -210,6 +238,29 @@ export default function CS1998Page() {
                 </Link>
                 .
               </p>
+            </article>
+          </section>
+
+          <section id="staff" className="mt-20 scroll-mt-28 sm:mt-24">
+            {/* Seven faces are a lot of scrolling on a phone, so they start collapsed there. */}
+            <details className="group border-t border-blue sm:hidden">
+              <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden">
+                <span className="display-title text-[2rem] leading-[1.1]">Course Staff</span>
+                <span
+                  aria-hidden="true"
+                  className="text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="pb-2 pt-2">
+                <CourseStaffGrid className="grid gap-y-8" />
+              </div>
+            </details>
+
+            <article className="hidden border-t border-blue pt-8 sm:block">
+              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
+              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
             </article>
           </section>
 

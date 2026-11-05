@@ -69,6 +69,8 @@ export const metadata: Metadata = createPageMetadata({
     "Fall 2026",
     "course archive",
   ],
+  image: "/og/og-cs1998.png",
+  imageAlt: "CS 1998, drawn in blue halftone dots",
 });
 
 function MaterialList({ items }: { items: MaterialItem[] }) {

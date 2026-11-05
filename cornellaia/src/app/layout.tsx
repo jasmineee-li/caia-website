@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import { IS_PREVIEW, SITE_URL } from "@/content/seo";
+import { IS_PREVIEW, ogImages, SITE_URL } from "@/content/seo";
 import JsonLd from "@/components/JsonLd";
 import { SITE_SCHEMA } from "@/content/site-schema";
 
@@ -24,12 +24,20 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Cornell AI Alignment",
     type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    title: "Cornell AI Alignment",
+    images: ogImages().openGraph,
   },
   twitter: {
     card: "summary_large_image",
+    title: "Cornell AI Alignment",
+    images: ogImages().twitter,
   },
+  alternates: { canonical: SITE_URL },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/favicon.ico" }, { url: "/og/icon-512.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/og/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
