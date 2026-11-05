@@ -483,3 +483,20 @@ export const SPRING_2027_PROJECT: CourseModule = {
   title: "Project",
   lectures: [],
 };
+
+export interface CourseStaffMember {
+  name: string;
+  role: string;
+  imageSrc: string;
+}
+
+/** Jinzhou first, then the rest alphabetically, with the faculty advisor last. */
+export const SPRING_2027_STAFF: CourseStaffMember[] = [
+  { name: "Jinzhou Wu", role: "Lead Instructor", imageSrc: "/team/TEAM_jinzhou_wu.png" },
+  { name: "Arya Datla", role: "Instructor", imageSrc: "/team/TEAM_arya_datla.jpeg" },
+  { name: "Jash Vira", role: "Instructor", imageSrc: "/team/TEAM_jash_vira.jpeg" },
+  { name: "Niranjan Nair", role: "Instructor", imageSrc: "/team/TEAM_niranjan_nair.jpeg" },
+  { name: "Owen Karmel", role: "Instructor", imageSrc: "/team/TEAM_owen_karmel.jpeg" },
+  { name: "Rittik Bhattacharya", role: "Instructor", imageSrc: "/team/TEAM_rittik_bhattacharya_2026.jpg" },
+  { name: "\u00c9va Tardos", role: "Faculty Advisor", imageSrc: "/team/TEAM_eva_tardos.jpg" },
+];

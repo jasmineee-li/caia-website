@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ProfileCard from "@/components/ProfileCard";
 import Button from "@/components/ui/Button";
 import Tag from "@/components/ui/Tag";
 import { createPageMetadata, SITE_URL } from "@/content/seo";
@@ -8,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import {
   SPRING_2027_MODULES,
   SPRING_2027_PROJECT,
+  SPRING_2027_STAFF,
   type CourseModule,
   type Lecture,
   type MaterialItem,
@@ -163,6 +165,7 @@ export default function CS1998Page() {
                   aria-label="CS 1998 sections"
                   className="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-blue pt-6"
                 >
+                  <a href="#staff" className="focus-ring text-link text-[0.9375rem]">Staff</a>
                   <a href="#content" className="focus-ring text-link text-[0.9375rem]">Content</a>
                   <a href="#logistics" className="focus-ring text-link text-[0.9375rem]">Logistics</a>
                   <a href="#grading" className="focus-ring text-link text-[0.9375rem]">Grading</a>
@@ -210,6 +213,23 @@ export default function CS1998Page() {
                 </Link>
                 .
               </p>
+            </article>
+          </section>
+
+          <section id="staff" className="mt-20 scroll-mt-28 sm:mt-24">
+            <article className="border-t border-blue pt-8">
+              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
+              <div className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {SPRING_2027_STAFF.map((member) => (
+                  <ProfileCard
+                    key={member.name}
+                    imageSrc={member.imageSrc}
+                    name={member.name}
+                    role={member.role}
+                    unframed
+                  />
+                ))}
+              </div>
             </article>
           </section>
 

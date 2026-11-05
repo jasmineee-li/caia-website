@@ -17,6 +17,14 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "CAIA Alumni Career Panel: Careers in AI Safety",
+    embedUrl: "https://luma.com/embed/event/evt-hOs8vP8m4hWLbMo/simple",
+  },
+  {
+    title: "Technical Reading Group: Agentic Misalignment",
+    embedUrl: "https://luma.com/embed/event/evt-oFCw0k3EAuqbgar/simple",
+  },
+  {
     title: "CAIA Policy Reading Group (Oct 28)",
     embedUrl: "https://luma.com/embed/event/evt-PgCTjZG19lfNFeV/simple",
   },
