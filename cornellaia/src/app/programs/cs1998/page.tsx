@@ -177,7 +177,7 @@ export default function CS1998Page() {
                   Intro to AI Safety &amp; Alignment
                 </h1>
                 <ul className="flex flex-wrap gap-2" aria-label="Course facts">
-                  {["2 credits", "7 weeks, first half", "S/U only", "Open enrollment"].map((fact) => (
+                  {["2 credits", "7 weeks, first half", "S/U", "Open enrollment"].map((fact) => (
                     <li
                       key={fact}
                       className="inline-flex items-center border border-rule bg-white px-2.5 py-[5px] font-mono text-[0.75rem] font-medium uppercase leading-[1.3] tracking-[0.08em] text-ink-2"
