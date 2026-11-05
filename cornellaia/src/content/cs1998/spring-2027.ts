@@ -492,7 +492,7 @@ export interface CourseStaffMember {
 
 /** Jinzhou first, then the rest alphabetically, with the faculty advisor last. */
 export const SPRING_2027_STAFF: CourseStaffMember[] = [
-  { name: "Jinzhou Wu", role: "Lead Instructor", imageSrc: "/team/TEAM_jinzhou_wu.png" },
+  { name: "Jinzhou Wu", role: "Organizer & Lead Instructor", imageSrc: "/team/TEAM_jinzhou_wu.png" },
   { name: "Arya Datla", role: "Instructor", imageSrc: "/team/TEAM_arya_datla.jpeg" },
   { name: "Jash Vira", role: "Instructor", imageSrc: "/team/TEAM_jash_vira.jpeg" },
   { name: "Niranjan Nair", role: "Instructor", imageSrc: "/team/TEAM_niranjan_nair.jpeg" },

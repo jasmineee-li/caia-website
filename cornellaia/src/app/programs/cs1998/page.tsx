@@ -119,6 +119,22 @@ function ReadingList({ items }: { items: MaterialItem[] }) {
   );
 }
 
+function CourseStaffGrid({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      {SPRING_2027_STAFF.map((member) => (
+        <ProfileCard
+          key={member.name}
+          imageSrc={member.imageSrc}
+          name={member.name}
+          role={member.role}
+          unframed
+        />
+      ))}
+    </div>
+  );
+}
+
 /** One lecture: its number and date on the left, what it covers and its readings on the right. */
 function LectureRow({ lecture }: { lecture: Lecture }) {
   return (
@@ -217,19 +233,25 @@ export default function CS1998Page() {
           </section>
 
           <section id="staff" className="mt-20 scroll-mt-28 sm:mt-24">
-            <article className="border-t border-blue pt-8">
-              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
-              <div className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {SPRING_2027_STAFF.map((member) => (
-                  <ProfileCard
-                    key={member.name}
-                    imageSrc={member.imageSrc}
-                    name={member.name}
-                    role={member.role}
-                    unframed
-                  />
-                ))}
+            {/* Seven faces are a lot of scrolling on a phone, so they start collapsed there. */}
+            <details className="group border-t border-blue sm:hidden">
+              <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden">
+                <span className="display-title text-[2rem] leading-[1.1]">Course Staff</span>
+                <span
+                  aria-hidden="true"
+                  className="text-2xl leading-none text-blue transition-transform duration-200 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <div className="pb-2 pt-2">
+                <CourseStaffGrid className="grid gap-y-8" />
               </div>
+            </details>
+
+            <article className="hidden border-t border-blue pt-8 sm:block">
+              <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
+              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
             </article>
           </section>
 
