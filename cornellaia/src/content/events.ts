@@ -17,6 +17,14 @@ const PAST_EVENT_IDS = [
 
 export const PAST_EVENTS = [
   {
+    title: "Technical Reading Group: Automated AI R&D Risks",
+    embedUrl: "https://luma.com/embed/event/evt-1Z6GkgsmkceRA2L/simple",
+  },
+  {
+    title: "WICC x CAIA Social",
+    embedUrl: "https://luma.com/embed/event/evt-4cB8BSdrnaWlZfo/simple",
+  },
+  {
     title: "CAIA Alumni Career Panel: Careers in AI Safety",
     embedUrl: "https://luma.com/embed/event/evt-hOs8vP8m4hWLbMo/simple",
   },
