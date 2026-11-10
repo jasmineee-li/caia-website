@@ -494,6 +494,8 @@ export interface CourseStaffMember {
 export const SPRING_2027_STAFF: CourseStaffMember[] = [
   { name: "Jinzhou Wu", role: "Organizer", imageSrc: "/team/TEAM_jinzhou_wu.png" },
   { name: "Arya Datla", role: "Instructor", imageSrc: "/team/TEAM_arya_datla.jpeg" },
+  { name: "Daniel Lee", role: "Instructor", imageSrc: "/team/TEAM_daniel_lee.jpeg" },
+  { name: "Elle Kim", role: "Instructor", imageSrc: "/team/TEAM_elle_kim.png" },
   { name: "Jash Vira", role: "Instructor", imageSrc: "/team/TEAM_jash_vira.jpeg" },
   { name: "Niranjan Nair", role: "Instructor", imageSrc: "/team/TEAM_niranjan_nair.jpeg" },
   { name: "Owen Karmel", role: "Instructor", imageSrc: "/team/TEAM_owen_karmel.jpeg" },

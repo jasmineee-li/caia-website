@@ -260,7 +260,7 @@ export default function CS1998Page() {
 
             <article className="hidden border-t border-blue pt-8 sm:block">
               <h2 className="display-title text-[2rem] leading-[1.1] sm:text-[2.75rem]">Course Staff</h2>
-              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
+              <CourseStaffGrid className="mt-6 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" />
             </article>
           </section>
 
