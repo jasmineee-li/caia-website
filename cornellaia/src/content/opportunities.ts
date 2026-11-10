@@ -5,11 +5,19 @@ import { TEAM_GROUPS } from "@/content/team";
  * "Application opens soon" placeholder in place of the Apply button.
  */
 export const APPLICATIONS: Record<
-  "researchTeam" | "projectProposal" | "technicalReadingGroup" | "policyReadingGroup" | "organizer",
+  | "researchTeam"
+  | "projectProposal"
+  | "researchGrant"
+  | "travelGrant"
+  | "technicalReadingGroup"
+  | "policyReadingGroup"
+  | "organizer",
   string | null
 > = {
   researchTeam: null,
   projectProposal: "https://airtable.com/appjO4DuQKwI1MaNr/shrgG7c0VEMWpGpFG",
+  researchGrant: "https://airtable.com/appjO4DuQKwI1MaNr/pagkvpRulv1Muvnn9/form",
+  travelGrant: "https://airtable.com/appjO4DuQKwI1MaNr/pagH8bGbI3MOXTGs8/form",
   technicalReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shrW1K1BBdGfgjDLe",
   policyReadingGroup: "https://airtable.com/appjO4DuQKwI1MaNr/shruuVk6rF2LarJu2",
   organizer: "https://airtable.com/appjO4DuQKwI1MaNr/shrGbP58RXXgapgZ9",
@@ -127,5 +135,31 @@ export const FALL_2026_PROJECTS: TeamProject[] = [
       "No technical background is required. The project suits students interested in law, economics, government or public policy as well as computer science.",
     ],
     topics: ["Policy", "Governance"],
+  },
+];
+
+export interface Grant {
+  title: string;
+  amount: string;
+  summary: string;
+  /** The application form, or null while it is not open. */
+  href: string | null;
+}
+
+/** Funding CAIA offers students directly, shown on the Get Involved page. */
+export const GRANTS: Grant[] = [
+  {
+    title: "Research Grant",
+    amount: "Up to $800",
+    summary:
+      "For compute, API credits, research tools and other costs of doing AI safety research, alongside mentorship from our research team on direction, experimental design and publication. Projects at any stage are welcome, early ideas included, and work approaching publication may be eligible for a follow-up grant.",
+    href: APPLICATIONS.researchGrant,
+  },
+  {
+    title: "Travel Grant",
+    amount: "Up to $500",
+    summary:
+      "For transport, accommodation and registration at AI safety conferences, workshops and retreats, whether you are presenting your own work or going to learn. In return we ask you to bring something back to CAIA, through a talk or a reading group session.",
+    href: APPLICATIONS.travelGrant,
   },
 ];

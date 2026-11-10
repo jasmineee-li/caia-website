@@ -9,7 +9,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import Section from "@/components/ui/Section";
 import { HOME_CTA_ITEMS } from "@/content/home";
 import { EVENTS_CALENDAR_URL } from "@/content/events";
-import { APPLICATIONS } from "@/content/opportunities";
+import { APPLICATIONS, GRANTS } from "@/content/opportunities";
 import { createPageMetadata } from "@/content/seo";
 
 export const metadata = createPageMetadata({
@@ -158,6 +158,25 @@ export default function JoinPage() {
           <Link href="/resources" className="text-link">resources page</Link> has courses, fellowships, and a reading
           library.
         </p>
+      </Section>
+
+      <Section
+        id="grants"
+        title="Grants"
+        subtitle="Funding we give students directly, for doing the research and for getting to where the field is."
+      >
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
+          {GRANTS.map((grant) => (
+            <article key={grant.title} className="flex flex-col rounded-[8px] bg-panel p-6 sm:p-8">
+              <p className="mono-label text-brand-red">{grant.amount}</p>
+              <h3 className="mt-4 font-display text-[1.75rem] leading-[1.15]">{grant.title}</h3>
+              <p className="mt-4 text-[1rem] leading-[1.7] text-slate-600">{grant.summary}</p>
+              <div className="mt-auto pt-7">
+                <ApplicationButton href={grant.href} label={`Apply for a ${grant.title}`} />
+              </div>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <section id="contribute" className="scroll-mt-24 pt-20 sm:pt-28 lg:pt-32">
